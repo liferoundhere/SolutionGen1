@@ -76,9 +76,27 @@ Built: the guardrail is now two sentences that name the audience and leave the d
 
 The project, the skill pack, the rebuilds, the captured originals, the tools and this history were uploaded to `liferoundhere/solutiongen1`.
 
+## 11. Why the MedStar run was not a masterpiece
+
+Feedback: a prompt from the generator, run for MedStar Health, did not produce a masterpiece. Shared for comparison: the original CSX prompt, the brief Cursor wrote for its agent, and the CSX output.
+
+Findings:
+- The CSX prompt was about 280 words of intent only: customer, places and people, the conversation and audience, navigation axes, a story device, must include, must not mention, an integration target, mandatory research, one shot, time and "create a masterpiece". Cursor's brief expanded it in the domain (named yards, incidents, directives, asset classes) and added proof of delivery, still with no layout or colors. The model designed the rest.
+- The generator did the opposite: 3,000 to 4,000 words describing how one build was implemented, a rail-shaped template and fields, and sample values that leaked into real prompts.
+
+## 12. All eight examples studied, and the composer rebuilt around the brief
+
+With here.now reachable, all eight published builds were downloaded and reviewed. The four new links are the MSK Operations Twin (two versions) and the Deltaverse (two versions). The FutureSE talk's workshop scene contains the eight-block brief itself, the same shape as the CSX prompt. From that one kind of brief, the model chose a different form for every customer, and all eight share the same ingredients: their real place as the stage, people as the way in, timed story scenarios, several lenses, before and after, a guided way in plus free exploration, a living world, an honesty layer, and depth.
+
+Built:
+- The composer now writes the eight-block brief first, then the format as an experience with live reference builds to clear ("similar ambition and craft, not a copy"), the nine shared ingredients, a research-then-brief step, the skills check and a proof-of-delivery list. Prompts run about 1,100 words.
+- Shared fields for every format in the order of the brief, including Navigate by, Story device, Must not mention and Call out integrations. Fields start empty with placeholders; Copy stays disabled until the required fields are filled.
+- The detailed specs became an optional technical appendix, off by default. Signature elements from any format can be borrowed.
+- A fifth format, the Operations Twin, drawn from MSK and the Deltaverse, the closest precedent for a hospital system.
+- docs/examples compares the MedStar prompt from the old and new generator: 3,758 words with 31 rail terms, 10 Splunk mentions and 4 sample-customer mentions, against 1,109 words with none.
+
 ## Open items
 
-- Study the four new examples once here.now is reachable (allow `here.now` and `*.here.now` in the environment's network settings, add Firecrawl credits, or upload the saved pages), then add their specs, prompts and elements.
 - Add the `cisco-branded` skill if it is to be part of the pack.
-- Run each prompt template for a new customer to confirm it produces a build similar to, not a copy of, its original.
+- Run the new MedStar prompt (docs/examples/medstar-new-prompt.md) end to end and compare it with the earlier run.
 - Render neural voices (edge-tts) for the narrated and audio editions; the rebuilds here use the browser voice or captions only.

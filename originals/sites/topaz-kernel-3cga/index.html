@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MSK Operations Twin</title>
+<meta name="description" content="Illustrative 3D hospital-operations digital twin of Memorial Sloan Kettering's York Avenue campus, orchestrated by Cisco Cloud Control with Splunk as the data layer." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/app.css?v=b681989193" />
+<script>/* theme before first paint: #theme=dark deep link, else saved choice, else the light daylight map */ try { var t = (location.hash.match(/theme=(\w+)/) || [])[1] || JSON.parse(localStorage.getItem("msk.theme") || "\"light\""); document.documentElement.dataset.theme = t === "dark" ? "dark" : "light"; } catch (e) { document.documentElement.dataset.theme = "light"; }</script>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+} }
+</script>
+<meta property="og:title" content="MSK Operations Twin" />
+<meta property="og:description" content="Illustrative 3D hospital-operations twin: Cisco Cloud Control orchestration, Splunk data layer. Concept demo, not affiliated with MSK." />
+<meta property="og:url" content="https://topaz-kernel-3cga.here.now/" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://here.now/og/topaz-kernel-3cga.jpg" />
+<meta property="og:image:width" content="1280" />
+<meta property="og:image:height" content="720" />
+<meta name="twitter:image" content="https://here.now/og/topaz-kernel-3cga.jpg" />
+<meta name="twitter:card" content="summary_large_image" /></head>
+<body>
+<div id="loader"><div class="in"><div class="ring"></div><h1>MSK Operations Twin</h1><p id="loader-msg">Building the York Avenue campus, 230+ floors, the Cisco Spaces location fabric and 17 operations scenarios…</p></div></div>
+
+<div id="app">
+  <header id="topbar">
+    <button class="tbtn" id="btn-left" title="Toggle scenario panel">☰</button>
+    <div class="brand"><div class="logo">MSK</div><div><b>MSK Operations Twin</b><small>York Avenue Campus · Cisco Cloud Control × Splunk</small></div></div>
+    <div class="top-right">
+      <span class="clock" id="clock">09:00<small id="wx">Clear</small></span>
+      <button class="tbtn" id="btn-lead" style="--c:#f472b6" title="Leadership Command: milestones, tasks, insights">◆ Command</button>
+      <button class="tbtn" id="btn-ai" style="--c:#84cc16" title="AI usage, safety and tokenomics">✦ AI</button>
+      <button class="tbtn" id="btn-splunk" style="--c:#ff5ca8" title="Splunk hospital operations analytics">❯ Splunk</button>
+      <button class="tbtn" id="btn-sys" style="--c:#38bdf8" title="Operations priority systems">▤ Systems</button>
+      <button class="tbtn" id="btn-tech" style="--c:#00bceb" title="The Cisco technology stack">◎ Cisco</button>
+      <button class="tbtn" id="btn-explore" style="--c:#84cc16" title="Explore AI use cases, technology and leaders (E)">⌖ Explore</button>
+      <button class="tbtn journeys" id="btn-journeys" title="Journeys: narrated stories with and without Cisco (J)">♥ Journeys</button>
+      <button class="tbtn" id="btn-focus" style="--c:#22d3ee" title="Focus: collapse all panels for a full-screen map (F)">⛶ Focus</button>
+      <button class="tbtn" id="btn-theme" title="Switch between the daylight map and the night operations view (L)">☾ Night</button>
+      <button class="tbtn" id="btn-sources" title="Sources & methodology: what is factual and what is generated">ⓘ Sources</button>
+      <button class="tbtn" id="btn-help" title="About & how to use">?</button>
+    </div>
+  </header>
+  <nav class="personabar lenses" id="lenses" aria-label="Personas"></nav>
+
+  <aside id="left">
+    <div class="persona-card" id="persona"></div>
+    <div class="tabs"><button class="tab on" data-tab="sc">Scenarios <span class="n" id="sc-n"></span></button><button class="tab" data-tab="dash">Lens dashboard</button><button class="tab" data-tab="people">People</button></div>
+    <div class="scroll" id="left-body"></div>
+    <div class="disclaimer">Illustrative concept demo. Not affiliated with or endorsed by Memorial Sloan Kettering Cancer Center. Story characters are fictional and metrics are simulated; leader names and titles come from MSK’s public pages. <a href="#" data-open-sources>Sources &amp; methodology</a></div>
+  </aside>
+
+  <main id="stage">
+    <div class="layers">
+      <div class="toolbar" id="toolbar">
+        <button class="tbtn" data-ov="spaces" style="--c:#4f8cff">⌖ Spaces data</button>
+        <select id="spaces-metric" title="Cisco Spaces room metric"><option value="occupancy">Occupancy</option><option value="temp">Temperature</option><option value="air">Air quality (CO₂)</option></select>
+        <button class="tbtn on" data-ov="ai" style="--c:#84cc16">✦ AI map</button>
+        <button class="tbtn on" data-ov="flows" style="--c:#00bceb">⇡ Data flows</button>
+        <button class="tbtn on" data-ov="labels">Labels</button>
+        <button class="tbtn" id="btn-wayfind" style="--c:#3b82f6">● Blue-dot wayfinding</button>
+        <button class="tbtn" id="btn-home" title="Campus view">⌂</button>
+      </div>
+      <div class="legend-spaces" id="legend-spaces"><span>Cisco Spaces · <b id="lg-metric">Occupancy</b></span><span>low</span><span class="grad"></span><span>high</span></div>
+    </div>
+    <div class="floorstrip" id="floorstrip"></div>
+    <div class="cascade" id="cascade"></div>
+    <div class="alerts" id="alerts"></div>
+    <div class="timer" id="timer"></div>
+    <div class="phone" id="phone"></div>
+    <div class="dock" id="dock"></div>
+  </main>
+
+  <aside id="right">
+    <div class="insp-head"><span class="crumb" id="insp-crumb">Inspector</span><span class="sp"></span><button class="cbtn" id="insp-back" title="Back">←</button><button class="cbtn" id="insp-close" title="Close">✕</button></div>
+    <div class="insp" id="insp"></div>
+  </aside>
+</div>
+
+<div class="modal" id="modal"><div class="modal-box"><div class="modal-head"><div><h2 id="modal-title"></h2><small id="modal-sub"></small></div><span class="sp"></span><button class="cbtn" id="modal-close">✕</button></div><div class="modal-body" id="modal-body"></div></div></div>
+
+<!-- data & engine (classic scripts) -->
+<script src="js/core/util.js?v=207073e495"></script>
+<script src="js/data/campus.js?v=44d2e0970f"></script>
+<script src="js/data/cisco.js?v=04b54a9416"></script>
+<script src="js/data/people.js?v=6532d42ab3"></script>
+<script src="js/data/ai.js?v=24cf37aae1"></script>
+<script src="js/data/dashboards.js?v=35b2c8993c"></script>
+<script src="js/data/narration-manifest.js?v=28c1cf904e"></script>
+<script src="js/data/usecases.js?v=a3be2c180c"></script>
+<script src="js/data/leaders.js?v=6ae7155887"></script>
+<script src="js/data/sources.js?v=c5d1316489"></script>
+<script src="js/data/stories.js?v=ba3ed43592"></script>
+<script src="js/data/story-manifest.js?v=651136f024"></script>
+<script src="js/data/scenarios/00-campus-tour.js?v=ecc69fa2ff"></script>
+<script src="js/data/scenarios/01-surgical-journey.js?v=92ddb2df2b"></script>
+<script src="js/data/scenarios/02-lost-med-cart.js?v=af4429fc41"></script>
+<script src="js/data/scenarios/03-equipment-hunt.js?v=21cd43fdee"></script>
+<script src="js/data/scenarios/04-code-blue.js?v=5ffe5b7402"></script>
+<script src="js/data/scenarios/05-dementia-wander.js?v=13eda6d131"></script>
+<script src="js/data/scenarios/06-duress-ucc.js?v=ac5d37d431"></script>
+<script src="js/data/scenarios/07-ucc-surge.js?v=da95e757c9"></script>
+<script src="js/data/scenarios/08-noreaster.js?v=e38f02d6ee"></script>
+<script src="js/data/scenarios/09-heat-wave.js?v=23f78c48c0"></script>
+<script src="js/data/scenarios/10-blizzard.js?v=fcefdc67b8"></script>
+<script src="js/data/scenarios/11-epic-slowdown.js?v=1038aa262a"></script>
+<script src="js/data/scenarios/12-iomt-pump.js?v=7f85893e2b"></script>
+<script src="js/data/scenarios/13-ai-guardrails.js?v=69194062d3"></script>
+<script src="js/data/scenarios/14-cold-chain.js?v=5a2b346405"></script>
+<script src="js/data/scenarios/15-or-humidity.js?v=b4f79bb039"></script>
+<script src="js/data/scenarios/16-meals-robots.js?v=41707a2a48"></script>
+<script src="js/data/scenarios/17-leadership-huddle.js?v=a4dd239e80"></script>
+<script src="js/data/scenarios/18-koch-infusion-day.js?v=d38c39f794"></script>
+<script src="js/engine/nav.js?v=127d9dd715"></script>
+<script src="js/engine/world.js?v=92dd4c4a9f"></script>
+<script src="js/engine/actors.js?v=9228f57f59"></script>
+<script src="js/engine/fx.js?v=8e0d73d765"></script>
+<script src="js/engine/weather.js?v=81dfd358b0"></script>
+<script src="js/engine/elevators.js?v=b20d1fc872"></script>
+<script src="js/engine/director.js?v=b322f2ad59"></script>
+<script src="js/engine/narrator.js?v=91400a057f"></script>
+<script src="js/ui/panels.js?v=f41c9838f6"></script>
+<script src="js/ui/inspector.js?v=f9986cc743"></script>
+<script src="js/ui/dock.js?v=1dd3ba0db8"></script>
+<script src="js/ui/dashboards.js?v=cf82b061a4"></script>
+<script src="js/ui/story.js?v=4d11292fcd"></script>
+<script src="js/ui/explore.js?v=3344fea2ca"></script>
+<script src="js/ui/app.js?v=8ccfe4a9be"></script>
+
+<script type="module">
+  import * as THREE from 'three';
+  import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+  import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+  import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+  import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+  import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+  import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+  import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
+  window.THREE = THREE;
+  window.THREE_ADDONS = { OrbitControls, CSS2DRenderer, CSS2DObject, EffectComposer, RenderPass, UnrealBloomPass, OutputPass, mergeGeometries };
+  window.MSK.boot();
+</script>
+<script>
+  // fallback if the CDN modules cannot load (offline)
+  setTimeout(function () { if (!window.THREE) { var m = document.getElementById('loader-msg'); if (m) m.innerHTML = 'Could not load three.js from the CDN. Check your internet connection and reload.'; } }, 12000);
+</script>
+</body>
+</html>
