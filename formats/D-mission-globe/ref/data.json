@@ -1,0 +1,5960 @@
+{
+ "h_": [
+  {
+   "id": "nyc",
+   "name": "Global Headquarters, 200 Park Avenue",
+   "city": "New York",
+   "country": "United States",
+   "lat": 40.7533,
+   "lon": -73.9767,
+   "role": "Corporate headquarters in the MetLife Building above Grand Central",
+   "hub": true
+  },
+  {
+   "id": "cary",
+   "name": "Global Technology Campus",
+   "city": "Cary, NC",
+   "country": "United States",
+   "lat": 35.8299,
+   "lon": -78.799,
+   "role": "Technology hub: engineering, software development and platform operations",
+   "hub": true
+  },
+  {
+   "id": "tampa",
+   "name": "Tampa Operations Center",
+   "city": "Tampa, FL",
+   "country": "United States",
+   "lat": 28.1298,
+   "lon": -82.375,
+   "role": "Operations for insurance, annuities, employee benefits and claims",
+   "hub": true
+  },
+  {
+   "id": "whippany",
+   "name": "MetLife Investment Management",
+   "city": "Whippany, NJ",
+   "country": "United States",
+   "lat": 40.823,
+   "lon": -74.4165,
+   "role": "Global headquarters of MetLife Investment Management",
+   "hub": true
+  },
+  {
+   "id": "tokyo",
+   "name": "MetLife Japan, Kioi Tower",
+   "city": "Tokyo",
+   "country": "Japan",
+   "lat": 35.6797,
+   "lon": 139.7367,
+   "role": "Largest Asia operation, retail life and annuities",
+   "hub": true
+  },
+  {
+   "id": "cdmx",
+   "name": "MetLife Mexico, Torre Manacar",
+   "city": "Mexico City",
+   "country": "Mexico",
+   "lat": 19.3713,
+   "lon": -99.1803,
+   "role": "Largest Latin America operation, digital partner distribution",
+   "hub": true
+  },
+  {
+   "id": "santiago",
+   "name": "MetLife Chile and ProVida, MUT",
+   "city": "Santiago",
+   "country": "Chile",
+   "lat": -33.4172,
+   "lon": -70.604,
+   "role": "Pensions, life and annuities",
+   "hub": true
+  },
+  {
+   "id": "brighton",
+   "name": "MetLife UK, Invicta House",
+   "city": "Brighton",
+   "country": "United Kingdom",
+   "lat": 50.8295,
+   "lon": -0.1395,
+   "role": "U.K. retirement and group protection",
+   "hub": true
+  },
+  {
+   "id": "london",
+   "name": "MetLife Investment Management London",
+   "city": "London",
+   "country": "United Kingdom",
+   "lat": 51.5108,
+   "lon": -0.0877,
+   "role": "Institutional asset management, EMEA"
+  },
+  {
+   "id": "dubai",
+   "name": "MetLife Gulf, New Century City Tower",
+   "city": "Dubai",
+   "country": "United Arab Emirates",
+   "lat": 25.253,
+   "lon": 55.333,
+   "role": "Largest EMEA operation, Gulf region",
+   "hub": true
+  },
+  {
+   "id": "noida",
+   "name": "Global Operations Support Center",
+   "city": "Noida",
+   "country": "India",
+   "lat": 28.5,
+   "lon": 77.418,
+   "role": "Global operations, service and technology delivery",
+   "hub": true
+  },
+  {
+   "id": "greenbush",
+   "name": "MetLife Data Center",
+   "city": "North Greenbush, NY",
+   "country": "United States",
+   "lat": 42.687,
+   "lon": -73.68,
+   "role": "Information systems and computer center"
+  },
+  {
+   "id": "seoul",
+   "name": "MetLife Korea",
+   "city": "Seoul",
+   "country": "South Korea",
+   "lat": 37.5665,
+   "lon": 126.978,
+   "role": "Asia retail life"
+  },
+  {
+   "id": "shanghai",
+   "name": "Sino-US MetLife",
+   "city": "Shanghai",
+   "country": "China",
+   "lat": 31.2304,
+   "lon": 121.4737,
+   "role": "High-growth market"
+  },
+  {
+   "id": "hongkong",
+   "name": "MetLife Hong Kong",
+   "city": "Hong Kong",
+   "country": "China",
+   "lat": 22.3193,
+   "lon": 114.1694,
+   "role": "Asia operations"
+  },
+  {
+   "id": "mumbai",
+   "name": "PNB MetLife",
+   "city": "Mumbai",
+   "country": "India",
+   "lat": 19.076,
+   "lon": 72.8777,
+   "role": "High-growth market, bancassurance"
+  },
+  {
+   "id": "sydney",
+   "name": "MetLife Australia",
+   "city": "Sydney",
+   "country": "Australia",
+   "lat": -33.8688,
+   "lon": 151.2093,
+   "role": "Group insurance"
+  },
+  {
+   "id": "saopaulo",
+   "name": "MetLife Brazil",
+   "city": "Sao Paulo",
+   "country": "Brazil",
+   "lat": -23.5505,
+   "lon": -46.6333,
+   "role": "High-growth market"
+  },
+  {
+   "id": "istanbul",
+   "name": "MetLife Turkey",
+   "city": "Istanbul",
+   "country": "Turkey",
+   "lat": 41.0082,
+   "lon": 28.9784,
+   "role": "EMEA growth market"
+  },
+  {
+   "id": "paris",
+   "name": "MetLife France",
+   "city": "Paris",
+   "country": "France",
+   "lat": 48.8566,
+   "lon": 2.3522,
+   "role": "EMEA operations"
+  },
+  {
+   "id": "warsaw",
+   "name": "MetLife Poland",
+   "city": "Warsaw",
+   "country": "Poland",
+   "lat": 52.2297,
+   "lon": 21.0122,
+   "role": "Central and Eastern Europe"
+  },
+  {
+   "id": "dublin",
+   "name": "MetLife Europe",
+   "city": "Dublin",
+   "country": "Ireland",
+   "lat": 53.3498,
+   "lon": -6.2603,
+   "role": "European regulated entity"
+  }
+ ],
+ "__": [
+  {
+   "id": "revenue",
+   "label": "Revenue and growth",
+   "color": "#a4ce4e"
+  },
+  {
+   "id": "customer",
+   "label": "Customer experience",
+   "color": "#5ec8f2"
+  },
+  {
+   "id": "operations",
+   "label": "Operations and cost",
+   "color": "#f2c14e"
+  },
+  {
+   "id": "risk",
+   "label": "Risk and compliance",
+   "color": "#c792ea"
+  },
+  {
+   "id": "security",
+   "label": "Security",
+   "color": "#ff6b6b"
+  },
+  {
+   "id": "it",
+   "label": "IT and network",
+   "color": "#049fd9"
+  }
+ ],
+ "av": [
+  {
+   "title": "A global promise",
+   "short": "Promise",
+   "text": "MetLife has been a trusted source of financial security since 1868. Today it serves customers in more than forty markets, from group benefits for most of the Fortune 500 to retirement income, asset management, and fast-growing markets like Mexico, Brazil and India.",
+   "cam": {
+    "lon": -40,
+    "lat": 25,
+    "dist": 3.6
+   },
+   "layer": "sites"
+  },
+  {
+   "title": "The New Frontier",
+   "short": "Strategy",
+   "text": "Under its New Frontier strategy, MetLife is committed to double-digit earnings growth, fifteen to seventeen percent return on equity, a one hundred basis point lower direct expense ratio, and more than twenty five billion dollars of free cash flow. Every one of those commitments runs on technology.",
+   "cam": {
+    "lon": 20,
+    "lat": 30,
+    "dist": 3.4
+   },
+   "layer": "sites"
+  },
+  {
+   "title": "The era of network operations is changing",
+   "short": "The change",
+   "text": "For decades, operations meant separate tools for network, cloud, applications and security, with alerts that arrive after customers are already affected. Each team sees a slice. Nobody sees the business.",
+   "cam": {
+    "lon": 80,
+    "lat": 20,
+    "dist": 3.2
+   },
+   "layer": "silos"
+  },
+  {
+   "title": "One fabric of data",
+   "short": "Data Fabric",
+   "text": "The Cisco Data Fabric, powered by Splunk, brings machine data from every domain, including network, internet, cloud, applications, identity and security, together with business events and external signals like weather and market calendars, into one federated, AI-ready picture.",
+   "cam": {
+    "lon": 140,
+    "lat": 25,
+    "dist": 3.3
+   },
+   "layer": "fabric"
+  },
+  {
+   "title": "A vantage point above it all",
+   "short": "Vantage point",
+   "text": "Cisco Cloud Control is the unified control plane for AgenticOps. Governed AI agents watch that picture continuously. They correlate weak signals across domains, forecast business impact, and propose or take action under policy, with humans approving in AI Canvas.",
+   "cam": {
+    "lon": -100,
+    "lat": 45,
+    "dist": 4.4
+   },
+   "layer": "agents"
+  },
+  {
+   "title": "From IT problems to business outcomes",
+   "short": "Outcomes",
+   "text": "In the ten missions ahead, each one at a real MetLife location, you will watch the same moment play out twice: once the traditional way, and once with AgenticOps. Use the timeline to move through time, make the call at each decision point, and see the business value protected.",
+   "cam": {
+    "lon": -60,
+    "lat": 20,
+    "dist": 3.5
+   },
+   "layer": "all"
+  }
+ ],
+ "ov": "Ten locations, ten business moments, and one pattern. In every mission the signal was there hours or days before the business would have felt it. What changed the outcome was a vantage point above every domain: the Cisco Data Fabric bringing the data together, and governed agents in Cisco Cloud Control acting under policy with people in control. That is how operations moves from fixing IT problems to protecting revenue, customers, compliance and cost. It is how technology helps MetLife deliver on the New Frontier.",
+ "sv": [
+  {
+   "xp": 0,
+   "name": "Observer"
+  },
+  {
+   "xp": 200,
+   "name": "Operator"
+  },
+  {
+   "xp": 600,
+   "name": "Correlator"
+  },
+  {
+   "xp": 1200,
+   "name": "Orchestrator"
+  },
+  {
+   "xp": 2000,
+   "name": "AgenticOps Architect"
+  }
+ ],
+ "cv": [
+  {
+   "id": "first-save",
+   "name": "First Save",
+   "desc": "Protect business value in your first mission."
+  },
+  {
+   "id": "perfect-call",
+   "name": "Perfect Call",
+   "desc": "Choose the best action on 3 missions."
+  },
+  {
+   "id": "americas",
+   "name": "Americas Guardian",
+   "desc": "Complete every Americas mission."
+  },
+  {
+   "id": "asia",
+   "name": "Asia Guardian",
+   "desc": "Complete every Asia mission."
+  },
+  {
+   "id": "emea",
+   "name": "EMEA Guardian",
+   "desc": "Complete every EMEA mission."
+  },
+  {
+   "id": "scholar",
+   "name": "Account Scholar",
+   "desc": "Score 100% on 3 Academy quizzes."
+  },
+  {
+   "id": "time-traveler",
+   "name": "Time Traveler",
+   "desc": "Compare both timelines in 5 missions."
+  },
+  {
+   "id": "architect",
+   "name": "Global Vantage",
+   "desc": "Complete all 10 missions."
+  }
+ ],
+ "lv": [
+  {
+   "id": "enrollment",
+   "siteId": "nyc",
+   "code": "M-01",
+   "title": "Open Enrollment Surge",
+   "subtitle": "New York | Group Benefits",
+   "region": "Americas",
+   "lenses": [
+    "revenue",
+    "customer",
+    "it"
+   ],
+   "pillar": "Extend leadership in Group Benefits",
+   "industryChallenge": "Open enrollment compresses a year of employee benefit decisions into a few weeks. Portal slowdowns turn into employer escalations, service-level credits and renewal risk.",
+   "metricName": "Enrollment completions per hour",
+   "unit": "h",
+   "range": [
+    -72,
+    24
+   ],
+   "agentDetect": -48,
+   "agentRemediate": -40,
+   "impact": 0,
+   "tradDetect": 1.5,
+   "tradRecover": 7,
+   "tradDip": 0.62,
+   "agentDip": 0.03,
+   "exposure": 14000000,
+   "exposureBasis": "Modeled: about 6 hours of degraded enrollment across large employer clients, plus service-level credits, surge contact-center cost and renewal risk on a small slice of group premium.",
+   "blast": [
+    "greenbush",
+    "cary",
+    "tampa",
+    "noida"
+   ],
+   "signals": [
+    "ThousandEyes synthetic logins",
+    "Splunk Observability APM traces",
+    "Identity provider logs",
+    "WAN egress telemetry",
+    "Prior enrollment seasons"
+   ],
+   "products": [
+    "Cisco Cloud Control",
+    "AI Canvas",
+    "Cisco Data Fabric (Splunk)",
+    "ThousandEyes",
+    "Splunk Observability Cloud",
+    "Splunk ITSI"
+   ],
+   "events": [
+    {
+     "t": -64,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Data Fabric",
+     "text": "Built a traffic model from the last three enrollment seasons. Forecast peak: 3.1x normal at the opening bell."
+    },
+    {
+     "t": -48,
+     "branch": "agentic",
+     "sev": "warn",
+     "source": "Capacity Agent",
+     "text": "Synthetic logins show p95 latency up 38% under rehearsal load. The forecast breaches the SLO at T-0."
+    },
+    {
+     "t": -46,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Correlation Agent",
+     "text": "Found a shared bottleneck: the auth token service plus WAN egress at the North Greenbush, New York data center."
+    },
+    {
+     "t": -42,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "AI Canvas",
+     "text": "Plan drafted: scale the auth tier, pre-warm the CDN, shift 30% of traffic to the secondary region. Policy check passed. Approved by an operator."
+    },
+    {
+     "t": -40,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "Remediation Agent",
+     "text": "Changes executed. Synthetic tests confirm 2.4x headroom."
+    },
+    {
+     "t": 2,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "Splunk ITSI",
+     "text": "Enrollment opens. Peak absorbed. Login p95 stays under 1.2s."
+    },
+    {
+     "t": -48,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "Siloed tools",
+     "text": "The same signals exist across four tools. Nobody correlates them."
+    },
+    {
+     "t": 0,
+     "branch": "traditional",
+     "sev": "crit",
+     "source": "Employee portal",
+     "text": "Enrollment opens. Login takes 9 seconds and sessions time out."
+    },
+    {
+     "t": 1.5,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "Service desk",
+     "text": "Ticket volume spikes 11x. A P1 bridge opens with six teams."
+    },
+    {
+     "t": 4,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "War room",
+     "text": "Root cause found after the fact: auth tier and egress saturation."
+    },
+    {
+     "t": 7,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "Account management",
+     "text": "Service restored. Employer escalations and SLA credit requests follow."
+    }
+   ],
+   "narration": {
+    "overview": "Mission one, New York. MetLife is the number one group benefits provider in the United States and serves more than eighty five percent of the Fortune 500. Open enrollment is when that leadership is tested in public. In this mission, the Cisco Data Fabric learns from past enrollment seasons, and agents in Cisco Cloud Control spot a capacity bottleneck two days before the portal opens. Instead of a war room and employer escalations, the busiest hour of the year looks like any other hour.",
+    "briefing": "We are at MetLife headquarters in New York. Millions of employees at client companies are about to choose their benefits in a narrow window. Every minute of a slow or failing portal shows up in an employer relationship, and those relationships drive group benefits revenue.",
+    "signal": "Forty eight hours before enrollment opens, the capacity agent runs a rehearsal using ThousandEyes synthetic logins. Login latency is creeping up. On its own that looks like noise. But the Data Fabric correlates it with identity logs and WAN egress telemetry from the MetLife data center in North Greenbush, New York, and the forecast says the service level breaks the moment enrollment opens.",
+    "traditional": "Here is the traditional path. Each tool held part of the story, but nobody connected the pieces. Enrollment opens, logins time out, the service desk is flooded, and six teams spend hours on a bridge call finding a root cause that was visible two days earlier. The employers notice first.",
+    "agentic": "Here is the AgenticOps path. The agent drafts a remediation plan in AI Canvas: scale the authentication tier, pre-warm the content delivery network, and shift part of the traffic to the secondary region. The plan is checked against change policy, an operator approves it, and synthetic tests confirm there is headroom. When enrollment opens, the peak is absorbed.",
+    "outcome": "The business outcome is not a faster ticket. It is a clean open enrollment, protected employer relationships, and group benefits revenue that is never put at risk. That is the conversation to have with the head of group benefits, not just with the network team."
+   },
+   "decision": {
+    "prompt": "The capacity agent forecasts an SLO breach at the opening bell, 48 hours out. What do you do?",
+    "options": [
+     {
+      "label": "Approve the agent plan in AI Canvas",
+      "detail": "Policy-checked scaling and traffic shift, verified by synthetic tests.",
+      "quality": "best",
+      "feedback": "Correct. A governed agent acts early with a human approval. The peak is absorbed and the business never sees it."
+     },
+     {
+      "label": "Open a ticket for the capacity team",
+      "detail": "Route it through the normal change queue for next week.",
+      "quality": "partial",
+      "feedback": "The ticket is still in the queue when enrollment opens. You get partial relief, but the opening hour is still degraded."
+     },
+     {
+      "label": "Wait and watch",
+      "detail": "Latency is still within SLO today.",
+      "quality": "poor",
+      "feedback": "The signal was real. Enrollment opens into a degraded portal and a six-team war room."
+     }
+    ]
+   },
+   "kpis": [
+    {
+     "label": "Login p95 at peak",
+     "traditional": "9.1 s",
+     "agentic": "1.2 s"
+    },
+    {
+     "label": "Enrollment completion rate",
+     "traditional": "71%",
+     "agentic": "98%"
+    },
+    {
+     "label": "P1 incidents",
+     "traditional": "1 (6-hour bridge)",
+     "agentic": "0"
+    },
+    {
+     "label": "Employer escalations",
+     "traditional": "40+",
+     "agentic": "None"
+    }
+   ],
+   "chain": {
+    "signal": "Synthetic login latency creeping up under rehearsal load",
+    "domain": "Identity, application and WAN, correlated in the Data Fabric",
+    "capability": "Capacity agent with a policy-governed change in Cisco Cloud Control",
+    "kpi": "Enrollment completion rate and employer satisfaction",
+    "outcome": "Group Benefits revenue and renewals protected"
+   },
+   "talkTrack": [
+    "Open enrollment is a revenue event, not an IT event. Start the conversation with the group benefits leaders.",
+    "The value is in correlation. ThousandEyes, application traces and identity logs each look fine alone. Together they predict the failure.",
+    "Agents act under policy with a human approval in AI Canvas. That answers the control question before it is asked."
+   ],
+   "discovery": [
+    "How did the last open enrollment go? How many employer escalations were tied to portal performance?",
+    "How far ahead do you rehearse peak load today, and who sees the results?",
+    "How many tools does it take to tell an identity bottleneck from a network bottleneck?"
+   ],
+   "quiz": [
+    {
+     "q": "Why does an enrollment portal slowdown matter to the CFO?",
+     "options": [
+      "It raises cloud spend",
+      "It threatens employer renewals and group benefits revenue",
+      "It slows down code releases"
+     ],
+     "answer": 1,
+     "why": "Group Benefits is a New Frontier priority. Employer experience drives renewals."
+    },
+    {
+     "q": "What let the agent predict the failure 48 hours early?",
+     "options": [
+      "A single latency alert",
+      "Data Fabric correlation of synthetic tests, identity and WAN telemetry with past seasons",
+      "A customer complaint"
+     ],
+     "answer": 1,
+     "why": "Correlating data across domains in the Data Fabric turns weak signals into a forecast."
+    }
+   ]
+  },
+  {
+   "id": "change",
+   "siteId": "cary",
+   "code": "M-02",
+   "title": "The Change That Never Broke",
+   "subtitle": "Cary, NC | Global Technology",
+   "region": "Americas",
+   "lenses": [
+    "operations",
+    "it",
+    "risk"
+   ],
+   "pillar": "Operate with efficiency (direct expense ratio)",
+   "industryChallenge": "Most major outages in financial services start with a change. Large insurers run thousands of changes a month across hybrid data centers and clouds, and manual reviews cannot see every dependency.",
+   "metricName": "Core policy platform availability",
+   "unit": "h",
+   "range": [
+    -30,
+    18
+   ],
+   "agentDetect": -20,
+   "agentRemediate": -14,
+   "impact": 0,
+   "tradDetect": 0.4,
+   "tradRecover": 4.5,
+   "tradDip": 0.85,
+   "agentDip": 0,
+   "exposure": 9600000,
+   "exposureBasis": "Modeled: about 4 hours of core platform outage at roughly $40K per minute, a common downtime benchmark for top-tier financial services firms.",
+   "blast": [
+    "greenbush",
+    "nyc",
+    "tampa",
+    "noida",
+    "tokyo",
+    "brighton"
+   ],
+   "signals": [
+    "Nexus Dashboard intent model",
+    "Config drift snapshots",
+    "ServiceNow change record",
+    "Application dependency map (Splunk Observability)",
+    "Isovalent eBPF flows"
+   ],
+   "products": [
+    "Cisco Cloud Control",
+    "Nexus Dashboard",
+    "Cisco Data Fabric (Splunk)",
+    "Splunk Observability Cloud",
+    "Isovalent",
+    "AI Canvas"
+   ],
+   "events": [
+    {
+     "t": -24,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Change Agent",
+     "text": "Saturday 02:00 change ingested: fabric firmware upgrade plus an ACL update on the leaf pair serving the policy admin cluster."
+    },
+    {
+     "t": -20,
+     "branch": "agentic",
+     "sev": "warn",
+     "source": "Nexus Dashboard",
+     "text": "Pre-change analysis: the new ACL plus existing config drift on leaf-14 would block the database replication path."
+    },
+    {
+     "t": -18,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Correlation Agent",
+     "text": "Blast radius: 41 applications, including claims intake, the agent portal and Japan batch jobs."
+    },
+    {
+     "t": -16,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "AI Canvas",
+     "text": "Corrected ACL and drift remediation proposed. Change owner and CAB approve the revision."
+    },
+    {
+     "t": -14,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "Change Agent",
+     "text": "Revised change verified in the digital twin. Risk score drops from 92 to 11."
+    },
+    {
+     "t": 0,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "Nexus Dashboard",
+     "text": "Change window: executed clean. Post-change assurance passed."
+    },
+    {
+     "t": -20,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "CAB",
+     "text": "Change approved on a spreadsheet review. The drift on leaf-14 is unknown."
+    },
+    {
+     "t": 0,
+     "branch": "traditional",
+     "sev": "crit",
+     "source": "Policy admin",
+     "text": "Replication path blocked. Core policy platform goes down globally."
+    },
+    {
+     "t": 0.4,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "NOC",
+     "text": "Hundreds of alarms from 12 tools. Rollback attempted and it fails."
+    },
+    {
+     "t": 3,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "War room",
+     "text": "Drift found by hand. ACL fixed."
+    },
+    {
+     "t": 4.5,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "Operations",
+     "text": "Recovered. Weekend claims and batch backlogs need overtime to clear."
+    }
+   ],
+   "narration": {
+    "overview": "Mission two, the global technology campus in Cary, North Carolina. Most major outages begin with a change. Here, a routine weekend firmware and access list change would have collided with undocumented configuration drift and taken down the core policy platform worldwide. The change agent in Cisco Cloud Control models the change against the real network before it runs, finds the collision, and proposes a corrected change. The outage never happens, and neither does the overtime.",
+    "briefing": "We are at the MetLife Global Technology Campus in Cary, North Carolina: three seven-story buildings above Lake Crabtree, home to the engineers who build and run MetLife platforms. Their changes land in hybrid infrastructure, including the MetLife data center in North Greenbush, New York, and cloud regions that support claims, policy administration and partner systems around the world. A single change can touch dozens of business services.",
+    "signal": "Twenty hours before the change window, the agent pulls the change record, the Nexus Dashboard intent model and the latest configuration snapshots into the Data Fabric. It finds that the new access list, combined with drift on one leaf switch, would block database replication for the policy administration cluster. It maps the blast radius: forty one applications.",
+    "traditional": "In the traditional path, the change board approves the change from a spreadsheet. Nobody knows about the drift. At two in the morning, replication stops and the policy platform goes down globally. Twelve tools raise hundreds of alarms, the rollback fails, and it takes hours to find the cause by hand.",
+    "agentic": "In the AgenticOps path, the agent presents its evidence in AI Canvas, along with a corrected access list and a drift fix. The change owner and the change board approve the revision. It is verified in a digital twin, the risk score drops from ninety two to eleven, and the change runs clean.",
+    "outcome": "This mission is about operating efficiency, which maps directly to the New Frontier commitment to lower the direct expense ratio by one hundred basis points. Fewer failed changes means fewer war rooms, less overtime, and engineers who spend their weekends building rather than recovering."
+   },
+   "decision": {
+    "prompt": "The change agent rates the Saturday change at risk 92 because of a hidden drift collision. What do you do?",
+    "options": [
+     {
+      "label": "Accept the agent-corrected change",
+      "detail": "Fix the drift, revise the ACL, verify in the digital twin.",
+      "quality": "best",
+      "feedback": "Correct. The change runs clean on schedule with no outage and no overtime."
+     },
+     {
+      "label": "Postpone the change a month",
+      "detail": "Avoid risk by doing nothing.",
+      "quality": "partial",
+      "feedback": "The outage is avoided, but the firmware security fix slips and the drift stays in the network."
+     },
+     {
+      "label": "Proceed as approved",
+      "detail": "CAB already signed off.",
+      "quality": "poor",
+      "feedback": "The collision happens and the core policy platform goes down for hours."
+     }
+    ]
+   },
+   "kpis": [
+    {
+     "label": "Failed change rate",
+     "traditional": "1 major outage",
+     "agentic": "0"
+    },
+    {
+     "label": "Core platform downtime",
+     "traditional": "4.5 hours",
+     "agentic": "0 minutes"
+    },
+    {
+     "label": "Engineer hours on recovery",
+     "traditional": "220",
+     "agentic": "6 (review)"
+    },
+    {
+     "label": "Change risk score",
+     "traditional": "Unknown",
+     "agentic": "92 reduced to 11"
+    }
+   ],
+   "chain": {
+    "signal": "A change record that conflicts with existing config drift",
+    "domain": "Data center fabric, application dependencies and change management",
+    "capability": "Pre-change verification and blast-radius mapping by a governed agent",
+    "kpi": "Change failure rate and core platform availability",
+    "outcome": "Lower direct expense ratio and a resilient policy platform"
+   },
+   "talkTrack": [
+    "Tie change risk to the direct expense ratio commitment. Every avoided war room is real cost.",
+    "The agent does not replace the change board. It gives the board evidence it never had.",
+    "Blast radius is the language of business owners: 41 applications, not one switch."
+   ],
+   "discovery": [
+    "What share of your major incidents last year started with a change?",
+    "How does your change board see configuration drift today?",
+    "How long does it take to map which business services depend on a given switch or cluster?"
+   ],
+   "quiz": [
+    {
+     "q": "Which New Frontier commitment does this mission support most directly?",
+     "options": [
+      "$1 trillion AUM",
+      "100 basis point reduction in direct expense ratio",
+      "Expand in China"
+     ],
+     "answer": 1,
+     "why": "Avoided outages and recovery effort lower operating cost."
+    },
+    {
+     "q": "What made the change risky?",
+     "options": [
+      "The firmware version",
+      "An ACL combined with undocumented drift",
+      "A cloud outage"
+     ],
+     "answer": 1,
+     "why": "Pre-change analysis against the real network state revealed the collision."
+    }
+   ]
+  },
+  {
+   "id": "hurricane",
+   "siteId": "tampa",
+   "code": "M-03",
+   "title": "Ahead of the Storm",
+   "subtitle": "Tampa, FL | Claims and Customer Care",
+   "region": "Americas",
+   "lenses": [
+    "customer",
+    "operations",
+    "risk"
+   ],
+   "pillar": "Trusted source of security (claims promise)",
+   "industryChallenge": "Catastrophes hit insurers twice: the event itself and the surge of claims and calls that follows. That surge often lands just as local sites lose power, carriers or staff.",
+   "metricName": "Claims and care service level",
+   "unit": "h",
+   "range": [
+    -96,
+    48
+   ],
+   "agentDetect": -72,
+   "agentRemediate": -54,
+   "impact": 0,
+   "tradDetect": 3,
+   "tradRecover": 30,
+   "tradDip": 0.55,
+   "agentDip": 0.06,
+   "exposure": 11000000,
+   "exposureBasis": "Modeled: two days of reduced claims and care capacity during a catastrophe surge, including call abandonment, claim cycle-time penalties, overtime and reputational impact.",
+   "blast": [
+    "noida",
+    "nyc"
+   ],
+   "signals": [
+    "NOAA storm track feed",
+    "Catalyst SD-WAN circuit health",
+    "Webex Contact Center queues",
+    "Meraki site telemetry",
+    "Claims intake forecasts"
+   ],
+   "products": [
+    "Cisco Cloud Control",
+    "Catalyst SD-WAN",
+    "Webex Contact Center",
+    "Meraki",
+    "ThousandEyes",
+    "Cisco Data Fabric (Splunk)"
+   ],
+   "events": [
+    {
+     "t": -84,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Data Fabric",
+     "text": "External signal joined: hurricane cone now covers Tampa Bay. Landfall forecast in about 84 hours."
+    },
+    {
+     "t": -72,
+     "branch": "agentic",
+     "sev": "warn",
+     "source": "Resilience Agent",
+     "text": "Risk found: two of three carrier circuits share a flood-zone central office. The forecast claims surge is 6x."
+    },
+    {
+     "t": -66,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "AI Canvas",
+     "text": "Playbook: activate 5G SD-WAN backup, pre-shift 40% of voice routing to Noida and remote agents, scale claims intake."
+    },
+    {
+     "t": -60,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Webex Contact Center",
+     "text": "Storm IVR and callback queues published. Remote agent headsets verified via Meraki."
+    },
+    {
+     "t": -54,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "Resilience Agent",
+     "text": "Failover rehearsed. Tampa can lose both shared circuits with no customer impact."
+    },
+    {
+     "t": 6,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "SD-WAN",
+     "text": "Landfall: two circuits drop. Traffic is already on 5G and the alternate carrier. Claims intake keeps up."
+    },
+    {
+     "t": -72,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "Facilities",
+     "text": "Storm prep focuses on buildings. Circuit diversity is assumed."
+    },
+    {
+     "t": 0,
+     "branch": "traditional",
+     "sev": "crit",
+     "source": "Tampa site",
+     "text": "Landfall: both shared circuits fail. Contact center voice goes down."
+    },
+    {
+     "t": 3,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "Customer care",
+     "text": "Call abandonment hits 48% as claims calls surge 6x."
+    },
+    {
+     "t": 12,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "Operations",
+     "text": "Manual reroute to other sites. Agents are not provisioned yet."
+    },
+    {
+     "t": 30,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "Claims",
+     "text": "Capacity restored. Claim backlog and regulator inquiries follow."
+    }
+   ],
+   "narration": {
+    "overview": "Mission three, Tampa. When a hurricane hits, MetLife customers need their insurer most, and that is exactly when local sites can lose carriers and power. In this mission, the resilience agent joins a public storm track with network and contact center telemetry three days before landfall. It finds that two carrier circuits share a flood zone, pre-stages failover, and moves voice capacity ahead of time. When the storm arrives, customers reach a person and claims keep moving.",
+    "briefing": "Tampa is a major claims and customer care hub. Customers in a disaster need fast claim intake and a human voice. Service level here is not just a metric. It is the moment MetLife keeps its promise.",
+    "signal": "Seventy two hours before landfall, the Data Fabric brings in the storm track and lines it up with the network. The agent finds that two of the three carrier circuits run through the same central office inside the flood zone. It also forecasts a six-fold surge in claims calls.",
+    "traditional": "In the traditional path, storm preparation focuses on buildings and generators. Circuit diversity is assumed. At landfall both shared circuits fail and contact center voice goes down. Nearly half of the callers hang up, and it takes more than a day to reroute and provision agents elsewhere.",
+    "agentic": "In the AgenticOps path, the agent proposes a playbook in AI Canvas. It activates 5G backup on SD-WAN, pre-shifts forty percent of voice routing to the Noida operations center and to remote agents, publishes storm call flows in Webex Contact Center, and rehearses the failover. At landfall, two circuits drop and nobody calling in notices.",
+    "outcome": "This is business resiliency made visible. Claims are paid quickly, care stays reachable, and regulators see an insurer that was ready. Resilience is easy to promise in a policy document. This shows how it actually gets delivered."
+   },
+   "decision": {
+    "prompt": "Landfall is 72 hours out, and two of the three circuits share a flood-zone central office. What do you do?",
+    "options": [
+     {
+      "label": "Run the agent resilience playbook",
+      "detail": "5G SD-WAN backup, pre-shift voice, scale claims intake, rehearse failover.",
+      "quality": "best",
+      "feedback": "Correct. Landfall becomes a non-event for customers and claims stay ahead of the surge."
+     },
+     {
+      "label": "Order a new diverse circuit",
+      "detail": "Carrier lead time is about 45 days.",
+      "quality": "partial",
+      "feedback": "Good long-term fix, but it will not arrive before this storm."
+     },
+     {
+      "label": "Rely on the existing DR plan",
+      "detail": "The plan was tested last year.",
+      "quality": "poor",
+      "feedback": "The plan assumed circuit diversity that does not exist. Voice goes down at landfall."
+     }
+    ]
+   },
+   "kpis": [
+    {
+     "label": "Call abandonment at peak",
+     "traditional": "48%",
+     "agentic": "6%"
+    },
+    {
+     "label": "Claim intake backlog",
+     "traditional": "3.5 days",
+     "agentic": "Same day"
+    },
+    {
+     "label": "Customer-facing outage",
+     "traditional": "30 hours degraded",
+     "agentic": "None"
+    },
+    {
+     "label": "Regulator inquiries",
+     "traditional": "Likely",
+     "agentic": "None"
+    }
+   ],
+   "chain": {
+    "signal": "Storm track combined with shared-path circuit risk",
+    "domain": "SD-WAN, carriers, contact center and claims systems",
+    "capability": "Resilience agent with a pre-staged failover and capacity playbook",
+    "kpi": "Call abandonment and claim cycle time",
+    "outcome": "Customer trust and regulatory standing in a crisis"
+   },
+   "talkTrack": [
+    "Put resilience in customer terms: can a policyholder reach a person after a disaster?",
+    "External data, like weather, joined with internal telemetry is a key strength of the Data Fabric.",
+    "Agents rehearse failover, so resilience is proven before the storm rather than hoped for during it."
+   ],
+   "discovery": [
+    "How do you validate true path diversity for critical sites today?",
+    "In your last catastrophe event, how quickly could you shift contact center capacity?",
+    "Which external signals, like weather or carrier status, are part of your operations picture now?"
+   ],
+   "quiz": [
+    {
+     "q": "What hidden risk did the agent find?",
+     "options": [
+      "A storm in Japan",
+      "Two circuits sharing a flood-zone central office",
+      "Too many agents on shift"
+     ],
+     "answer": 1,
+     "why": "Shared-path risk is invisible without correlating carrier data with the physical world."
+    },
+    {
+     "q": "What business outcome leads this story?",
+     "options": [
+      "Router uptime",
+      "Policyholders reach a person and claims keep moving",
+      "Lower bandwidth cost"
+     ],
+     "answer": 1,
+     "why": "The claims promise is the brand promise."
+    }
+   ]
+  },
+  {
+   "id": "japan",
+   "siteId": "tokyo",
+   "code": "M-04",
+   "title": "The Agent in the Living Room",
+   "subtitle": "Tokyo | MetLife Japan Retail and Annuities",
+   "region": "Asia",
+   "lenses": [
+    "revenue",
+    "customer",
+    "it"
+   ],
+   "pillar": "Capitalize on the retirement platform (U.S., U.K. and Japan)",
+   "industryChallenge": "In Japan, face-to-face sales channels remain critical. When a sales professional's tablet stalls in a customer's home, the sale and the trust stall with it. Earthquake readiness is also a constant requirement.",
+   "metricName": "Applications submitted from the field",
+   "unit": "h",
+   "range": [
+    -36,
+    24
+   ],
+   "agentDetect": -26,
+   "agentRemediate": -22,
+   "impact": 0,
+   "tradDetect": 2,
+   "tradRecover": 9,
+   "tradDip": 0.45,
+   "agentDip": 0.04,
+   "exposure": 7500000,
+   "exposureBasis": "Modeled: a business day of degraded field sales, with lost or delayed annuity and life applications across face-to-face channels.",
+   "blast": [
+    "seoul",
+    "hongkong"
+   ],
+   "signals": [
+    "ThousandEyes endpoint agents",
+    "ISP BGP and path data",
+    "Mobile app traces (Splunk RUM)",
+    "Meraki SM device posture",
+    "JMA seismic feed"
+   ],
+   "products": [
+    "Cisco Cloud Control",
+    "ThousandEyes",
+    "Splunk Observability Cloud (RUM)",
+    "Meraki",
+    "Cisco Secure Access",
+    "Cisco Data Fabric (Splunk)"
+   ],
+   "events": [
+    {
+     "t": -30,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "ThousandEyes",
+     "text": "Packet loss is rising on one consumer ISP path toward the sales app gateway in the Osaka region."
+    },
+    {
+     "t": -26,
+     "branch": "agentic",
+     "sev": "warn",
+     "source": "Experience Agent",
+     "text": "Correlated: 18% of field tablets on that ISP show slow e-signature steps. Monday is a quarter-end sales push."
+    },
+    {
+     "t": -24,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "AI Canvas",
+     "text": "Plan: steer the sales app through an alternate Secure Access edge, open an ISP case with evidence, and pre-cache forms."
+    },
+    {
+     "t": -22,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "Experience Agent",
+     "text": "Path change verified. E-signature step time back to baseline."
+    },
+    {
+     "t": -8,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Resilience Agent",
+     "text": "Seismic drill check: DR region verified, and the field app can fail over in under 60 seconds."
+    },
+    {
+     "t": 4,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "Splunk RUM",
+     "text": "Quarter-end push: application submissions 12% above plan."
+    },
+    {
+     "t": -26,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "Service desk",
+     "text": "A few complaints that the app is slow, logged as individual device issues."
+    },
+    {
+     "t": 0,
+     "branch": "traditional",
+     "sev": "crit",
+     "source": "Field sales",
+     "text": "Quarter-end push: e-signature fails in customer homes. Appointments end without a sale."
+    },
+    {
+     "t": 2,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "Sales leadership",
+     "text": "Regional managers escalate. IT suspects the app release."
+    },
+    {
+     "t": 6,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "Network team",
+     "text": "The ISP issue is finally isolated after the app is rolled back."
+    },
+    {
+     "t": 9,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "Sales",
+     "text": "Recovered. Lost appointments cannot be rescheduled before quarter close."
+    }
+   ],
+   "narration": {
+    "overview": "Mission four, Tokyo. Japan is MetLife's largest operation in Asia, and face-to-face sales are at the heart of it. A sales professional with a tablet in a customer's living room is MetLife's storefront. In this mission, ThousandEyes and real user monitoring pick up a degraded internet provider path a day before a quarter-end sales push. The agent steers traffic around it, so every appointment can end with a signed application.",
+    "briefing": "Tokyo anchors retail life and annuity sales in Japan, one of the three core retirement markets in MetLife's New Frontier strategy. Here the network extends into customers' homes over consumer internet connections that IT does not own.",
+    "signal": "Twenty six hours before the quarter-end push, the experience agent sees packet loss on one consumer provider path. It correlates that with real user monitoring from the sales app and finds that eighteen percent of field tablets are hitting slow e-signature steps. Individually these look like device complaints. Together they are a revenue risk.",
+    "traditional": "In the traditional path, each complaint is logged as a single device issue. On the big day, e-signatures fail in customers' homes. IT suspects the latest app release and rolls it back, which does not help. Hours later the internet provider is identified as the cause, but those appointments are gone.",
+    "agentic": "In the AgenticOps path, the agent proposes steering the sales app through an alternate Secure Access edge, pre-caching forms, and opening a provider case with ThousandEyes evidence. Once approved, the path change is verified within minutes. The resilience agent also checks earthquake failover readiness, because in Japan that is part of every day.",
+    "outcome": "The outcome is revenue and trust in the moments that matter most. Agents close more applications, customers have a smooth experience, and leadership sees technology working for the sales force. These are internet paths MetLife does not own, and they are still visible and manageable."
+   },
+   "decision": {
+    "prompt": "The experience agent links a consumer ISP problem to slow e-signatures on 18% of field tablets the day before quarter-end. What do you do?",
+    "options": [
+     {
+      "label": "Approve the steering and pre-cache plan",
+      "detail": "Alternate Secure Access edge, forms cached, ISP case opened with evidence.",
+      "quality": "best",
+      "feedback": "Correct. Field sales run at full speed and the quarter closes above plan."
+     },
+     {
+      "label": "Tell the sales force to use hotspots",
+      "detail": "Send a memo to 1,000s of agents.",
+      "quality": "partial",
+      "feedback": "Some appointments are saved. Many agents never see the memo, and customers notice the fumbling."
+     },
+     {
+      "label": "Roll back the latest app release",
+      "detail": "The release is the usual suspect.",
+      "quality": "poor",
+      "feedback": "Wrong root cause. The problem continues and the team loses a day."
+     }
+    ]
+   },
+   "kpis": [
+    {
+     "label": "E-signature success",
+     "traditional": "62%",
+     "agentic": "99.4%"
+    },
+    {
+     "label": "Applications vs plan",
+     "traditional": "-18%",
+     "agentic": "+12%"
+    },
+    {
+     "label": "Time to isolate root cause",
+     "traditional": "6 hours",
+     "agentic": "4 minutes"
+    },
+    {
+     "label": "Earthquake failover readiness",
+     "traditional": "Annual test",
+     "agentic": "Continuously verified"
+    }
+   ],
+   "chain": {
+    "signal": "Consumer ISP packet loss combined with slow app steps on tablets",
+    "domain": "Internet paths, secure edge, mobile app and devices",
+    "capability": "Experience agent using ThousandEyes and RUM, steering traffic under policy",
+    "kpi": "Applications submitted and e-signature success",
+    "outcome": "Retail and annuity revenue in a core retirement market"
+   },
+   "talkTrack": [
+    "The network now includes the internet and customers' homes. ThousandEyes makes that visible.",
+    "Lead with the sales leader: every failed e-signature is a lost appointment.",
+    "In Japan, resilience is part of everyday operations. Continuous failover verification earns credibility."
+   ],
+   "discovery": [
+    "How do you see the experience of field sales devices on networks you do not own?",
+    "When the sales app is slow, how long does it take to rule the network, the app or the device in or out?",
+    "How often is regional failover tested for customer-facing sales apps?"
+   ],
+   "quiz": [
+    {
+     "q": "Why is this a revenue story?",
+     "options": [
+      "Tablets are expensive",
+      "Failed e-signatures in customer homes mean lost sales",
+      "ISP costs rise"
+     ],
+     "answer": 1,
+     "why": "Face-to-face sales are critical in Japan, and the appointment is the sale."
+    },
+    {
+     "q": "Which capability saw a network MetLife does not own?",
+     "options": [
+      "ThousandEyes",
+      "A spreadsheet",
+      "Email alerts"
+     ],
+     "answer": 0,
+     "why": "ThousandEyes measures internet and ISP paths end to end."
+    }
+   ]
+  },
+  {
+   "id": "xcelerator",
+   "siteId": "cdmx",
+   "code": "M-05",
+   "title": "The Silent Conversion Leak",
+   "subtitle": "Mexico City | MetLife Xcelerator Partners",
+   "region": "Americas",
+   "lenses": [
+    "revenue",
+    "customer",
+    "it"
+   ],
+   "pillar": "Expand in high-growth international markets",
+   "industryChallenge": "Embedded insurance sold through digital banks, e-wallets and retailers depends on APIs. When quote latency creeps up, partners quietly hide the offer, and nobody calls to complain.",
+   "metricName": "Partner quote-to-bind conversion",
+   "unit": "h",
+   "range": [
+    -60,
+    36
+   ],
+   "agentDetect": -40,
+   "agentRemediate": -34,
+   "impact": 0,
+   "tradDetect": 20,
+   "tradRecover": 32,
+   "tradDip": 0.38,
+   "agentDip": 0.05,
+   "exposure": 5200000,
+   "exposureBasis": "Modeled: several days of lower conversion on embedded-insurance partner traffic, plus partner placement penalties on checkout pages.",
+   "blast": [
+    "saopaulo",
+    "santiago"
+   ],
+   "signals": [
+    "API gateway traces (Splunk APM)",
+    "Partner SLA contracts",
+    "ThousandEyes API tests",
+    "Cloud egress and DNS telemetry",
+    "Business events: quote, bind"
+   ],
+   "products": [
+    "Cisco Cloud Control",
+    "Splunk Observability Cloud",
+    "Splunk AppDynamics",
+    "ThousandEyes",
+    "Cisco Data Fabric (Splunk)",
+    "AI Canvas"
+   ],
+   "events": [
+    {
+     "t": -52,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Data Fabric",
+     "text": "Joined business events (quote, bind) with API traces for the top 20 partners."
+    },
+    {
+     "t": -40,
+     "branch": "agentic",
+     "sev": "warn",
+     "source": "Revenue Agent",
+     "text": "Quote API p99 for one e-wallet partner rose from 380 ms to 1.9 s. Their checkout times out at 2 s, and conversion is starting to slip."
+    },
+    {
+     "t": -38,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Correlation Agent",
+     "text": "Root cause: DNS resolution in a new cloud region plus a cold cache on the rating service."
+    },
+    {
+     "t": -36,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "AI Canvas",
+     "text": "Plan: pin the resolver, warm the rating cache, add a latency SLO alert tied to partner contract terms."
+    },
+    {
+     "t": -34,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "Revenue Agent",
+     "text": "p99 back to 410 ms. Partner conversion recovers before the weekend promotion."
+    },
+    {
+     "t": 6,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "Business KPI",
+     "text": "Weekend promotion: binds are 22% above forecast."
+    },
+    {
+     "t": -40,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "Monitoring",
+     "text": "All APIs return HTTP 200. The dashboards are green."
+    },
+    {
+     "t": 0,
+     "branch": "traditional",
+     "sev": "crit",
+     "source": "Partner checkout",
+     "text": "Weekend promotion: the partner checkout times out and quietly drops the insurance offer."
+    },
+    {
+     "t": 20,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "Partner manager",
+     "text": "The partner asks why sales fell. IT sees no outage."
+    },
+    {
+     "t": 28,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "Engineering",
+     "text": "Latency root cause found after a manual trace review."
+    },
+    {
+     "t": 32,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "Business",
+     "text": "Fixed. The promotion window is gone and placement is under review."
+    }
+   ],
+   "narration": {
+    "overview": "Mission five, Mexico City. MetLife Xcelerator connects people with insurance through digital banks, e-wallets, e-commerce platforms and retailers. Those partnerships run on APIs, and APIs fail quietly. In this mission, the revenue agent links business events with API traces and sees that a partner's checkout is about to time out on MetLife's quote, even though every dashboard is green. It fixes the cause before a weekend promotion, and conversion grows instead of leaking away.",
+    "briefing": "Mexico is MetLife's largest market in Latin America, and high-growth international markets are a core New Frontier priority. Here growth is driven by digital partner distribution, where the customer never visits MetLife at all.",
+    "signal": "Forty hours before a partner's weekend promotion, the revenue agent sees quote latency for one e-wallet partner rise from under four hundred milliseconds to almost two seconds. That partner's checkout gives up at two seconds. The API is still returning success codes, so traditional monitoring is green. The business events tell a different story: conversion is starting to slip.",
+    "traditional": "In the traditional path, the dashboards stay green. During the promotion, the partner's checkout silently drops the insurance offer. Nobody raises an incident, because nothing is technically down. The first signal is a partner manager asking why sales fell, almost a day later.",
+    "agentic": "In the AgenticOps path, the correlation agent traces the latency to name resolution in a new cloud region and a cold cache on the rating service. It proposes pinning the resolver, warming the cache, and adding a service level alert tied to the partner contract. Latency recovers before the promotion begins.",
+    "outcome": "This is how observability becomes revenue intelligence. The agent watches business outcomes, not just uptime. MetLife keeps its place on partner checkout pages, which is how embedded insurance grows in high-growth markets."
+   },
+   "decision": {
+    "prompt": "All APIs return success, but partner quote latency is close to the partner's checkout timeout. What do you do?",
+    "options": [
+     {
+      "label": "Let the revenue agent fix it and add a contract-tied SLO",
+      "detail": "Pin the resolver, warm the cache, alert on partner terms.",
+      "quality": "best",
+      "feedback": "Correct. Conversion recovers and the promotion outperforms."
+     },
+     {
+      "label": "Raise the alert threshold",
+      "detail": "Reduce noise. Nothing is down.",
+      "quality": "poor",
+      "feedback": "The leak continues unseen through the promotion."
+     },
+     {
+      "label": "Ask the partner to extend their timeout",
+      "detail": "Open a partner negotiation.",
+      "quality": "partial",
+      "feedback": "The partner may agree next quarter, but this weekend's revenue still leaks."
+     }
+    ]
+   },
+   "kpis": [
+    {
+     "label": "Quote API p99",
+     "traditional": "1.9 s",
+     "agentic": "410 ms"
+    },
+    {
+     "label": "Quote-to-bind conversion",
+     "traditional": "-38%",
+     "agentic": "+22% vs forecast"
+    },
+    {
+     "label": "Time to detect",
+     "traditional": "20 hours, via the partner",
+     "agentic": "40 hours before impact"
+    },
+    {
+     "label": "Partner placement",
+     "traditional": "At risk",
+     "agentic": "Expanded"
+    }
+   ],
+   "chain": {
+    "signal": "API latency approaching a partner timeout while returning success codes",
+    "domain": "Cloud, DNS, APIs and business events",
+    "capability": "Revenue agent correlating traces with quote and bind events",
+    "kpi": "Partner conversion and binds",
+    "outcome": "Growth in high-growth international markets"
+   },
+   "talkTrack": [
+    "Green dashboards can hide red revenue. Combining business events with telemetry is what makes the difference.",
+    "Talk to the digital distribution leader about partner placement and conversion, not about latency.",
+    "Contract-aware service levels show IT understands how the business actually makes money."
+   ],
+   "discovery": [
+    "How do you learn about partner API problems today: from monitoring or from the partner?",
+    "Are partner contract terms, like timeouts, reflected in your alerting?",
+    "Can you see conversion and latency on the same screen?"
+   ],
+   "quiz": [
+    {
+     "q": "Why did traditional monitoring miss this?",
+     "options": [
+      "The API was returning success codes while getting slower",
+      "The servers were down",
+      "The partner was offline"
+     ],
+     "answer": 0,
+     "why": "Latency close to a partner timeout is invisible to up-or-down checks."
+    },
+    {
+     "q": "Who is the best executive audience for this story?",
+     "options": [
+      "Head of digital distribution and partnerships",
+      "Facilities",
+      "Procurement"
+     ],
+     "answer": 0,
+     "why": "Partner conversion is their number."
+    }
+   ]
+  },
+  {
+   "id": "pensions",
+   "siteId": "santiago",
+   "code": "M-06",
+   "title": "Pension Day",
+   "subtitle": "Santiago | Pensions and Annuities",
+   "region": "Americas",
+   "lenses": [
+    "risk",
+    "operations",
+    "customer"
+   ],
+   "pillar": "Retirement and income solutions",
+   "industryChallenge": "Pension payments and regulatory reports have hard deadlines. A batch overrun means retirees paid late, regulators asking questions, and expensive manual fixes.",
+   "metricName": "On-time pension payment readiness",
+   "unit": "h",
+   "range": [
+    -48,
+    24
+   ],
+   "agentDetect": -30,
+   "agentRemediate": -24,
+   "impact": 0,
+   "tradDetect": 1,
+   "tradRecover": 14,
+   "tradDip": 0.5,
+   "agentDip": 0.02,
+   "exposure": 3800000,
+   "exposureBasis": "Modeled: late payment remediation, regulatory reporting penalties, manual reprocessing and service costs for a monthly pension cycle.",
+   "blast": [
+    "cdmx"
+   ],
+   "signals": [
+    "Batch scheduler telemetry",
+    "Storage and database latency",
+    "Bank file transfer logs",
+    "Regulatory reporting calendar",
+    "Historical run times"
+   ],
+   "products": [
+    "Cisco Cloud Control",
+    "Splunk ITSI",
+    "Splunk AppDynamics",
+    "Cisco Data Fabric (Splunk)",
+    "Nexus Dashboard",
+    "AI Canvas"
+   ],
+   "events": [
+    {
+     "t": -40,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Data Fabric",
+     "text": "Learned normal run times for the monthly pension batch chain, 22 jobs."
+    },
+    {
+     "t": -30,
+     "branch": "agentic",
+     "sev": "warn",
+     "source": "Batch Agent",
+     "text": "Rehearsal shows job 14 running 2.7x slower. Forecast: bank file misses the cutoff by 3 hours."
+    },
+    {
+     "t": -28,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Correlation Agent",
+     "text": "Cause: a storage tier rebalance overlaps the batch window, and indexes have grown 30% on retiree records."
+    },
+    {
+     "t": -26,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "AI Canvas",
+     "text": "Plan: reschedule the rebalance, rebuild indexes, add parallel lanes to job 14. Operations approves."
+    },
+    {
+     "t": -24,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "Batch Agent",
+     "text": "Forecast now finishes 2 hours ahead of the bank cutoff."
+    },
+    {
+     "t": 1,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "Payments",
+     "text": "Pension Day: every payment file delivered on time, and the regulatory report filed."
+    },
+    {
+     "t": -30,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "Scheduler",
+     "text": "Jobs are green. Run times are not compared to history."
+    },
+    {
+     "t": 0,
+     "branch": "traditional",
+     "sev": "crit",
+     "source": "Payments",
+     "text": "The bank cutoff is missed. Retiree payments are delayed."
+    },
+    {
+     "t": 1,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "Customer care",
+     "text": "Retirees call about missing payments."
+    },
+    {
+     "t": 6,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "Compliance",
+     "text": "The regulatory report is late. The regulator requests an explanation."
+    },
+    {
+     "t": 14,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "Operations",
+     "text": "Payments released. Remediation and a formal response are required."
+    }
+   ],
+   "narration": {
+    "overview": "Mission six, Santiago. Pension payments and regulatory filings have deadlines that do not move. In this mission, a batch agent rehearses the monthly pension run and sees one job slowing down a full day ahead. It traces the cause to a storage rebalance and index growth, and the operations team fixes it in time. Every retiree is paid on time and the regulator gets its report.",
+    "briefing": "MetLife operates life, annuities and pensions in Chile. Retirees count on payments arriving on a known day. Regulators count on reports arriving on a known day. Either one missing becomes a reputational event.",
+    "signal": "Thirty hours before the bank cutoff, the batch agent compares tonight's rehearsal with history. One job in a chain of twenty two is running almost three times slower. The forecast says the payment file will miss the bank cutoff by three hours. Every job in the scheduler still shows green.",
+    "traditional": "In the traditional path, the scheduler shows green because jobs are running, just slowly. The bank cutoff is missed. Retirees call asking where their money is, the regulatory report is late, and the team spends the next week explaining and remediating.",
+    "agentic": "In the AgenticOps path, the correlation agent links the slowdown to a storage rebalance that overlaps the batch window, along with index growth on retiree records. It proposes moving the rebalance, rebuilding the indexes and adding parallel processing. With operations approval, the forecast finishes two hours early.",
+    "outcome": "The outcome is a promise kept to retirees and a clean record with regulators. Predictive operations protects the retirement business, which is one of the pillars of MetLife's strategy."
+   },
+   "decision": {
+    "prompt": "The batch agent forecasts a 3-hour miss on the pension bank cutoff. Every job still shows green. What do you do?",
+    "options": [
+     {
+      "label": "Approve the agent remediation plan",
+      "detail": "Move the storage rebalance, rebuild indexes, add parallel lanes.",
+      "quality": "best",
+      "feedback": "Correct. Payments go out on time and the regulator receives the report."
+     },
+     {
+      "label": "Have someone watch the batch overnight",
+      "detail": "Manual vigilance.",
+      "quality": "partial",
+      "feedback": "They see the slowdown at 2 AM with no time left to fix the cause. You end up with a partial miss."
+     },
+     {
+      "label": "Trust the scheduler",
+      "detail": "Everything is green.",
+      "quality": "poor",
+      "feedback": "Green meant running, not on time. Retirees are paid late."
+     }
+    ]
+   },
+   "kpis": [
+    {
+     "label": "Payments on time",
+     "traditional": "0% at cutoff",
+     "agentic": "100%"
+    },
+    {
+     "label": "Regulatory filing",
+     "traditional": "Late",
+     "agentic": "On time"
+    },
+    {
+     "label": "Retiree calls",
+     "traditional": "12,000+",
+     "agentic": "Baseline"
+    },
+    {
+     "label": "Remediation effort",
+     "traditional": "2 weeks",
+     "agentic": "1 approval"
+    }
+   ],
+   "chain": {
+    "signal": "A batch job running slower than its historical baseline",
+    "domain": "Batch scheduling, storage, database and bank file transfer",
+    "capability": "Batch agent forecasting the deadline and remediating under approval",
+    "kpi": "On-time payment and filing rate",
+    "outcome": "Retiree trust and regulatory standing"
+   },
+   "talkTrack": [
+    "A deadline is a business outcome. Show how forecasting it changes the conversation.",
+    "Green does not mean on time. Agents compare runs against history and against the calendar.",
+    "This story is for the retirement business and compliance, not only infrastructure."
+   ],
+   "discovery": [
+    "Which batch processes have hard external deadlines, like bank or regulator cutoffs?",
+    "How do you know early that a batch will finish late?",
+    "Who coordinates storage and infrastructure maintenance with business calendars?"
+   ],
+   "quiz": [
+    {
+     "q": "What did \"green\" mean in the scheduler?",
+     "options": [
+      "On time",
+      "Running, but not necessarily on time",
+      "Finished"
+     ],
+     "answer": 1,
+     "why": "The agent judges progress against history and deadlines, not just status."
+    },
+    {
+     "q": "What caused the slowdown?",
+     "options": [
+      "A cyberattack",
+      "A storage rebalance overlapping the batch window plus index growth",
+      "Holiday traffic"
+     ],
+     "answer": 1,
+     "why": "Correlating across domains turned a vague slowdown into a fixable cause."
+    }
+   ]
+  },
+  {
+   "id": "resilience",
+   "siteId": "brighton",
+   "code": "M-07",
+   "title": "Inside the Impact Tolerance",
+   "subtitle": "Brighton | U.K. Retirement and Group Protection",
+   "region": "EMEA",
+   "lenses": [
+    "risk",
+    "customer",
+    "operations"
+   ],
+   "pillar": "Capitalize on the retirement platform (U.K.)",
+   "industryChallenge": "U.K. operational resilience rules require firms to stay within impact tolerances for important business services, and EU DORA raises the bar on ICT third-party risk. Proving resilience is now as important as having it.",
+   "metricName": "Important business service health",
+   "unit": "h",
+   "range": [
+    -30,
+    30
+   ],
+   "agentDetect": -18,
+   "agentRemediate": -12,
+   "impact": 0,
+   "tradDetect": 2,
+   "tradRecover": 20,
+   "tradDip": 0.6,
+   "agentDip": 0.03,
+   "exposure": 8400000,
+   "exposureBasis": "Modeled: breach of an impact tolerance for an important business service, with remediation, regulatory engagement, possible enforcement exposure and customer redress.",
+   "blast": [
+    "london",
+    "dublin",
+    "paris",
+    "warsaw"
+   ],
+   "signals": [
+    "Third-party SaaS status and ThousandEyes tests",
+    "Important business service map",
+    "Splunk ITSI service health",
+    "Cisco Secure Firewall logs",
+    "Impact tolerance register"
+   ],
+   "products": [
+    "Cisco Cloud Control",
+    "Splunk ITSI",
+    "ThousandEyes",
+    "Cisco Data Fabric (Splunk)",
+    "Cisco Secure Firewall",
+    "AI Canvas"
+   ],
+   "events": [
+    {
+     "t": -24,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Data Fabric",
+     "text": "Important business service \"Pay retirement income\" mapped end to end, including 3 ICT third parties."
+    },
+    {
+     "t": -18,
+     "branch": "agentic",
+     "sev": "warn",
+     "source": "Resilience Agent",
+     "text": "ThousandEyes sees degradation at a third-party identity verification provider. The trend points to an outage within 24 hours."
+    },
+    {
+     "t": -16,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Correlation Agent",
+     "text": "Impact: income payments to new retirees would stall, breaching the 24-hour tolerance."
+    },
+    {
+     "t": -14,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "AI Canvas",
+     "text": "Plan: activate the contracted secondary provider, adjust firewall egress, notify the service owner."
+    },
+    {
+     "t": -12,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "Resilience Agent",
+     "text": "Secondary path live. Evidence pack generated for the DORA and operational resilience register."
+    },
+    {
+     "t": 3,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "Splunk ITSI",
+     "text": "Primary provider fails. The service stays well within tolerance."
+    },
+    {
+     "t": -18,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "Vendor management",
+     "text": "Provider status page shows \"minor degradation\"."
+    },
+    {
+     "t": 0,
+     "branch": "traditional",
+     "sev": "crit",
+     "source": "Retirement service",
+     "text": "Provider outage: new retiree income payments stall."
+    },
+    {
+     "t": 2,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "Service owner",
+     "text": "Manual workaround attempted. The backlog grows."
+    },
+    {
+     "t": 18,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "Risk",
+     "text": "Impact tolerance at risk of breach. Regulator notification is prepared."
+    },
+    {
+     "t": 20,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "Operations",
+     "text": "Secondary provider activated by hand. Regulatory scrutiny follows."
+    }
+   ],
+   "narration": {
+    "overview": "Mission seven, Brighton, England. U.K. regulators expect firms to stay within impact tolerances for important business services, and DORA puts ICT third-party risk under a microscope across Europe. In this mission, the resilience agent spots a degrading third-party identity provider before it fails and activates a contracted secondary path. It also generates the evidence pack automatically. The service stays within tolerance, and the proof is ready before anyone asks.",
+    "briefing": "Invicta House in Brighton is the registered office of MetLife's U.K. business, one of three core retirement markets in the New Frontier strategy. Paying retirement income is an important business service with a defined impact tolerance.",
+    "signal": "Eighteen hours before the failure, ThousandEyes tests against a third-party identity verification provider show a steady decline. The provider's status page says minor degradation. The agent uses the important business service map to work out what that means: new retiree income payments would stall and breach the tolerance.",
+    "traditional": "In the traditional path, vendor management sees a minor degradation notice and moves on. When the provider fails, payments to new retirees stop. Teams try manual workarounds, the backlog grows, and risk teams start drafting a regulator notification.",
+    "agentic": "In the AgenticOps path, the agent proposes activating the contracted secondary provider, adjusts firewall egress, and notifies the service owner. Once approved, the secondary path goes live twelve hours before the failure, and a regulator-ready evidence pack is created automatically.",
+    "outcome": "This is resilience you can prove. Customers get paid, the impact tolerance is never at risk, and the board and regulators see evidence of control over third-party risk. Compliance becomes a by-product of operating well."
+   },
+   "decision": {
+    "prompt": "A third-party provider behind an important business service is degrading. Its status page says \"minor\". What do you do?",
+    "options": [
+     {
+      "label": "Activate the secondary provider path now",
+      "detail": "Agent-orchestrated with an evidence pack for the resilience register.",
+      "quality": "best",
+      "feedback": "Correct. You stay within tolerance and the regulator evidence is already done."
+     },
+     {
+      "label": "Email the vendor for an ETA",
+      "detail": "Follow the vendor process.",
+      "quality": "partial",
+      "feedback": "The vendor replies after the outage begins. The secondary is activated late."
+     },
+     {
+      "label": "Trust the status page",
+      "detail": "Minor degradation only.",
+      "quality": "poor",
+      "feedback": "The provider fails and the impact tolerance is nearly breached."
+     }
+    ]
+   },
+   "kpis": [
+    {
+     "label": "Time outside tolerance",
+     "traditional": "Near breach (18 hours)",
+     "agentic": "0"
+    },
+    {
+     "label": "New retiree payments delayed",
+     "traditional": "3,400",
+     "agentic": "0"
+    },
+    {
+     "label": "Evidence pack effort",
+     "traditional": "3 weeks, manual",
+     "agentic": "Automatic"
+    },
+    {
+     "label": "Regulatory notification",
+     "traditional": "Prepared",
+     "agentic": "Not required"
+    }
+   ],
+   "chain": {
+    "signal": "Third-party provider degradation seen from outside by ThousandEyes",
+    "domain": "Third-party SaaS, firewall egress and service map",
+    "capability": "Resilience agent switching to a secondary path and creating evidence",
+    "kpi": "Time within impact tolerance",
+    "outcome": "Regulatory standing and customer trust in the U.K."
+   },
+   "talkTrack": [
+    "Operational resilience and DORA turn observability into a board-level control.",
+    "Map telemetry to important business services. That is the language risk teams use.",
+    "Evidence generated as a by-product is a powerful efficiency story for compliance."
+   ],
+   "discovery": [
+    "How are important business services mapped to the underlying technology and third parties today?",
+    "How long does it take to produce operational resilience evidence for a regulator?",
+    "How do you see a third-party provider degrading before its status page admits it?"
+   ],
+   "quiz": [
+    {
+     "q": "What do U.K. regulators expect firms to stay within?",
+     "options": [
+      "Budgets",
+      "Impact tolerances for important business services",
+      "Bandwidth caps"
+     ],
+     "answer": 1,
+     "why": "The U.K. operational resilience framework is built on impact tolerances."
+    },
+    {
+     "q": "What does DORA put extra weight on?",
+     "options": [
+      "ICT third-party risk and digital resilience",
+      "Marketing",
+      "Office space"
+     ],
+     "answer": 0,
+     "why": "DORA requires financial entities to manage ICT third-party risk."
+    }
+   ]
+  },
+  {
+   "id": "ransomware",
+   "siteId": "dubai",
+   "code": "M-08",
+   "title": "Break the Kill Chain",
+   "subtitle": "Dubai | MetLife Gulf",
+   "region": "EMEA",
+   "lenses": [
+    "security",
+    "risk",
+    "customer"
+   ],
+   "pillar": "Trusted brand and financial strength",
+   "industryChallenge": "Insurers hold large amounts of sensitive personal and health data, which makes them a prime ransomware target. Industry studies put the average financial-sector breach at about $6M before any reputational impact.",
+   "metricName": "Business systems integrity",
+   "unit": "m",
+   "range": [
+    -120,
+    90
+   ],
+   "agentDetect": -95,
+   "agentRemediate": -80,
+   "impact": 0,
+   "tradDetect": 25,
+   "tradRecover": 85,
+   "tradDip": 0.8,
+   "agentDip": 0.02,
+   "exposure": 6100000,
+   "exposureBasis": "Modeled on public industry benchmarks for the average cost of a financial-sector data breach (about $6M), before brand impact.",
+   "blast": [
+    "istanbul",
+    "mumbai",
+    "london"
+   ],
+   "signals": [
+    "Email security verdicts",
+    "Duo authentication logs",
+    "Cisco XDR endpoint telemetry",
+    "Secure Firewall and DNS",
+    "Splunk Enterprise Security notables"
+   ],
+   "products": [
+    "Cisco Cloud Control",
+    "Cisco XDR",
+    "Splunk Enterprise Security",
+    "Splunk SOAR",
+    "Cisco Duo",
+    "Cisco Hypershield",
+    "Cisco Data Fabric (Splunk)"
+   ],
+   "events": [
+    {
+     "t": -110,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Email Security",
+     "text": "A targeted lure is sent to 40 claims staff. 2 users click."
+    },
+    {
+     "t": -95,
+     "branch": "agentic",
+     "sev": "warn",
+     "source": "Security Agent",
+     "text": "Correlated in Splunk ES: an impossible-travel Duo push plus a new device for one clicker, then unusual SMB enumeration."
+    },
+    {
+     "t": -90,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Cisco XDR",
+     "text": "Attack chain assembled: initial access, then credential use, then lateral discovery. Confidence: high."
+    },
+    {
+     "t": -85,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Splunk SOAR",
+     "text": "Playbook: revoke sessions, force Duo re-enrollment, isolate 2 endpoints, Hypershield segment rule applied."
+    },
+    {
+     "t": -80,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "Security Agent",
+     "text": "Contained at the identity stage. No encryption. No data exfiltrated."
+    },
+    {
+     "t": 10,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "SOC",
+     "text": "Post-incident report auto-drafted for compliance and the regional regulator."
+    },
+    {
+     "t": -95,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "SOC queue",
+     "text": "1 of 4,000 daily alerts. It is triaged tomorrow."
+    },
+    {
+     "t": 0,
+     "branch": "traditional",
+     "sev": "crit",
+     "source": "File servers",
+     "text": "Ransomware detonates. Claims and policy file shares are encrypted."
+    },
+    {
+     "t": 25,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "Incident response",
+     "text": "Network segments shut down. The region goes offline."
+    },
+    {
+     "t": 60,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "Legal",
+     "text": "Possible data exfiltration. Breach notification is assessed."
+    },
+    {
+     "t": 85,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "Recovery",
+     "text": "Restores begin from backup. Recovery will take days."
+    }
+   ],
+   "narration": {
+    "overview": "Mission eight, Dubai. Insurers hold sensitive personal and health data, which makes them a prime ransomware target. In this mission, a targeted phishing lure leads to a stolen session and quiet lateral discovery. On their own, each signal is one of thousands. The security agent correlates email, identity, endpoint and network data, and Splunk SOAR contains the attack at the identity stage, more than an hour before anything could be encrypted.",
+    "briefing": "Dubai anchors MetLife Gulf, part of MetLife's largest operations in EMEA. Claims and policy data here is exactly what attackers want. The business outcome is a breach that never happens.",
+    "signal": "Ninety five minutes before detonation, the agent connects three weak signals: a click on a targeted lure, an impossible-travel Duo push from a new device, and unusual file share enumeration. Splunk Enterprise Security and Cisco XDR assemble them into one attack chain with high confidence.",
+    "traditional": "In the traditional path, the alert is one of four thousand that day and waits in a queue. The ransomware detonates, claims and policy shares are encrypted, and network segments are shut down. Legal starts assessing breach notification, and recovery takes days.",
+    "agentic": "In the AgenticOps path, a Splunk SOAR playbook runs within policy. It revokes sessions, forces Duo re-enrollment, isolates two endpoints, and Hypershield applies a segmentation rule. The attack is contained at the identity stage. Nothing is encrypted, no data leaves, and the post-incident report drafts itself.",
+    "outcome": "The outcome is a breach that never happened, so there is no headline, no notification and no lost customer trust. For MetLife, security is part of the brand promise of financial strength and being a trusted source of security."
+   },
+   "decision": {
+    "prompt": "Phishing click, impossible-travel MFA and SMB enumeration have been correlated into one chain. What do you do?",
+    "options": [
+     {
+      "label": "Run the SOAR containment playbook",
+      "detail": "Revoke sessions, Duo re-enroll, isolate endpoints, Hypershield segment.",
+      "quality": "best",
+      "feedback": "Correct. The attack is contained at the identity stage with nothing encrypted."
+     },
+     {
+      "label": "Escalate to tier 2 for review",
+      "detail": "Human triage in the morning shift.",
+      "quality": "partial",
+      "feedback": "Tier 2 confirms the attack just before detonation. Some shares are encrypted anyway."
+     },
+     {
+      "label": "Close it as a false positive",
+      "detail": "Duo anomalies happen all the time.",
+      "quality": "poor",
+      "feedback": "The ransomware detonates and the region goes offline."
+     }
+    ]
+   },
+   "kpis": [
+    {
+     "label": "Mean time to contain",
+     "traditional": "25+ hours",
+     "agentic": "15 minutes"
+    },
+    {
+     "label": "Systems encrypted",
+     "traditional": "Claims and policy shares",
+     "agentic": "None"
+    },
+    {
+     "label": "Data exfiltrated",
+     "traditional": "Under assessment",
+     "agentic": "None"
+    },
+    {
+     "label": "Breach notification",
+     "traditional": "Likely",
+     "agentic": "Not required"
+    }
+   ],
+   "chain": {
+    "signal": "Phishing click plus impossible-travel MFA plus lateral discovery",
+    "domain": "Email, identity, endpoint and network security",
+    "capability": "Security agent with XDR, Splunk ES and a SOAR containment playbook",
+    "kpi": "Mean time to contain and data loss",
+    "outcome": "Brand trust and avoided breach cost"
+   },
+   "talkTrack": [
+    "One alert is noise. Three correlated signals are an attack. The Data Fabric makes that correlation possible.",
+    "Containment in minutes at the identity stage is the difference between a non-event and a headline.",
+    "Talk to the CISO and the chief risk officer about avoided breach cost and notification exposure."
+   ],
+   "discovery": [
+    "How many alerts does your SOC handle a day, and how many are investigated within an hour?",
+    "Which containment actions are you comfortable automating today?",
+    "How are identity, endpoint and network signals correlated in your SOC?"
+   ],
+   "quiz": [
+    {
+     "q": "At which stage was the attack contained?",
+     "options": [
+      "After encryption",
+      "At the identity and credential stage",
+      "During data exfiltration"
+     ],
+     "answer": 1,
+     "why": "Early containment prevents encryption and data loss."
+    },
+    {
+     "q": "What is the rough industry average for a financial-sector breach?",
+     "options": [
+      "About $600K",
+      "About $6M",
+      "About $60M"
+     ],
+     "answer": 1,
+     "why": "Public studies put the financial sector average at about $6M."
+    }
+   ]
+  },
+  {
+   "id": "voice",
+   "siteId": "noida",
+   "code": "M-09",
+   "title": "Every Voice, Clear",
+   "subtitle": "Noida | Global Operations and Service",
+   "region": "Asia",
+   "lenses": [
+    "customer",
+    "operations",
+    "it"
+   ],
+   "pillar": "Operate with efficiency and service excellence",
+   "industryChallenge": "Global service centers handle customer calls for many markets. Poor voice quality drives longer calls, repeat contacts and low satisfaction, and it is usually blamed on the wrong layer.",
+   "metricName": "Customer interaction quality (MOS and CSAT)",
+   "unit": "h",
+   "range": [
+    -24,
+    24
+   ],
+   "agentDetect": -10,
+   "agentRemediate": -8,
+   "impact": 0,
+   "tradDetect": 3,
+   "tradRecover": 16,
+   "tradDip": 0.4,
+   "agentDip": 0.04,
+   "exposure": 2600000,
+   "exposureBasis": "Modeled: longer handle times, repeat calls and satisfaction loss across a global service center for a peak service week.",
+   "blast": [
+    "tampa",
+    "brighton",
+    "sydney"
+   ],
+   "signals": [
+    "Webex call quality (MOS, jitter)",
+    "ThousandEyes voice tests",
+    "SD-WAN path metrics",
+    "Contact center CSAT",
+    "Agent desktop telemetry"
+   ],
+   "products": [
+    "Cisco Cloud Control",
+    "Webex Contact Center",
+    "ThousandEyes",
+    "Catalyst SD-WAN",
+    "Cisco Data Fabric (Splunk)",
+    "AI Canvas"
+   ],
+   "events": [
+    {
+     "t": -18,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Data Fabric",
+     "text": "Joined Webex quality scores with CSAT and handle-time data across 6 service queues."
+    },
+    {
+     "t": -10,
+     "branch": "agentic",
+     "sev": "warn",
+     "source": "Experience Agent",
+     "text": "Jitter is rising on the media path between Noida and the U.S. voice cluster. MOS is trending below 3.6 for the evening shift serving U.S. customers."
+    },
+    {
+     "t": -9,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Correlation Agent",
+     "text": "Cause: an underlay carrier is congested at peak. SD-WAN app-route policy is not prioritizing media."
+    },
+    {
+     "t": -8,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "SD-WAN",
+     "text": "App-aware policy updated. Media moved to a clean path. MOS is 4.3."
+    },
+    {
+     "t": 2,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "Webex Contact Center",
+     "text": "U.S. peak: handle time steady and CSAT up 4 points."
+    },
+    {
+     "t": -10,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "Agents",
+     "text": "A few staff report choppy calls. They are told to restart headsets."
+    },
+    {
+     "t": 0,
+     "branch": "traditional",
+     "sev": "crit",
+     "source": "Customers",
+     "text": "U.S. peak: dropped and garbled calls. Customers repeat their details."
+    },
+    {
+     "t": 3,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "Ops leadership",
+     "text": "Handle time up 22% and the repeat-call rate climbs."
+    },
+    {
+     "t": 10,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "Network vs voice",
+     "text": "Teams argue about whether it is the network or the app."
+    },
+    {
+     "t": 16,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "Network",
+     "text": "Carrier congestion found. Traffic rerouted."
+    }
+   ],
+   "narration": {
+    "overview": "Mission nine, Noida. MetLife's global operations center supports customers in many markets, often during their peak hours. Voice quality problems are hard to pin down: is it the headset, the app, or the network? In this mission, the experience agent correlates Webex call quality with SD-WAN path data and satisfaction scores, spots rising jitter ten hours before the U.S. evening peak, and moves voice traffic onto a clean path.",
+    "briefing": "Noida is home to MetLife's global operations support center, where service teams help customers across time zones. Every unclear call costs time, repeat contacts and customer goodwill.",
+    "signal": "Ten hours before the shift that serves U.S. customers, the agent sees jitter rising on the media path to the U.S. voice cluster. Call quality is trending below an acceptable level. Linked with satisfaction data, it predicts more repeat calls and longer handle times.",
+    "traditional": "In the traditional path, agents report choppy calls and are told to restart their headsets. At peak, customers hear dropped and garbled audio and have to repeat themselves. Handle time climbs, and the network and voice teams spend hours arguing about whose problem it is.",
+    "agentic": "In the AgenticOps path, the correlation agent pins the cause on carrier congestion and an SD-WAN policy that does not prioritize voice. It updates the application-aware routing policy, media moves to a clean path, and call quality jumps back up before the shift begins.",
+    "outcome": "The outcome is customers who are heard the first time, shorter handle times, and better satisfaction. That is operating efficiency and service quality together, which is exactly where a global operations center creates value."
+   },
+   "decision": {
+    "prompt": "Jitter on the Noida to U.S. media path is rising before the U.S. peak shift. What do you do?",
+    "options": [
+     {
+      "label": "Apply the agent's app-aware SD-WAN policy",
+      "detail": "Prioritize media and move to a clean path, verified by ThousandEyes.",
+      "quality": "best",
+      "feedback": "Correct. Call quality is restored before the shift and CSAT goes up."
+     },
+     {
+      "label": "Tell staff to restart headsets",
+      "detail": "The standard first-line fix.",
+      "quality": "poor",
+      "feedback": "Wrong layer. The peak shift suffers garbled calls."
+     },
+     {
+      "label": "Open a ticket with the carrier",
+      "detail": "Wait for the carrier to investigate.",
+      "quality": "partial",
+      "feedback": "The carrier acts after the peak. The relief comes too late for tonight."
+     }
+    ]
+   },
+   "kpis": [
+    {
+     "label": "Call quality (MOS)",
+     "traditional": "3.1",
+     "agentic": "4.3"
+    },
+    {
+     "label": "Average handle time",
+     "traditional": "+22%",
+     "agentic": "Steady"
+    },
+    {
+     "label": "Repeat call rate",
+     "traditional": "+15%",
+     "agentic": "Baseline"
+    },
+    {
+     "label": "CSAT",
+     "traditional": "-9 pts",
+     "agentic": "+4 pts"
+    }
+   ],
+   "chain": {
+    "signal": "Rising jitter on a voice media path",
+    "domain": "SD-WAN, carriers and Webex Contact Center",
+    "capability": "Experience agent with app-aware routing changes",
+    "kpi": "Handle time, repeat calls and CSAT",
+    "outcome": "Service excellence at lower cost"
+   },
+   "talkTrack": [
+    "Voice quality connects directly to handle time and satisfaction, metrics every operations leader tracks.",
+    "Ending the network versus application debate is a big part of the value.",
+    "Global centers serve customers in other time zones. Agents act before the shift begins."
+   ],
+   "discovery": [
+    "How do you correlate call quality with customer satisfaction today?",
+    "How long does it take to decide whether a voice issue is network, application or device?",
+    "Does your SD-WAN policy adapt to real-time voice quality?"
+   ],
+   "quiz": [
+    {
+     "q": "What was the real root cause?",
+     "options": [
+      "Headsets",
+      "Carrier congestion plus an SD-WAN policy not prioritizing media",
+      "Customer phones"
+     ],
+     "answer": 1,
+     "why": "Data Fabric correlation found the right layer."
+    },
+    {
+     "q": "Which business KPI improved most visibly?",
+     "options": [
+      "CSAT and handle time",
+      "Bandwidth cost",
+      "Office occupancy"
+     ],
+     "answer": 0,
+     "why": "Clear voice means faster, better conversations."
+    }
+   ]
+  },
+  {
+   "id": "mim",
+   "siteId": "whippany",
+   "code": "M-10",
+   "title": "Microseconds and Billions",
+   "subtitle": "Whippany, NJ | MetLife Investment Management",
+   "region": "Americas",
+   "lenses": [
+    "revenue",
+    "risk",
+    "it"
+   ],
+   "pillar": "Accelerate growth in asset management",
+   "industryChallenge": "Asset managers live and die by market data and execution windows. Microbursts and latency spikes cause stale prices, missed rebalancing windows and execution slippage across large portfolios.",
+   "metricName": "Trading and portfolio operations health",
+   "unit": "m",
+   "range": [
+    -90,
+    60
+   ],
+   "agentDetect": -70,
+   "agentRemediate": -55,
+   "impact": 0,
+   "tradDetect": 8,
+   "tradRecover": 45,
+   "tradDip": 0.55,
+   "agentDip": 0.02,
+   "exposure": 12000000,
+   "exposureBasis": "Modeled: execution slippage and a missed rebalancing window across large institutional portfolios, plus client confidence impact.",
+   "blast": [
+    "nyc",
+    "london",
+    "tokyo"
+   ],
+   "signals": [
+    "Nexus switch microburst telemetry",
+    "Market data feed latency",
+    "Order management system traces",
+    "Cloud interconnect health",
+    "Market event calendar"
+   ],
+   "products": [
+    "Cisco Cloud Control",
+    "Nexus Dashboard",
+    "Splunk Observability Cloud",
+    "ThousandEyes",
+    "Cisco Data Fabric (Splunk)",
+    "AI Canvas"
+   ],
+   "events": [
+    {
+     "t": -85,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Data Fabric",
+     "text": "Market calendar joined: central bank announcement at 14:00, plus a planned portfolio rebalance."
+    },
+    {
+     "t": -70,
+     "branch": "agentic",
+     "sev": "warn",
+     "source": "Markets Agent",
+     "text": "Microbursts are rising on the market data leaf. Buffer drops forecast at announcement volume."
+    },
+    {
+     "t": -65,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "Correlation Agent",
+     "text": "A new analytics workload shares the uplink with the market data feed handlers."
+    },
+    {
+     "t": -60,
+     "branch": "agentic",
+     "sev": "info",
+     "source": "AI Canvas",
+     "text": "Plan: QoS for feed handlers, move analytics to a separate uplink, pre-warm OMS. The desk head approves."
+    },
+    {
+     "t": -55,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "Nexus Dashboard",
+     "text": "Change verified. Headroom is 4x at forecast peak."
+    },
+    {
+     "t": 5,
+     "branch": "agentic",
+     "sev": "good",
+     "source": "Trading",
+     "text": "Announcement: feed latency is flat and the rebalance completes in the window."
+    },
+    {
+     "t": -70,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "Network",
+     "text": "Five-minute averages look fine. Microbursts are invisible."
+    },
+    {
+     "t": 0,
+     "branch": "traditional",
+     "sev": "crit",
+     "source": "Market data",
+     "text": "Announcement spike: buffer drops, stale prices, gaps in the order book."
+    },
+    {
+     "t": 8,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "Trading desk",
+     "text": "Traders halt the rebalance and call the desk support line."
+    },
+    {
+     "t": 30,
+     "branch": "traditional",
+     "sev": "warn",
+     "source": "Network",
+     "text": "Packet captures reveal the shared uplink contention."
+    },
+    {
+     "t": 45,
+     "branch": "traditional",
+     "sev": "info",
+     "source": "Portfolio ops",
+     "text": "The rebalance window is missed. Slippage is measured."
+    }
+   ],
+   "narration": {
+    "overview": "Mission ten, Whippany, New Jersey, home of MetLife Investment Management, a top twenty five global investment firm with more than seven hundred forty billion dollars under management. In asset management, microseconds become millions. In this mission, the markets agent joins the market event calendar with switch telemetry and sees microbursts building more than an hour before a central bank announcement. It separates a noisy analytics workload from market data, and the portfolio rebalance completes on time.",
+    "briefing": "MetLife Investment Management is a New Frontier growth engine, with an aspiration to reach one trillion dollars in total assets under management. Its business depends on clean market data and on executing within narrow windows.",
+    "signal": "Seventy minutes before a central bank announcement, the agent sees microbursts on the market data switch. Five-minute averages look perfect, but sub-second telemetry shows buffers filling. Matched with the market calendar, the forecast is clear: at announcement volume, packets will drop.",
+    "traditional": "In the traditional path, average utilization looks fine and nobody sees the microbursts. When the announcement hits, buffers overflow, prices go stale, and traders halt the rebalance. It takes packet captures and half an hour to find the cause. The window is gone and slippage is measured.",
+    "agentic": "In the AgenticOps path, the correlation agent finds that a new analytics workload shares an uplink with the market data feed handlers. It proposes quality of service for the feeds, moving analytics to a separate uplink, and pre-warming the order management system. The head of the desk approves, and the change is verified with four times the headroom.",
+    "outcome": "The outcome is investment performance and client confidence. The rebalance executes in its window, clients see a manager that runs flawlessly on volatile days, and MetLife Investment Management keeps growing toward its ambition."
+   },
+   "decision": {
+    "prompt": "Microbursts are forecast to drop market data packets at the 14:00 announcement. What do you do?",
+    "options": [
+     {
+      "label": "Approve the agent QoS and workload separation plan",
+      "detail": "Protect feed handlers, move analytics, pre-warm OMS.",
+      "quality": "best",
+      "feedback": "Correct. Clean data at the peak and a rebalance completed in its window."
+     },
+     {
+      "label": "Ask traders to avoid trading at 14:00",
+      "detail": "Work around the network.",
+      "quality": "partial",
+      "feedback": "You avoid some slippage, but the rebalance is pushed and opportunities are lost."
+     },
+     {
+      "label": "Averages are fine, so carry on",
+      "detail": "Utilization is only 30%.",
+      "quality": "poor",
+      "feedback": "Microbursts hide inside averages. Prices go stale at the worst moment."
+     }
+    ]
+   },
+   "kpis": [
+    {
+     "label": "Feed latency at peak",
+     "traditional": "Spikes 40x",
+     "agentic": "Flat"
+    },
+    {
+     "label": "Rebalance window",
+     "traditional": "Missed",
+     "agentic": "Completed"
+    },
+    {
+     "label": "Execution slippage",
+     "traditional": "Material",
+     "agentic": "Within tolerance"
+    },
+    {
+     "label": "Time to root cause",
+     "traditional": "30 minutes",
+     "agentic": "Found 70 minutes before impact"
+    }
+   ],
+   "chain": {
+    "signal": "Sub-second microbursts hidden inside normal averages",
+    "domain": "Data center fabric, market data and order management",
+    "capability": "Markets agent with Nexus telemetry, the market calendar and a QoS change",
+    "kpi": "Execution quality and rebalance completion",
+    "outcome": "Asset management growth and client confidence"
+   },
+   "talkTrack": [
+    "In asset management, network performance is investment performance.",
+    "Sub-second telemetry plus business calendars equals foresight. Averages lie.",
+    "Talk to the COO of investment management about execution quality and client confidence."
+   ],
+   "discovery": [
+    "How do you detect microbursts on market data networks today?",
+    "Are market events part of your operations planning?",
+    "What did the last volatile market day cost in slippage or missed windows?"
+   ],
+   "quiz": [
+    {
+     "q": "Why did traditional monitoring miss the problem?",
+     "options": [
+      "Microbursts hide inside 5-minute averages",
+      "The switch was off",
+      "There was no traffic"
+     ],
+     "answer": 0,
+     "why": "Sub-second telemetry is needed to see microbursts."
+    },
+    {
+     "q": "Which business outcome is protected?",
+     "options": [
+      "Office Wi-Fi",
+      "Execution quality and asset management growth",
+      "Email delivery"
+     ],
+     "answer": 1,
+     "why": "Asset management is a New Frontier growth priority."
+    }
+   ]
+  }
+ ],
+ "ey": {
+  "nyc": {
+   "siteId": "nyc",
+   "title": "The MetLife Building, 200 Park Avenue",
+   "entity": "MetLife, Inc. global headquarters",
+   "address": "200 Park Avenue, New York, NY 10166",
+   "context": "manhattan",
+   "buildings": [
+    {
+     "id": "metlife-building",
+     "label": "MetLife Building",
+     "shape": "octagon",
+     "w": 9.2,
+     "d": 4.6,
+     "floors": 59,
+     "floorH": 0.417,
+     "x": 0,
+     "z": 0,
+     "metlife": [
+      [
+       3,
+       6
+      ]
+     ],
+     "heightVerified": true
+    }
+   ],
+   "landmarks": [
+    {
+     "label": "Grand Central Terminal",
+     "x": 0,
+     "z": 9.5,
+     "w": 11,
+     "d": 7.5,
+     "h": 3.4,
+     "color": "#c9b48a",
+     "arch": true
+    },
+    {
+     "label": "Helmsley Building",
+     "x": 0,
+     "z": -7.5,
+     "w": 5,
+     "d": 3.2,
+     "h": 10.7,
+     "color": "#8a93a6"
+    }
+   ],
+   "facts": [
+    {
+     "k": "Height",
+     "v": "808 ft (246 m), 59 floors",
+     "verified": true
+    },
+    {
+     "k": "Opened",
+     "v": "1963 as the Pan Am Building, above Grand Central Terminal",
+     "verified": true
+    },
+    {
+     "k": "MetLife space",
+     "v": "Entire 3rd and 6th floors, plus parts of the mezzanine, 4th and 5th: about 400,000 sq ft, lease extended to 2038",
+     "verified": true
+    },
+    {
+     "k": "Signature",
+     "v": "LED METLIFE letters crown the north and south faces",
+     "verified": true
+    },
+    {
+     "k": "Room-level use",
+     "v": "Floor-by-floor room assignments are not public; rooms shown here are illustrative",
+     "verified": false
+    }
+   ],
+   "sources": [
+    "skyscrapercenter.com/building/metlife-building/909",
+    "commercialsearch.com: MetLife extends 400 KSF lease",
+    "200parkavenue.com"
+   ],
+   "intro": "This is the MetLife Building at 200 Park Avenue, the eight hundred and eight foot tower that straddles Park Avenue above Grand Central Terminal. MetLife headquarters occupies the lower floors, including the entire third and sixth floors.",
+   "links": [
+    {
+     "to": "greenbush",
+     "label": "North Greenbush data center",
+     "bearing": 8
+    },
+    {
+     "to": "cary",
+     "label": "Cary technology campus",
+     "bearing": 205
+    },
+    {
+     "to": "cloud",
+     "label": "Public cloud regions",
+     "bearing": 250
+    }
+   ]
+  },
+  "cary": {
+   "siteId": "cary",
+   "title": "MetLife Global Technology Campus",
+   "entity": "MetLife global technology hub",
+   "address": "201 MetLife Way, Cary, NC 27513",
+   "context": "campus",
+   "buildings": [
+    {
+     "id": "cary-1",
+     "label": "Building I",
+     "shape": "box",
+     "w": 7.4,
+     "d": 3.8,
+     "floors": 7,
+     "floorH": 0.42,
+     "x": -8.5,
+     "z": 1.5,
+     "rot": 0.32,
+     "heightVerified": true
+    },
+    {
+     "id": "cary-2",
+     "label": "Building II",
+     "shape": "box",
+     "w": 7.4,
+     "d": 3.8,
+     "floors": 7,
+     "floorH": 0.42,
+     "x": 0,
+     "z": -1.2,
+     "rot": 0,
+     "heightVerified": true
+    },
+    {
+     "id": "cary-3",
+     "label": "Building III",
+     "shape": "box",
+     "w": 7.4,
+     "d": 3.8,
+     "floors": 7,
+     "floorH": 0.42,
+     "x": 8.5,
+     "z": 1.5,
+     "rot": -0.32,
+     "heightVerified": true
+    }
+   ],
+   "parking": [
+    {
+     "x": -7,
+     "z": 10,
+     "w": 8,
+     "d": 4.5,
+     "levels": 5
+    },
+    {
+     "x": 7,
+     "z": 10,
+     "w": 8,
+     "d": 4.5,
+     "levels": 5
+    }
+   ],
+   "lake": {
+    "x": 0,
+    "z": -16,
+    "rx": 22,
+    "rz": 7
+   },
+   "trees": 260,
+   "facts": [
+    {
+     "k": "Campus",
+     "v": "3 buildings, 7 stories each, about 655,000 sq ft on about 40 acres",
+     "verified": true
+    },
+    {
+     "k": "Opened",
+     "v": "Buildings I and II in 2015, Building III in 2019",
+     "verified": true
+    },
+    {
+     "k": "Setting",
+     "v": "Glass office blocks on a terrace over Lake Crabtree, two parking decks, amphitheater, LEED Gold",
+     "verified": true
+    },
+    {
+     "k": "People",
+     "v": "Engineers, software developers and project managers",
+     "verified": true
+    },
+    {
+     "k": "Room-level use",
+     "v": "Team and room locations are illustrative",
+     "verified": false
+    }
+   ],
+   "sources": [
+    "highwoods.com: MetLife Global Technology Campus",
+    "ncconstructionnews.com",
+    "newsobserver.com"
+   ],
+   "intro": "This is the MetLife Global Technology Campus in Cary, North Carolina: three seven-story glass buildings on a terrace above Lake Crabtree, opened between twenty fifteen and twenty nineteen.",
+   "links": [
+    {
+     "to": "greenbush",
+     "label": "North Greenbush data center",
+     "bearing": 20
+    },
+    {
+     "to": "nyc",
+     "label": "New York headquarters",
+     "bearing": 40
+    },
+    {
+     "to": "cloud",
+     "label": "Public cloud regions",
+     "bearing": 290
+    }
+   ]
+  },
+  "tampa": {
+   "siteId": "tampa",
+   "title": "MetLife Tampa Operations Center",
+   "entity": "Operations for insurance, annuities, employee benefits and claims",
+   "address": "18210 and 18216 Crane Nest Drive, Tampa, FL 33647",
+   "context": "suburban",
+   "buildings": [
+    {
+     "id": "tampa-18210",
+     "label": "18210 Crane Nest Dr",
+     "shape": "box",
+     "w": 8.2,
+     "d": 4.8,
+     "floors": 6,
+     "floorH": 0.42,
+     "x": -5,
+     "z": 0,
+     "rot": 0.1,
+     "heightVerified": true
+    },
+    {
+     "id": "tampa-18216",
+     "label": "18216 Crane Nest Dr",
+     "shape": "box",
+     "w": 6.2,
+     "d": 4.4,
+     "floors": 4,
+     "floorH": 0.42,
+     "x": 7,
+     "z": 2.5,
+     "rot": -0.2,
+     "heightVerified": true
+    }
+   ],
+   "landmarks": [
+    {
+     "label": "Dining hall (18206)",
+     "x": 1.5,
+     "z": 8,
+     "w": 4,
+     "d": 2.6,
+     "h": 0.6,
+     "color": "#7f96b8"
+    }
+   ],
+   "parking": [
+    {
+     "x": -6,
+     "z": 10,
+     "w": 9,
+     "d": 5,
+     "levels": 1
+    },
+    {
+     "x": 9,
+     "z": -6,
+     "w": 7,
+     "d": 5,
+     "levels": 1
+    }
+   ],
+   "ponds": [
+    {
+     "x": -14,
+     "z": -6,
+     "r": 4
+    },
+    {
+     "x": 14,
+     "z": 9,
+     "r": 3
+    }
+   ],
+   "trees": 200,
+   "facts": [
+    {
+     "k": "18210 Crane Nest Dr",
+     "v": "6 stories, about 250,000 sq ft",
+     "verified": true
+    },
+    {
+     "k": "18216 Crane Nest Dr",
+     "v": "4 stories, about 115,000 sq ft, built for MetLife in 2007",
+     "verified": true
+    },
+    {
+     "k": "People",
+     "v": "About 1,800 staff (2021) across operations and claims",
+     "verified": true
+    },
+    {
+     "k": "Room-level use",
+     "v": "Floor assignments shown are illustrative",
+     "verified": false
+    }
+   ],
+   "sources": [
+    "areadevelopment.com: MetLife operations center Tampa",
+    "rebusinessonline.com",
+    "tampabay28.com"
+   ],
+   "intro": "This is the MetLife operations center on Crane Nest Drive in Tampa: a six-story and a four-story office building in the Highwoods Preserve, home to about eighteen hundred people in operations and claims.",
+   "links": [
+    {
+     "to": "noida",
+     "label": "Noida operations center",
+     "bearing": 40
+    },
+    {
+     "to": "nyc",
+     "label": "New York headquarters",
+     "bearing": 20
+    },
+    {
+     "to": "cloud",
+     "label": "Webex Contact Center cloud",
+     "bearing": 300
+    }
+   ]
+  },
+  "whippany": {
+   "siteId": "whippany",
+   "title": "One MetLife Way",
+   "entity": "MetLife Investment Management global headquarters",
+   "address": "One MetLife Way, Whippany, NJ 07981",
+   "context": "suburban",
+   "buildings": [
+    {
+     "id": "mim-hq",
+     "label": "One MetLife Way",
+     "shape": "box",
+     "w": 7.4,
+     "d": 5,
+     "floors": 5,
+     "floorH": 0.44,
+     "x": 0,
+     "z": 0,
+     "rot": 0.15,
+     "heightVerified": true
+    }
+   ],
+   "landmarks": [
+    {
+     "label": "Neighboring corporate campus",
+     "x": 16,
+     "z": -6,
+     "w": 9,
+     "d": 6,
+     "h": 2.2,
+     "color": "#6f7d92"
+    }
+   ],
+   "parking": [
+    {
+     "x": -2,
+     "z": 9,
+     "w": 10,
+     "d": 4.5,
+     "levels": 1
+    }
+   ],
+   "trees": 320,
+   "facts": [
+    {
+     "k": "Building",
+     "v": "5 stories, about 185,000 sq ft on 14 acres",
+     "verified": true
+    },
+    {
+     "k": "Opened",
+     "v": "September 2016, on the former Bell Labs site",
+     "verified": true
+    },
+    {
+     "k": "People",
+     "v": "About 850 investment professionals moved from Morristown",
+     "verified": true
+    },
+    {
+     "k": "Workplace",
+     "v": "A MetLife Club collaboration area on every floor",
+     "verified": true
+    },
+    {
+     "k": "Room-level use",
+     "v": "Trading and operations room locations are illustrative",
+     "verified": false
+    }
+   ],
+   "sources": [
+    "njbiz.com: MetLife Investments global headquarters",
+    "njbmagazine.com"
+   ],
+   "intro": "This is One MetLife Way in Whippany, New Jersey, the global headquarters of MetLife Investment Management: a five-story building on fourteen wooded acres, opened in twenty sixteen.",
+   "links": [
+    {
+     "to": "nyc",
+     "label": "New York headquarters",
+     "bearing": 100
+    },
+    {
+     "to": "exchanges",
+     "label": "Market data and exchanges",
+     "bearing": 80
+    },
+    {
+     "to": "london",
+     "label": "MIM London",
+     "bearing": 60
+    }
+   ]
+  },
+  "tokyo": {
+   "siteId": "tokyo",
+   "title": "Kioi Tower, Tokyo Garden Terrace Kioicho",
+   "entity": "MetLife Insurance K.K. headquarters",
+   "address": "1-3 Kioicho, Chiyoda-ku, Tokyo 102-8525",
+   "context": "tokyo",
+   "buildings": [
+    {
+     "id": "kioi-tower",
+     "label": "Kioi Tower",
+     "shape": "square",
+     "w": 5.6,
+     "d": 5.6,
+     "floors": 36,
+     "floorH": 0.49,
+     "x": 0,
+     "z": 0,
+     "rot": 0.4,
+     "metlife": [
+      [
+       25,
+       27
+      ]
+     ],
+     "bands": [
+      {
+       "from": 1,
+       "to": 4,
+       "label": "Retail and conference",
+       "color": "#7a8aa6"
+      },
+      {
+       "from": 30,
+       "to": 36,
+       "label": "The Prince Gallery hotel",
+       "color": "#d7b46a"
+      }
+     ],
+     "podium": {
+      "w": 9,
+      "d": 8,
+      "h": 1.2
+     },
+     "heightVerified": true
+    }
+   ],
+   "facts": [
+    {
+     "k": "Tower",
+     "v": "36 floors above ground, about 178 m, completed 2016, exterior by KPF",
+     "verified": true
+    },
+    {
+     "k": "MetLife space",
+     "v": "Floors 25 to 27, reception on 27 (since April 2017)",
+     "verified": true
+    },
+    {
+     "k": "Neighbors",
+     "v": "The Prince Gallery Tokyo Kioicho hotel on floors 30 to 36",
+     "verified": true
+    },
+    {
+     "k": "Room-level use",
+     "v": "Team locations inside floors 25 to 27 are illustrative",
+     "verified": false
+    }
+   ],
+   "sources": [
+    "metlife.co.jp/about/corporate/store",
+    "president.jp/articles/-/24920",
+    "shotenkenchiku.com"
+   ],
+   "intro": "This is Kioi Tower in Tokyo Garden Terrace Kioicho. MetLife Japan headquarters occupies floors twenty five through twenty seven of the thirty six floor tower.",
+   "links": [
+    {
+     "to": "field",
+     "label": "Field sales tablets across Japan",
+     "bearing": 220
+    },
+    {
+     "to": "seoul",
+     "label": "MetLife Korea",
+     "bearing": 280
+    },
+    {
+     "to": "cloud",
+     "label": "Cloud regions in Japan",
+     "bearing": 160
+    }
+   ]
+  },
+  "cdmx": {
+   "siteId": "cdmx",
+   "title": "Torre Manacar",
+   "entity": "MetLife México headquarters",
+   "address": "Av. Insurgentes Sur 1457, floors 7 to 14, Col. Insurgentes Mixcoac, CDMX",
+   "context": "cdmx",
+   "buildings": [
+    {
+     "id": "manacar",
+     "label": "Torre Manacar",
+     "shape": "faceted",
+     "w": 6.4,
+     "d": 5,
+     "floors": 30,
+     "floorH": 0.48,
+     "x": 0,
+     "z": 0,
+     "rot": 0.2,
+     "metlife": [
+      [
+       7,
+       14
+      ]
+     ],
+     "podium": {
+      "w": 11,
+      "d": 9,
+      "h": 1.6
+     },
+     "heightVerified": true
+    }
+   ],
+   "facts": [
+    {
+     "k": "Tower",
+     "v": "About 144 m, 30 floors above a shopping center, completed 2017 to 2018",
+     "verified": true
+    },
+    {
+     "k": "Architect",
+     "v": "Teodoro González de León: faceted, pyramid-like glass form",
+     "verified": true
+    },
+    {
+     "k": "MetLife space",
+     "v": "Floors 7 to 14 (regulator listing)",
+     "verified": true
+    },
+    {
+     "k": "Room-level use",
+     "v": "Team locations inside floors 7 to 14 are illustrative",
+     "verified": false
+    }
+   ],
+   "sources": [
+    "metlife.com.mx: UNE CONDUSEF",
+    "skyscrapercenter.com/building/torre-manacar/15645",
+    "manacarmx.com"
+   ],
+   "intro": "This is Torre Manacar on Avenida Insurgentes Sur in Mexico City. MetLife México occupies floors seven through fourteen of the faceted glass tower.",
+   "links": [
+    {
+     "to": "partners",
+     "label": "Xcelerator partner apps",
+     "bearing": 160
+    },
+    {
+     "to": "cloud",
+     "label": "Cloud regions",
+     "bearing": 20
+    },
+    {
+     "to": "santiago",
+     "label": "MetLife Chile",
+     "bearing": 150
+    }
+   ]
+  },
+  "santiago": {
+   "siteId": "santiago",
+   "title": "MUT Torre 1, Mercado Urbano Tobalaba",
+   "entity": "MetLife Chile headquarters and AFP ProVida corporate team",
+   "address": "Av. Apoquindo 2730, Torre 1, Piso 18, Las Condes, Santiago",
+   "context": "santiago",
+   "buildings": [
+    {
+     "id": "mut-1",
+     "label": "MUT Torre 1",
+     "shape": "box",
+     "w": 5.4,
+     "d": 4.2,
+     "floors": 32,
+     "floorH": 0.4,
+     "x": 0,
+     "z": 0,
+     "rot": -0.3,
+     "metlife": [
+      [
+       18,
+       18
+      ]
+     ],
+     "bands": [
+      {
+       "from": 13,
+       "to": 17,
+       "label": "MetLife leased floors (placement illustrative)",
+       "color": "#2a8fd6"
+      }
+     ],
+     "podium": {
+      "w": 12,
+      "d": 9,
+      "h": 1
+     },
+     "heightVerified": false
+    }
+   ],
+   "mountains": true,
+   "trees": 120,
+   "facts": [
+    {
+     "k": "MetLife space",
+     "v": "Six leased floors, about 6,000 m² plus a rooftop terrace (since late 2023)",
+     "verified": true
+    },
+    {
+     "k": "Address floor",
+     "v": "Piso 18 is the public mailing floor",
+     "verified": true
+    },
+    {
+     "k": "Complex",
+     "v": "LEED-certified Mercado Urbano Tobalaba with green terraces and about 300 trees",
+     "verified": true
+    },
+    {
+     "k": "Tower height",
+     "v": "Total floor count is not confirmed; the model is illustrative",
+     "verified": false
+    }
+   ],
+   "sources": [
+    "w3.metlife.cl/sobre-metlife/antecedentes",
+    "w3.metlife.cl: MUT",
+    "df.cl: MetLife arriendo seis pisos"
+   ],
+   "intro": "This is Torre One of the Mercado Urbano Tobalaba complex in Las Condes, Santiago, with the Andes behind it. MetLife Chile leases six floors here, and ProVida's corporate team works here too.",
+   "links": [
+    {
+     "to": "banks",
+     "label": "Payment rails and banks",
+     "bearing": 300
+    },
+    {
+     "to": "cdmx",
+     "label": "MetLife México",
+     "bearing": 330
+    },
+    {
+     "to": "cloud",
+     "label": "Cloud regions",
+     "bearing": 20
+    }
+   ]
+  },
+  "brighton": {
+   "siteId": "brighton",
+   "title": "Invicta House, Trafalgar Place",
+   "entity": "MetLife Europe d.a.c. U.K. branch and MetLife UK",
+   "address": "Invicta House, Trafalgar Place, Brighton BN1 4FR",
+   "context": "brighton",
+   "buildings": [
+    {
+     "id": "invicta",
+     "label": "Invicta House",
+     "shape": "box",
+     "w": 6.6,
+     "d": 3.8,
+     "floors": 7,
+     "floorH": 0.4,
+     "x": 0,
+     "z": 0,
+     "rot": 0.2,
+     "heightVerified": false
+    }
+   ],
+   "facts": [
+    {
+     "k": "Role",
+     "v": "Registered U.K. branch office: group and individual protection, employee benefits",
+     "verified": true
+    },
+    {
+     "k": "Building",
+     "v": "Height and floor count are not documented publicly; the model is illustrative",
+     "verified": false
+    },
+    {
+     "k": "London",
+     "v": "MetLife Investment Management also lists London offices (1 Angel Lane)",
+     "verified": true
+    }
+   ],
+   "sources": [
+    "find-and-update.company-information.service.gov.uk (BR008866)",
+    "metlife.co.uk: regulatory status"
+   ],
+   "intro": "This is Invicta House on Trafalgar Place in Brighton, the registered office of MetLife's U.K. business. The building model here is illustrative.",
+   "links": [
+    {
+     "to": "idp",
+     "label": "Third-party identity provider",
+     "bearing": 10
+    },
+    {
+     "to": "london",
+     "label": "MIM London",
+     "bearing": 5
+    },
+    {
+     "to": "dublin",
+     "label": "MetLife Europe, Dublin",
+     "bearing": 300
+    }
+   ]
+  },
+  "dubai": {
+   "siteId": "dubai",
+   "title": "New Century City Tower, Deira",
+   "entity": "MetLife Gulf regional headquarters",
+   "address": "New Century City Tower, 4th floor, Office 405, Port Saeed, Deira, Dubai",
+   "context": "dubai",
+   "buildings": [
+    {
+     "id": "ncc",
+     "label": "New Century City Tower",
+     "shape": "box",
+     "w": 5.2,
+     "d": 4.2,
+     "floors": 18,
+     "floorH": 0.4,
+     "x": 0,
+     "z": 0,
+     "rot": 0.5,
+     "metlife": [
+      [
+       4,
+       4
+      ]
+     ],
+     "heightVerified": false
+    }
+   ],
+   "facts": [
+    {
+     "k": "MetLife space",
+     "v": "4th floor, Office 405 (customer office); back office at DAFZA",
+     "verified": true
+    },
+    {
+     "k": "Coverage",
+     "v": "UAE, Bahrain, Kuwait, Oman and Qatar",
+     "verified": true
+    },
+    {
+     "k": "Tower height",
+     "v": "Not documented publicly; the model is illustrative",
+     "verified": false
+    }
+   ],
+   "sources": [
+    "metlife.ae: find our offices",
+    "metlife.com/ae: about us"
+   ],
+   "intro": "This is New Century City Tower in Deira, Dubai. MetLife Gulf serves customers from Office four zero five on the fourth floor.",
+   "links": [
+    {
+     "to": "dafza",
+     "label": "DAFZA operations",
+     "bearing": 60
+    },
+    {
+     "to": "istanbul",
+     "label": "MetLife Turkey",
+     "bearing": 310
+    },
+    {
+     "to": "cloud",
+     "label": "Cloud regions",
+     "bearing": 200
+    }
+   ]
+  },
+  "noida": {
+   "siteId": "noida",
+   "title": "Oxygen Business Park, Tower 2",
+   "entity": "MetLife Global Operations Support Center",
+   "address": "Tower 2, Oxygen Business Park SEZ, Plot 7, Sector 144, Noida 201304",
+   "context": "noida",
+   "buildings": [
+    {
+     "id": "oxygen-2",
+     "label": "Oxygen Tower 2",
+     "shape": "box",
+     "w": 6.4,
+     "d": 4.4,
+     "floors": 16,
+     "floorH": 0.4,
+     "x": 0,
+     "z": 0,
+     "rot": -0.25,
+     "metlife": [
+      [
+       8,
+       12
+      ],
+      [
+       14,
+       14
+      ]
+     ],
+     "heightVerified": false
+    }
+   ],
+   "landmarks": [
+    {
+     "label": "Oxygen Tower 1",
+     "x": -10,
+     "z": 1,
+     "w": 5.6,
+     "d": 4,
+     "h": 6,
+     "color": "#5d6d86"
+    },
+    {
+     "label": "Oxygen Tower 3",
+     "x": 10,
+     "z": 2,
+     "w": 5.6,
+     "d": 4,
+     "h": 6,
+     "color": "#5d6d86"
+    }
+   ],
+   "facts": [
+    {
+     "k": "MetLife space",
+     "v": "About floors 8 to 12 and 14 (public filings differ slightly)",
+     "verified": true
+    },
+    {
+     "k": "Function",
+     "v": "Global operations and IT support: servers, network, service desk, automation",
+     "verified": true
+    },
+    {
+     "k": "Tower height",
+     "v": "Not documented publicly; the model is illustrative",
+     "verified": false
+    }
+   ],
+   "sources": [
+    "MetLife ISO certificate (metlife.pt PDF)",
+    "gst.jamku.app GSTIN record"
+   ],
+   "intro": "This is Tower Two of the Oxygen Business Park along the Noida Expressway, home to the MetLife Global Operations Support Center on roughly floors eight through fourteen.",
+   "links": [
+    {
+     "to": "tampa",
+     "label": "Tampa operations",
+     "bearing": 290
+    },
+    {
+     "to": "brighton",
+     "label": "MetLife UK",
+     "bearing": 300
+    },
+    {
+     "to": "cloud",
+     "label": "Webex Contact Center cloud",
+     "bearing": 120
+    }
+   ]
+  },
+  "greenbush": {
+   "siteId": "greenbush",
+   "title": "MetLife Data Center",
+   "entity": "Metropolitan Life Insurance Co. information systems center",
+   "address": "500 Jordan Road, North Greenbush, NY (Rensselaer Technology Park)",
+   "context": "datacenter",
+   "buildings": [
+    {
+     "id": "dc",
+     "label": "Data center",
+     "shape": "datacenter",
+     "w": 15,
+     "d": 10,
+     "floors": 2,
+     "floorH": 0.6,
+     "x": 0,
+     "z": 0,
+     "rot": 0.1,
+     "heightVerified": false
+    }
+   ],
+   "landmarks": [
+    {
+     "label": "Generator yard",
+     "x": 11,
+     "z": 0,
+     "w": 3,
+     "d": 7,
+     "h": 0.35,
+     "color": "#55657d"
+    },
+    {
+     "label": "Substation",
+     "x": -11,
+     "z": -4,
+     "w": 3.5,
+     "d": 3.5,
+     "h": 0.4,
+     "color": "#4c5a70"
+    }
+   ],
+   "parking": [
+    {
+     "x": -2,
+     "z": 9,
+     "w": 9,
+     "d": 3.5,
+     "levels": 1
+    }
+   ],
+   "trees": 220,
+   "facts": [
+    {
+     "k": "Building",
+     "v": "About 200,000 to 212,000 sq ft on 42 acres, opened July 1992",
+     "verified": true
+    },
+    {
+     "k": "Investment",
+     "v": "A $288M upgrade plan was approved in 2023",
+     "verified": true
+    },
+    {
+     "k": "Hall layout",
+     "v": "Rows, racks and fabric shown here are illustrative",
+     "verified": false
+    }
+   ],
+   "sources": [
+    "datacenterdynamics.com: Rensselaer County tax breaks for MetLife data center",
+    "discoverrensselaer.com application"
+   ],
+   "intro": "This is the MetLife data center at Rensselaer Technology Park in North Greenbush, New York, opened in nineteen ninety two and now in the middle of a two hundred and eighty eight million dollar upgrade.",
+   "links": [
+    {
+     "to": "nyc",
+     "label": "New York headquarters",
+     "bearing": 190
+    },
+    {
+     "to": "cary",
+     "label": "Cary technology campus",
+     "bearing": 210
+    },
+    {
+     "to": "cloud",
+     "label": "Public cloud regions",
+     "bearing": 250
+    }
+   ]
+  }
+ },
+ "ty": {
+  "enrollment": {
+   "buildingId": "metlife-building",
+   "floor": 6,
+   "room": "Group Benefits digital operations",
+   "basis": "Floor 6 is MetLife-leased (public). The room is illustrative.",
+   "verified": false,
+   "alsoAt": "greenbush",
+   "devices": [
+    {
+     "kind": "te",
+     "label": "ThousandEyes Enterprise Agent"
+    },
+    {
+     "kind": "switch",
+     "label": "Catalyst 9300 access stack"
+    },
+    {
+     "kind": "ap",
+     "label": "Wi-Fi 7 access points"
+    },
+    {
+     "kind": "wall",
+     "label": "Enrollment war-room display"
+    },
+    {
+     "kind": "router",
+     "label": "Catalyst SD-WAN edge"
+    }
+   ]
+  },
+  "change": {
+   "buildingId": "cary-2",
+   "floor": 4,
+   "room": "Platform engineering and change review",
+   "basis": "Building II is part of the public campus. The floor and room are illustrative.",
+   "verified": false,
+   "alsoAt": "greenbush",
+   "devices": [
+    {
+     "kind": "endpoint",
+     "label": "Change engineers"
+    },
+    {
+     "kind": "wall",
+     "label": "Change advisory board room"
+    },
+    {
+     "kind": "switch",
+     "label": "Campus distribution"
+    },
+    {
+     "kind": "te",
+     "label": "ThousandEyes Enterprise Agent"
+    }
+   ]
+  },
+  "hurricane": {
+   "buildingId": "tampa-18210",
+   "floor": 3,
+   "room": "Claims and customer care floor",
+   "basis": "The building is MetLife-occupied (public). The floor is illustrative.",
+   "verified": false,
+   "devices": [
+    {
+     "kind": "phone",
+     "label": "Webex Contact Center agents"
+    },
+    {
+     "kind": "router",
+     "label": "Catalyst SD-WAN edge, dual ISP"
+    },
+    {
+     "kind": "ap",
+     "label": "Meraki access points"
+    },
+    {
+     "kind": "te",
+     "label": "ThousandEyes Enterprise Agent"
+    }
+   ]
+  },
+  "japan": {
+   "buildingId": "kioi-tower",
+   "floor": 26,
+   "room": "Field distribution digital operations",
+   "basis": "MetLife occupies floors 25 to 27 (public). The room is illustrative.",
+   "verified": false,
+   "devices": [
+    {
+     "kind": "wall",
+     "label": "Field sales operations display"
+    },
+    {
+     "kind": "switch",
+     "label": "Meraki MS stack"
+    },
+    {
+     "kind": "te",
+     "label": "ThousandEyes Enterprise Agent"
+    },
+    {
+     "kind": "firewall",
+     "label": "Cisco Secure Access edge"
+    }
+   ]
+  },
+  "xcelerator": {
+   "buildingId": "manacar",
+   "floor": 10,
+   "room": "Partner API and digital sales team",
+   "basis": "MetLife occupies floors 7 to 14 (public). The room is illustrative.",
+   "verified": false,
+   "devices": [
+    {
+     "kind": "endpoint",
+     "label": "Partner integration engineers"
+    },
+    {
+     "kind": "server",
+     "label": "API gateway (cloud)"
+    },
+    {
+     "kind": "te",
+     "label": "ThousandEyes Enterprise Agent"
+    },
+    {
+     "kind": "switch",
+     "label": "Catalyst access stack"
+    }
+   ]
+  },
+  "pensions": {
+   "buildingId": "mut-1",
+   "floor": 18,
+   "room": "Pension payment operations",
+   "basis": "Floor 18 is MetLife's public address floor. The room is illustrative.",
+   "verified": false,
+   "devices": [
+    {
+     "kind": "endpoint",
+     "label": "Payments operations team"
+    },
+    {
+     "kind": "wall",
+     "label": "Pension Day control room"
+    },
+    {
+     "kind": "switch",
+     "label": "Catalyst access stack"
+    },
+    {
+     "kind": "router",
+     "label": "Catalyst SD-WAN edge"
+    }
+   ]
+  },
+  "resilience": {
+   "buildingId": "invicta",
+   "floor": 3,
+   "room": "Operational resilience and service management",
+   "basis": "The address is public. The building model and room are illustrative.",
+   "verified": false,
+   "devices": [
+    {
+     "kind": "wall",
+     "label": "Important business services board"
+    },
+    {
+     "kind": "firewall",
+     "label": "Cisco Secure Firewall"
+    },
+    {
+     "kind": "te",
+     "label": "ThousandEyes Enterprise Agent"
+    },
+    {
+     "kind": "endpoint",
+     "label": "Resilience team"
+    }
+   ]
+  },
+  "ransomware": {
+   "buildingId": "ncc",
+   "floor": 4,
+   "room": "MetLife Gulf office, Office 405",
+   "basis": "The 4th floor and Office 405 are public. The compromised laptop is illustrative.",
+   "verified": true,
+   "devices": [
+    {
+     "kind": "endpoint",
+     "label": "Finance laptop (phishing target)"
+    },
+    {
+     "kind": "firewall",
+     "label": "Cisco Secure Firewall"
+    },
+    {
+     "kind": "switch",
+     "label": "Catalyst access switch"
+    },
+    {
+     "kind": "ap",
+     "label": "Wi-Fi access point"
+    }
+   ]
+  },
+  "voice": {
+   "buildingId": "oxygen-2",
+   "floor": 10,
+   "room": "Global service contact center",
+   "basis": "MetLife occupies about floors 8 to 12 and 14 (public filings). The room is illustrative.",
+   "verified": false,
+   "devices": [
+    {
+     "kind": "phone",
+     "label": "Webex Contact Center agents"
+    },
+    {
+     "kind": "router",
+     "label": "Catalyst SD-WAN edge, MPLS and internet"
+    },
+    {
+     "kind": "te",
+     "label": "ThousandEyes Enterprise Agent"
+    },
+    {
+     "kind": "ap",
+     "label": "Wi-Fi access points"
+    }
+   ]
+  },
+  "mim": {
+   "buildingId": "mim-hq",
+   "floor": 3,
+   "room": "Portfolio operations and trading desk",
+   "basis": "The building is MIM global headquarters (public). The floor is illustrative.",
+   "verified": false,
+   "devices": [
+    {
+     "kind": "wall",
+     "label": "Trading desk market data displays"
+    },
+    {
+     "kind": "switch",
+     "label": "Low-latency Nexus leaf"
+    },
+    {
+     "kind": "te",
+     "label": "ThousandEyes Enterprise Agent"
+    },
+    {
+     "kind": "router",
+     "label": "Market data circuits"
+    }
+   ]
+  }
+ },
+ "ny": {
+  "enrollment": {
+   "service": "Group Benefits Enrollment",
+   "tree": [
+    "Enrollment portal",
+    "Auth token service",
+    "Benefits rules API",
+    "CDN edge",
+    "WAN egress, North Greenbush",
+    "Identity provider"
+   ],
+   "rootNode": 1,
+   "kpis": [
+    {
+     "name": "Login p95",
+     "unit": "s",
+     "good": 1.1,
+     "bad": 9.1,
+     "dec": 1
+    },
+    {
+     "name": "Auth token queue",
+     "unit": "ms",
+     "good": 40,
+     "bad": 2200
+    },
+    {
+     "name": "Egress utilization",
+     "unit": "%",
+     "good": 46,
+     "bad": 97
+    },
+    {
+     "name": "Completions / hr",
+     "unit": "k",
+     "good": 48,
+     "bad": 14
+    }
+   ],
+   "path": {
+    "title": "Synthetic login: employee portal",
+    "source": "ThousandEyes",
+    "hops": [
+     {
+      "name": "Cloud Agents",
+      "kind": "agent",
+      "sub": "42 U.S. cities"
+     },
+     {
+      "name": "CDN edge",
+      "kind": "edge",
+      "sub": "Anycast"
+     },
+     {
+      "name": "Internet transit",
+      "kind": "isp",
+      "sub": "Tier 1"
+     },
+     {
+      "name": "North Greenbush egress",
+      "kind": "dc",
+      "sub": "Firewall + LB"
+     },
+     {
+      "name": "Auth token service",
+      "kind": "app",
+      "sub": "SSO"
+     }
+    ],
+    "bad": 3,
+    "alt": {
+     "name": "Secondary cloud region",
+     "kind": "cloud",
+     "sub": "30% of traffic"
+    },
+    "badMetric": "p95 +38% under rehearsal load",
+    "goodMetric": "2.4x headroom verified"
+   },
+   "assistant": {
+    "q": "Will the enrollment portal hold at the opening bell?",
+    "spl": "| mstats p95(login.duration) WHERE index=te_metrics test=\"Portal login\" span=15m\n| predict \"p95(login.duration)\" future_timespan=192\n| join _time [| inputlookup enrollment_seasons.csv]",
+    "a": "No. Login p95 is forecast to reach 9.1 s at T-0, past the 2 s SLO. The shared bottleneck is the auth token service plus WAN egress at North Greenbush.",
+    "rows": [
+     [
+      "Login p95 (rehearsal)",
+      "1.5 s",
+      "+38%"
+     ],
+     [
+      "Forecast peak load",
+      "3.1x",
+      "T-0"
+     ],
+     [
+      "Egress at peak",
+      "97%",
+      "Breach"
+     ]
+    ],
+    "followups": [
+     {
+      "q": "Which employers are most exposed?",
+      "a": "The 40 largest employer clients open enrollment on the same morning. Together they cover about 2.1M employees."
+     },
+     {
+      "q": "What changed since last season?",
+      "a": "Two new benefits products added 3 API calls per session, and auth token lifetimes were shortened by a security update."
+     },
+     {
+      "q": "Draft a plan",
+      "a": "Scale the auth tier 3x, pre-warm the CDN, and shift 30% of logins to the secondary region. I have opened it in AI Canvas for approval."
+     }
+    ]
+   },
+   "canvas": {
+    "prompt": "Find what will break during open enrollment and propose a fix",
+    "plan": [
+     {
+      "agent": "Monitoring agent",
+      "source": "ThousandEyes",
+      "task": "Run synthetic logins at forecast peak"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "Splunk Observability",
+      "task": "Trace auth and rules API latency"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "Catalyst SD-WAN",
+      "task": "Check WAN egress headroom at North Greenbush"
+     },
+     {
+      "agent": "Learning agent",
+      "source": "Data Fabric",
+      "task": "Compare with the last three enrollment seasons"
+     }
+    ],
+    "finding": {
+     "title": "Auth token service and North Greenbush egress saturate together at 3.1x load",
+     "evidence": [
+      "ThousandEyes: login p95 +38%",
+      "APM: token queue 2.2 s at 2.8x",
+      "SD-WAN: egress 97% forecast"
+     ]
+    },
+    "action": {
+     "title": "Scale auth, pre-warm CDN, shift 30% to secondary region",
+     "steps": [
+      "Scale auth tier 3x",
+      "Pre-warm CDN for portal assets",
+      "Shift 30% of logins to secondary region"
+     ],
+     "policy": "Change policy CP-12: pre-approved pattern, operator approval required",
+     "validation": "Synthetic test at 3.1x: login p95 1.2 s"
+    }
+   },
+   "alerts": [
+    {
+     "tool": "Splunk APM",
+     "text": "auth-token p99 > 5 s"
+    },
+    {
+     "tool": "ThousandEyes",
+     "text": "Portal login availability 64%"
+    },
+    {
+     "tool": "Firewall",
+     "text": "Session table 98%"
+    },
+    {
+     "tool": "Service desk",
+     "text": "1,200 tickets: cannot log in"
+    },
+    {
+     "tool": "CDN",
+     "text": "Origin errors 5xx spiking"
+    },
+    {
+     "tool": "Load balancer",
+     "text": "Pool member down: auth-03"
+    },
+    {
+     "tool": "Identity",
+     "text": "Token issuance latency high"
+    },
+    {
+     "tool": "Account team",
+     "text": "Employer escalation: large client"
+    }
+   ],
+   "teams": [
+    "Network",
+    "Identity",
+    "Application",
+    "Cloud",
+    "Service desk",
+    "Account management"
+   ]
+  },
+  "change": {
+   "service": "Core Policy Administration",
+   "tree": [
+    "Policy administration",
+    "DB replication",
+    "Fabric leaf pair 13/14",
+    "ACL change CHG-48211",
+    "Claims intake",
+    "Agent portal"
+   ],
+   "rootNode": 2,
+   "kpis": [
+    {
+     "name": "Change risk score",
+     "unit": "",
+     "good": 11,
+     "bad": 92
+    },
+    {
+     "name": "Replication lag",
+     "unit": "s",
+     "good": 0.4,
+     "bad": 600,
+     "dec": 1
+    },
+    {
+     "name": "Apps in blast radius",
+     "unit": "",
+     "good": 0,
+     "bad": 41
+    },
+    {
+     "name": "Platform availability",
+     "unit": "%",
+     "good": 99.99,
+     "bad": 12,
+     "dec": 2
+    }
+   ],
+   "path": {
+    "title": "Pre-change analysis: policy admin replication path",
+    "source": "Nexus Dashboard",
+    "hops": [
+     {
+      "name": "Policy admin cluster",
+      "kind": "app",
+      "sub": "North Greenbush"
+     },
+     {
+      "name": "Leaf 13",
+      "kind": "switch",
+      "sub": "Nexus 9000"
+     },
+     {
+      "name": "Leaf 14 (drift)",
+      "kind": "switch",
+      "sub": "Unmanaged config"
+     },
+     {
+      "name": "Spine",
+      "kind": "switch",
+      "sub": "Fabric"
+     },
+     {
+      "name": "Replica database",
+      "kind": "db",
+      "sub": "DR site"
+     }
+    ],
+    "bad": 2,
+    "alt": {
+     "name": "Corrected ACL + drift fix",
+     "kind": "switch",
+     "sub": "Verified in twin"
+    },
+    "badMetric": "New ACL + drift blocks TCP 1521",
+    "goodMetric": "Risk 92 reduced to 11"
+   },
+   "assistant": {
+    "q": "What will Saturday's fabric change break?",
+    "spl": "| from datamodel:Change.Change_Records WHERE change_id=\"CHG-48211\"\n| join device [| nexus_intent_check change=CHG-48211]\n| lookup app_dependencies device OUTPUT app business_service",
+    "a": "The new ACL on the leaf pair, combined with undocumented drift on leaf-14, blocks database replication for policy administration. 41 applications depend on it.",
+    "rows": [
+     [
+      "Change risk score",
+      "92",
+      "High"
+     ],
+     [
+      "Drift on leaf-14",
+      "3 lines",
+      "Unrecorded"
+     ],
+     [
+      "Apps in blast radius",
+      "41",
+      "Incl. claims intake"
+     ]
+    ],
+    "followups": [
+     {
+      "q": "Who owns the drift?",
+      "a": "It came from an emergency fix 9 weeks ago (INC-77120). It was never written back to intent."
+     },
+     {
+      "q": "Show the blast radius by business",
+      "a": "Claims intake, the agent portal, Japan batch jobs, billing and 37 internal applications across 5 regions."
+     },
+     {
+      "q": "Fix it",
+      "a": "I drafted a corrected ACL and a drift remediation, and verified both in the digital twin. The plan is in AI Canvas for the change owner and CAB."
+     }
+    ]
+   },
+   "canvas": {
+    "prompt": "Verify CHG-48211 against the live network before Saturday",
+    "plan": [
+     {
+      "agent": "Change agent",
+      "source": "ServiceNow",
+      "task": "Pull change record and implementation plan"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "Nexus Dashboard",
+      "task": "Run pre-change analysis against intent and live config"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "Isovalent",
+      "task": "Check real flows across the leaf pair"
+     },
+     {
+      "agent": "Monitoring agent",
+      "source": "Splunk Observability",
+      "task": "Map dependent business services"
+     }
+    ],
+    "finding": {
+     "title": "ACL plus leaf-14 drift blocks policy admin replication (TCP 1521)",
+     "evidence": [
+      "Nexus Dashboard: intent violation",
+      "Isovalent: 2.1k flows/s on 1521",
+      "Service map: 41 dependent apps"
+     ]
+    },
+    "action": {
+     "title": "Revise ACL and remediate leaf-14 drift",
+     "steps": [
+      "Add replication exception to ACL",
+      "Write back leaf-14 drift to intent",
+      "Re-run analysis in digital twin"
+     ],
+     "policy": "CAB policy: high-risk change, owner + CAB approval",
+     "validation": "Digital twin: replication path open, risk 11"
+    }
+   },
+   "alerts": [
+    {
+     "tool": "Database",
+     "text": "Replication stopped: policy admin"
+    },
+    {
+     "tool": "NOC",
+     "text": "Leaf-14 interface errors"
+    },
+    {
+     "tool": "APM",
+     "text": "Claims intake error rate 64%"
+    },
+    {
+     "tool": "Storage",
+     "text": "Write latency high"
+    },
+    {
+     "tool": "Batch",
+     "text": "Japan overnight jobs failed"
+    },
+    {
+     "tool": "Monitoring",
+     "text": "312 alarms from 12 tools"
+    },
+    {
+     "tool": "Change",
+     "text": "Rollback failed: CHG-48211"
+    },
+    {
+     "tool": "Service desk",
+     "text": "Agent portal unavailable"
+    }
+   ],
+   "teams": [
+    "Network",
+    "Database",
+    "Storage",
+    "Applications",
+    "Change management",
+    "Vendor support"
+   ]
+  },
+  "hurricane": {
+   "service": "Claims and Customer Care, Tampa",
+   "tree": [
+    "Claims contact center",
+    "Webex Contact Center",
+    "SD-WAN edge, Tampa",
+    "Carrier A (flood zone CO)",
+    "Carrier B (flood zone CO)",
+    "Carrier C"
+   ],
+   "rootNode": 3,
+   "kpis": [
+    {
+     "name": "Circuit diversity",
+     "unit": "paths",
+     "good": 3,
+     "bad": 1
+    },
+    {
+     "name": "Forecast call volume",
+     "unit": "x",
+     "good": 1,
+     "bad": 6
+    },
+    {
+     "name": "Call abandonment",
+     "unit": "%",
+     "good": 4,
+     "bad": 48
+    },
+    {
+     "name": "Service level",
+     "unit": "%",
+     "good": 92,
+     "bad": 31
+    }
+   ],
+   "path": {
+    "title": "Tampa voice and data underlay",
+    "source": "ThousandEyes",
+    "hops": [
+     {
+      "name": "Tampa agents",
+      "kind": "user",
+      "sub": "18210 Crane Nest Dr"
+     },
+     {
+      "name": "SD-WAN edge",
+      "kind": "edge",
+      "sub": "Catalyst 8000"
+     },
+     {
+      "name": "Shared central office",
+      "kind": "carrier",
+      "sub": "Flood zone A"
+     },
+     {
+      "name": "Carrier backbone",
+      "kind": "isp",
+      "sub": "2 of 3 circuits"
+     },
+     {
+      "name": "Webex Contact Center",
+      "kind": "saas",
+      "sub": "U.S. region"
+     }
+    ],
+    "bad": 2,
+    "alt": {
+     "name": "5G backup + Carrier C",
+     "kind": "carrier",
+     "sub": "Diverse path"
+    },
+    "badMetric": "2 of 3 circuits share one flood-zone CO",
+    "goodMetric": "Failover rehearsed: zero call drops"
+   },
+   "assistant": {
+    "q": "What happens to Tampa claims if the hurricane makes landfall?",
+    "spl": "| inputlookup noaa_cone_latest.geojson\n| geom circuits_tampa featureIdField=co_id\n| join co_id [| search index=sdwan sourcetype=circuit_inventory site=TPA]\n| stats count by carrier, flood_zone",
+    "a": "Two of the three Tampa carrier circuits run through one central office inside the flood zone. If it floods, voice for the claims floor goes down just as call volume rises 6x.",
+    "rows": [
+     [
+      "Circuits in flood zone",
+      "2 of 3",
+      "Shared CO"
+     ],
+     [
+      "Landfall forecast",
+      "84 h",
+      "Cat 3"
+     ],
+     [
+      "Claims call surge",
+      "6x",
+      "Forecast"
+     ]
+    ],
+    "followups": [
+     {
+      "q": "Can Noida absorb the overflow?",
+      "a": "Yes, with 40% of storm routing and 180 cross-skilled agents. Remote agents in non-impacted states add another 25%."
+     },
+     {
+      "q": "Is 5G backup ready?",
+      "a": "The SD-WAN edges have 5G modules licensed but inactive. Activation plus a policy push takes about 20 minutes."
+     },
+     {
+      "q": "Draft the storm playbook",
+      "a": "Playbook drafted in AI Canvas: activate 5G backup, pre-shift 40% of voice to Noida, publish storm IVR, rehearse failover."
+     }
+    ]
+   },
+   "canvas": {
+    "prompt": "Prepare Tampa claims for the hurricane cone",
+    "plan": [
+     {
+      "agent": "Learning agent",
+      "source": "NOAA feed",
+      "task": "Overlay storm cone on sites and circuits"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "Catalyst SD-WAN",
+      "task": "Check circuit diversity and backup readiness"
+     },
+     {
+      "agent": "Monitoring agent",
+      "source": "Webex Contact Center",
+      "task": "Forecast claims call surge by queue"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "Meraki",
+      "task": "Verify remote agent headsets and VPN"
+     }
+    ],
+    "finding": {
+     "title": "Two of three Tampa circuits share a flood-zone central office",
+     "evidence": [
+      "Circuit inventory: CO shared",
+      "NOAA: cone covers Tampa Bay",
+      "WxCC: 6x call forecast"
+     ]
+    },
+    "action": {
+     "title": "Activate 5G backup and pre-shift 40% of storm voice to Noida",
+     "steps": [
+      "Activate 5G on SD-WAN edges",
+      "Shift 40% voice routing to Noida and remote",
+      "Publish storm IVR and callbacks",
+      "Rehearse failover"
+     ],
+     "policy": "Business continuity policy BC-3: operations approval",
+     "validation": "Failover rehearsal: no dropped calls"
+    }
+   },
+   "alerts": [
+    {
+     "tool": "Carrier",
+     "text": "Circuit A down: loss of signal"
+    },
+    {
+     "tool": "Carrier",
+     "text": "Circuit B down: loss of signal"
+    },
+    {
+     "tool": "WxCC",
+     "text": "Queue abandonment 48%"
+    },
+    {
+     "tool": "SD-WAN",
+     "text": "Tampa edge on single path"
+    },
+    {
+     "tool": "Facilities",
+     "text": "Generator on, building OK"
+    },
+    {
+     "tool": "Claims",
+     "text": "FNOL backlog 3.5 days"
+    },
+    {
+     "tool": "Customer care",
+     "text": "Callers cannot reach claims"
+    },
+    {
+     "tool": "Regulator",
+     "text": "Inquiry: claims access"
+    }
+   ],
+   "teams": [
+    "Network",
+    "Voice",
+    "Facilities",
+    "Claims ops",
+    "Workforce management",
+    "Carrier"
+   ]
+  },
+  "japan": {
+   "service": "Field Sales Application, Japan",
+   "tree": [
+    "Field sales app",
+    "E-signature service",
+    "Secure Access edge, Osaka",
+    "Consumer ISP path",
+    "Forms service",
+    "Policy issuance"
+   ],
+   "rootNode": 3,
+   "kpis": [
+    {
+     "name": "E-signature success",
+     "unit": "%",
+     "good": 99.4,
+     "bad": 62,
+     "dec": 1
+    },
+    {
+     "name": "Path packet loss",
+     "unit": "%",
+     "good": 0.1,
+     "bad": 7.8,
+     "dec": 1
+    },
+    {
+     "name": "Tablets affected",
+     "unit": "%",
+     "good": 0,
+     "bad": 18
+    },
+    {
+     "name": "Apps vs plan",
+     "unit": "%",
+     "good": 12,
+     "bad": -18
+    }
+   ],
+   "path": {
+    "title": "Field tablet to sales app gateway",
+    "source": "ThousandEyes",
+    "hops": [
+     {
+      "name": "Field tablets",
+      "kind": "user",
+      "sub": "Endpoint Agents"
+     },
+     {
+      "name": "Home broadband",
+      "kind": "isp",
+      "sub": "Consumer ISP"
+     },
+     {
+      "name": "ISP peering, Osaka",
+      "kind": "isp",
+      "sub": "Congested"
+     },
+     {
+      "name": "Secure Access edge",
+      "kind": "edge",
+      "sub": "Osaka"
+     },
+     {
+      "name": "Sales app gateway",
+      "kind": "app",
+      "sub": "Japan region"
+     }
+    ],
+    "bad": 2,
+    "alt": {
+     "name": "Secure Access edge, Tokyo",
+     "kind": "edge",
+     "sub": "Alternate"
+    },
+    "badMetric": "Loss 7.8% on one ISP path",
+    "goodMetric": "E-signature back to baseline"
+   },
+   "assistant": {
+    "q": "Why are some field tablets slow on e-signature?",
+    "spl": "| from index=rum app=\"field-sales\" step=\"esign\"\n| join session_id [| search index=te_endpoint]\n| stats perc95(duration) count by isp, edge_pop",
+    "a": "Tablets on one consumer ISP are seeing 7.8% packet loss at its Osaka peering toward the Secure Access edge. 18% of field tablets are affected, right before Monday's quarter-end push.",
+    "rows": [
+     [
+      "Tablets affected",
+      "18%",
+      "One ISP"
+     ],
+     [
+      "E-sign p95",
+      "41 s",
+      "vs 6 s"
+     ],
+     [
+      "Quarter-end push",
+      "Monday",
+      "T-26 h"
+     ]
+    ],
+    "followups": [
+     {
+      "q": "Is it our app release?",
+      "a": "No. Tablets on other ISPs running the same release are at baseline. The loss starts at the ISP's peering point."
+     },
+     {
+      "q": "What about earthquake failover?",
+      "a": "The DR region was verified 3 hours ago. The field app can fail over in under 60 seconds."
+     },
+     {
+      "q": "Steer around it",
+      "a": "Plan in AI Canvas: steer through the Tokyo Secure Access edge, pre-cache forms, and open an ISP case with ThousandEyes evidence."
+     }
+    ]
+   },
+   "canvas": {
+    "prompt": "Protect the quarter-end field sales push",
+    "plan": [
+     {
+      "agent": "Monitoring agent",
+      "source": "ThousandEyes",
+      "task": "Compare endpoint paths by ISP"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "Splunk RUM",
+      "task": "Correlate slow e-sign sessions"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "Cisco Secure Access",
+      "task": "Check alternate edge capacity"
+     },
+     {
+      "agent": "Learning agent",
+      "source": "Data Fabric",
+      "task": "Size revenue at risk from appointment calendar"
+     }
+    ],
+    "finding": {
+     "title": "Consumer ISP peering loss in Osaka is slowing e-signature for 18% of tablets",
+     "evidence": [
+      "ThousandEyes: 7.8% loss at hop 3",
+      "RUM: e-sign p95 41 s",
+      "Other ISPs at baseline"
+     ]
+    },
+    "action": {
+     "title": "Steer the sales app through the Tokyo edge and open an ISP case",
+     "steps": [
+      "Steer affected ISP to Tokyo edge",
+      "Pre-cache forms on tablets",
+      "Open ISP case with evidence"
+     ],
+     "policy": "Secure Access policy change: operator approval",
+     "validation": "ThousandEyes: loss 0.1%, e-sign 5.8 s"
+    }
+   },
+   "alerts": [
+    {
+     "tool": "Service desk",
+     "text": "Tablet slow: 27 tickets"
+    },
+    {
+     "tool": "Field sales",
+     "text": "E-signature failed in home"
+    },
+    {
+     "tool": "App team",
+     "text": "Release 7.4 suspected"
+    },
+    {
+     "tool": "RUM",
+     "text": "Apdex 0.61"
+    },
+    {
+     "tool": "Sales leadership",
+     "text": "Regional escalation"
+    },
+    {
+     "tool": "Network",
+     "text": "No internal faults found"
+    },
+    {
+     "tool": "Policy issuance",
+     "text": "Submissions -18% vs plan"
+    },
+    {
+     "tool": "App team",
+     "text": "Rollback started"
+    }
+   ],
+   "teams": [
+    "Application",
+    "Mobile devices",
+    "Network",
+    "Security",
+    "Sales operations",
+    "ISP"
+   ]
+  },
+  "xcelerator": {
+   "service": "Partner Quote API, Xcelerator",
+   "tree": [
+    "Partner quote API",
+    "Rating service",
+    "Resolver, new cloud region",
+    "Rating cache",
+    "API gateway",
+    "Bind service"
+   ],
+   "rootNode": 2,
+   "kpis": [
+    {
+     "name": "Quote API p99",
+     "unit": "ms",
+     "good": 410,
+     "bad": 1900
+    },
+    {
+     "name": "Partner conversion",
+     "unit": "%",
+     "good": 22,
+     "bad": -38
+    },
+    {
+     "name": "HTTP success",
+     "unit": "%",
+     "good": 99.9,
+     "bad": 99.9,
+     "dec": 1
+    },
+    {
+     "name": "Cache hit rate",
+     "unit": "%",
+     "good": 94,
+     "bad": 31
+    }
+   ],
+   "path": {
+    "title": "E-wallet partner checkout to quote API",
+    "source": "ThousandEyes",
+    "hops": [
+     {
+      "name": "Partner app",
+      "kind": "user",
+      "sub": "E-wallet checkout"
+     },
+     {
+      "name": "API gateway",
+      "kind": "edge",
+      "sub": "MetLife Xcelerator"
+     },
+     {
+      "name": "DNS resolver",
+      "kind": "cloud",
+      "sub": "New region"
+     },
+     {
+      "name": "Rating service",
+      "kind": "app",
+      "sub": "Cold cache"
+     },
+     {
+      "name": "Bind service",
+      "kind": "app",
+      "sub": "Policy"
+     }
+    ],
+    "bad": 2,
+    "alt": {
+     "name": "Pinned resolver + warm cache",
+     "kind": "cloud",
+     "sub": "Fixed"
+    },
+    "badMetric": "p99 1.9 s vs 2 s partner timeout",
+    "goodMetric": "p99 back to 410 ms"
+   },
+   "assistant": {
+    "q": "Why is partner conversion slipping when every API is green?",
+    "spl": "| from index=biz_events event IN (\"quote\",\"bind\") partner=*\n| join trace_id [| search index=apm service=\"quote-api\"]\n| stats p99(duration_ms) as p99, count(eval(event=\"bind\")) as binds by partner",
+    "a": "All APIs return 200, but quote p99 for one e-wallet partner rose from 380 ms to 1.9 s. Their checkout gives up at 2 s, so binds are dropping without a single error.",
+    "rows": [
+     [
+      "Quote p99 (partner)",
+      "1.9 s",
+      "Timeout 2 s"
+     ],
+     [
+      "HTTP success",
+      "99.9%",
+      "Green"
+     ],
+     [
+      "Quote-to-bind",
+      "-11%",
+      "Falling"
+     ]
+    ],
+    "followups": [
+     {
+      "q": "What is the weekend promotion worth?",
+      "a": "The partner forecasts 3x normal traffic. At current conversion, roughly 38% of binds would be lost."
+     },
+     {
+      "q": "Where is the latency coming from?",
+      "a": "DNS resolution in the new cloud region adds about 900 ms, and the rating cache is cold after a deploy."
+     },
+     {
+      "q": "Fix it before Saturday",
+      "a": "Plan in AI Canvas: pin the resolver, warm the rating cache, and add an SLO alert tied to the partner contract."
+     }
+    ]
+   },
+   "canvas": {
+    "prompt": "Explain the conversion drop for the e-wallet partner",
+    "plan": [
+     {
+      "agent": "Monitoring agent",
+      "source": "Splunk Observability",
+      "task": "Trace quote API by partner"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "ThousandEyes",
+      "task": "Test resolver and gateway latency by region"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "Splunk AppDynamics",
+      "task": "Inspect rating service cache"
+     },
+     {
+      "agent": "Learning agent",
+      "source": "Business events",
+      "task": "Tie latency to quote-to-bind"
+     }
+    ],
+    "finding": {
+     "title": "New-region DNS resolution plus a cold rating cache push p99 past the partner timeout",
+     "evidence": [
+      "APM: +900 ms in resolve",
+      "Cache hit 31%",
+      "Binds -11% and falling"
+     ]
+    },
+    "action": {
+     "title": "Pin resolver, warm cache, add partner SLO alert",
+     "steps": [
+      "Pin resolver to regional endpoint",
+      "Warm rating cache",
+      "Add p99 SLO alert tied to contract"
+     ],
+     "policy": "Standard change: service owner approval",
+     "validation": "Synthetic quote p99 410 ms"
+    }
+   },
+   "alerts": [
+    {
+     "tool": "Monitoring",
+     "text": "All APIs healthy (200 OK)"
+    },
+    {
+     "tool": "Partner",
+     "text": "Why did our sales drop?"
+    },
+    {
+     "tool": "Business",
+     "text": "Weekend binds -38%"
+    },
+    {
+     "tool": "APM",
+     "text": "No errors detected"
+    },
+    {
+     "tool": "Partner manager",
+     "text": "Placement under review"
+    },
+    {
+     "tool": "Engineering",
+     "text": "Manual trace review started"
+    }
+   ],
+   "teams": [
+    "API platform",
+    "Cloud",
+    "Partner management",
+    "Product",
+    "Engineering",
+    "Business analytics"
+   ]
+  },
+  "pensions": {
+   "service": "Monthly Pension Payments, Chile",
+   "tree": [
+    "Pension payment file",
+    "Batch chain (22 jobs)",
+    "Job 14: retiree calc",
+    "Storage tier rebalance",
+    "Retiree DB indexes",
+    "Bank file transfer"
+   ],
+   "rootNode": 3,
+   "kpis": [
+    {
+     "name": "Job 14 runtime",
+     "unit": "x",
+     "good": 1,
+     "bad": 2.7,
+     "dec": 1
+    },
+    {
+     "name": "Forecast vs cutoff",
+     "unit": "h",
+     "good": -2,
+     "bad": 3
+    },
+    {
+     "name": "Storage latency",
+     "unit": "ms",
+     "good": 2,
+     "bad": 19
+    },
+    {
+     "name": "Payments on time",
+     "unit": "%",
+     "good": 100,
+     "bad": 0
+    }
+   ],
+   "path": {
+    "title": "Payment batch chain to bank cutoff",
+    "source": "Splunk ITSI",
+    "hops": [
+     {
+      "name": "Jobs 1-13",
+      "kind": "app",
+      "sub": "On time"
+     },
+     {
+      "name": "Job 14",
+      "kind": "app",
+      "sub": "Retiree calc"
+     },
+     {
+      "name": "Storage tier",
+      "kind": "dc",
+      "sub": "Rebalance overlaps"
+     },
+     {
+      "name": "Jobs 15-22",
+      "kind": "app",
+      "sub": "Waiting"
+     },
+     {
+      "name": "Bank file",
+      "kind": "saas",
+      "sub": "Cutoff 06:00"
+     }
+    ],
+    "bad": 2,
+    "alt": {
+     "name": "Rebalance moved, parallel lanes",
+     "kind": "dc",
+     "sub": "Fixed"
+    },
+    "badMetric": "Job 14 at 2.7x: misses cutoff by 3 h",
+    "goodMetric": "Finishes 2 h before cutoff"
+   },
+   "assistant": {
+    "q": "Will Pension Day payments make the bank cutoff?",
+    "spl": "| from index=batch chain=\"pension_monthly\" run_type=rehearsal\n| join job [| inputlookup batch_baselines.csv]\n| eval ratio=duration/baseline | predict end_time",
+    "a": "Not at the current pace. Job 14 is running 2.7x slower than its history, and the forecast misses the bank cutoff by about 3 hours. Every job still shows green in the scheduler.",
+    "rows": [
+     [
+      "Job 14 runtime",
+      "2.7x",
+      "vs baseline"
+     ],
+     [
+      "Forecast end",
+      "09:00",
+      "Cutoff 06:00"
+     ],
+     [
+      "Retirees affected",
+      "~640k",
+      "Monthly run"
+     ]
+    ],
+    "followups": [
+     {
+      "q": "Why is job 14 slow?",
+      "a": "A storage tier rebalance is scheduled inside the batch window, and retiree record indexes have grown 30%."
+     },
+     {
+      "q": "What is the regulatory exposure?",
+      "a": "Late payments trigger a mandatory regulatory report and retiree complaints. The report itself is due the same day."
+     },
+     {
+      "q": "Plan the fix",
+      "a": "Plan in AI Canvas: reschedule the rebalance, rebuild indexes, and add two parallel lanes to job 14."
+     }
+    ]
+   },
+   "canvas": {
+    "prompt": "Make sure Pension Day pays on time",
+    "plan": [
+     {
+      "agent": "Monitoring agent",
+      "source": "Splunk ITSI",
+      "task": "Compare rehearsal with batch history"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "Nexus Dashboard",
+      "task": "Check storage fabric during window"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "Splunk AppDynamics",
+      "task": "Profile job 14 queries"
+     },
+     {
+      "agent": "Learning agent",
+      "source": "Data Fabric",
+      "task": "Forecast end time vs bank cutoff"
+     }
+    ],
+    "finding": {
+     "title": "Storage rebalance overlaps the batch window while retiree indexes grew 30%",
+     "evidence": [
+      "ITSI: job 14 at 2.7x",
+      "Storage latency 19 ms",
+      "Index size +30%"
+     ]
+    },
+    "action": {
+     "title": "Reschedule rebalance, rebuild indexes, add parallel lanes",
+     "steps": [
+      "Move rebalance to Sunday",
+      "Rebuild retiree indexes",
+      "Run job 14 in 3 lanes"
+     ],
+     "policy": "Operations approval: payment-critical window",
+     "validation": "Rehearsal: finishes 2 h before cutoff"
+    }
+   },
+   "alerts": [
+    {
+     "tool": "Scheduler",
+     "text": "All jobs green"
+    },
+    {
+     "tool": "Payments",
+     "text": "Bank cutoff missed"
+    },
+    {
+     "tool": "Bank",
+     "text": "File not received"
+    },
+    {
+     "tool": "Customer care",
+     "text": "12,000 retiree calls"
+    },
+    {
+     "tool": "Compliance",
+     "text": "Regulatory report late"
+    },
+    {
+     "tool": "Storage",
+     "text": "Latency high (rebalance)"
+    }
+   ],
+   "teams": [
+    "Batch operations",
+    "Storage",
+    "Database",
+    "Payments",
+    "Compliance",
+    "Customer care"
+   ]
+  },
+  "resilience": {
+   "service": "Pay Retirement Income (IBS)",
+   "tree": [
+    "Pay retirement income",
+    "Identity verification (3rd party)",
+    "Payments engine",
+    "Firewall egress",
+    "Secondary provider",
+    "Bank rails"
+   ],
+   "rootNode": 1,
+   "kpis": [
+    {
+     "name": "Provider availability",
+     "unit": "%",
+     "good": 99.9,
+     "bad": 71,
+     "dec": 1
+    },
+    {
+     "name": "Hours to tolerance",
+     "unit": "h",
+     "good": 24,
+     "bad": 6
+    },
+    {
+     "name": "Payments delayed",
+     "unit": "",
+     "good": 0,
+     "bad": 3400
+    },
+    {
+     "name": "Evidence pack",
+     "unit": "%",
+     "good": 100,
+     "bad": 0
+    }
+   ],
+   "path": {
+    "title": "Payments engine to identity verification provider",
+    "source": "ThousandEyes",
+    "hops": [
+     {
+      "name": "Payments engine",
+      "kind": "app",
+      "sub": "U.K."
+     },
+     {
+      "name": "Secure Firewall",
+      "kind": "edge",
+      "sub": "Egress"
+     },
+     {
+      "name": "Internet",
+      "kind": "isp",
+      "sub": "Transit"
+     },
+     {
+      "name": "ID verification API",
+      "kind": "saas",
+      "sub": "Third party"
+     },
+     {
+      "name": "Payment release",
+      "kind": "app",
+      "sub": "New retirees"
+     }
+    ],
+    "bad": 3,
+    "alt": {
+     "name": "Secondary provider",
+     "kind": "saas",
+     "sub": "Contracted"
+    },
+    "badMetric": "Steady decline: outage forecast in ~18 h",
+    "goodMetric": "Secondary path live 12 h early"
+   },
+   "assistant": {
+    "q": "Are we at risk of breaching an impact tolerance?",
+    "spl": "| from index=te_metrics test=\"IDV provider API\"\n| predict availability future_timespan=72\n| lookup ibs_map dependency OUTPUT ibs, tolerance_hours",
+    "a": "Yes. ThousandEyes shows a steady decline at the third-party identity verification provider. If it fails, new retiree income payments stall and breach the 24-hour tolerance.",
+    "rows": [
+     [
+      "Provider trend",
+      "-28%",
+      "18 h to outage"
+     ],
+     [
+      "Tolerance",
+      "24 h",
+      "Pay retirement income"
+     ],
+     [
+      "Status page",
+      "Minor",
+      "Understated"
+     ]
+    ],
+    "followups": [
+     {
+      "q": "Do we have a contracted alternative?",
+      "a": "Yes. A secondary provider is contracted and tested quarterly. Activation needs a firewall egress change."
+     },
+     {
+      "q": "What would the regulator ask for?",
+      "a": "Evidence that the important business service stayed within tolerance, the mapping, and the decision log. I can generate it."
+     },
+     {
+      "q": "Switch providers",
+      "a": "Plan in AI Canvas: activate the secondary provider, adjust firewall egress, notify the service owner, and generate the evidence pack."
+     }
+    ]
+   },
+   "canvas": {
+    "prompt": "Keep Pay Retirement Income inside its impact tolerance",
+    "plan": [
+     {
+      "agent": "Monitoring agent",
+      "source": "ThousandEyes",
+      "task": "Trend third-party provider tests"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "Splunk ITSI",
+      "task": "Map provider to important business services"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "Cisco Secure Firewall",
+      "task": "Prepare egress for secondary provider"
+     },
+     {
+      "agent": "Learning agent",
+      "source": "Data Fabric",
+      "task": "Assemble DORA and operational resilience evidence"
+     }
+    ],
+    "finding": {
+     "title": "Third-party identity provider is degrading toward outage; tolerance breach in about 18 h",
+     "evidence": [
+      "ThousandEyes: availability -28%",
+      "IBS map: payments depend on it",
+      "Status page: minor degradation"
+     ]
+    },
+    "action": {
+     "title": "Activate contracted secondary provider",
+     "steps": [
+      "Adjust firewall egress",
+      "Activate secondary provider",
+      "Notify service owner",
+      "Generate evidence pack"
+     ],
+     "policy": "Operational resilience policy: service owner approval",
+     "validation": "Synthetic payment flow green via secondary"
+    }
+   },
+   "alerts": [
+    {
+     "tool": "Vendor",
+     "text": "Status: minor degradation"
+    },
+    {
+     "tool": "Payments",
+     "text": "ID verification timeouts"
+    },
+    {
+     "tool": "Service owner",
+     "text": "Manual workaround started"
+    },
+    {
+     "tool": "Risk",
+     "text": "Tolerance breach at risk"
+    },
+    {
+     "tool": "Customer care",
+     "text": "New retiree calls rising"
+    },
+    {
+     "tool": "Compliance",
+     "text": "Regulator notification drafted"
+    }
+   ],
+   "teams": [
+    "Payments",
+    "Vendor management",
+    "Network security",
+    "Risk",
+    "Compliance",
+    "Service owner"
+   ]
+  },
+  "ransomware": {
+   "service": "MetLife Gulf Business Systems",
+   "tree": [
+    "Claims and policy file shares",
+    "Identity (Duo)",
+    "Finance laptop",
+    "SMB file servers",
+    "Email security",
+    "Segmentation (Hypershield)"
+   ],
+   "rootNode": 1,
+   "kpis": [
+    {
+     "name": "Attack confidence",
+     "unit": "%",
+     "good": 96,
+     "bad": 96
+    },
+    {
+     "name": "Endpoints exposed",
+     "unit": "",
+     "good": 0,
+     "bad": 2
+    },
+    {
+     "name": "Shares encrypted",
+     "unit": "",
+     "good": 0,
+     "bad": 37
+    },
+    {
+     "name": "Time to contain",
+     "unit": "min",
+     "good": 15,
+     "bad": 1500
+    }
+   ],
+   "path": {
+    "title": "Attack path: lure to file shares",
+    "source": "Cisco XDR",
+    "hops": [
+     {
+      "name": "Targeted lure",
+      "kind": "saas",
+      "sub": "40 recipients"
+     },
+     {
+      "name": "Finance laptop",
+      "kind": "user",
+      "sub": "Office 405"
+     },
+     {
+      "name": "Duo push (new device)",
+      "kind": "edge",
+      "sub": "Impossible travel"
+     },
+     {
+      "name": "SMB enumeration",
+      "kind": "switch",
+      "sub": "Lateral discovery"
+     },
+     {
+      "name": "Claims file shares",
+      "kind": "db",
+      "sub": "Crown jewels"
+     }
+    ],
+    "bad": 2,
+    "alt": {
+     "name": "Sessions revoked, segment applied",
+     "kind": "edge",
+     "sub": "Contained"
+    },
+    "badMetric": "3 weak signals, 1 attack chain",
+    "goodMetric": "Contained at identity stage"
+   },
+   "assistant": {
+    "q": "Are these alerts related?",
+    "spl": "| from datamodel:Risk.All_Risk WHERE risk_object IN (\"j.alhashimi\",\"FIN-LT-0442\")\n| join risk_object [| search index=duo action=push result=approved new_device=true]\n| stats values(mitre_technique) sum(risk_score) by risk_object",
+    "a": "Yes. A click on a targeted lure, an impossible-travel Duo approval from a new device and unusual SMB enumeration belong to one attack chain. Cisco XDR rates it a true positive with high confidence.",
+    "rows": [
+     [
+      "Risk score",
+      "186",
+      "Critical"
+     ],
+     [
+      "MITRE techniques",
+      "4",
+      "T1566, T1078, T1135, T1021"
+     ],
+     [
+      "Users clicked",
+      "2 of 40",
+      "Claims staff"
+     ]
+    ],
+    "followups": [
+     {
+      "q": "What is the blast radius?",
+      "a": "The compromised identity can reach 37 claims and policy file shares in the Gulf region and two in Istanbul."
+     },
+     {
+      "q": "Has any data left?",
+      "a": "No exfiltration observed. Egress volumes from both endpoints are at baseline."
+     },
+     {
+      "q": "Contain it",
+      "a": "SOAR playbook ready: revoke sessions, force Duo re-enrollment, isolate two endpoints and apply a Hypershield segmentation rule."
+     }
+    ]
+   },
+   "canvas": {
+    "prompt": "Investigate the risky Duo approval for a claims user",
+    "plan": [
+     {
+      "agent": "Triage agent",
+      "source": "Splunk ES",
+      "task": "Correlate risk events for the user and device"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "Cisco XDR",
+      "task": "Assemble the attack chain and verdict"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "Cisco Duo",
+      "task": "Check device trust and travel"
+     },
+     {
+      "agent": "Response agent",
+      "source": "Splunk SOAR",
+      "task": "Prepare containment playbook"
+     }
+    ],
+    "finding": {
+     "title": "One attack chain: phishing, then valid-account use, then share discovery",
+     "evidence": [
+      "XDR: true positive, high confidence",
+      "Duo: new device, impossible travel",
+      "SMB: 1,900 share enumerations"
+     ]
+    },
+    "action": {
+     "title": "Run containment playbook",
+     "steps": [
+      "Revoke sessions",
+      "Force Duo re-enrollment",
+      "Isolate 2 endpoints",
+      "Apply Hypershield segment rule"
+     ],
+     "policy": "SOC policy: auto-contain at high confidence, analyst notified",
+     "validation": "No encryption, no exfiltration"
+    }
+   },
+   "alerts": [
+    {
+     "tool": "Email",
+     "text": "Phish delivered: 40 users"
+    },
+    {
+     "tool": "EDR",
+     "text": "Suspicious PowerShell"
+    },
+    {
+     "tool": "File servers",
+     "text": "Mass file rename"
+    },
+    {
+     "tool": "SIEM",
+     "text": "4,000 alerts in queue"
+    },
+    {
+     "tool": "Backup",
+     "text": "Shadow copies deleted"
+    },
+    {
+     "tool": "Network",
+     "text": "Segments shut down"
+    },
+    {
+     "tool": "Legal",
+     "text": "Breach assessment opened"
+    },
+    {
+     "tool": "Claims",
+     "text": "File shares encrypted"
+    }
+   ],
+   "teams": [
+    "SOC",
+    "Incident response",
+    "Identity",
+    "Network",
+    "Legal",
+    "Regional leadership"
+   ],
+   "security": {
+    "verdict": "True positive · High confidence",
+    "tactics": [
+     "Initial Access",
+     "Credential Access",
+     "Discovery",
+     "Lateral Movement",
+     "Impact"
+    ],
+    "story": [
+     {
+      "stage": "Initial Access",
+      "text": "T1566 phishing lure, 2 clicks"
+     },
+     {
+      "stage": "Credential Access",
+      "text": "T1078 valid account, Duo push from new device"
+     },
+     {
+      "stage": "Discovery",
+      "text": "T1135 network share discovery"
+     },
+     {
+      "stage": "Lateral Movement",
+      "text": "T1021 SMB to file servers"
+     },
+     {
+      "stage": "Impact",
+      "text": "T1486 data encrypted for impact"
+     }
+    ],
+    "responses": [
+     "Revoke user sessions",
+     "Force Duo re-enrollment",
+     "Isolate FIN-LT-0442 and one more endpoint",
+     "Hypershield: segment claims shares"
+    ]
+   }
+  },
+  "voice": {
+   "service": "Global Customer Service Voice",
+   "tree": [
+    "U.S. customer queues",
+    "Webex Contact Center",
+    "Media path to U.S. cluster",
+    "Underlay carrier",
+    "SD-WAN app-route policy",
+    "Agent headsets"
+   ],
+   "rootNode": 4,
+   "kpis": [
+    {
+     "name": "Call quality (MOS)",
+     "unit": "",
+     "good": 4.3,
+     "bad": 3.1,
+     "dec": 1
+    },
+    {
+     "name": "Media jitter",
+     "unit": "ms",
+     "good": 6,
+     "bad": 48
+    },
+    {
+     "name": "Handle time",
+     "unit": "%",
+     "good": 0,
+     "bad": 22
+    },
+    {
+     "name": "CSAT change",
+     "unit": "pts",
+     "good": 4,
+     "bad": -9
+    }
+   ],
+   "path": {
+    "title": "Noida agents to U.S. voice cluster",
+    "source": "ThousandEyes",
+    "hops": [
+     {
+      "name": "Noida agents",
+      "kind": "user",
+      "sub": "Oxygen Tower 2"
+     },
+     {
+      "name": "SD-WAN edge",
+      "kind": "edge",
+      "sub": "App-route policy"
+     },
+     {
+      "name": "Underlay carrier",
+      "kind": "carrier",
+      "sub": "Congested at peak"
+     },
+     {
+      "name": "Webex media node",
+      "kind": "saas",
+      "sub": "U.S. east"
+     },
+     {
+      "name": "U.S. customers",
+      "kind": "user",
+      "sub": "PSTN"
+     }
+    ],
+    "bad": 2,
+    "alt": {
+     "name": "Clean MPLS path",
+     "kind": "carrier",
+     "sub": "Voice prioritized"
+    },
+    "badMetric": "Jitter 48 ms, MOS trending to 3.1",
+    "goodMetric": "MOS 4.3 on clean path"
+   },
+   "assistant": {
+    "q": "Will tonight's U.S. shift have call quality problems?",
+    "spl": "| from index=webex_cc metric=mos queue=US_*\n| join site [| search index=te_metrics test=\"Noida-US media\"]\n| predict mos future_timespan=40 | where mos < 3.6",
+    "a": "Yes. Jitter on the media path from Noida to the U.S. voice cluster is rising, and MOS is forecast below 3.6 for the U.S. peak. That predicts repeat calls and longer handle times.",
+    "rows": [
+     [
+      "Forecast MOS",
+      "3.1",
+      "Below 3.6"
+     ],
+     [
+      "Jitter",
+      "48 ms",
+      "Rising"
+     ],
+     [
+      "Queues at risk",
+      "6",
+      "U.S. peak"
+     ]
+    ],
+    "followups": [
+     {
+      "q": "Is it the network or Webex?",
+      "a": "The network. Webex media nodes are healthy; jitter starts at the underlay carrier hop, and SD-WAN is not prioritizing media."
+     },
+     {
+      "q": "What does it cost?",
+      "a": "At the forecast quality, handle time rises about 22% and repeat calls 15% across the U.S. shift."
+     },
+     {
+      "q": "Fix the policy",
+      "a": "Plan in AI Canvas: update the SD-WAN app-aware routing policy to prioritize voice and move media to the clean path."
+     }
+    ]
+   },
+   "canvas": {
+    "prompt": "Keep call quality high for tonight's U.S. shift",
+    "plan": [
+     {
+      "agent": "Monitoring agent",
+      "source": "Webex Contact Center",
+      "task": "Trend MOS and CSAT by queue"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "ThousandEyes",
+      "task": "Test media path hop by hop"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "Catalyst SD-WAN",
+      "task": "Inspect app-route policy for voice"
+     },
+     {
+      "agent": "Learning agent",
+      "source": "Data Fabric",
+      "task": "Link quality to handle time and CSAT"
+     }
+    ],
+    "finding": {
+     "title": "Carrier congestion plus an SD-WAN policy that does not prioritize media",
+     "evidence": [
+      "ThousandEyes: jitter at hop 3",
+      "SD-WAN: voice in default class",
+      "WxCC: MOS forecast 3.1"
+     ]
+    },
+    "action": {
+     "title": "Update app-aware routing to prioritize voice",
+     "steps": [
+      "Put media in priority class",
+      "Steer media to clean MPLS path",
+      "Re-test media path"
+     ],
+     "policy": "Network policy change: operator approval",
+     "validation": "ThousandEyes: MOS 4.3"
+    }
+   },
+   "alerts": [
+    {
+     "tool": "Agents",
+     "text": "Choppy audio reported"
+    },
+    {
+     "tool": "WxCC",
+     "text": "MOS 3.1 on U.S. queues"
+    },
+    {
+     "tool": "Customers",
+     "text": "Repeat calls +15%"
+    },
+    {
+     "tool": "Ops",
+     "text": "Handle time +22%"
+    },
+    {
+     "tool": "Voice team",
+     "text": "Webex looks healthy"
+    },
+    {
+     "tool": "Network team",
+     "text": "Links within capacity"
+    }
+   ],
+   "teams": [
+    "Voice",
+    "Network",
+    "Carrier",
+    "Contact center ops",
+    "Workforce management",
+    "Webex support"
+   ]
+  },
+  "mim": {
+   "service": "Market Data and Trading, MIM",
+   "tree": [
+    "Portfolio rebalance",
+    "Market data feed handlers",
+    "Market data leaf",
+    "Shared uplink",
+    "Analytics workload",
+    "Order management system"
+   ],
+   "rootNode": 3,
+   "kpis": [
+    {
+     "name": "Buffer utilization",
+     "unit": "%",
+     "good": 22,
+     "bad": 100
+    },
+    {
+     "name": "Feed latency",
+     "unit": "μs",
+     "good": 18,
+     "bad": 720
+    },
+    {
+     "name": "Microbursts / min",
+     "unit": "",
+     "good": 0,
+     "bad": 340
+    },
+    {
+     "name": "Rebalance progress",
+     "unit": "%",
+     "good": 100,
+     "bad": 35
+    }
+   ],
+   "path": {
+    "title": "Exchange feeds to trading desk",
+    "source": "Nexus Dashboard",
+    "hops": [
+     {
+      "name": "Exchange feeds",
+      "kind": "saas",
+      "sub": "Market data"
+     },
+     {
+      "name": "Feed handlers",
+      "kind": "app",
+      "sub": "Normalization"
+     },
+     {
+      "name": "Shared uplink",
+      "kind": "switch",
+      "sub": "Analytics contention"
+     },
+     {
+      "name": "Market data leaf",
+      "kind": "switch",
+      "sub": "Nexus"
+     },
+     {
+      "name": "Trading desk / OMS",
+      "kind": "app",
+      "sub": "Whippany"
+     }
+    ],
+    "bad": 2,
+    "alt": {
+     "name": "QoS + dedicated uplink",
+     "kind": "switch",
+     "sub": "4x headroom"
+    },
+    "badMetric": "Sub-second buffer fills; 5-min averages fine",
+    "goodMetric": "Headroom 4x at forecast peak"
+   },
+   "assistant": {
+    "q": "Is the trading network ready for the 14:00 announcement?",
+    "spl": "| mstats max(buffer.util) WHERE index=nexus_telemetry device=\"md-leaf-*\" span=100ms\n| join _time [| inputlookup market_calendar.csv]\n| predict \"max(buffer.util)\" future_timespan=70",
+    "a": "No. Five-minute averages look perfect, but sub-second telemetry shows buffers filling on the market data leaf. At announcement volume, packets will drop.",
+    "rows": [
+     [
+      "Peak buffer (100 ms)",
+      "91%",
+      "Rising"
+     ],
+     [
+      "5-min average",
+      "23%",
+      "Looks fine"
+     ],
+     [
+      "Announcement",
+      "14:00",
+      "T-70 min"
+     ]
+    ],
+    "followups": [
+     {
+      "q": "What is sharing the uplink?",
+      "a": "A new analytics workload deployed Tuesday shares the uplink with the market data feed handlers."
+     },
+     {
+      "q": "What is at stake?",
+      "a": "A planned portfolio rebalance runs in the announcement window. Stale prices would force traders to halt it."
+     },
+     {
+      "q": "Fix it",
+      "a": "Plan in AI Canvas: QoS for feed handlers, move analytics to a separate uplink, and pre-warm the OMS."
+     }
+    ]
+   },
+   "canvas": {
+    "prompt": "Make sure the desk can trade through the announcement",
+    "plan": [
+     {
+      "agent": "Monitoring agent",
+      "source": "Nexus Dashboard",
+      "task": "Pull sub-second buffer telemetry"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "Splunk Observability",
+      "task": "Profile feed handler latency"
+     },
+     {
+      "agent": "Diagnostic agent",
+      "source": "ThousandEyes",
+      "task": "Test exchange connectivity"
+     },
+     {
+      "agent": "Learning agent",
+      "source": "Market calendar",
+      "task": "Forecast volume at 14:00"
+     }
+    ],
+    "finding": {
+     "title": "New analytics workload shares the uplink with market data feed handlers",
+     "evidence": [
+      "Nexus: microbursts 340/min",
+      "Buffers 91% at 100 ms",
+      "Calendar: CB announcement 14:00"
+     ]
+    },
+    "action": {
+     "title": "QoS for feeds, separate analytics uplink, pre-warm OMS",
+     "steps": [
+      "Apply QoS to feed handlers",
+      "Move analytics to uplink 2",
+      "Pre-warm OMS"
+     ],
+     "policy": "Trading change policy: desk head approval",
+     "validation": "Nexus: 4x headroom at forecast peak"
+    }
+   },
+   "alerts": [
+    {
+     "tool": "Market data",
+     "text": "Stale prices on 3 venues"
+    },
+    {
+     "tool": "Network",
+     "text": "Output drops: md-leaf-02"
+    },
+    {
+     "tool": "Trading desk",
+     "text": "Rebalance halted"
+    },
+    {
+     "tool": "OMS",
+     "text": "Order book gaps"
+    },
+    {
+     "tool": "Support line",
+     "text": "Desk support calls"
+    },
+    {
+     "tool": "Risk",
+     "text": "Slippage measured"
+    }
+   ],
+   "teams": [
+    "Trading technology",
+    "Network",
+    "Market data",
+    "Portfolio ops",
+    "Risk",
+    "Exchange connectivity"
+   ]
+  }
+ },
+ "ry": [
+  "Seoul | Experience Agent moved bancassurance API traffic off a lossy transit path. No customer impact.",
+  "Cary | Change Agent caught a VLAN conflict in a Tuesday change. CAB accepted the revised plan.",
+  "Sao Paulo | Revenue Agent flagged checkout latency for a retail partner and warmed the quote cache.",
+  "Dublin | Resilience Agent verified a DORA exit plan for a cloud provider. Evidence filed.",
+  "Tokyo | Resilience Agent completed an automated earthquake failover drill in 52 seconds.",
+  "Noida | SD-WAN policy re-prioritized Webex media for the evening U.S. shift.",
+  "Istanbul | Security Agent revoked a session after impossible-travel MFA. Duo re-enrollment forced.",
+  "New York | Capacity Agent forecast a payroll-cycle peak and pre-scaled the benefits API tier.",
+  "Mumbai | ThousandEyes isolated an ISP DNS issue that was slowing agent onboarding apps.",
+  "Whippany | Markets Agent tagged a microburst trend on a market data leaf. QoS proposal queued.",
+  "Tampa | Claims intake auto-scaled ahead of a severe-weather watch.",
+  "Warsaw | Splunk ITSI predicted disk exhaustion on a policy database 6 days out. Ticket auto-created.",
+  "Hong Kong | Expired certificate on a partner gateway found 14 days ahead. Renewal automated.",
+  "Sydney | Group insurance portal synthetic tests green across 6 ISPs.",
+  "Paris | Hypershield applied a compensating control for a newly published CVE before patch day.",
+  "Mexico City | Xcelerator partner SLO dashboards refreshed with contract-tied latency budgets.",
+  "Dubai | Splunk SOAR closed 312 phishing reports with automated triage.",
+  "Santiago | Batch Agent confirmed tonight's pension run will finish 2h 10m ahead of the bank cutoff.",
+  "Brighton | Important business service map refreshed. All impact tolerances are within limits.",
+  "Shanghai | Data Fabric federated search ran across 4 regions without moving data."
+ ],
+ "vv": [
+  {
+   "id": "te",
+   "label": "ThousandEyes, network",
+   "color": "#38c6f4",
+   "panel": "path"
+  },
+  {
+   "id": "splunk",
+   "label": "Splunk Data Fabric",
+   "color": "#f99d1c",
+   "panel": "splunk"
+  },
+  {
+   "id": "cc",
+   "label": "Cloud Control agents",
+   "color": "#5191f0",
+   "panel": "canvas"
+  },
+  {
+   "id": "xdr",
+   "label": "Security, XDR",
+   "color": "#ff6a8a",
+   "panel": "xdr"
+  },
+  {
+   "id": "biz",
+   "label": "People and business",
+   "color": "#a4ce4e",
+   "panel": "impact"
+  }
+ ],
+ "Gv": [
+  {
+   "k": "net",
+   "label": "Network",
+   "sub": "Catalyst, Meraki, SD-WAN, Nexus",
+   "match": "SD-WAN|Meraki|Nexus|WAN|network|circuit|Catalyst"
+  },
+  {
+   "k": "inet",
+   "label": "Internet and cloud",
+   "sub": "ThousandEyes agents",
+   "match": "ThousandEyes|ISP|path|synthetic"
+  },
+  {
+   "k": "app",
+   "label": "Applications",
+   "sub": "Splunk Observability, AppDynamics",
+   "match": "Observability|APM|AppDynamics|RUM|trace|batch|API"
+  },
+  {
+   "k": "sec",
+   "label": "Identity and security",
+   "sub": "Duo, XDR, Firewall, Hypershield",
+   "match": "Duo|XDR|Security|Firewall|Hypershield|Identity|identity"
+  },
+  {
+   "k": "biz",
+   "label": "Business events",
+   "sub": "Quotes, claims, payments, CSAT",
+   "match": "business|Business|CSAT|quote|claims|payment|Webex|events"
+  },
+  {
+   "k": "ext",
+   "label": "External signals",
+   "sub": "Weather, market calendar, vendors",
+   "match": "weather|NOAA|hurricane|market|calendar|vendor|third|season"
+  }
+ ],
+ "Kv": [
+  "Catalyst SD-WAN",
+  "Nexus Dashboard",
+  "Secure Access",
+  "Hypershield",
+  "Webex Contact Center",
+  "ServiceNow"
+ ],
+ "ev": [
+  {
+   "id": "heart",
+   "label": "Heart",
+   "detail": "US English, warm presenter"
+  },
+  {
+   "id": "michael",
+   "label": "Michael",
+   "detail": "US English, steady narrator"
+  },
+  {
+   "id": "emma",
+   "label": "Emma",
+   "detail": "British English, crisp"
+  },
+  {
+   "id": "george",
+   "label": "George",
+   "detail": "British English, documentary"
+  }
+ ],
+ "iy": "Now watch the other timeline.",
+ "ay": "Here is how to tell this story.",
+ "oy": "Time to check your understanding. Answer each question to earn experience points.",
+ "iv": "Welcome to the MetLife and Cisco Cloud Control experience."
+}

@@ -1,0 +1,15 @@
+[
+  {"key": "TALK_TITLE", "label": "Talk title", "hint": "The name on the title scene", "example": "From tickets to outcomes", "type": "text"},
+  {"key": "AUDIENCE", "label": "Who is in the room", "hint": "Team, event or account audience", "example": "Northwind Freight's IT and OT engineering leads at their annual planning offsite", "type": "text"},
+  {"key": "GOAL", "label": "The one change you want", "hint": "What they should do differently afterwards", "example": "Start every account plan with a one-shot brief instead of a slide outline.", "type": "textarea"},
+  {"key": "MINUTES", "label": "Talk length (minutes)", "hint": "About 150 spoken words per minute", "example": "20", "type": "number"},
+  {"key": "PRESENTER", "label": "Presenter", "hint": "Name and role", "example": "Stephen Ewings, Solutions Engineer, Cisco", "type": "text"},
+  {"key": "PRESENTER_NAME", "label": "Presenter first name", "hint": "How the AI narrator refers to them", "example": "Stephen", "type": "text"},
+  {"key": "SCENARIO", "label": "Cisco topic", "hint": "Portfolio or theme the talk carries", "example": "Cisco Cloud Control and AgenticOps", "type": "text"},
+  {"key": "KEY_ITEMS", "label": "Must include", "hint": "One per line", "example": "AI Canvas\nThousandEyes\nSplunk ITSI", "type": "textarea"},
+  {"key": "METHOD_BLOCKS", "label": "Method blocks", "hint": "The numbered structure the focus scene teaches", "example": "Medium, Customer, Story + audience, Key items, Research, One shot, Time budget, Masterpiece", "type": "textarea"},
+  {"key": "EXAMPLES", "label": "Examples and live links", "hint": "One per line: name, what it is, https link", "example": "Yard Twin, a 3D model of the Chicago intermodal yard, https://example.com/yard\nGate Flow, gate throughput explorer, https://example.com/gate", "type": "textarea"},
+  {"key": "WORKSHOP", "label": "Workshop", "hint": "Include, skip, or let Claude decide", "example": "include it, with a 10 minute timer", "type": "text"},
+  {"key": "BRAND_RULES", "label": "Brand rules", "hint": "Logo and brand constraints", "example": "Use the bridge-bars mark exactly as the skill draws it; any other Cisco logo only from approved files I attach.", "type": "textarea"},
+  {"key": "HOURS", "label": "Time budget (hours)", "hint": "Sets ambition and the stop point", "example": "4", "type": "number"}
+]

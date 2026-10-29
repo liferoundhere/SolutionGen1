@@ -1,0 +1,107 @@
+[
+ {
+  "key": "CUSTOMER",
+  "label": "Customer",
+  "hint": "Company name as it should appear in the lockup and H1.",
+  "example": "Northwind Power",
+  "type": "text"
+ },
+ {
+  "key": "WHERE",
+  "label": "Territory",
+  "hint": "States, regions or service area the hex twin should map.",
+  "example": "Oregon and Washington service territory (Willamette Valley to Puget Sound), plus the Columbia River Gorge",
+  "type": "text"
+ },
+ {
+  "key": "AUDIENCE",
+  "label": "Leadership audience",
+  "hint": "Who reads the page and what they own.",
+  "example": "CIO, CISO and VP Grid Operations at Northwind Power, plus their direct staff",
+  "type": "text"
+ },
+ {
+  "key": "GOAL",
+  "label": "Goal of the page",
+  "hint": "What the leave-behind must achieve after the meeting.",
+  "example": "Leave IT leadership with a sourced view of how Splunk and Cisco support Northwind's wildfire-season operations and CIP-015 program, and agree on two roadmap options to scope",
+  "type": "textarea"
+ },
+ {
+  "key": "SCENARIO",
+  "label": "Cisco and Splunk topic",
+  "hint": "The theme the story is built around.",
+  "example": "Agentic operations with Cisco Cloud Control on the Splunk data fabric: wildfire public-safety power shutoffs, OT security and CIP-015 INSM",
+  "type": "textarea"
+ },
+ {
+  "key": "KEY_ITEMS",
+  "label": "Sites and functions on the twin",
+  "hint": "15 to 20 sites with type and approximate location; these become hex-map beacons.",
+  "example": "Portland HQ (hq, 45.52,-122.68); Salem control center (substation, 44.94,-123.03); Bonneville tie (substation, 45.64,-121.94); Hood River wind (wind, 45.7,-121.5); Klamath gas plant (gas, 42.2,-121.8); Puget data center cluster (datacenter, 47.25,-122.3); Customer Ops (cx, 45.3,-122.9); Columbia Generating Station PPA (nuclear, 46.47,-119.33)",
+  "type": "textarea"
+ },
+ {
+  "key": "HOURS",
+  "label": "Time budget (hours)",
+  "hint": "Hours for research, build and review.",
+  "example": "6",
+  "type": "number"
+ },
+ {
+  "key": "PRESENTER",
+  "label": "Prepared by",
+  "hint": "Team or person named in the kicker and footer.",
+  "example": "Splunk, a Cisco company, Northwind account team",
+  "type": "text"
+ },
+ {
+  "key": "PLATFORM_OWNED",
+  "label": "Platform they already run",
+  "hint": "Splunk and Cisco products already in production; marked 'in place' everywhere.",
+  "example": "Splunk Cloud Platform, Splunk Enterprise Security (standard), Cisco Secure Firewall, Cisco ISE",
+  "type": "textarea"
+ },
+ {
+  "key": "CURRENT_WORK",
+  "label": "Current joint work",
+  "hint": "Active engagement that powers the 'Our work together' section.",
+  "example": "Moving OT telemetry from substations into Splunk Cloud through Edge Processor for wildfire-season monitoring",
+  "type": "textarea"
+ },
+ {
+  "key": "REGULATORY_FRAME",
+  "label": "Regulatory frame",
+  "hint": "Regulations and dates that anchor the roadmap.",
+  "example": "NERC CIP-015-1 INSM (effective Oct 1, 2028), Oregon PUC wildfire mitigation plans, TSA pipeline security directive for gas assets",
+  "type": "textarea"
+ },
+ {
+  "key": "CATALYSTS",
+  "label": "Catalysts",
+  "hint": "Merger, build-out, deadlines or events that make it timely.",
+  "example": "$9B five-year capital plan, two hyperscale data center interconnections, 2027 wildfire mitigation plan refresh",
+  "type": "textarea"
+ },
+ {
+  "key": "MISSION_CUSTOMERS",
+  "label": "Mission or critical customers",
+  "hint": "Federal, defense, hospital or other critical customers (section 9). Write 'none' to drop the section.",
+  "example": "Joint Base Lewis-McChord and regional hospitals on critical feeders",
+  "type": "text"
+ },
+ {
+  "key": "DEPARTMENTS",
+  "label": "Departments to cover",
+  "hint": "8 to 12 departments for the persona tabs and dashboards.",
+  "example": "SOC, OT/ICS and NERC CIP, Grid Operations, Wildfire Operations, Generation, Large Load, Customer Experience and IT, Physical Security, Executive Risk, AI Governance",
+  "type": "textarea"
+ },
+ {
+  "key": "BRIEFING_DATE",
+  "label": "Briefing date",
+  "hint": "Month and year on the kicker line.",
+  "example": "November 2026",
+  "type": "text"
+ }
+]

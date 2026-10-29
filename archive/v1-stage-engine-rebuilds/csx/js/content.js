@@ -1,0 +1,387 @@
+// All on-screen copy, the talk track (notes), sources and assumptions for the CSX wayside briefing.
+// Rebuilt from Stephen Ewings' explorable "Cisco for CSX, Securing the wayside" app.
+// Labels follow the original: PUBLIC (sourced), MODELED (composite persona, site or line geometry),
+// ILLUSTRATIVE (scenario narrative and KPIs for discussion). Copy rules: no em dashes anywhere.
+
+export const DECK = {
+  name: 'Cisco for CSX',
+  sub: 'Securing the wayside · Executive briefing for the CISO and CIO',
+  channel: 'cisco-csx-wayside',
+  film: {
+    blurb: 'An AI narrator walks you through the CSX wayside briefing, one scenario at a time. Choose a narrator.',
+    album: 'Cisco for CSX, Securing the wayside',
+  },
+};
+
+export const PRESENTER = {
+  name: 'Stephen Ewings',
+  role: 'Solutions Engineer, Cisco',
+};
+
+// The seven personas from the original, used by the focus scene (one tile each).
+export const BLOCKS = [
+  { key: 'ciso', label: 'CSX CISO', hint: 'PUBLIC role', color: '#38BDF8' },
+  { key: 'cio', label: 'Steve Watkins', hint: 'PUBLIC role', color: '#A78BFA' },
+  { key: 'dana', label: 'Dana, Dispatcher', hint: 'MODELED persona', color: '#F59E0B' },
+  { key: 'marcus', label: 'Marcus, Signals', hint: 'MODELED persona', color: '#22C55E' },
+  { key: 'priya', label: 'Priya, OT Network', hint: 'MODELED persona', color: '#06B6D4' },
+  { key: 'jordan', label: 'Jordan, SOC', hint: 'MODELED persona', color: '#EF4444' },
+  { key: 'luis', label: 'Luis, Field Comms', hint: 'MODELED persona', color: '#F472B6' },
+];
+
+// Evidence labels and story markers shown as chips under the beats.
+export const TAGS = [
+  { key: 'public', label: 'Public', color: '#00BCEB' },
+  { key: 'modeled', label: 'Modeled', color: '#FBAB18' },
+  { key: 'illustrative', label: 'Illustrative', color: '#F25C9A' },
+  { key: 'without', label: 'Without Cisco', color: '#FF6B4A' },
+  { key: 'with', label: 'With Cisco', color: '#6CC04A' },
+  { key: 'sentinel', label: 'Sentinel', color: '#5AA0FF' },
+];
+
+// No live links in this deck. The links panel stays empty.
+export const VERSES = [];
+
+export const SCENES = [
+  {
+    id: 'open',
+    eyebrow: '00 · Executive briefing for the CSX CISO and CIO',
+    title: 'Every bungalow, a sensor.',
+    grad: 'Every mile, assured.',
+    lead: 'A walk through the CSX network and one representative wayside control point. Every scenario is told twice, without Cisco and with Cisco, and shows where Microsoft Sentinel receives the context.',
+    layout: 'hero',
+    chipsTitle: 'How to read the labels',
+    prompt: [['public', 'sourced from public documents'], ['modeled', 'composite persona, site or line'], ['illustrative', 'scenarios and KPIs']],
+    beats: [{ h: 'Stephen Ewings', p: 'Solutions Engineer, Cisco' }],
+    notes: [
+      'Thank you for the time. I am Stephen Ewings, a Solutions Engineer at Cisco. This is a briefing for the CSX CISO and for the executive who holds the CIO remit. The idea is simple: every bungalow on the railroad can be a sensor, and every mile can be assured. As we go, watch the labels. Public means sourced. Modeled means a composite. Illustrative means a story and numbers for discussion.',
+    ],
+  },
+  {
+    id: 'network',
+    eyebrow: '01 · The network',
+    title: 'About 20,000 route miles in 26 states.',
+    grad: 'Every mile runs on the wayside.',
+    lead: 'CSX moves freight across the eastern US from Jacksonville. 2025 revenue was $14.1B, with about 23,000 employees.',
+    chipsTitle: 'Labels on this map',
+    prompt: [['public', 'FY2025 10-K, CSX.com, Trains'], ['modeled', 'corridors are schematic']],
+    beats: [
+      { h: 'The eastern network', p: 'PUBLIC: 26 states, DC, Ontario and Quebec. The corridor lines are MODELED and schematic.' },
+      { h: 'Jacksonville is the nerve center', p: 'PUBLIC: headquarters at 500 Water Street, the West JAX command center, and the CSX data center.' },
+      { h: 'A network under pressure', p: 'PUBLIC: Helene destroyed about 60 miles of the Blue Ridge Sub. Howard Street carried its first double-stack train on May 4, 2026.' },
+      { h: 'Rail is being watched', p: 'PUBLIC: TSA directives are in force, CISA flagged a rail RF protocol, and the 10-K names cyber attack as a risk.' },
+    ],
+    notes: [
+      'Here is the network. CSX runs about 20,000 route miles across 26 states, DC, Ontario and Quebec. Those are public numbers from the 10-K. The lines you see are schematic corridors between real cities, so they are modeled, not a survey.',
+      'Click. Everything rolls up to Jacksonville. Headquarters on Water Street, the West JAX command center where dispatchers work, and the CSX data center on Southpoint Parkway.',
+      'Click. The network is under pressure. Hurricane Helene destroyed about 60 miles of the Blue Ridge Subdivision. And the Howard Street Tunnel opened double-stack service in May 2026. New lanes raise the cost of every outage.',
+      'Click. And regulators and adversaries are watching rail. The TSA directives are in force, CISA published an advisory on a legacy rail radio protocol, and the CSX 10-K itself names cyber attack as a risk that could interrupt service. Those red points are the wayside sites nobody can see today.',
+    ],
+  },
+  {
+    id: 'wayside',
+    eyebrow: '02 · Inside the wayside',
+    title: 'Thousands of sites like this one.',
+    grad: 'Each keeps trains moving safely.',
+    lead: 'A representative control point, modeled near Waycross, Georgia. It does not depict a specific CSX location or equipment inventory.',
+    chipsTitle: 'Labels on this site',
+    prompt: [['modeled', 'site layout'], ['public', 'WIU count, 2015 SEC exhibit']],
+    beats: [
+      { h: 'The control point', p: 'MODELED: signals, a grade crossing, a hot box detector and a power switch along the main line.' },
+      { h: 'PTC at the trackside', p: 'PUBLIC: a wayside interface unit and 220 MHz radio. CSX reported more than 2,500 WIUs as early as 2015.' },
+      { h: 'The bungalow', p: 'The equipment house that ties signal, crossing and detector electronics together.' },
+      { h: 'Backhaul to Jacksonville', p: 'MODELED: fiber primary and cellular secondary, back to the data center and the PTC back office.' },
+    ],
+    notes: [
+      'Let us step into one site. This is a modeled control point near Waycross, Georgia. Signals, a grade crossing, a hot box detector, and a power switch.',
+      'Click. This is positive train control at the trackside. A wayside interface unit and a 220 megahertz radio. CSX reported more than 2,500 of these WIUs back in 2015.',
+      'Click. And this is the bungalow, the equipment house where the signal, crossing and detector electronics all come together. Remember it. Most of our scenarios start here.',
+      'Click. Finally the backhaul. Fiber first, cellular second, all the way back to Jacksonville. If that path goes quiet, trains slow down.',
+    ],
+  },
+  {
+    id: 'rogue',
+    eyebrow: '03 · Scenario 1 · The unknown laptop',
+    title: 'A laptop plugs into a signal bungalow.',
+    grad: 'Quarantined in minutes, not found in weeks.',
+    lead: 'A contractor plugs a personal laptop into a spare port to check something on the signal controller.',
+    chipsTitle: 'Illustrative scenario',
+    prompt: [['illustrative', 'story and KPIs'], ['with', 'IE3500, ISE, Cyber Vision, XDR'], ['sentinel', 'ISE syslog, Cyber Vision CEF, XDR']],
+    beats: [
+      { h: 'Without Cisco', p: 'A live, flat spare port. The laptop scans the subnet and reaches the PTC WIU. Found weeks later, if ever.' },
+      { h: 'With Cisco', p: 'The IE3500 demands 802.1X and ISE restricts the device. Cyber Vision flags the scan. Sentinel gets ISE and Cyber Vision events, and XDR adds the summary.' },
+      { h: 'The outcome', p: 'ILLUSTRATIVE: time to detect, weeks to minutes. Truck rolls, three to one. The port is quarantined.' },
+    ],
+    notes: [
+      'Scenario one. A contractor plugs a personal laptop into a spare port in the bungalow. Without Cisco, that port is live and flat, on the same network as the WIU and the signal controller. Nobody has an inventory of what normally talks to what, so the laptop is invisible. It scans, it reaches the PTC management interface, and we find out weeks later, if ever.',
+      'Click. With Cisco, the IE3500 port demands 802.1X. ISE profiles the laptop as unknown and drops it into a restricted group. The Cyber Vision sensor inside the same switch sees a new component and an abnormal scan. Both events land in Microsoft Sentinel, and XDR adds the incident summary.',
+      'Click. Marcus gets the alert on the way in, and the port is quarantined. These numbers are illustrative, but the shape is the point: weeks become minutes, and three truck rolls become one.',
+    ],
+  },
+  {
+    id: 'backhaul',
+    eyebrow: '04 · Scenario 2 · The quiet WIU',
+    title: 'A PTC WIU goes quiet on the backhaul.',
+    grad: 'The path proves who owns the fault.',
+    lead: 'WIU status messages to the PTC back office turn intermittent, and trains approach at restricted speed.',
+    chipsTitle: 'Illustrative scenario',
+    prompt: [['illustrative', 'story and KPIs'], ['with', 'IR1101, ThousandEyes, Cloud Control'], ['sentinel', 'ThousandEyes webhook']],
+    beats: [
+      { h: 'Without Cisco', p: 'Dana opens a ticket and waits. The carrier says no problem found. A truck rolls three hours out.' },
+      { h: 'With Cisco', p: 'ThousandEyes on the IR1101 shows loss on the carrier hop. The router shifts WIU traffic to the second SIM and 5G path.' },
+      { h: 'One view, on the record', p: 'Cloud Control correlates the sites. A webhook posts the alert to Sentinel. ILLUSTRATIVE: hours to under five minutes, zero trips.' },
+    ],
+    notes: [
+      'Scenario two. WIU status messages to the PTC back office get intermittent, and trains approach at restricted speed. Without Cisco, Dana in the operations center opens a ticket and waits. The network team checks the core. The carrier says no problem found. A truck rolls to a site three hours away, and the root cause, congestion on one cell sector, shows up a day later.',
+      'Click. With Cisco, a ThousandEyes agent runs right on the IR1101 in the bungalow. It shows the loss on the carrier hop, not the bungalow. And the router moves WIU traffic to its second SIM and the 5G path on its own.',
+      'Click. Cloud Control puts the router health, the path, and the affected sites in one view. A ThousandEyes custom webhook posts the alert to the Sentinel ingestion endpoint for the audit trail. Illustrative numbers again: hours become under five minutes, and nobody drives.',
+    ],
+  },
+  {
+    id: 'lateral',
+    eyebrow: '05 · Scenario 3 · IT to OT',
+    title: 'Ransomware tries to cross into the wayside.',
+    grad: 'The conduit holds, and the SOC sees why.',
+    lead: 'An enterprise workstation is compromised and starts probing networks that route toward field sites.',
+    chipsTitle: 'Illustrative scenario',
+    prompt: [['illustrative', 'story and KPIs'], ['with', 'ISE TrustSec, Cyber Vision, XDR'], ['sentinel', 'XDR incident export, ISE solution']],
+    beats: [
+      { h: 'Without Cisco', p: 'Flat routing between enterprise and field. The SOC sees endpoint alerts with no OT context.' },
+      { h: 'With Cisco', p: 'ISE TrustSec allows only approved conduits. Cyber Vision spots the new IT to OT pattern and reports to XDR.' },
+      { h: 'Contained in Sentinel', p: 'XDR exports the correlated incident. A Sentinel playbook plus ISE quarantine contain the workstation. ILLUSTRATIVE: days to minutes.' },
+    ],
+    notes: [
+      'Scenario three is the one that keeps CISOs up at night. An enterprise workstation is compromised and starts probing toward the field. Without Cisco, routing between enterprise and field networks is flat. Jordan in the managed SOC sees endpoint alerts but no OT context, and the attack reaches bungalow management interfaces before anyone connects the dots.',
+      'Click. With Cisco, ISE TrustSec groups only allow approved conduits between the enterprise and OT zones. Everything else bounces. Cyber Vision notices the brand new IT to OT conversation and reports it to XDR.',
+      'Click. XDR exports the correlated incident into Microsoft Sentinel, and the ISE events enrich it through the Sentinel ISE solution. A Sentinel playbook plus ISE quarantine contain the workstation. Days become minutes, and the outage risk stays contained.',
+    ],
+  },
+  {
+    id: 'trackside',
+    eyebrow: '06 · Scenarios 4 and 5 · Trackside',
+    title: 'Trust the trackside.',
+    grad: 'Access on purpose, diagnosis first.',
+    lead: 'The detector vendor needs logs after false alarms, and a crossing controller starts reporting intermittently.',
+    chipsTitle: 'Illustrative scenarios',
+    prompt: [['illustrative', 'stories and KPIs'], ['with', 'SEA, Cyber Vision, ThousandEyes'], ['sentinel', 'events via CEF']],
+    beats: [
+      { h: 'Vendor access, without Cisco', p: 'A shared VPN account and an always-on modem. No recording, no time limit, the whole subnet in reach.' },
+      { h: 'Vendor access, with Cisco', p: 'Secure Equipment Access grants a time-boxed session to that one detector, through the IE3500. Events go to Sentinel.' },
+      { h: 'The crossing, without Cisco', p: 'Visible only when the public calls in a gate problem. The maintainer drives out without a diagnosis.' },
+      { h: 'The crossing, with Cisco', p: 'Cyber Vision flags the controller change and ThousandEyes rules the backhaul in or out. One trip, right part.' },
+    ],
+    notes: [
+      'Two quick ones at the trackside. First, the hot box detector vendor needs logs after some false alarms. Without Cisco, that means a shared VPN account and a modem that is always on. No session recording, no time limit, and the vendor can reach anything on the subnet.',
+      'Click. With Cisco, Secure Equipment Access, which comes with Cyber Vision, grants a time-boxed session to that one detector, through the IE3500, with no site VPN. Access events go to Sentinel, and the CISO gets an auditable record for TSA evidence.',
+      'Click. Second, a crossing controller starts reporting intermittently. Without Cisco, we only know when the public calls in a gate problem, and the maintainer drives out without knowing if it is power, network or the controller.',
+      'Click. With Cisco, Cyber Vision has a baseline for that controller and highlights the change in its communications. ThousandEyes on the router rules the backhaul in or out. Marcus arrives with the right part and the right diagnosis.',
+    ],
+  },
+  {
+    id: 'fleet',
+    eyebrow: '07 · Scenario 6 · The fleet',
+    title: 'An advisory lands for hundreds of bungalows.',
+    grad: 'Every switch in policy, with evidence.',
+    lead: 'A critical security advisory hits switches across the fleet, and some sites have drifted from the golden config.',
+    chipsTitle: 'Illustrative scenario',
+    prompt: [['illustrative', 'story and KPIs'], ['with', 'Catalyst Center, IE3500, Cyber Vision']],
+    beats: [
+      { h: 'Without Cisco', p: 'Spreadsheets and SSH sessions to find the affected sites. Drift stays unknown until an outage. Patching takes months.' },
+      { h: 'With Cisco', p: 'Catalyst Center compliance shows every IE3500 out of policy: image, PSIRT, running versus startup config.' },
+      { h: 'Staged and proven', p: 'Updates staged per maintenance window with approvals, evidence exported for auditors. ILLUSTRATIVE: months to same day.' },
+    ],
+    notes: [
+      'Scenario six is about scale. A critical security advisory lands for switches deployed across hundreds of bungalows, and some sites have drifted from the golden config. Without Cisco, Priya is in spreadsheets and SSH sessions just to find out which sites are affected. Drift stays invisible until an outage reveals it.',
+      'Click. With Cisco, Catalyst Center compliance shows every IE3500 that is out of policy: the image, the security advisory, running versus startup config. And Cyber Vision lists the vulnerable OT assets behind each switch.',
+      'Click. Templates and image updates are staged per maintenance window, with approvals. An evidence report goes to the CISO and the auditors. Months become the same day.',
+    ],
+  },
+  {
+    id: 'helene',
+    eyebrow: '08 · Scenario 7 · The Blue Ridge',
+    title: 'Helene took about 60 miles of railroad.',
+    grad: 'The next rebuild comes up on day one.',
+    lead: 'CSX rebuilt the Blue Ridge Subdivision in about a year and reopened it on September 25, 2025. The story below illustrates future rebuilds, not what CSX deployed.',
+    chipsTitle: 'Labels in this scene',
+    prompt: [['public', 'CSX.com, Railfan & Railroad'], ['illustrative', 'rebuild story and KPIs'], ['with', 'IR1101, Catalyst Center, ThousandEyes']],
+    beats: [
+      { h: 'The rebuild', p: 'PUBLIC: Helene destroyed about 60 miles of a line that carries over 14 million tons a year. Reported cost, $450M.' },
+      { h: 'Without Cisco', p: 'Each new bungalow is hand configured by a specialist on site. Fiber is not ready yet, so sites wait.' },
+      { h: 'With Cisco', p: 'The IR1101 comes up on 5G and calls home, Plug and Play pushes the template, and ThousandEyes proves the path.' },
+    ],
+    notes: [
+      'In September 2024, Hurricane Helene destroyed about 60 miles of the Blue Ridge Subdivision, a line that carries over 14 million tons a year. CSX rebuilt it in about a year, at a reported 450 million dollars, and reopened it on September 25, 2025. Every rebuilt mile needed new signals, crossings and communications. What follows is a story about the next rebuild, not a claim about what CSX deployed.',
+      'Click. Without Cisco, every new bungalow is hand configured by a specialist on site. The fiber is not ready yet, so the sites wait. And there is no proof of performance before handing back to service.',
+      'Click. With Cisco, Luis installs the IR1101, it comes up on 5G first and calls home, and Catalyst Center Plug and Play pushes the site template. If a switch fails, Swap Drive makes it a no-expertise replacement. ThousandEyes validates the path to the PTC back office before the site goes live, and Cloud Control shows rebuild progress across every site.',
+    ],
+  },
+  {
+    id: 'tsa',
+    eyebrow: '09 · Scenario 8 · The board',
+    title: 'TSA directives ask for proof.',
+    grad: 'Show the board live data, not slides.',
+    lead: 'SD 1580-21-01E (effective January 16, 2026) and SD 1580/82-2022-01E require a coordinator, incident reporting, response plans, assessments, and mitigation testing.',
+    chipsTitle: 'Labels in this scene',
+    prompt: [['public', 'TSA security directives'], ['illustrative', 'story and KPIs'], ['sentinel', 'workbooks for reporting']],
+    beats: [
+      { h: 'Without Cisco', p: 'Asset lists assembled by hand from field surveys. Segmentation claims are hard to prove. Briefings built from slides.' },
+      { h: 'With Cisco', p: 'Cyber Vision Global Center keeps a live OT inventory and vulnerability posture. ISE and TrustSec show the enforced zones.' },
+      { h: 'One view for the board', p: 'Cloud Control gives one inventory and topology. Sentinel workbooks track incidents for TSA and CISA timelines.' },
+    ],
+    notes: [
+      'Scenario eight is for the board. The TSA directives require a cybersecurity coordinator, incident reporting, response plans, assessments, and mitigation actions and testing. Without Cisco, the asset list is assembled by hand from field surveys, segmentation claims are hard to prove, and the board briefing is built from slides.',
+      'Click. With Cisco, Cyber Vision Global Center provides a live OT inventory and vulnerability posture across all sites. ISE and TrustSec policy shows the zones and conduits that are actually enforced.',
+      'Click. Cloud Control gives one inventory and one topology for executive review, and Sentinel workbooks track incidents against the TSA and CISA reporting timelines. Quarterly becomes continuous.',
+    ],
+  },
+  {
+    id: 'people',
+    eyebrow: '10 · The people',
+    title: 'Seven people live this every day.',
+    grad: 'Each gets a better morning.',
+    lead: 'Two executives by public role, five modeled composites. None of the modeled personas are real CSX employees.',
+    layout: 'focus',
+    beats: [
+      { h: 'Who is in the story', p: 'PUBLIC roles for the two executives, MODELED composites for everyone else. The words in quotes are illustrative priorities, not quotes.' },
+      { b: 0, h: 'Chief Information Security Officer', q: 'Show me every asset in the field, prove TSA compliance, and get OT signals into my SOC without a new silo.', p: 'PUBLIC role per the FY2025 10-K, shown by role only. Scenarios: TSA, the laptop, IT to OT, the vendor.' },
+      { b: 1, h: 'Steve Watkins', q: 'Keep the railroad running, simplify operations, and make every dollar of network spend count toward reliability.', p: 'PUBLIC: Chief Digital and Technology Officer (CSX.com), the CIO remit. Scenarios: the quiet WIU, Blue Ridge, TSA, the fleet.' },
+      { b: 2, h: 'Dana, Train Dispatcher', q: 'When a WIU drops off PTC, I get a restricted-speed train and a delay. I need to know why, fast.', p: 'MODELED persona. Network Operations Center, Jacksonville.' },
+      { b: 3, h: 'Marcus, Signal Maintainer', q: 'I cover a lot of track. I want to roll the truck once, with the right part, and know my bungalow is not talking to strangers.', p: 'MODELED persona. C&S territory near Waycross, GA.' },
+      { b: 4, h: 'Priya, OT Network Engineer', q: 'Thousands of wayside sites, mixed vintages, and every config change is a risk. I need automation with guardrails.', p: 'MODELED persona. Network engineering, Jacksonville.' },
+      { b: 5, h: 'Jordan, SOC Analyst', q: 'My Sentinel queue is full of IT alerts. OT alerts either never arrive or arrive with no context.', p: 'MODELED persona. Managed SOC partner; the 10-K cites a third-party SOC service.' },
+      { b: 6, h: 'Luis, Field Communications Technician', q: 'After Helene we rebuilt sites from bare ground. Every box I install should configure itself and prove it works.', p: 'MODELED persona. Blue Ridge Subdivision rebuild crew.' },
+    ],
+    notes: [
+      'Let us put faces on this. Seven people. Two are executives, shown by public role. Five are modeled composites, not real CSX employees. What you will read in quotes are illustrative priorities, not things anyone said.',
+      'Click. The CISO, shown by role from the 10-K. Every asset in the field, proof for TSA, and OT signals in the SOC without a new silo.',
+      'Click. Steve Watkins, Chief Digital and Technology Officer, who holds the CIO remit. Keep the railroad running, simplify, and make network spend count toward reliability.',
+      'Click. Dana, a modeled dispatcher in Jacksonville. When a WIU drops off PTC, she gets a restricted speed train and a delay, and she needs to know why, fast.',
+      'Click. Marcus, a modeled signal maintainer near Waycross. One truck roll, the right part, and a bungalow that is not talking to strangers.',
+      'Click. Priya, a modeled OT network engineer. Thousands of sites, mixed vintages, and every change is a risk. She wants automation with guardrails.',
+      'Click. Jordan, a modeled analyst at the managed SOC partner. The Sentinel queue is full of IT alerts, and OT alerts arrive with no context, if at all.',
+      'Click. And Luis, a modeled field technician from the Blue Ridge rebuild crew. Every box he installs should configure itself and prove it works.',
+    ],
+  },
+  {
+    id: 'adds',
+    eyebrow: '11 · What this adds up to',
+    title: 'Eight Cisco pieces, one wayside story.',
+    grad: 'Sentinel gets the context it was missing.',
+    lead: 'The bungalow switch and router become the sensors. Identity, assurance and automation sit around them, and the SOC works it all in its existing queue.',
+    chipsTitle: 'Labels in this scene',
+    prompt: [['sentinel', 'assumed SIEM, not publicly confirmed'], ['public', 'Cisco and Microsoft documentation']],
+    beats: [
+      { h: 'In the bungalow', p: 'IE3500 switch and IR1101 router, both hosting the Cyber Vision sensor, with ThousandEyes on the router.' },
+      { h: 'Documented paths to Sentinel', p: 'ISE solution, Cyber Vision CEF via AMA, XDR incident export, ThousandEyes webhooks, IOS XE syslog.' },
+      { h: 'Patterns to validate', p: 'Catalyst Center notifications and Cloud Control Studio are integration patterns, not documented connectors.' },
+    ],
+    notes: [
+      'So what does this add up to? It starts in the bungalow. The IE3500 switch and the IR1101 router you need anyway both host the Cyber Vision sensor, so there is no extra appliance per site. ThousandEyes runs on the router.',
+      'Click. Around them, ISE, Cyber Vision, XDR and ThousandEyes each have a documented path into Microsoft Sentinel. ISE through the Sentinel ISE solution. Cyber Vision as CEF through the AMA connector. XDR through its incident export. ThousandEyes through custom webhooks. And plain device syslog.',
+      'Click. To be straight with you, two links are patterns to validate, not documented connectors: Catalyst Center notifications, and Cloud Control through Cloud Control Studio. And Sentinel itself is our assumption. It is not publicly confirmed as your SIEM.',
+    ],
+  },
+  {
+    id: 'sources',
+    eyebrow: '12 · Sources and assumptions',
+    title: 'Public facts are cited.',
+    grad: 'Everything else is labeled.',
+    lead: 'Sources were researched in October 2026. Items labeled MODELED or ILLUSTRATIVE are not sourced CSX facts.',
+    chipsTitle: 'Label key',
+    prompt: [['public', 'sourced'], ['modeled', 'composite'], ['illustrative', 'for discussion']],
+    beats: [
+      { h: '46 public sources', p: 'CSX filings and CSX.com, rail and PTC records, TSA, CISA and the Federal Register, Cisco and Microsoft documentation.' },
+      { h: '13 assumptions', p: 'Sentinel is assumed. KPIs are illustrative. Personas are composites. The site is representative. No scenario is a real CSX incident.' },
+    ],
+    notes: [
+      'Everything public in this briefing is cited. There are 46 sources: the CSX 10-K and annual report, CSX.com, rail and PTC records, TSA, CISA and the Federal Register, and Cisco and Microsoft documentation. The full list is in the talk track.',
+      'Click. And here are the assumptions, out loud. Sentinel as your SIEM is assumed. Every KPI is illustrative, not measured CSX data and not a Cisco guarantee. The personas are composites. The wayside site is representative. And no scenario describes a real CSX incident.',
+    ],
+  },
+  {
+    id: 'close',
+    eyebrow: '13 · Epilogue',
+    title: 'Every bungalow, a sensor.',
+    grad: 'Every mile, assured.',
+    lead: 'Visibility in the field, context in the SOC, and proof for the board, from the network the wayside already needs.',
+    layout: 'hero',
+    beats: [
+      { h: 'The takeaway', p: 'The bungalow network can be the sensor the SOC is missing.' },
+      { h: 'Next step', p: 'Validate the Sentinel paths together, one territory at a time.' },
+    ],
+    notes: [
+      'Let me bring it home. The switch and router you already need in every bungalow can be the sensor your SOC is missing. Visibility in the field, context in Sentinel, and proof for the board.',
+      'Click. My ask is simple. Let us validate the Sentinel paths together, one territory at a time. Thank you.',
+    ],
+  },
+];
+
+export const SOURCES = [
+  ['CSX Corporation Form 10-K for FY2025 (filed Feb 12, 2026)', 'https://www.sec.gov/Archives/edgar/data/277948/000027794826000006/csx-20251231.htm', 'CSX'],
+  ['CSX 2025 Annual Report', 'https://www.sec.gov/Archives/edgar/data/277948/000162828026021995/csx2025annualreport.pdf', 'CSX'],
+  ['CSX releases 2025 Annual Report (CSX.com)', 'https://www.csx.com/index.cfm/about-us/csx-releases-2025-annual-report-touting-major-infrastructure-rebuilds-and-safety-gains/', 'CSX'],
+  ['CSX Management Team (CSX.com)', 'https://www.csx.com/index.cfm/about-us/company-overview/csx-leadership/management-team/', 'CSX'],
+  ['CSX 2026 Proxy Statement', 'https://s2.q4cdn.com/859568992/files/doc_financials/2026/ar/CSX-2026-Proxy-Statement.pdf', 'CSX'],
+  ['CSX position on proposed UP-NS transaction (csxstayingontrack.com)', 'https://csxstayingontrack.com/', 'CSX'],
+  ['CSX Celebrates Reopening of Blue Ridge Subdivision (Oct 2, 2025)', 'https://www.csx.com/index.cfm/about-us/media/press-releases/csx-celebrates-reopening-of-blue-ridge-subdivision/', 'CSX'],
+  ['Blue Ridge Subdivision Recovery project page (CSX.com)', 'https://www.csx.com/index.cfm/about-us/projects-and-partnerships/blue-ridge-subdivision-recovery/', 'CSX'],
+  ['CSX Blue Ridge Subdivision Reopens (Railfan & Railroad)', 'https://railfan.com/csx-blue-ridge-subdivision-reopens/', 'CSX'],
+  ['CSX Reopens Expanded Howard Street Tunnel Ahead of Schedule (Sep 26, 2025)', 'https://investors.csx.com/news-and-events/news/news-details/2025/CSX-Reopens-Expanded-Howard-Street-Tunnel-Ahead-of-Schedule-Strengthening-East-Coast-Freight-Growth/default.aspx', 'CSX'],
+  ['First CSX double-stack train operates through Howard Street Tunnel (Trains)', 'https://www.trains.com/pro/freight/intermodal/first-csx-double-stack-train-operates-through-howard-street-tunnel/', 'CSX'],
+  ['Governor Moore leads ribbon-cutting of double-stack rail operations (Jun 22, 2026)', 'https://governor.maryland.gov/news/press-releases/governor-moore-leads-ribbon-cutting-double-stack-rail-operations-port-baltimore', 'CSX'],
+  ['CSXT West JAX Command Center listing, 3019 Warrington St (MapQuest)', 'https://www.mapquest.com/us/florida/csxt-west-jax-command-center-445212592', 'CSX'],
+  ['CSX Data Center Colocation Services (CSX.com)', 'https://www.csx.com/index.cfm/about-us/company-overview/colocation-services/', 'CSX'],
+  ['CSX Data Center, 6425 Southpoint Pkwy (ColoMap)', 'https://colomap.com/facilities/csx-data-center/', 'CSX'],
+  ['North America\'s hump yards (Trains)', 'https://www.trains.com/trn/train-basics/abcs-of-railroading/north-americas-hump-yards/', 'CSX'],
+  ['CSX removing humps at three yards, adding switching ladders (Trains)', 'https://www.trains.com/pro/maintenance-of-way/csx-removing-humps-at-three-yards-adding-new-switching-ladders-to-improve-operations/', 'CSX'],
+  ['CSX PTC status letter, 2,500+ WIUs and 465 base stations (SEC exhibit, 2015)', 'https://www.sec.gov/Archives/edgar/data/277948/000119312515318553/d94247dex991.htm', 'Rail and PTC'],
+  ['CSX statement on PTC, Senate Commerce Committee', 'https://www.commerce.senate.gov/wp-content/uploads/meetings/F7F97386-494F-4A18-A6C1-AE0C39EA97DD/260115%20CSX%20Statement%20on%20PTC.PDF', 'Rail and PTC'],
+  ['CSXT GE ElectroBlox WIU Product Safety Plan (FRA docket)', 'https://downloads.regulations.gov/FRA-2010-0028-0183/attachment_1.pdf', 'Rail and PTC'],
+  ['Meteorcomm ITCnet and ITCR 220 MHz PTC radios', 'https://meteorcomm.com/digital-network-solutions/itcnet-products/', 'Rail and PTC'],
+  ['TSA SD 1580-21-01E Enhancing Rail Cybersecurity (effective Jan 16, 2026)', 'https://www.tsa.gov/sites/default/files/signed_security-directive-1580-21-01e-and-transmittal-memo_508c.pdf', 'Regulatory and threat'],
+  ['TSA SD 1580/82-2022-01E Rail Cybersecurity Mitigation Actions and Testing', 'https://www.tsa.gov/sites/default/files/signed_security_directive_1580_82-2022-01e_and_transmittal_memo_508c.pdf', 'Regulatory and threat'],
+  ['TSA NPRM: Enhancing Surface Cyber Risk Management (Federal Register)', 'https://www.federalregister.gov/documents/2024/11/07/2024-24704/enhancing-surface-cyber-risk-management', 'Regulatory and threat'],
+  ['CISA ICSA-25-191-10 End-of-Train and Head-of-Train Remote Linking Protocol', 'https://www.cisa.gov/news-events/ics-advisories/icsa-25-191-10', 'Regulatory and threat'],
+  ['Global tech outage largely bypasses freight railroads (FreightWaves, Jul 2024)', 'https://www.freightwaves.com/news/global-tech-outage-largely-bypasses-freight-and-passenger-railroads', 'Regulatory and threat'],
+  ['Cisco Powers Secure Infrastructure for the AI Era (Cisco Live, Jun 10, 2025)', 'https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2025/m06/cisco-powers-secure-infrastructure-for-the-ai-era.html', 'Cisco'],
+  ['Cisco Cloud Control is now generally available for U.S. customers (Cisco Blogs)', 'https://blogs.cisco.com/ai/cisco-cloud-control-us-general-availability', 'Cisco'],
+  ['Cisco Cloud Control Release Notes', 'https://www.cisco.com/c/en/us/td/docs/ai/cisco-cloud-control/release-notes/cisco-cloud-control-release-notes.html', 'Cisco'],
+  ['Cisco Cloud Control product page', 'https://www.cisco.com/site/us/en/solutions/artificial-intelligence/agentic-ops/cisco-cloud-control/index.html', 'Cisco'],
+  ['Cisco IE3500 Rugged Series Data Sheet', 'https://www.cisco.com/c/en/us/products/collateral/networking/industrial-switches/ie3500-rugged-series/ie3500-rugged-series-ds.html', 'Cisco'],
+  ['Cisco Catalyst IR1101 Rugged Series Router Data Sheet', 'https://www.cisco.com/c/en/us/products/collateral/routers/1101-industrial-integrated-services-router/datasheet-c78-741709.html', 'Cisco'],
+  ['Release Notes, Catalyst IR1101/IR1800/IR8140/IR8340, IOS XE 17.18.x', 'https://www.cisco.com/c/en/us/td/docs/routers/IIoT/release-notes/17-18-x/IOT-IR-17-18-1-RN.html', 'Cisco'],
+  ['ThousandEyes Enterprise Agents on Cisco Industrial Routers', 'https://docs.thousandeyes.com/product-documentation/global-vantage-points/enterprise-agents/installing/cisco-devices/industrial-routers', 'Cisco'],
+  ['ThousandEyes Custom Webhooks documentation', 'https://docs.thousandeyes.com/product-documentation/integration-guides/custom-webhooks', 'Cisco'],
+  ['Cisco Cyber Vision Data Sheet', 'https://www.cisco.com/c/en/us/products/collateral/security/cyber-vision/cyber-vision-ds.html', 'Cisco'],
+  ['Cisco Cyber Vision syslog configuration (CEF, TCP+TLS), Admin Guide 5.6', 'https://www.cisco.com/c/en/us/td/docs/security/cyber_vision/Release-5-6-x/Admin-Guide/cisco-cyber-vision-classic-ui-administration-guide-release-5-6-0/maintain-and-monitor-cisco-cyber-vision-5-6/c-syslog-configurations.html', 'Cisco'],
+  ['Integrate Cisco Cyber Vision with Cisco ISE through pxGrid', 'https://www.cisco.com/c/en/us/td/docs/security/cyber_vision/Release-5-4-0/Integrate-Cisco-Cyber-Vision-with-Cisco-Identity-Services-Engine--ISE--through-pxGrid/b_Integrate_Cisco_Cyber_Vision_with_Cisco_ISE_through_pxGrid/m_Introduction.html', 'Cisco'],
+  ['Cisco Cyber Vision 5.0.2 Release Notes (supported sensor platforms incl. IR1101)', 'https://www.cisco.com/c/dam/en/us/td/docs/security/cyber_vision/Cisco-Cyber-Vision_Release-Notes-5-0-2.pdf', 'Cisco'],
+  ['Cisco Catalyst Center for Industrial Automation (solution brief)', 'https://www.cisco.com/c/dam/en/us/td/docs/solutions/Verticals/Industrial_Automation/IA_Horizontal/IA_Networking/Update-Cisco-Catalyst-Center-for-IA/Cisco_Catalyst_Center_for_IA_SB.pdf', 'Cisco'],
+  ['Catalyst Center User Guide 2.3.7: Compliance Audit for Network Devices', 'https://www.cisco.com/c/en/us/td/docs/cloud-systems-management/network-automation-and-management/catalyst-center/2-3-7/user_guide/b_cisco_catalyst_center_user_guide_237/m-compliance-audit-for-network-devices.html', 'Cisco'],
+  ['Cisco XDR Connect: Microsoft Sentinel integration', 'https://connect.xdr.security.cisco.com/integration/microsoft-sentinel', 'Microsoft Sentinel'],
+  ['Cisco Security and Microsoft Sentinel (Cisco)', 'https://www.cisco.com/site/us/en/products/security/technical-alliance-partners/microsoft-sentinel.html', 'Microsoft Sentinel'],
+  ['Cisco ISE solution for Microsoft Sentinel (Azure Marketplace)', 'https://azuremarketplace.microsoft.com/en-us/marketplace/apps/azuresentinel.azure-sentinel-solution-ciscoise?tab=overview', 'Microsoft Sentinel'],
+  ['Ingest syslog and CEF messages to Microsoft Sentinel with AMA (Microsoft Learn)', 'https://learn.microsoft.com/en-us/azure/sentinel/connect-cef-syslog-ama', 'Microsoft Sentinel'],
+  ['Syslog via AMA connector: device list incl. Cisco ISE (Microsoft Learn)', 'https://learn.microsoft.com/en-us/azure/sentinel/unified-connector-syslog-device', 'Microsoft Sentinel'],
+];
+
+// Assumptions and labeling, verbatim from the original briefing.
+export const ASSUMPTIONS = [
+  "Audience: CSX CISO and the CSX executive who holds the CIO remit. CSX.com lists Steve Watkins as Chief Digital and Technology Officer (from May 2026); we treat that role as the \"CIO\" audience.",
+  "The CISO is shown by role only. The FY2025 10-K describes the CISO as \"Assistant Vice President of Cloud Infrastructure Platforms and CISO\". We do not name an individual because public sources conflict.",
+  "All non-executive personas (dispatcher, signal maintainer, OT engineer, SOC analyst, field technician) are modeled composites, not real CSX employees.",
+  "Network lines on the map are schematic corridors drawn between real city coordinates. They are not survey-accurate and omit many subdivisions.",
+  "The 26 highlighted states follow the 10-K statement of 26 states plus DC; the specific state list is our reconstruction (including New England states from the 2022 Pan Am acquisition).",
+  "The wayside site is a representative, modeled control point (signals, PTC WIU, crossing, hot box detector, switch, bungalow, backhaul). It does not depict any specific CSX location or CSX equipment inventory.",
+  "We assume CSX operates a Microsoft Sentinel SIEM for SOC analytics. This is not publicly confirmed. The 10-K states CSX uses a third-party managed SOC service.",
+  "Sentinel integration paths are shown only where documented: ISE (Microsoft Sentinel solution, Syslog via AMA), Cyber Vision (CEF syslog to the CEF via AMA connector), Cisco XDR (native Sentinel export workflows), ThousandEyes (custom webhooks to a customer-built ingestion endpoint), and IOS XE devices (standard syslog). Catalyst Center and Cloud Control flows are shown as integration patterns to validate.",
+  "Cisco Cloud Control: previewed at Cisco Live June 2025 and generally available for U.S. customers on August 25, 2026, per Cisco release notes. Capabilities depend on connected products and subscriptions.",
+  "ThousandEyes Enterprise Agent on IR1101 requires IOS XE 17.18.1 or later (application hosting). We assume IR1101 units are on a supported release.",
+  "All KPIs and timelines shown under \"without Cisco\" and \"with Cisco\" are illustrative, modeled values for discussion. They are not measured CSX data or Cisco performance guarantees.",
+  "Threat scenarios are plausible composites informed by public advisories (for example CISA ICSA-25-191-10) and TSA directives. No scenario describes a real CSX incident.",
+  "The app is intended for a presentation context; it avoids any CSX sensitive security information and uses only public sources.",
+];
+
+// No workshop in this deck. Kept empty so the engine's workshop panel stays inert.
+export const WORKSHOP_FIELDS = [];
+export function buildWorkshopPrompt() { return []; }

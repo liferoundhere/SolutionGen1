@@ -1,0 +1,114 @@
+[
+ {
+  "key": "CUSTOMER",
+  "label": "Customer name",
+  "hint": "The account's public name, as executives say it.",
+  "example": "Northwind Mutual",
+  "type": "text"
+ },
+ {
+  "key": "CUSTOMER_SLUG",
+  "label": "File slug",
+  "hint": "Lowercase, no spaces. Used for the output file name and storage keys.",
+  "example": "northwind",
+  "type": "text"
+ },
+ {
+  "key": "INDUSTRY",
+  "label": "Industry",
+  "hint": "One or two words, used in the disclaimer.",
+  "example": "insurance",
+  "type": "text"
+ },
+ {
+  "key": "WHERE",
+  "label": "Global footprint",
+  "hint": "Headquarters plus the main hubs and markets, from public sources.",
+  "example": "Headquartered in Hartford, CT, serving customers in 28 countries. Hubs: a technology campus in Charlotte, NC; claims operations in Jacksonville, FL; asset management in Boston; regional offices in Toronto, London, Dublin, Singapore, Sydney and Manila",
+  "type": "textarea"
+ },
+ {
+  "key": "AUDIENCE",
+  "label": "Audience",
+  "hint": "Who will watch or play it, by role.",
+  "example": "Northwind Mutual's CIO, CISO, chief risk officer and the heads of Group Life, Claims and Asset Management, plus the Cisco account team",
+  "type": "textarea"
+ },
+ {
+  "key": "GOAL",
+  "label": "Goal",
+  "hint": "What the audience should believe or agree to at the end.",
+  "example": "show that early, cross-domain signals acted on under policy protect renewals, claims experience and regulatory standing, then agree to run discovery on one live mission with its business owner",
+  "type": "textarea"
+ },
+ {
+  "key": "SCENARIO",
+  "label": "Cisco scenario",
+  "hint": "The Cisco topic the missions demonstrate.",
+  "example": "Cisco Cloud Control and AgenticOps, powered by the Splunk-based Cisco Data Fabric",
+  "type": "text"
+ },
+ {
+  "key": "KEY_ITEMS",
+  "label": "Products and capabilities",
+  "hint": "Comma-separated Cisco and Splunk capabilities to feature.",
+  "example": "Cisco Cloud Control, AI Canvas, Cisco AI Assistant, Cisco Data Fabric (Splunk), Splunk ITSI, Splunk Observability Cloud, Splunk ES and SOAR, ThousandEyes, Catalyst SD-WAN, Nexus Dashboard, Cisco XDR, Duo, Hypershield, Webex Contact Center",
+  "type": "textarea"
+ },
+ {
+  "key": "STRATEGY",
+  "label": "Strategy name",
+  "hint": "Short name of the customer's public strategy, as it reads inside a sentence.",
+  "example": "its Horizon 2030 strategy",
+  "type": "text"
+ },
+ {
+  "key": "STRATEGY_PILLARS",
+  "label": "Strategy pillars and commitments",
+  "hint": "Public pillars and numeric targets the missions map to.",
+  "example": "grow Group Life and Disability; simplify claims; scale the retirement platform; expand in Asia; lower the expense ratio by 80 bps; return $6B to shareholders by 2030",
+  "type": "textarea"
+ },
+ {
+  "key": "HEADLINE",
+  "label": "Intro headline",
+  "hint": "A short promise, ending with a full stop.",
+  "example": "Catch it before your customers ever feel it.",
+  "type": "text"
+ },
+ {
+  "key": "PRESENTER",
+  "label": "Presenter",
+  "hint": "Name and role for credits.",
+  "example": "Alex Rivera, Solutions Engineer, Cisco",
+  "type": "text"
+ },
+ {
+  "key": "MISSION_COUNT",
+  "label": "Number of missions",
+  "hint": "Usually 10 (8 to 12 works). One mission per real location.",
+  "example": "10",
+  "type": "number"
+ },
+ {
+  "key": "BUSINESS_FUNCTIONS",
+  "label": "Business functions (filters)",
+  "hint": "Semicolon-separated lenses for the mission rail. Six works best.",
+  "example": "Revenue and growth; Customer experience; Operations and cost; Risk and compliance; Security; IT and network",
+  "type": "textarea"
+ },
+ {
+  "key": "LOCATIONS",
+  "label": "Mission locations",
+  "hint": "Real sites, each with its business unit, and optionally a mission idea and region. Add minor offices for the globe.",
+  "example": "Hartford (HQ, Group Life open enrollment); Charlotte (technology campus, change risk); Jacksonville (claims, hurricane season); Boston (asset management, market-data microbursts); Toronto (Canadian retail, partner API conversion); London (U.K. pensions, operational resilience); Dublin (EU entity, DORA third-party risk); Singapore (Asia bancassurance, field app); Sydney (group insurance portal peak); Manila (global service center voice quality, security incident in minutes). Minor: Chicago, Phoenix, Frankfurt, Hong Kong, Tokyo, Mumbai",
+  "type": "textarea"
+ },
+ {
+  "key": "HOURS",
+  "label": "Build time budget (hours)",
+  "hint": "How long the coding model should spend. 8 to 16 is typical.",
+  "example": "12",
+  "type": "number"
+ }
+]

@@ -1,0 +1,1092 @@
+<title>Cisco Solutions Generator</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a tool page in Cisco midnight. Sticky tab bar for four views (Gallery, Compose, Install, Design);
+   content in a 1320px column; glass panels mark separate objects, nothing else is boxed. */
+:root {
+  --midnight: #050e1d; --navy: #07182d; --deep: #0d274d;
+  --panel: rgba(10, 30, 58, 0.62);
+  --line: rgba(155, 231, 255, 0.14); --line-strong: rgba(155, 231, 255, 0.28);
+  --ink: #e8f1f8; --muted: #8fa6bd;
+  --blue: #00bceb; --sky: #02c8ff; --ice: #9be7ff; --green: #6cc04a; --amber: #fbab18; --red: #e2231a;
+  --on-blue: #021624;
+  --grad: linear-gradient(90deg, #7fe3ff, #00bceb 45%, #6cc04a);
+  --f-body: CiscoSansTT, Inter, "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--midnight); }
+body { background: var(--midnight); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.55; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--midnight); }
+.glow { position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background: radial-gradient(900px 520px at 85% -10%, rgba(0, 188, 235, 0.16), transparent 70%), radial-gradient(700px 420px at -10% 30%, rgba(108, 192, 74, 0.08), transparent 70%); }
+.wrap { position: relative; z-index: 1; max-width: 1320px; margin: 0 auto; padding-block: 0 56px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+a { color: var(--ice); }
+a:hover { color: #ffffff; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+.topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: rgba(5, 14, 29, 0.88); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+.topbar-in { display: flex; align-items: center; gap: 8px 24px; flex-wrap: wrap; min-height: 60px; padding-block: 8px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -0.01em; min-width: 0; }
+.brand svg { width: 34px; height: 19px; color: var(--blue); flex: none; }
+.brand small { color: var(--muted); font-weight: 500; }
+nav.tabs { display: flex; gap: 4px; margin-left: auto; flex-wrap: wrap; }
+nav.tabs a { text-decoration: none; color: var(--muted); font-weight: 600; font-size: 0.9rem; padding: 7px 14px; border-radius: 999px; border: 1px solid transparent; }
+nav.tabs a[aria-current="page"] { color: var(--on-blue); background: var(--blue); }
+nav.tabs a:not([aria-current="page"]):hover { color: var(--ink); border-color: var(--line-strong); }
+@media (max-width: 640px) { .brand small { display: none; } nav.tabs { margin-left: 0; } nav.tabs a { padding: 6px 10px; font-size: 0.84rem; } }
+
+.eyebrow { font-size: 12.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.16em; color: var(--blue); }
+h1, h2, h3 { margin: 0; letter-spacing: -0.03em; line-height: 1.05; text-wrap: balance; }
+h1 { font-size: clamp(34px, 4.4vw, 58px); font-weight: 800; }
+h2 { font-size: clamp(24px, 2.6vw, 36px); font-weight: 800; }
+h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.015em; line-height: 1.2; }
+.grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.lead { color: #c4d4e3; font-size: 1.08rem; max-width: 64ch; margin: 0; }
+.muted { color: var(--muted); }
+.mono { font-family: var(--f-mono); }
+p { margin: 0; }
+
+.hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px; align-items: end; padding-block: 40px 6px; }
+@media (max-width: 900px) { .hero { grid-template-columns: minmax(0, 1fr); padding-block: 26px 0; gap: 18px; } }
+.hero .text { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.notice { border: 1px solid var(--line); background: var(--panel); border-radius: 14px; padding: 14px 16px; font-size: 0.88rem; display: flex; flex-direction: column; gap: 8px; }
+.notice b { color: var(--ice); }
+.notice.warn { border-color: rgba(251, 171, 24, 0.4); }
+.notice.warn b { color: var(--amber); }
+
+section.view { display: flex; flex-direction: column; gap: 22px; }
+section.view[hidden] { display: none; }
+.glass { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; backdrop-filter: blur(16px); min-width: 0; }
+.pad { padding: 20px; }
+.stack { display: flex; flex-direction: column; gap: 12px; }
+@media (max-width: 560px) { .pad { padding: 16px; } }
+
+button, .btn { font: inherit; font-weight: 600; font-size: 0.88rem; border-radius: 999px; padding: 8px 16px; cursor: pointer; border: 1px solid var(--line-strong);
+  background: rgba(10, 30, 58, 0.7); color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; line-height: 1.2; }
+button:hover, .btn:hover { border-color: var(--ice); color: #ffffff; }
+.primary { background: var(--blue); border-color: var(--blue); color: var(--on-blue); }
+.primary:hover { background: var(--sky); color: var(--on-blue); }
+.small { padding: 4px 11px; font-size: 0.8rem; }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 3px rgba(108, 192, 74, 0.22); flex: none; }
+.btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.04em; padding: 2px 9px; border-radius: 999px;
+  border: 1px solid var(--line-strong); color: var(--ice); white-space: nowrap; }
+.chip.green { color: var(--green); border-color: rgba(108, 192, 74, 0.45); }
+.chip.amber { color: var(--amber); border-color: rgba(251, 171, 24, 0.45); }
+.toast { font-size: 0.84rem; color: var(--green); min-height: 1.3em; }
+.toast.err { color: var(--amber); }
+
+/* gallery */
+.deck-picker { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 980px) { .deck-picker { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 460px) { .deck-picker { grid-template-columns: minmax(0, 1fr); } }
+.pick { all: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; gap: 8px; padding: 8px 8px 12px; border-radius: 14px;
+  border: 1px solid var(--line); background: rgba(7, 24, 45, 0.6); min-width: 0; }
+.pick:hover { border-color: var(--line-strong); }
+.pick[aria-pressed="true"] { border-color: var(--blue); background: rgba(0, 188, 235, 0.1); box-shadow: 0 0 0 1px var(--blue) inset; }
+.pick:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.pick img, .shot-main img, .thumbs img, .ex-grid img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 9px; background: var(--navy); }
+.pick .meta { display: flex; gap: 10px; align-items: center; padding: 0 4px; }
+.key { flex: none; width: 24px; height: 24px; border-radius: 7px; display: grid; place-items: center; font-family: var(--f-mono); font-size: 12px; font-weight: 600;
+  border: 1px solid var(--line-strong); color: var(--ice); }
+.pick[aria-pressed="true"] .key { background: var(--blue); color: var(--on-blue); border-color: var(--blue); }
+.pick b { font-weight: 700; font-size: 0.98rem; line-height: 1.2; }
+.pick .based { font-size: 0.8rem; color: var(--muted); padding: 0 4px; }
+.pick .stackline { font-family: var(--f-mono); font-size: 0.72rem; color: var(--ice); padding: 0 4px; }
+
+.deck { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 22px; align-items: start; }
+@media (max-width: 1040px) { .deck { grid-template-columns: minmax(0, 1fr); } }
+.shots { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.shot-main { position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); margin: 0; }
+.shot-main img { border-radius: 0; }
+.shot-main figcaption { position: absolute; left: 10px; bottom: 10px; width: fit-content; max-width: calc(100% - 20px); font-size: 0.78rem; background: rgba(5, 14, 29, 0.86); border: 1px solid var(--line); padding: 3px 10px; border-radius: 999px; }
+.shot-main .kind { position: absolute; top: 10px; left: 10px; }
+.kind { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 8px; border-radius: 6px; background: rgba(5, 14, 29, 0.86); border: 1px solid var(--line-strong); color: var(--ice); }
+.kind.orig { color: var(--amber); border-color: rgba(251, 171, 24, 0.5); }
+.thumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; }
+.thumbs button { all: unset; cursor: pointer; border-radius: 9px; border: 1px solid var(--line); overflow: hidden; min-width: 0; position: relative; }
+.thumbs button[aria-pressed="true"] { border-color: var(--blue); box-shadow: 0 0 0 1px var(--blue); }
+.thumbs button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.thumbs button.orig::after { content: "orig"; position: absolute; top: 4px; left: 4px; font-family: var(--f-mono); font-size: 9px; color: var(--amber); background: rgba(5, 14, 29, 0.86); padding: 0 4px; border-radius: 4px; }
+.thumbs img { border-radius: 0; }
+.deck-info { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.deck-info .use { color: #c4d4e3; }
+.facts { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 14px; font-size: 0.86rem; margin: 0; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.status-note { font-size: 0.8rem; color: var(--muted); }
+.sw-row { display: flex; flex-wrap: wrap; gap: 6px; }
+.sw-row span { width: 22px; height: 22px; border-radius: 6px; border: 1px solid var(--line-strong); }
+
+.cols2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 22px; }
+@media (max-width: 900px) { .cols2 { grid-template-columns: minmax(0, 1fr); } }
+.table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--line); }
+table { border-collapse: collapse; width: 100%; font-size: 0.86rem; min-width: 460px; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); font-weight: 600; background: rgba(7, 24, 45, 0.7); }
+tr:last-child td { border-bottom: 0; }
+td.cat { font-family: var(--f-mono); font-size: 0.74rem; color: var(--ice); white-space: nowrap; }
+td b { font-weight: 700; }
+.list { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 0.88rem; }
+
+/* composer */
+.compose { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 22px; align-items: start; }
+@media (max-width: 1040px) { .compose { grid-template-columns: minmax(0, 1fr); } }
+form { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+fieldset { border: 1px solid var(--line); background: var(--panel); border-radius: 18px; padding: 16px 18px 18px; margin: 0; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+legend { font-weight: 700; font-size: 1rem; padding: 0 6px; margin-left: -6px; }
+legend .eyebrow { margin-right: 8px; }
+label.f, div.f { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+.lab { font-weight: 600; font-size: 0.86rem; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.hint { color: var(--muted); font-size: 0.8rem; font-weight: 400; }
+.row2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
+input[type=text], input[type=number], textarea, select { font: inherit; color: var(--ink); background: rgba(5, 14, 29, 0.7); border: 1px solid var(--line-strong);
+  border-radius: 10px; padding: 8px 11px; width: 100%; min-width: 0; }
+textarea { resize: vertical; min-height: 64px; }
+textarea.code { font-family: var(--f-mono); font-size: 0.8rem; }
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--line-strong); border-radius: 18px; overflow: hidden; width: fit-content; max-width: 100%; }
+.seg label { cursor: pointer; position: relative; }
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg span { display: block; padding: 6px 14px; font-size: 0.86rem; font-weight: 600; color: var(--muted); }
+.seg input:checked + span { background: var(--blue); color: var(--on-blue); }
+.seg input:focus-visible + span { outline: 2px solid var(--ice); outline-offset: -2px; }
+.preset-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+@media (max-width: 520px) { .preset-row { grid-template-columns: minmax(0, 1fr); } }
+.preset-opt { position: relative; display: flex; gap: 10px; align-items: center; padding: 8px 10px; border-radius: 12px; border: 1px solid var(--line); cursor: pointer; min-width: 0; }
+.preset-opt input { position: absolute; opacity: 0; pointer-events: none; }
+.preset-opt img { width: 64px; height: 36px; object-fit: cover; border-radius: 5px; flex: none; background: var(--navy); }
+.preset-opt span { font-size: 0.86rem; font-weight: 600; line-height: 1.25; min-width: 0; }
+.preset-opt:has(input:checked) { border-color: var(--blue); background: rgba(0, 188, 235, 0.1); }
+.preset-opt:has(input:focus-visible) { outline: 2px solid var(--blue); outline-offset: 2px; }
+.note { font-size: 0.8rem; color: var(--muted); }
+.el-head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+.els { display: flex; flex-direction: column; gap: 4px; max-height: 360px; overflow: auto; padding-right: 4px; }
+.el { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 10px; padding: 7px 8px; border-radius: 10px; cursor: pointer; align-items: start; }
+.el:hover { background: rgba(155, 231, 255, 0.05); }
+.el input { margin: 3px 0 0; accent-color: var(--blue); width: 16px; height: 16px; }
+.el b { font-size: 0.86rem; font-weight: 600; }
+.el .c { font-family: var(--f-mono); font-size: 0.7rem; color: var(--ice); margin-left: 6px; }
+.el small { display: block; color: var(--muted); font-size: 0.78rem; line-height: 1.4; }
+details.more { border-top: 1px solid var(--line); padding-top: 10px; }
+details.more summary { cursor: pointer; font-weight: 600; font-size: 0.88rem; }
+details.more .grp { margin-top: 10px; }
+details.more .grp > .eyebrow { margin: 6px 0 4px; display: block; }
+aside.out { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 76px); display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+@media (max-width: 1040px) { aside.out { position: static; } }
+.out-head { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; }
+.meter { font-family: var(--f-mono); font-size: 0.76rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.missing { display: flex; flex-wrap: wrap; gap: 6px; font-size: 0.8rem; align-items: center; min-height: 24px; }
+.missing .chip { color: var(--amber); border-color: rgba(251, 171, 24, 0.45); }
+.missing .chip.green { color: var(--green); border-color: rgba(108, 192, 74, 0.45); }
+pre { margin: 0; background: #020812; border: 1px solid var(--line); color: #cfe2f0; border-radius: 14px; padding: 16px 18px; font-family: var(--f-mono);
+  font-size: 0.78rem; line-height: 1.6; white-space: pre-wrap; word-break: break-word; overflow: auto; }
+pre#prompt { max-height: calc(100vh - 230px); }
+@media (max-width: 1040px) { pre#prompt { max-height: 70vh; } }
+pre .h { color: var(--blue); font-weight: 600; }
+pre mark { background: var(--amber); color: #1d1200; border-radius: 3px; padding: 0 2px; }
+
+/* install */
+.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; counter-reset: s; }
+.steps > li { counter-increment: s; display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; }
+.steps > li::before { content: counter(s, decimal-leading-zero); font-family: var(--f-mono); font-size: 12px; color: var(--blue); border: 1px solid var(--line-strong);
+  border-radius: 8px; height: 26px; display: grid; place-items: center; }
+.steps .body { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.cmd { position: relative; }
+.cmd pre { padding-right: 76px; }
+.cmd button { position: absolute; top: 8px; right: 8px; padding: 4px 10px; font-size: 0.75rem; }
+.platform-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.platform-tabs button[aria-pressed="true"] { background: var(--blue); color: var(--on-blue); border-color: var(--blue); }
+.pane[hidden] { display: none; }
+.dl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.dl { display: flex; flex-direction: column; gap: 8px; padding: 16px; border-radius: 14px; border: 1px solid var(--line); background: rgba(7, 24, 45, 0.6); min-width: 0; }
+.dl .size { font-family: var(--f-mono); font-size: 0.75rem; color: var(--muted); overflow-wrap: anywhere; }
+.ex-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.ex-grid figure { margin: 0; display: flex; flex-direction: column; gap: 6px; font-size: 0.82rem; color: var(--muted); min-width: 0; }
+.ex-grid img { border: 1px solid var(--line); }
+
+/* design */
+.type-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.type-tabs button[aria-pressed="true"] { background: var(--blue); color: var(--on-blue); border-color: var(--blue); }
+.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.sw { border-radius: 12px; border: 1px solid var(--line); overflow: hidden; background: rgba(7, 24, 45, 0.6); }
+.sw i { display: block; height: 52px; }
+.sw div { padding: 8px 10px; font-size: 0.8rem; display: flex; flex-direction: column; gap: 2px; }
+.sw code { font-family: var(--f-mono); color: var(--muted); font-size: 0.74rem; overflow-wrap: anywhere; }
+/* dictation */
+.fwrap { position: relative; min-width: 0; }
+.fwrap input, .fwrap textarea { padding-right: 46px; }
+.mic { position: absolute; top: 5px; right: 5px; width: 32px; height: 32px; padding: 0; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(0, 188, 235, 0.12); border: 1px solid rgba(0, 188, 235, 0.45); color: var(--ice); }
+.mic svg { width: 16px; height: 16px; }
+.mic:hover { background: rgba(0, 188, 235, 0.24); }
+.mic.on { background: var(--red); border-color: var(--red); color: #ffffff; }
+@media (prefers-reduced-motion: no-preference) { .mic.on { animation: pulse 1.2s ease-in-out infinite; } @keyframes pulse { 50% { box-shadow: 0 0 0 7px rgba(226, 35, 26, 0.18); } } }
+.live { font-size: 0.8rem; color: var(--ice); font-style: italic; min-height: 0; }
+.live:empty { display: none; }
+.mic-help { position: fixed; z-index: 60; left: 50%; bottom: calc(env(safe-area-inset-bottom, 0px) + 20px); transform: translateX(-50%); width: min(560px, calc(100% - 32px));
+  background: #0a1e3a; border: 1px solid var(--line-strong); border-radius: 16px; padding: 16px 18px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45); display: flex; flex-direction: column; gap: 8px; font-size: 0.88rem; }
+.mic-help[hidden] { display: none; }
+.mic-help b { color: var(--ice); }
+.mic-help kbd { font-family: var(--f-mono); font-size: 0.8rem; border: 1px solid var(--line-strong); border-radius: 5px; padding: 0 5px; }
+.voice-cta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 14px 16px; border-radius: 14px; border: 1px dashed rgba(0, 188, 235, 0.5); background: rgba(0, 188, 235, 0.06); }
+.voice-cta .tag { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); border: 1px solid rgba(251, 171, 24, 0.5); border-radius: 6px; padding: 1px 6px; }
+.qa { position: fixed; inset: 0; z-index: 50; background: rgba(2, 8, 18, 0.92); backdrop-filter: blur(10px); display: grid; place-items: center;
+  padding: calc(env(safe-area-inset-top, 0px) + 16px) max(16px, env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 16px) max(16px, env(safe-area-inset-left, 0px)); }
+.qa[hidden] { display: none; }
+.qa-card { width: min(760px, 100%); max-height: 100%; overflow: auto; background: #07182d; border: 1px solid var(--line-strong); border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 16px; }
+.qa-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.qa-bar { height: 4px; border-radius: 2px; background: rgba(155, 231, 255, 0.12); overflow: hidden; }
+.qa-bar i { display: block; height: 100%; background: var(--grad); width: 0; }
+@media (prefers-reduced-motion: no-preference) { .qa-bar i { transition: width .3s; } }
+.qa h2 { font-size: clamp(22px, 2.6vw, 32px); }
+.qa .qhint { color: var(--muted); }
+.qa-mic { width: 84px; height: 84px; border-radius: 50%; border: 1px solid rgba(0, 188, 235, 0.6); background: rgba(0, 188, 235, 0.14); color: var(--ice); display: grid; place-items: center; padding: 0; flex: none; }
+.qa-mic svg { width: 34px; height: 34px; }
+.qa-mic.on { background: var(--red); border-color: var(--red); color: #ffffff; }
+@media (prefers-reduced-motion: no-preference) { .qa-mic.on { animation: pulse 1.2s ease-in-out infinite; } }
+.qa-row { display: flex; gap: 16px; align-items: center; }
+.qa-row > div { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.qa textarea { min-height: 110px; font-size: 1rem; }
+.qa-status { font-size: 0.82rem; color: var(--muted); }
+.qa-status.listening { color: var(--green); }
+.qa-cmds { font-size: 0.78rem; color: var(--muted); }
+.qa-cmds code { font-family: var(--f-mono); color: var(--ice); }
+.qa-choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+@media (max-width: 520px) { .qa-choices { grid-template-columns: minmax(0, 1fr); } .qa-row { flex-direction: column; align-items: stretch; } .qa-mic { align-self: center; } }
+.qa-choices button { justify-content: flex-start; border-radius: 12px; text-align: left; }
+.qa-choices button[aria-pressed="true"] { background: var(--blue); color: var(--on-blue); border-color: var(--blue); }
+.qa-nav { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.qa-review { display: flex; flex-direction: column; gap: 8px; max-height: 46vh; overflow: auto; }
+.qa-review div { display: grid; grid-template-columns: minmax(120px, 0.4fr) minmax(0, 1fr); gap: 10px; font-size: 0.86rem; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+.qa-review span:first-child { color: var(--muted); }
+.qa-review span:last-child { white-space: pre-wrap; overflow-wrap: anywhere; }
+footer { margin-top: 36px; color: var(--muted); font-size: 0.8rem; max-width: 90ch; }
+@media (prefers-reduced-motion: no-preference) { button, .btn, .pick, nav.tabs a { transition: background-color .15s, border-color .15s, color .15s; } }
+</style>
+
+<div class="glow" aria-hidden="true"></div>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <div class="brand">
+      <svg viewBox="0 0 36 20" aria-hidden="true"><g fill="currentColor"><rect x="1" y="14" width="2" height="5" rx="1"/><rect x="5" y="9" width="2" height="10" rx="1"/><rect x="9" y="3" width="2" height="16" rx="1"/><rect x="13" y="9" width="2" height="10" rx="1"/><rect x="17" y="14" width="2" height="5" rx="1"/><rect x="21" y="9" width="2" height="10" rx="1"/><rect x="25" y="3" width="2" height="16" rx="1"/><rect x="29" y="9" width="2" height="10" rx="1"/><rect x="33" y="14" width="2" height="5" rx="1"/></g></svg>
+      <span>Cisco Solutions Generator <small>· four formats, four prompts</small></span>
+    </div>
+    <nav class="tabs" aria-label="Views">
+      <a href="#gallery" data-view="gallery">Gallery</a>
+      <a href="#compose" data-view="compose">Compose</a>
+      <a href="#install" data-view="install">Setup</a>
+      <a href="#design" data-view="design">Design systems</a>
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+
+  <section class="view" id="view-gallery" aria-labelledby="g-title">
+    <div class="hero">
+      <div class="text">
+        <div class="eyebrow">01 · Gallery</div>
+        <h1 id="g-title">Four formats, each on its own stack. <span class="grad">Rebuilt from its own prompt.</span></h1>
+        <p class="lead">Each type was studied from one of your published originals: its tech stack, layout, design tokens, components and interaction model. That study became the type's prompt, and the rebuild shown here was built from that prompt.</p>
+      </div>
+      <div class="notice">
+        <span><b>Rebuild and original, side by side.</b> Thumbnails marked "orig" are screenshots of your original; the rest are the rebuild. Open the rebuild to use it.</span>
+        <span>Only the FutureSE talk uses the cisco-3d-stage skill, because that talk is where the skill came from. The other three have no deck navigation, no presenter camera box and no narrated talk track.</span>
+      </div>
+    </div>
+    <div class="deck-picker" id="deckPicker" role="group" aria-label="Presentation type"></div>
+    <div class="glass pad deck" id="deckDetail"></div>
+    <div class="cols2">
+      <div class="glass pad stack">
+        <div class="eyebrow">How it is built</div>
+        <ul class="list" id="specList"></ul>
+      </div>
+      <div class="glass pad stack">
+        <div class="eyebrow" id="elTitle">Elements</div>
+        <div class="table-wrap" style="max-height:420px"><table id="elTable"><thead><tr><th>Element</th><th>Kind</th></tr></thead><tbody></tbody></table></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="view-compose" aria-labelledby="c-title" hidden>
+    <div class="hero">
+      <div class="text">
+        <div class="eyebrow">02 · Compose</div>
+        <h1 id="c-title">Pick a format. <span class="grad">Get the prompt that builds it.</span></h1>
+        <p class="lead">Each format has its own prompt, written from a study of the original: stack and versions, layout, tokens, components, data model and review steps. Fill the fields, keep or drop the format's elements, borrow elements from other formats, and copy.</p>
+      </div>
+      <div class="notice">
+        <span><b>Before you paste.</b> Use Claude Code in an empty folder. Type B also needs the cisco-3d-stage skill installed (see Setup); types A, C and D are self-contained.</span>
+        <span id="exampleBar"><b>Sample values filled in.</b> The made-up sample customer for each format comes from its field examples. <button type="button" id="clearBtn" class="small">Clear fields</button></span>
+      </div>
+    </div>
+    <div class="voice-cta">
+      <span class="tag">Advanced</span>
+      <span style="flex:1;min-width:220px"><b>Talk your intake out.</b> <span class="muted">A step-by-step spoken questionnaire: it reads each question, listens, and fills the fields as you talk. Say "next", "back", "skip" or "done".</span></span>
+      <button type="button" class="primary" id="qaOpen"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>Talk it through</button>
+    </div>
+    <div class="compose">
+      <form id="f" autocomplete="off">
+        <fieldset>
+          <legend><span class="eyebrow">01</span>Format</legend>
+          <div class="preset-row" id="presetRow"></div>
+        </fieldset>
+        <fieldset>
+          <legend><span class="eyebrow">02</span><span id="fieldsTitle">Details</span></legend>
+          <div class="row2" id="fieldsShort"></div>
+          <div class="stack" id="fieldsLong"></div>
+          <div class="btns"><button type="button" class="small" id="sampleBtn">Fill with sample values</button></div>
+        </fieldset>
+        <fieldset>
+          <legend><span class="eyebrow">03</span>Elements</legend>
+          <div class="el-head"><span class="note" id="elCount"></span><span class="btns"><button type="button" class="small" id="elAll">Keep all</button><button type="button" class="small" id="elNone">Drop all</button></span></div>
+          <div class="els" id="ownEls"></div>
+          <details class="more"><summary>Add elements from other formats</summary><div id="otherEls"></div></details>
+        </fieldset>
+        <fieldset>
+          <legend><span class="eyebrow">04</span>Guardrails</legend>
+          <div class="el-head"><span class="note" id="grSummary"></span><span class="btns"><button type="button" class="small" id="grBuild">Build it for me</button><button type="button" class="small" id="grGuide">Guide me through it</button></span></div>
+          <div class="els" id="guards" style="max-height:none"></div>
+          <div class="stack" id="mpOpts" style="border-top:1px solid var(--line);padding-top:12px">
+            <div class="f"><label class="lab" for="mpExamples">Masterpiece examples <span class="hint">Optional. Links or descriptions of work that sets the bar</span></label><div class="fwrap"><textarea id="mpExamples" rows="2" placeholder="e.g. https://rosy-beacon-q5c8.here.now/ for the globe and mission flow"></textarea><button type="button" class="mic" data-mic="mpExamples" aria-label="Dictate into Masterpiece examples"></button></div><div class="live" id="live-mpExamples"></div></div>
+            <label class="el" style="padding:0"><input type="checkbox" id="mpBar"><span><b>Add the gallery's quality bar and AI-slop list</b><small>Optional. Spells out the qualities the reference builds share and what to avoid. Leave off to give the model full freedom.</small></span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend><span class="eyebrow">05</span>Skills for the visuals</legend>
+          <span class="note" id="skillsNote"></span>
+          <div class="els" id="skillsList" style="max-height:none"></div>
+          <div class="row2" style="align-items:end"><div class="f"><label class="lab" for="skillAdd">Add a skill by name <span class="hint">As it appears in /skills</span></label><input type="text" id="skillAdd" placeholder="e.g. frontend-design"></div><button type="button" class="small" id="skillAddBtn" style="width:fit-content">Add skill</button></div>
+        </fieldset>
+        <fieldset>
+          <legend><span class="eyebrow">06</span>Delivery</legend>
+          <div class="row2">
+            <label class="f"><span class="lab">Publishing</span>
+              <select id="sharing" name="sharing">
+                <option value="herenow">here.now link</option>
+                <option value="private">Private host with access control</option>
+                <option value="zip">Files only, no hosting</option>
+              </select></label>
+          </div>
+          <div class="f"><label class="lab" for="notes">Notes from customer calls <span class="hint">Optional. Framing only, never shown</span></label><div class="fwrap"><textarea id="notes" name="notes" rows="3"></textarea><button type="button" class="mic" data-mic="notes" aria-label="Dictate into Notes from customer calls"></button></div><div class="live" id="live-notes"></div></div>
+        </fieldset>
+      </form>
+      <aside class="out" aria-label="Assembled prompt">
+        <div class="out-head"><h3>Assembled prompt</h3><span class="meter" id="meter"></span></div>
+        <div class="missing" id="missing"></div>
+        <div class="btns"><button type="button" class="primary" id="copyBtn">Copy prompt</button><button type="button" id="selectBtn">Select text</button><button type="button" id="dlPrompt">Download .md</button></div>
+        <div class="toast" id="toast" role="status"></div>
+        <pre id="prompt" tabindex="0"></pre>
+      </aside>
+    </div>
+  </section>
+
+  <section class="view" id="view-install" aria-labelledby="i-title" hidden>
+    <div class="hero">
+      <div class="text">
+        <div class="eyebrow">03 · Setup</div>
+        <h1 id="i-title">Set up once. <span class="grad">Paste a prompt, get the format.</span></h1>
+        <p class="lead">Types A, C and D carry their whole design and tech spec inside the prompt, so they need only Claude Code and Node. Type B, the narrated talk, runs on the cisco-3d-stage skill, which you install once.</p>
+      </div>
+      <div class="notice warn">
+        <span><b>Missing from the skill pack.</b> cisco-3d-stage says it extends a base skill called <span class="mono">cisco-branded</span> (palette, type, glass and scroll explainers). It was not in the zip you uploaded. Type B works without it.</span>
+      </div>
+    </div>
+    <div class="glass pad stack">
+      <div class="eyebrow">Which format needs what</div>
+      <div class="table-wrap"><table><thead><tr><th>Format</th><th>Stack the prompt asks for</th><th>Needs</th></tr></thead><tbody id="needsTable"></tbody></table></div>
+    </div>
+    <div class="glass pad stack">
+      <div class="eyebrow">Downloads</div>
+      <div class="dl-grid" id="dlGrid"></div>
+      <div class="toast" id="dlToast" role="status"></div>
+    </div>
+    <div class="glass pad" style="display:flex;flex-direction:column;gap:16px">
+      <div class="eyebrow">Install the cisco-3d-stage skill (type B)</div>
+      <div class="platform-tabs" id="platformTabs" role="group" aria-label="Where to install"></div>
+      <div id="panes"></div>
+    </div>
+    <div class="cols2">
+      <div class="glass pad stack">
+        <div class="eyebrow">Dependencies</div>
+        <div class="table-wrap"><table><thead><tr><th>Tool</th><th>Used by</th><th>Install</th></tr></thead><tbody>
+          <tr><td>Node.js 20+</td><td>All types: Vite builds (A, C, D), tools (B)</td><td>nodejs.org</td></tr>
+          <tr><td>Vite 8, vite-plugin-singlefile</td><td>A, C, D: one self-contained HTML file</td><td class="mono">npm i -D vite vite-plugin-singlefile</td></tr>
+          <tr><td>three</td><td>A (r186), C (r169), D (r186)</td><td class="mono">npm i three</td></tr>
+          <tr><td>gsap, topojson-client</td><td>D (both), A (topojson)</td><td class="mono">npm i gsap topojson-client</td></tr>
+          <tr><td>Playwright + Chromium</td><td>Headless review screenshots for A, C, D</td><td class="mono">npm i -D playwright && npx playwright install chromium</td></tr>
+          <tr><td>Python 3</td><td>B: local server; C and D: optional audio rendering</td><td class="mono">python3 -m http.server 8765</td></tr>
+          <tr><td>edge-tts</td><td>B voices; C briefing MP3; D studio voices</td><td class="mono">pip install edge-tts</td></tr>
+          <tr><td>puppeteer-core, rangehttpserver</td><td>B review and audio seeking</td><td class="mono">npm i -D puppeteer-core; pip install rangehttpserver</td></tr>
+        </tbody></table></div>
+        <p class="note">edge-tts is LGPL/GPL and uses Microsoft neural voices; Gemini TTS or ElevenLabs also work for C and D. Check voice use against Cisco policy.</p>
+      </div>
+      <div class="glass pad stack">
+        <div class="eyebrow">Get results like the gallery</div>
+        <ol class="steps">
+          <li><div class="body"><b>Pick the format that fits the room.</b><span class="muted">A for one executive and a physical environment; B for a talk; C for a leave-behind page; D for a multi-site story with enablement.</span><a class="btn small" href="#compose" style="width:fit-content">Open Compose</a></div></li>
+          <li><div class="body"><b>Fill the fields and choose elements.</b><span class="muted">Every field feeds a specific part of the prompt. Drop elements you do not need; borrow ones you want from other formats.</span></div></li>
+          <li><div class="body"><b>Paste into Claude Code in an empty folder.</b><span class="muted">With the guardrails on, it researches, builds the whole thing, reviews it in a browser and keeps refining until it is a masterpiece by its own judgment. Uncheck guardrails if you want it to plan or ask with you instead.</span></div></li>
+          <li><div class="body"><b>Check facts, then publish.</b><span class="muted">Every PUBLIC claim against its source, every MODELED and ILLUSTRATIVE label in place, before anything reaches a customer.</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="view" id="view-design" aria-labelledby="d-title" hidden>
+    <div class="hero">
+      <div class="text">
+        <div class="eyebrow">04 · Design systems</div>
+        <h1 id="d-title">Four originals, four looks. <span class="grad">Each prompt carries its own.</span></h1>
+        <p class="lead">The tokens below were read from each original's CSS and code where it was captured, and sampled from screenshots where it was not. The spec file for each format says which is which.</p>
+      </div>
+    </div>
+    <div class="type-tabs" id="typeTabs" role="group" aria-label="Format"></div>
+    <div class="glass pad stack">
+      <div class="eyebrow" id="dsTitle"></div>
+      <div class="swatches" id="dsSwatches"></div>
+    </div>
+    <div class="cols2">
+      <div class="glass pad stack"><div class="eyebrow">Type and surfaces</div><ul class="list" id="dsType"></ul></div>
+      <div class="glass pad stack"><div class="eyebrow">Rules</div><ul class="list" id="dsRules"></ul></div>
+    </div>
+  </section>
+
+  <div class="mic-help" id="micHelp" role="dialog" aria-labelledby="micHelpTitle" hidden>
+    <b id="micHelpTitle">Use your system dictation here</b>
+    <span id="micHelpWhy">This view does not allow the page to use your microphone.</span>
+    <span>The field is focused, so you can dictate into it right away:</span>
+    <span>Mac: press <kbd>Fn</kbd> twice (or the <kbd>🎤</kbd> key) · Windows: <kbd>Win</kbd> + <kbd>H</kbd> · iPhone and Android: the mic on the keyboard.</span>
+    <span class="muted">For live in-page dictation, download the generator from Setup and open it in Chrome or Edge.</span>
+    <div class="btns"><button type="button" class="small" id="micHelpClose">Got it</button></div>
+  </div>
+
+  <div class="qa" id="qa" role="dialog" aria-modal="true" aria-labelledby="qaQ" hidden>
+    <div class="qa-card">
+      <div class="qa-top"><span class="eyebrow" id="qaStep"></span><span class="btns"><label class="small btn" style="cursor:pointer"><input type="checkbox" id="qaSpeak" checked style="accent-color:var(--blue)"> Read questions aloud</label><button type="button" class="small" id="qaClose">Close</button></span></div>
+      <div class="qa-bar"><i id="qaBar"></i></div>
+      <h2 id="qaQ"></h2>
+      <p class="qhint" id="qaHint"></p>
+      <div id="qaBody"></div>
+      <div class="qa-nav"><button type="button" id="qaBack">Back</button><span class="btns"><button type="button" id="qaSkip">Skip</button><button type="button" class="primary" id="qaNext">Next</button></span></div>
+    </div>
+  </div>
+
+  <footer>Built from your Cisco Solutions Generator plan, your eight published examples and the SEVerse cisco-3d-stage skill by Stephen Ewings. This page only assembles text and offers files; nothing is sent anywhere until you paste a prompt into a model. Cisco names and marks belong to Cisco Systems, Inc. Have a person review every generated build before it reaches a customer.</footer>
+</div>
+
+<script>window.__TYPES = __TYPES_JSON__;</script>
+<script>window.__DECKS = __DECKS_JSON__;</script>
+<script>
+const TYPES = window.__TYPES, DECKS = window.__DECKS, ORDER = ["A", "B", "C", "D"];
+const $ = id => document.getElementById(id);
+const esc = t => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+/* views */
+const VIEWS = ["gallery", "compose", "install", "design"];
+function showView() {
+  const v = VIEWS.includes(location.hash.slice(1)) ? location.hash.slice(1) : "gallery";
+  for (const name of VIEWS) $("view-" + name).hidden = name !== v;
+  document.querySelectorAll("nav.tabs a").forEach(a => { if (a.dataset.view === v) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+}
+window.addEventListener("hashchange", () => { showView(); window.scrollTo(0, 0); });
+
+/* downloads (the host does not serve .zip, so archives ship as base64 text and are rebuilt here) */
+let dlApi;
+async function downloads() {
+  if (dlApi !== undefined) return dlApi;
+  try { dlApi = window.claude && window.claude.use ? await window.claude.use("downloads") : null; } catch (e) { dlApi = null; }
+  return dlApi;
+}
+async function offer(src, filename, toastEl) {
+  toastEl.className = "toast"; toastEl.textContent = "Preparing " + filename + "...";
+  try {
+    const api = await downloads();
+    if (!api) throw { code: "unavailable" };
+    let data;
+    if (typeof src === "object") data = src.text;
+    else {
+      const res = await fetch(src);
+      if (!res.ok) throw { code: "missing" };
+      if (src.endsWith(".b64.txt")) {
+        const bin = atob((await res.text()).trim()), u = new Uint8Array(bin.length);
+        for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
+        data = new Blob([u], { type: "application/zip" });
+      } else data = await res.blob();
+    }
+    await api.save({ filename, data });
+    toastEl.textContent = "Saved " + filename + ".";
+  } catch (e) {
+    toastEl.className = "toast err";
+    toastEl.textContent = e && e.code === "declined" ? "Download cancelled." : e && e.code === "missing" ? "That file is not published with this page." :
+      "Downloads are not available in this view. Open the page on claude.ai to save files.";
+  }
+}
+
+/* gallery */
+let cur = 0, curShot = 0;
+function renderPicker() {
+  $("deckPicker").innerHTML = DECKS.map((d, i) => `<button type="button" class="pick" aria-pressed="${i === cur}" data-i="${i}">
+    <img src="${d.shots[0].src}" alt="" loading="lazy"><span class="meta"><span class="key">${d.key}</span><b>${esc(d.name)}</b></span>
+    <span class="based">From ${esc(d.based)}</span><span class="stackline">${esc(d.stackShort)}</span></button>`).join("");
+}
+function renderDeck() {
+  const d = DECKS[cur]; if (!d) return;
+  const s = d.shots[curShot] || d.shots[0];
+  const t = TYPES[d.key];
+  $("deckDetail").innerHTML = `
+    <div class="shots">
+      <figure class="shot-main"><img src="${s.src}" alt="${esc(s.alt)}"><span class="kind ${s.orig ? "orig" : ""}">${s.orig ? "Original" : "Rebuild"}</span><figcaption>${esc(s.cap)}</figcaption></figure>
+      <div class="thumbs">${d.shots.map((x, k) => `<button type="button" class="${x.orig ? "orig" : ""}" aria-pressed="${k === curShot}" data-k="${k}" aria-label="${esc((x.orig ? "Original: " : "Rebuild: ") + x.cap)}"><img src="${x.src}" alt="" loading="lazy"></button>`).join("")}</div>
+    </div>
+    <div class="deck-info">
+      <div class="eyebrow">Type ${d.key} · ${esc(d.format)}</div>
+      <h2>${esc(d.headline)} <span class="grad">${esc(d.grad)}</span></h2>
+      <p class="use">${esc(d.use)}</p>
+      <dl class="facts">
+        <dt>Stack</dt><dd>${esc(d.stack)}</dd>
+        <dt>Layout</dt><dd>${esc(d.layout)}</dd>
+        <dt>Audience</dt><dd>${esc(d.audience)}</dd>
+        <dt>Narration</dt><dd>${esc(d.narration)}</dd>
+        <dt>Palette</dt><dd><div class="sw-row">${d.tokens.map(c => `<span style="background:${c}" title="${c}"></span>`).join("")}</div></dd>
+      </dl>
+      <div class="btns">
+        <a class="btn primary" href="${d.live}" target="_blank" rel="noopener"><span class="dot"></span>Open the rebuild</a>
+        ${d.narrated ? `<a class="btn" href="${d.narrated}" target="_blank" rel="noopener">Narrated edition</a>` : ""}
+        <a class="btn" href="${d.original}" target="_blank" rel="noopener">Original</a>
+      </div>
+      <div class="btns">
+        <a class="btn small" href="#compose" data-use="${d.key}">Use this format</a>
+        <button type="button" class="small" data-dl="kits/${t.slug}-PROMPT.md" data-name="${t.slug}-prompt-template.md">Prompt template</button>
+        ${d.spec ? `<button type="button" class="small" data-dl="kits/${t.slug}-SPEC.md" data-name="${t.slug}-design-spec.md">Design and tech spec</button>` : ""}
+        <button type="button" class="small" data-dl="${d.file}" data-name="${d.fileName}">Rebuild (.html)</button>
+      </div>
+      <div class="toast" id="deckToast" role="status"></div>
+      <p class="status-note">${esc(d.note)}</p>
+    </div>`;
+  $("specList").innerHTML = d.specPoints.map(x => `<li>${esc(x)}</li>`).join("");
+  $("elTitle").textContent = `Elements of this format (${t.elements.length})`;
+  $("elTable").tBodies[0].innerHTML = t.elements.map(e => `<tr><td><b>${esc(e.name)}</b><div class="muted">${esc(e.desc)}</div></td><td class="cat">${esc(e.cat)}</td></tr>`).join("");
+}
+$("deckPicker").addEventListener("click", e => { const b = e.target.closest(".pick"); if (!b) return; cur = +b.dataset.i; curShot = 0; renderPicker(); renderDeck(); });
+$("deckDetail").addEventListener("click", e => {
+  const t = e.target.closest("[data-k]"); if (t) { curShot = +t.dataset.k; renderDeck(); return; }
+  const dl = e.target.closest("[data-dl]"); if (dl) { offer(dl.dataset.dl, dl.dataset.name, $("deckToast")); return; }
+  const use = e.target.closest("[data-use]"); if (use) setType(use.dataset.use);
+});
+
+/* composer */
+const KEY = "csg-draft-v3";
+let state = { type: "A", values: {}, drop: {}, add: {}, guards: {}, sharing: "herenow", notes: "" };
+try { const s = JSON.parse(localStorage.getItem(KEY) || "null"); if (s && TYPES[s.type]) state = Object.assign(state, s); } catch (e) {}
+
+/* Guardrails: the core operating principles. On = build mode (one shot, no questions, finish inside the budget, masterpiece).
+   Off = the model works with the user on that point instead. */
+const GUARDS = [
+  { id: "oneshot", name: "One shot", desc: "Go from this prompt straight to a finished build. No plan, outline or storyboard for approval.",
+    on: () => "**One shot.** This is a one-shot brief, not the start of a conversation. Do not present a plan, an outline, a storyboard, a scene list or design options for approval, and do not pause between phases to check in. Go from this message straight to a finished, working build, and report only when it is done.",
+    off: () => "**Plan with me.** Start by proposing an outline of what you will build (sections or scenes, the data you will research, the main design choices) and wait for my approval before you build. Check in again after the first working version." },
+  { id: "noq", name: "No questions", desc: "Never ask. Decide like a strong practitioner and record every assumption.",
+    on: () => "**No questions.** Do not ask me anything: not before you start, not during, not at the end. Where something is missing, vague or contradictory, make the decision a senior Cisco solutions engineer and a top creative technologist would make together, write it down in the assumptions list the format provides (or in the README), and keep going. A reasonable assumption is always better than a question.",
+    off: () => "**Ask what you need.** Before you start, ask me the questions you need answered: at most eight, grouped, each with the default you would choose if I do not answer. Then continue." },
+  { id: "time", name: "Time budget", desc: "Use the hours given: research, make it real, then make it perfect. Cut scope, never quality.",
+    on: v => `**Time budget.** You have ${v.HOURS && String(v.HOURS).trim() ? String(v.HOURS).trim() + " hours" : "[HOURS] hours"} of focused work, and you are expected to use them. Spend roughly 15% researching, 45% getting a complete working version, and 40% raising it to the bar. Ship inside the budget. When time runs short, cut scope, never quality: a smaller thing that is finished and polished beats a bigger thing that is not.`,
+    off: () => "**Effort.** There is no fixed time budget. Before you build, tell me roughly how long each part will take so we can decide together what to include." },
+  { id: "real", name: "Make it real, then make it perfect", desc: "First a complete version that runs end to end with real content, then review and refine in passes.",
+    on: () => "**Make it real, then make it perfect.** First make it real: a complete version that runs end to end, with the customer's real content in every part, no placeholders, no lorem ipsum, no \"coming soon\" and no dead buttons. Then make it perfect: open it in a browser at laptop and phone sizes, look at every view and state, fix the weakest thing, and repeat. Stop only when it is a masterpiece by your own judgment or the time budget is spent.",
+    off: () => "**Draft first.** After the first working version, stop and show me what you have before you polish it, so I can steer the refinement." },
+  { id: "master", name: "Create a masterpiece", desc: "A broad approval: the model decides what a masterpiece is. Add your own examples or the gallery's quality bar below if you want to steer it.",
+    on: () => {
+      const out = ["**Create a masterpiece.** It will be shown to customer executives by Cisco sellers, solutions engineers and customer success managers. What a masterpiece is, is yours to decide."];
+      const ex = (state.mpExamples || "").trim();
+      if (ex) out.push("Here are examples of what a masterpiece looks like to me. Treat them as the bar to clear, not as templates to copy:\n\"\"\"\n" + ex + "\n\"\"\"");
+      if (state.mpBar) out.push(
+        "Qualities the reference builds behind this format share, as a floor rather than a ceiling:",
+        "- Unmistakably about this customer: their real places, operations, vocabulary and public priorities; it could not be re-skinned for another account by swapping the logo.",
+        "- A story with a point of view: the tension, the turn and the outcome, in business terms an executive repeats afterwards.",
+        "- Every interaction earns its place: each click, layer or step changes what you see and teaches something.",
+        "- Honest: public facts cited, modeled and illustrative content labeled, no invented numbers, quotes or names.",
+        "- One coherent visual system: deliberate type, color and spacing, crisp text, nothing overlapping.",
+        "- Works on first open: fast, no blank or broken states, no console errors, good on a laptop and a phone.",
+        "AI slop to avoid: generic gradients and glass on everything without purpose; emoji as icons; centered grids of identical cards; decorative 3D that means nothing; stock phrases such as \"unlock\", \"seamless\", \"leverage\", \"game-changer\"; feature lists instead of a story; made-up statistics; placeholder or generic company content; fake testimonials; tiny or low-contrast labels; layouts that break at other sizes; controls that do nothing.");
+      return out.join("\n");
+    },
+    off: () => "**Quality.** Aim for a clean, professional first version. I will direct the polish." }
+];
+function guardOn(id) { return state.guards[id] !== false; }
+
+/* What the model shows for approval in guided mode, per format */
+const SCRIPT = {
+  A: "the briefing script: the tagline, the network map and the site you will model, every persona (role, place, what they care about, label), every scenario with its Without and With step lists and outcome, the places with sources, the 6 to 8 guided story steps, and the assumptions list",
+  B: "the talk script: the scene list (id, chapter eyebrow, title, gradient outcome clause, lead, layout and the 3D world you will build), then for each scene the beats and the spoken notes for every click, plus where the workshop and the film pause go",
+  C: "the briefing script: the hero headline and the six KPIs with their sources, the ten story chapters with the narration for each, the twin layers and sites, every section in order with its cards, the threats with their counters, the roadmap options, and the numbered source list",
+  D: "the mission script: every mission (location, business function lenses, situation, signals, the three options with feedback, outcome and modeled value with its basis), the executive tour chapters and narration, the academy chains, discovery questions and quiz items"
+};
+
+/* Agent Skills the build should use for its visuals. use: required | recommended | optional, per format */
+const SKILLS = [
+  { id: "cisco-3d-stage", use: { A: "optional", B: "required", C: "optional", D: "optional" },
+    purpose: { B: "the stage engine, scene recipes, presenter tools, narrated edition and review tools this format is built on",
+      _: "its Cisco palette, type and glass tokens, crisp overlay labels after bloom, and its headless review tools; use them for the visuals but keep this format's own layout and stack" } },
+  { id: "cisco-branded", use: { A: "recommended", B: "recommended", C: "recommended", D: "recommended" },
+    purpose: { _: "the base Cisco design system: palette, type, logo usage, glass and scroll explainers" } }
+];
+function skillOn(id) { const s = (state.skills || {})[state.type] || {}; const def = SKILLS.find(x => x.id === id); return s[id] ?? (def ? def.use[state.type] !== "optional" : true); }
+function activeSkills() {
+  const list = SKILLS.filter(s => skillOn(s.id)).map(s => ({ id: s.id, level: s.use[state.type], purpose: s.purpose[state.type] || s.purpose._ }));
+  (state.customSkills || []).filter(n => n.trim()).forEach(n => list.push({ id: n.trim(), level: "recommended", purpose: "a skill you added; use it wherever it applies" }));
+  return list;
+}
+const INSTALL_HELP = "Install it from the Setup tab of the Cisco Solutions Generator. In Claude Code, copy the skill folder to ~/.claude/skills/ (or .claude/skills/ in this project) and run /reload-skills if needed. In the Claude app, upload the zip under Customize, then Skills. In Cursor, copy the folder to ~/.cursor/skills/.";
+function skillsBlock(oneShot) {
+  const list = activeSkills(); if (!list.length) return "";
+  const lines = list.map(s => `- \`${s.id}\` (${s.level}): ${s.purpose}.`).join("\n");
+  const check = "Check that each one is actually installed before you do anything else: list your skills (in Claude Code, run /skills), or look for `<name>/SKILL.md` under `~/.claude/skills/`, `.claude/skills/` in this project, or your tool's skills folder. Do not assume a skill is there because this prompt names it. For every skill you find, read its SKILL.md and the reference files it points to, and use them in every visual decision: brand rules, logo use, type, motion, craft techniques and review. Where a skill and this prompt disagree, follow the skill on Cisco brand rules (logo, approved colors, type) and follow this prompt on the format, layout, stack and this format's own design tokens.";
+  const missing = oneShot
+    ? "If a skill is missing, do not stop and do not ask. Build from the design system this prompt specifies, and put a short note at the top of the README naming the missing skill, what it would add and how to install it. " + INSTALL_HELP + (list.some(s => s.level === "required") ? " If a required skill is missing, also say so in one line at the start of your final report." : "")
+    : "If you cannot find a skill, stop before you build anything. Tell me which skill is missing, what it adds to this build, and how to install it. " + INSTALL_HELP + " Then ask whether I want to install it now or continue without it. When I say it is installed, check again and confirm you can read its SKILL.md." + (list.some(s => s.level === "required") ? " Do not build without a required skill unless I explicitly tell you to." : "");
+  return "## Skills for the visuals\nThis build relies on these Agent Skills:\n" + lines + "\n\n" + check + "\n\n" + missing;
+}
+
+function guardrailsBlock(v) {
+  const oneShot = guardOn("oneshot");
+  if (oneShot) {
+    const allOn = GUARDS.every(g => guardOn(g.id));
+    const head = allOn ? "## Operating rules\nThese rules come first and override anything later in this prompt that suggests stopping, planning for approval or asking questions."
+      : "## Operating rules\nThese rules come first and override anything later in this prompt. Some points are build-it-yourself and some are work-with-me, as marked.";
+    return [head, ...GUARDS.map(g => (guardOn(g.id) ? g.on(v) : g.off(v))), skillsBlock(true)].filter(Boolean).join("\n\n");
+  }
+  // Guided mode: one shot is off, so the model works through stages with the user and stops at each gate.
+  const t = state.type, h = v.HOURS && String(v.HOURS).trim() ? String(v.HOURS).trim() + " hours" : "the time budget";
+  const stages = [];
+  const sk = activeSkills();
+  if (sk.length) stages.push(`**Stage 1. Skills check.** Confirm the skills listed in "Skills for the visuals" below are installed and readable. If any is missing, stop here and help me install it before going on.`);
+  stages.push(guardOn("noq")
+    ? `**Stage ${stages.length + 1}. Assumptions.** Do not send me a list of questions. Make the calls yourself and list every assumption at the top of the script in the next stage, so I can correct them there.`
+    : `**Stage ${stages.length + 1}. Questions.** Ask me what you need to know before you research: at most eight questions, grouped, each with the default you would choose if I do not answer. Wait for my answers.`);
+  stages.push(`**Stage ${stages.length + 1}. Research and script for approval.** Research the customer and the Cisco content first, then show me ${SCRIPT[t]}. Wait for my approval or changes, and revise the script until I approve it.`);
+  stages.push(`**Stage ${stages.length + 1}. Build the first version.** Build exactly what I approved. ${guardOn("time") ? `Work within ${h}: about 15% research, 45% to a complete working version, 40% refinement; cut scope, never quality.` : "Before you start, tell me roughly how long each part will take so we can agree on scope."} ${guardOn("real") ? "Make it real: a complete version that runs end to end with the real content in every part, no placeholders and no dead controls." : ""} Then show me screenshots at laptop and phone sizes, list what you would improve, and wait for my feedback.`);
+  stages.push(`**Stage ${stages.length + 1}. Make it perfect.** Apply my feedback, then keep refining in passes: review every view and state in a browser, fix the weakest thing, and repeat. Check in with me after each pass with what changed, until I say it is done.`);
+  const quality = guardOn("master") ? GUARDS.find(g => g.id === "master").on(v) : GUARDS.find(g => g.id === "master").off(v);
+  return ["## How we will work\nThese rules come first and override anything later in this prompt. Guide me through this build in stages, and stop at the end of each stage for my go-ahead. Never skip a stage gate.", ...stages, quality, skillsBlock(false)].filter(Boolean).join("\n\n");
+}
+function guardrailsReminder(v) {
+  if (!guardOn("oneshot")) return "## Start now\nBegin with stage 1, and stop at each stage gate for my go-ahead.";
+  if (!GUARDS.every(g => guardOn(g.id))) return "";
+  const h = v.HOURS && String(v.HOURS).trim() ? String(v.HOURS).trim() + " hours" : "the time budget";
+  return "## Start now\nOne shot, no questions, " + h + ", make it real and then make it perfect, and create a masterpiece. Begin with the research and do not stop until it is finished.";
+}
+function renderGuards() {
+  $("guards").innerHTML = GUARDS.map(g => `<label class="el"><input type="checkbox" data-guard="${g.id}" ${guardOn(g.id) ? "checked" : ""}><span><b>${esc(g.name)}</b><small>${esc(g.desc)}</small></span></label>`).join("");
+  $("mpOpts").hidden = !guardOn("master");
+  const n = GUARDS.filter(g => guardOn(g.id)).length;
+  $("grSummary").textContent = n === GUARDS.length ? "All on: the model builds the whole thing without stopping."
+    : !guardOn("oneshot") ? "Guided: the model checks skills, shows you the script for approval, then builds and refines with you, stage by stage."
+    : `${n} of ${GUARDS.length} on: still one shot, with the unchecked points done together with you.`;
+}
+function renderSkills() {
+  const t = state.type;
+  $("skillsList").innerHTML = SKILLS.map(s => `<label class="el"><input type="checkbox" data-skill-use="${s.id}" ${skillOn(s.id) ? "checked" : ""}><span><b class="mono">${esc(s.id)}</b><span class="c">${esc(s.use[t])}</span><small>${esc(s.purpose[t] || s.purpose._)}</small></span></label>`).join("") +
+    (state.customSkills || []).map((n, i) => `<div class="el" style="cursor:default"><span></span><span><b class="mono">${esc(n)}</b><span class="c">added</span> <button type="button" class="small" data-skill-del="${i}" style="margin-left:8px">Remove</button></span></div>`).join("");
+  $("skillsNote").textContent = guardOn("oneshot") ? "One shot: the model checks for these and, if one is missing, builds anyway and notes it in the README." : "Guided: the model checks for these first and stops to help you install any that are missing.";
+}
+function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+function vals() { if (!state.values[state.type]) state.values[state.type] = Object.fromEntries(TYPES[state.type].fields.map(f => [f.key, f.example])); return state.values[state.type]; }
+function dropSet() { return state.drop[state.type] || (state.drop[state.type] = []); }
+
+$("presetRow").innerHTML = ORDER.map(k => {
+  const d = DECKS.find(x => x.key === k);
+  return `<label class="preset-opt"><input type="radio" name="preset" value="${k}">${d ? `<img src="${d.shots[0].src}" alt="">` : ""}<span>${k} · ${esc(TYPES[k].name)}<br><span class="hint">from ${esc(TYPES[k].based)}</span></span></label>`;
+}).join("");
+
+function renderFields() {
+  const t = TYPES[state.type], v = vals();
+  $("fieldsTitle").textContent = `${t.name} details`;
+  const field = f => {
+    const id = "fld-" + f.key, val = esc(v[f.key] ?? "");
+    const lab = `<label class="lab" for="${id}">${esc(f.label)}${f.hint ? ` <span class="hint">${esc(f.hint)}</span>` : ""}</label>`;
+    // numbers take dictated words like "twenty", so they render as text with a numeric keyboard hint
+    const ctl = f.type === "textarea" ? `<textarea id="${id}" data-key="${f.key}" rows="3">${val}</textarea>`
+      : `<input type="text" ${f.type === "number" ? 'inputmode="decimal"' : ""} id="${id}" data-key="${f.key}" value="${val}">`;
+    return `<div class="f">${lab}<div class="fwrap">${ctl}<button type="button" class="mic" data-mic="${id}" aria-label="Dictate into ${esc(f.label)}"></button></div><div class="live" id="live-${id}"></div></div>`;
+  };
+  $("fieldsShort").innerHTML = t.fields.filter(f => f.type !== "textarea").map(field).join("");
+  $("fieldsLong").innerHTML = t.fields.filter(f => f.type === "textarea").map(field).join("");
+  const isSample = t.fields.every(f => (v[f.key] ?? "") === f.example);
+  $("exampleBar").hidden = !isSample;
+  paintMics($("f"));
+}
+function renderElements() {
+  const t = TYPES[state.type], drop = dropSet(), add = state.add;
+  $("ownEls").innerHTML = t.elements.map(e => `<label class="el"><input type="checkbox" data-own="${e.id}" ${drop.includes(e.id) ? "" : "checked"}><span><b>${esc(e.name)}</b><span class="c">${esc(e.cat)}</span><small>${esc(e.desc)}</small></span></label>`).join("");
+  $("otherEls").innerHTML = ORDER.filter(k => k !== state.type).map(k => `<div class="grp"><span class="eyebrow">${k} · ${esc(TYPES[k].name)}</span><div class="els">${
+    TYPES[k].elements.map(e => { const id = k + ":" + e.id; return `<label class="el"><input type="checkbox" data-add="${id}" ${add[id] ? "checked" : ""}><span><b>${esc(e.name)}</b><span class="c">${esc(e.cat)}</span><small>${esc(e.desc)}</small></span></label>`; }).join("")}</div></div>`).join("");
+  updateElCount();
+}
+function updateElCount() {
+  const t = TYPES[state.type], kept = t.elements.length - dropSet().length, added = Object.keys(state.add).filter(k => state.add[k] && !k.startsWith(state.type + ":")).length;
+  $("elCount").textContent = `${kept} of ${t.elements.length} kept${added ? ` · ${added} added from other formats` : ""}`;
+}
+const PUB = { herenow: "Publish the finished file to here.now and give me the link and its claim URL. Keep any account key in the CLI credential file, never in the project.",
+  private: "Do not publish. I will host it behind access control; give me the build output ready for a static host.",
+  zip: "Do not publish. Give me the build output and a zip of the source project without node_modules, tmp or credentials." };
+function build() {
+  const t = TYPES[state.type], v = vals(), drop = dropSet();
+  const missing = [];
+  let txt = t.template.replace(/\{\{([A-Z_]+)\}\}/g, (m, k) => {
+    if (k === "STORYBOARD") return "";
+    if (k === "PUBLISHING") return PUB[state.sharing];
+    const x = v[k];
+    if (x == null || !String(x).trim()) { if (!missing.includes(k)) missing.push(k); return "[" + k + "]"; }
+    return String(x).trim();
+  });
+  const extra = [];
+  const dropped = t.elements.filter(e => drop.includes(e.id));
+  if (dropped.length) extra.push("## Leave these out\nThe spec above includes them, but this build does not need them. Leave them out and keep everything else consistent:\n" + dropped.map(e => `- ${e.name}`).join("\n"));
+  const added = Object.keys(state.add).filter(id => state.add[id] && !id.startsWith(state.type + ":")).map(id => { const [k, eid] = id.split(":"); return TYPES[k].elements.find(e => e.id === eid); }).filter(Boolean);
+  if (added.length) extra.push("## Also include\nAdd these elements from other formats, restyled to this format's design tokens and layout:\n" + added.map(e => `- ${e.name}. ${e.snip}`).join("\n"));
+  if (!t.template.includes("{{PUBLISHING}}")) extra.push("## Publishing\n" + PUB[state.sharing]);
+  if (state.notes.trim()) extra.push(`## Private context from customer calls\nUse this to frame the content only. Do not show it, quote it, or name people from it unless they also appear in public sources.\n"""\n${state.notes.trim()}\n"""`);
+  const rem = guardrailsReminder(v); if (rem) extra.push(rem);
+  txt = guardrailsBlock(v) + "\n\n---\n\n" + txt;
+  if (extra.length) txt += "\n\n" + extra.join("\n\n");
+  if (guardOn("time") && !(v.HOURS && String(v.HOURS).trim()) && !missing.includes("HOURS")) missing.push("HOURS");
+  return { txt, missing };
+}
+let current = "";
+function render() {
+  const { txt, missing } = build();
+  current = txt;
+  $("prompt").innerHTML = esc(txt).replace(/^(#{1,3} .+)$/gm, '<span class="h">$1</span>').replace(/\[([A-Z][A-Z_]+)\]/g, "<mark>[$1]</mark>");
+  $("meter").textContent = `${txt.split(/\s+/).length.toLocaleString()} words · ~${Math.round(txt.length / 4).toLocaleString()} tokens`;
+  const labelOf = k => (TYPES[state.type].fields.find(f => f.key === k) || { label: k }).label;
+  $("missing").innerHTML = missing.length ? `<span class="hint">Still to fill:</span>` + missing.map(m => `<span class="chip">${esc(labelOf(m))}</span>`).join("") : `<span class="chip green">All fields filled</span>`;
+  save();
+}
+function setType(k) {
+  state.type = k;
+  document.querySelectorAll("input[name=preset]").forEach(r => r.checked = r.value === k);
+  renderFields(); renderElements(); if (typeof renderSkills === "function" && $("skillsList")) renderSkills(); render();
+}
+$("presetRow").addEventListener("change", e => { if (e.target.name === "preset") setType(e.target.value); });
+$("f").addEventListener("input", e => {
+  const el = e.target;
+  if (el.dataset.key) { vals()[el.dataset.key] = el.value; $("exampleBar").hidden = true; }
+  else if (el.id === "notes") state.notes = el.value;
+  else if (el.id === "mpExamples") state.mpExamples = el.value;
+  render();
+});
+$("f").addEventListener("change", e => {
+  const el = e.target;
+  if (el.dataset.own) { const d = dropSet(), i = d.indexOf(el.dataset.own); if (el.checked && i >= 0) d.splice(i, 1); if (!el.checked && i < 0) d.push(el.dataset.own); updateElCount(); }
+  else if (el.dataset.add) { state.add[el.dataset.add] = el.checked; updateElCount(); }
+  else if (el.dataset.guard) { state.guards[el.dataset.guard] = el.checked; renderGuards(); renderSkills(); }
+  else if (el.dataset.skillUse) { state.skills = state.skills || {}; (state.skills[state.type] = state.skills[state.type] || {})[el.dataset.skillUse] = el.checked; }
+  else if (el.id === "skillAdd") return;
+  else if (el.id === "mpBar") state.mpBar = el.checked;
+  else if (el.id === "sharing") state.sharing = el.value;
+  render();
+});
+$("f").addEventListener("submit", e => e.preventDefault());
+$("grBuild").addEventListener("click", () => { GUARDS.forEach(g => state.guards[g.id] = true); renderGuards(); renderSkills(); render(); });
+$("grGuide").addEventListener("click", () => { GUARDS.forEach(g => state.guards[g.id] = false); renderGuards(); renderSkills(); render(); });
+function addSkill() {
+  const n = $("skillAdd").value.trim().replace(/^\//, ""); if (!n) return;
+  state.customSkills = state.customSkills || [];
+  if (!state.customSkills.includes(n) && !SKILLS.some(s => s.id === n)) state.customSkills.push(n);
+  $("skillAdd").value = ""; renderSkills(); render();
+}
+$("skillAddBtn").addEventListener("click", addSkill);
+$("skillAdd").addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); addSkill(); } });
+$("skillsList").addEventListener("click", e => { const b = e.target.closest("[data-skill-del]"); if (!b) return; state.customSkills.splice(+b.dataset.skillDel, 1); renderSkills(); render(); });
+$("elAll").addEventListener("click", () => { state.drop[state.type] = []; renderElements(); render(); });
+$("elNone").addEventListener("click", () => { state.drop[state.type] = TYPES[state.type].elements.map(e => e.id); renderElements(); render(); });
+$("sampleBtn").addEventListener("click", () => { state.values[state.type] = Object.fromEntries(TYPES[state.type].fields.map(f => [f.key, f.example])); renderFields(); render(); });
+$("clearBtn").addEventListener("click", () => { state.values[state.type] = Object.fromEntries(TYPES[state.type].fields.map(f => [f.key, ""])); renderFields(); $("exampleBar").hidden = true; render(); });
+
+function toast(msg, err) { const t = $("toast"); t.className = err ? "toast err" : "toast"; t.textContent = msg; clearTimeout(toast.t); toast.t = setTimeout(() => t.textContent = "", 3500); }
+function selectEl(el) { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+function copyText(text, el, done) {
+  const p = navigator.clipboard && navigator.clipboard.writeText ? navigator.clipboard.writeText(text) : Promise.reject();
+  return p.then(() => done(true)).catch(() => { if (el) selectEl(el); done(false); });
+}
+$("copyBtn").addEventListener("click", () => copyText(current, $("prompt"), ok => toast(ok ? "Copied. Paste it into Claude Code in an empty folder." : "Copy was blocked here. The prompt is selected; press Ctrl+C or Cmd+C.", !ok)));
+$("selectBtn").addEventListener("click", () => { selectEl($("prompt")); toast("Prompt selected."); });
+$("dlPrompt").addEventListener("click", () => offer({ text: current }, `${TYPES[state.type].slug}-prompt.md`, $("toast")));
+
+/* setup */
+const SKILL_FILES = { pack: { path: "downloads/SEVerse-Skill-main.zip.b64.txt", name: "SEVerse-Skill-main.zip" }, upload: { path: "downloads/cisco-3d-stage.zip.b64.txt", name: "cisco-3d-stage.zip" },
+  local: { path: "downloads/cisco-solutions-generator.html", name: "cisco-solutions-generator.html" } };
+const INSTALL = {
+  code: [
+    { t: "Download the skill pack and unzip it.", cmds: ["unzip SEVerse-Skill-main.zip"] },
+    { t: "Copy the skill into your personal skills folder.", d: "To share it with a team through git, copy it to .claude/skills/ inside the repo instead.", cmds: ["mkdir -p ~/.claude/skills && cp -R SEVerse-Skill-main/cisco-3d-stage ~/.claude/skills/"] },
+    { t: "Check that Claude Code sees it.", d: "New skills load without a restart. If ~/.claude/skills did not exist when the session started, run /reload-skills first.", cmds: ["/skills"] },
+    { t: "Install what the skill's tools use.", cmds: ["pip install edge-tts rangehttpserver", "npm i -D puppeteer-core"] },
+    { t: "Try the starter deck.", d: "Then open http://localhost:8765/.", cmds: ["cd ~/.claude/skills/cisco-3d-stage/starter && python3 -m http.server 8765"] }
+  ],
+  web: [
+    { t: "Turn on code execution.", d: "Settings, then Capabilities: turn on code execution and file creation. On Team and Enterprise an admin sets this." },
+    { t: "Download the upload-ready skill.", d: "The zip holds the cisco-3d-stage folder at its top level; a SKILL.md at the zip root is not recognized." },
+    { t: "Upload it.", d: "Customize, then Skills: +, Create skill, Upload a skill, choose cisco-3d-stage.zip, then switch it on. Older layouts put Skills under Settings, then Capabilities." },
+    { t: "Know the limits.", d: "The Claude app can write the deck files but cannot run a local server, headless review or edge-tts. Use Claude Code for the full workflow." }
+  ],
+  cursor: [
+    { t: "Download and unzip the skill pack.", cmds: ["unzip SEVerse-Skill-main.zip"] },
+    { t: "Copy the skill into Cursor's skills folder.", cmds: ["mkdir -p ~/.cursor/skills && cp -R SEVerse-Skill-main/cisco-3d-stage ~/.cursor/skills/"] },
+    { t: "Install the tool dependencies.", cmds: ["pip install edge-tts rangehttpserver"] }
+  ]
+};
+const PLATFORMS = [{ id: "code", name: "Claude Code (recommended)" }, { id: "web", name: "Claude app" }, { id: "cursor", name: "Cursor" }];
+function cmdBlock(c) { return `<div class="cmd"><pre>${esc(c)}</pre><button type="button" data-copy="${esc(c)}">Copy</button></div>`; }
+function renderSetup() {
+  $("needsTable").innerHTML = DECKS.map(d => `<tr><td><b>${d.key} · ${esc(d.name)}</b></td><td>${esc(d.stack)}</td><td>${esc(d.needs)}</td></tr>`).join("");
+  $("dlGrid").innerHTML = [
+    { k: "pack", t: "cisco-3d-stage skill pack", d: "The zip you uploaded: README, notices and the skill folder. For Claude Code or Cursor.", size: "3.3 MB" },
+    { k: "upload", t: "Upload-ready skill", d: "Only the cisco-3d-stage folder, zipped the way the Claude app expects.", size: "3.3 MB" }
+    , { k: "local", t: "This generator, for live dictation", d: "The composer as one HTML file. Open it in Chrome or Edge to dictate straight into every field and run the spoken questionnaire with your microphone. Gallery images stay online.", size: "single file" }
+  ].map(x => `<div class="dl"><b>${x.t}</b><span class="muted" style="font-size:0.86rem">${x.d}</span><span class="size">${SKILL_FILES[x.k].name} · ${x.size}</span><button type="button" class="primary small" style="width:fit-content" data-skill="${x.k}">Download</button></div>`).join("") +
+    ORDER.map(k => { const t = TYPES[k], d = DECKS.find(x => x.key === k); return `<div class="dl"><b>${k} · ${esc(t.name)} kit</b><span class="muted" style="font-size:0.86rem">The prompt template${d && d.spec ? " and the design and tech spec reverse engineered from the original" : ""}.</span><span class="btns"><button type="button" class="small" data-kit="kits/${t.slug}-PROMPT.md" data-name="${t.slug}-prompt-template.md">Prompt</button>${d && d.spec ? `<button type="button" class="small" data-kit="kits/${t.slug}-SPEC.md" data-name="${t.slug}-design-spec.md">Spec</button>` : ""}</span></div>`; }).join("");
+  $("platformTabs").innerHTML = PLATFORMS.map((p, i) => `<button type="button" aria-pressed="${i === 0}" data-p="${p.id}">${p.name}</button>`).join("");
+  $("panes").innerHTML = PLATFORMS.map((p, i) => `<div class="pane" data-pane="${p.id}" ${i ? "hidden" : ""}><ol class="steps">${INSTALL[p.id].map(st => `<li><div class="body"><b>${st.t}</b>${st.d ? `<span class="muted">${st.d}</span>` : ""}${(st.cmds || []).map(cmdBlock).join("")}</div></li>`).join("")}</ol></div>`).join("");
+}
+document.addEventListener("click", e => {
+  const c = e.target.closest("[data-copy]");
+  if (c) { const pre = c.parentElement.querySelector("pre"); copyText(c.dataset.copy, pre, ok => { c.textContent = ok ? "Copied" : "Selected"; setTimeout(() => c.textContent = "Copy", 1800); }); return; }
+  const sk = e.target.closest("[data-skill]"); if (sk) { const f = SKILL_FILES[sk.dataset.skill]; offer(f.path, f.name, $("dlToast")); return; }
+  const kit = e.target.closest("[data-kit]"); if (kit) { offer(kit.dataset.kit, kit.dataset.name, $("dlToast")); return; }
+  const pt = e.target.closest("[data-p]");
+  if (pt) { document.querySelectorAll("[data-p]").forEach(b => b.setAttribute("aria-pressed", b === pt)); document.querySelectorAll("[data-pane]").forEach(p => p.hidden = p.dataset.pane !== pt.dataset.p); }
+  const tt = e.target.closest("[data-ds]"); if (tt) renderDesign(tt.dataset.ds);
+});
+
+/* design systems */
+function renderDesign(k) {
+  const d = DECKS.find(x => x.key === k);
+  $("typeTabs").innerHTML = ORDER.map(x => `<button type="button" aria-pressed="${x === k}" data-ds="${x}">${x} · ${esc(TYPES[x].name)}</button>`).join("");
+  $("dsTitle").textContent = `${k} · ${TYPES[k].name} palette`;
+  $("dsSwatches").innerHTML = d.design.swatches.map(([n, c, u]) => `<div class="sw"><i style="background:${c}"></i><div><b>${esc(n)}</b><code>${esc(c)}</code><span class="muted">${esc(u)}</span></div></div>`).join("");
+  $("dsType").innerHTML = d.design.type.map(x => `<li>${esc(x)}</li>`).join("");
+  $("dsRules").innerHTML = d.design.rules.map(x => `<li>${esc(x)}</li>`).join("");
+}
+
+/* dictation: the browser's speech recognition where the page may use the microphone; system dictation otherwise */
+const MIC_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>';
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+let micBlocked = !SR;
+function paintMics(root = document) { root.querySelectorAll(".mic:not(.ready)").forEach(b => { b.innerHTML = MIC_SVG; b.classList.add("ready"); }); }
+function spoken(t) { return t.replace(/\s*\bnew paragraph\b\s*/gi, "\n\n").replace(/\s*\bnew line\b\s*/gi, "\n"); }
+function showMicHelp(target, why) {
+  $("micHelpWhy").textContent = why || (SR ? "This view does not allow the page to use your microphone." : "This browser has no built-in speech recognition.");
+  $("micHelp").hidden = false;
+  if (target) target.focus();
+}
+$("micHelpClose").addEventListener("click", () => { $("micHelp").hidden = true; });
+// one recognizer at a time; handlers decide what final text does
+let rec = null;
+function listen({ onInterim, onFinal, onEnd, onBlocked }) {
+  stopListening();
+  if (micBlocked) { onBlocked && onBlocked(); return false; }
+  const r = new SR();
+  r.lang = navigator.language || "en-US"; r.continuous = true; r.interimResults = true;
+  r.onresult = e => {
+    let interim = "";
+    for (let i = e.resultIndex; i < e.results.length; i++) {
+      const res = e.results[i];
+      if (res.isFinal) onFinal && onFinal(res[0].transcript.trim()); else interim += res[0].transcript;
+    }
+    onInterim && onInterim(interim);
+  };
+  // a session that errors, or ends without ever hearing audio, means this view cannot dictate
+  let heard = false, failed = false;
+  const fail = why => { if (failed) return; failed = true; micBlocked = true; if (rec === r) rec = null; try { r.abort(); } catch (e) {} onBlocked && onBlocked(why); };
+  r.onaudiostart = () => { heard = true; };
+  r.onerror = e => { if (e.error !== "no-speech" && e.error !== "aborted") fail(e.error); };
+  r.onend = () => { if (failed) return; if (!heard) return fail("no-audio"); if (rec === r) { rec = null; onEnd && onEnd(); } };
+  setTimeout(() => { if (!heard && rec === r) fail("no-audio"); }, 4000);
+  try { r.start(); rec = r; return true; } catch (err) { micBlocked = true; onBlocked && onBlocked(); return false; }
+}
+function stopListening() { if (rec) { const r = rec; rec = null; try { r.stop(); } catch (e) {} } }
+
+let micBtn = null;
+function fieldMicOff() { if (micBtn) { micBtn.classList.remove("on"); micBtn.setAttribute("aria-pressed", "false"); const l = $("live-" + micBtn.dataset.mic); if (l) l.textContent = ""; micBtn = null; } }
+document.addEventListener("click", e => {
+  const b = e.target.closest(".mic"); if (!b) return;
+  const target = $(b.dataset.mic), live = $("live-" + b.dataset.mic);
+  if (micBtn === b) { stopListening(); fieldMicOff(); return; }
+  fieldMicOff();
+  micBtn = b; b.classList.add("on"); b.setAttribute("aria-pressed", "true");
+  listen({
+    onInterim: t => { if (live) live.textContent = t; },
+    onFinal: t => {
+      const add = spoken(t); const v = target.value;
+      target.value = v + (v && !/[\s\n]$/.test(v) && !add.startsWith("\n") ? " " : "") + add;
+      target.dispatchEvent(new Event("input", { bubbles: true }));
+      if (live) live.textContent = "";
+    },
+    onEnd: fieldMicOff,
+    onBlocked: why => { fieldMicOff(); showMicHelp(target, why === "audio-capture" ? "No microphone was found." : undefined); }
+  });
+});
+document.addEventListener("keydown", e => { if (e.key === "Escape") { if (micBtn) { stopListening(); fieldMicOff(); } if (!$("micHelp").hidden) $("micHelp").hidden = true; } });
+
+/* spoken questionnaire (advanced) */
+const qa = { steps: [], i: 0, answers: {}, listening: false, speaking: false };
+function qaSteps() {
+  const t = TYPES[state.type];
+  return [{ kind: "type" }, ...t.fields.map(f => ({ kind: "field", f })), { kind: "notes" }, { kind: "review" }];
+}
+function qaQuestion(s) {
+  if (s.kind === "type") return ["Which format fits the room?", "Say explorable briefing, talk, leadership page or mission globe, or tap one."];
+  if (s.kind === "notes") return ["Anything from customer calls I should know?", "Optional. It frames the content and is never shown. Say skip if there is nothing."];
+  if (s.kind === "review") return ["Here is what you said.", "Check it, then apply it to the form. You can fix anything in the form afterwards."];
+  return [s.f.label + "?", s.f.hint || ""];
+}
+function qaSay(text) {
+  if (!$("qaSpeak").checked || !window.speechSynthesis) return Promise.resolve();
+  return new Promise(res => {
+    try {
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(text); u.rate = 1.02;
+      qa.speaking = true; const done = () => { qa.speaking = false; res(); };
+      u.onend = done; u.onerror = done; speechSynthesis.speak(u);
+      setTimeout(() => { if (qa.speaking) done(); }, 12000);
+    } catch (e) { res(); }
+  });
+}
+function qaCommand(t) {
+  const c = t.toLowerCase().replace(/[.!?,]/g, "").trim();
+  if (/^(next|next question|continue|okay next|ok next)$/.test(c)) return "next";
+  if (/^(back|go back|previous|previous question)$/.test(c)) return "back";
+  if (/^(skip|skip it|skip this|pass)$/.test(c)) return "skip";
+  if (/^(clear|clear that|clear answer|start over)$/.test(c)) return "clear";
+  if (/^(done|finish|i'?m done|that'?s it|apply)$/.test(c)) return "done";
+  if (/^(stop listening|stop|pause)$/.test(c)) return "stop";
+  return null;
+}
+function qaPickType(t) {
+  const c = t.toLowerCase();
+  if (/explor|brief(ing)? a\b|\btype a\b|wayside|csx/.test(c)) return "A";
+  if (/talk|film|narrat|deck|futurese|\btype b\b/.test(c)) return "B";
+  if (/leader|twin|page|scroll|dominion|\btype c\b/.test(c)) return "C";
+  if (/mission|globe|game|metlife|\btype d\b/.test(c)) return "D";
+  return null;
+}
+function qaRender() {
+  const s = qa.steps[qa.i], n = qa.steps.length;
+  const [q, h] = qaQuestion(s);
+  $("qaStep").textContent = s.kind === "review" ? "Review" : `Question ${qa.i + 1} of ${n - 1}`;
+  $("qaBar").style.width = Math.round(qa.i / (n - 1) * 100) + "%";
+  $("qaQ").textContent = q; $("qaHint").textContent = h;
+  $("qaBack").disabled = qa.i === 0;
+  $("qaSkip").hidden = s.kind === "review" || s.kind === "type";
+  $("qaNext").textContent = s.kind === "review" ? "Apply to the form" : "Next";
+  const micRow = id => `<div class="qa-row"><button type="button" class="qa-mic ${qa.listening ? "on" : ""}" id="qaMic" aria-label="${qa.listening ? "Stop listening" : "Start listening"}">${MIC_SVG}</button><div>${id}<span class="qa-status ${qa.listening ? "listening" : ""}" id="qaStatus">${qa.listening ? "Listening..." : micBlocked ? "Type your answer, or use your system dictation in the box." : "Tap the mic and talk."}</span><span class="live" id="qaLive"></span></div></div><p class="qa-cmds">Say <code>next</code>, <code>back</code>, <code>skip</code>, <code>clear</code> or <code>done</code>. "New line" starts a new line.</p>`;
+  if (s.kind === "type") {
+    $("qaBody").innerHTML = `<div class="qa-choices">${ORDER.map(k => `<button type="button" data-qtype="${k}" aria-pressed="${state.type === k}">${k} · ${esc(TYPES[k].name)}</button>`).join("")}</div>` + micRow("");
+  } else if (s.kind === "review") {
+    const t = TYPES[state.type];
+    $("qaBody").innerHTML = `<div class="qa-review">${t.fields.map(f => `<div><span>${esc(f.label)}</span><span>${esc(qa.answers[f.key] ?? "")}</span></div>`).join("")}<div><span>Notes</span><span>${esc(qa.answers.__notes || "")}</span></div></div>
+      <div class="btns" id="qaTidyRow" hidden><button type="button" id="qaTidy">Tidy my answers with Claude</button><span class="note" id="qaTidyNote">Fixes punctuation, turns spoken lists into one item per line and numbers into digits. Uses your Claude usage.</span></div>`;
+    qaTidySetup();
+  } else {
+    const key = s.kind === "notes" ? "__notes" : s.f.key;
+    $("qaBody").innerHTML = micRow(`<textarea id="qaAns" aria-label="Your answer">${esc(qa.answers[key] ?? "")}</textarea>`);
+    $("qaAns").addEventListener("input", e => { qa.answers[key] = e.target.value; });
+  }
+  const mic = $("qaMic"); if (mic) mic.addEventListener("click", () => qa.listening ? qaStop() : qaListen());
+}
+function qaKey() { const s = qa.steps[qa.i]; return s.kind === "notes" ? "__notes" : s.kind === "field" ? s.f.key : null; }
+function qaListen() {
+  if (qa.speaking) return;
+  const ok = listen({
+    onInterim: t => { const l = $("qaLive"); if (l) l.textContent = t; },
+    onFinal: t => {
+      const l = $("qaLive"); if (l) l.textContent = "";
+      const cmd = qaCommand(t);
+      if (cmd === "next") return qaGo(1); if (cmd === "back") return qaGo(-1); if (cmd === "skip") return qaGo(1, true);
+      if (cmd === "done") return qaGo(qa.steps.length - 1 - qa.i);
+      if (cmd === "stop") return qaStop();
+      const s = qa.steps[qa.i];
+      if (s.kind === "type") { const k = qaPickType(t); if (k) { setType(k); qa.steps = qaSteps(); qaGo(1); } return; }
+      const key = qaKey(); if (!key) return;
+      if (cmd === "clear") qa.answers[key] = "";
+      else { const v = qa.answers[key] || "", add = spoken(t); qa.answers[key] = v + (v && !/[\s\n]$/.test(v) && !add.startsWith("\n") ? " " : "") + add; }
+      const a = $("qaAns"); if (a) a.value = qa.answers[key];
+    },
+    onEnd: () => { if (qa.listening && !$("qa").hidden && !qa.speaking) qaListen(); },
+    onBlocked: () => { qa.listening = false; qaRender(); }
+  });
+  qa.listening = ok; qaRender();
+}
+function qaStop() { qa.listening = false; stopListening(); qaRender(); }
+async function qaGo(d, skip) {
+  const wasListening = qa.listening;
+  qa.listening = false; stopListening();
+  if (skip) { const k = qaKey(); if (k) qa.answers[k] = qa.answers[k] || ""; }
+  qa.i = Math.max(0, Math.min(qa.steps.length - 1, qa.i + d));
+  qaRender();
+  const [q, h] = qaQuestion(qa.steps[qa.i]);
+  await qaSay(q + " " + h);
+  if (wasListening && qa.steps[qa.i].kind !== "review" && !$("qa").hidden) qaListen();
+}
+function qaApply() {
+  const t = TYPES[state.type], v = vals();
+  t.fields.forEach(f => { if ((qa.answers[f.key] ?? "").trim()) v[f.key] = qa.answers[f.key].trim(); });
+  if ((qa.answers.__notes || "").trim()) { state.notes = qa.answers.__notes.trim(); $("notes").value = state.notes; }
+  renderFields(); paintMics(); render(); qaClose();
+  toast("Your answers are in the form and the prompt.");
+}
+function qaOpen() {
+  fieldMicOff(); stopListening();
+  qa.steps = qaSteps(); qa.i = 0; qa.listening = false;
+  qa.answers = Object.assign({}, vals(), { __notes: state.notes });
+  $("qa").hidden = false; qaRender();
+  qaSay(qaQuestion(qa.steps[0]).join(" "));
+}
+function qaClose() { qa.listening = false; stopListening(); try { speechSynthesis.cancel(); } catch (e) {} $("qa").hidden = true; }
+$("qaOpen").addEventListener("click", qaOpen);
+$("qaClose").addEventListener("click", qaClose);
+$("qaBack").addEventListener("click", () => qaGo(-1));
+$("qaSkip").addEventListener("click", () => qaGo(1, true));
+$("qaNext").addEventListener("click", () => qa.steps[qa.i].kind === "review" ? qaApply() : qaGo(1));
+$("qa").addEventListener("click", e => {
+  const b = e.target.closest("[data-qtype]"); if (!b) return;
+  setType(b.dataset.qtype); qa.steps = qaSteps(); qa.answers = Object.assign({}, vals(), { __notes: qa.answers.__notes });
+  qaRender();
+});
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("qa").hidden) qaClose(); });
+
+// optional clean-up of spoken answers by Claude, on the viewer's own account and only on request
+let sampleFn;
+async function qaTidySetup() {
+  if (sampleFn === undefined) { try { sampleFn = window.claude && window.claude.use ? await window.claude.use("sample") : null; } catch (e) { sampleFn = null; } }
+  const row = $("qaTidyRow"); if (!row || !sampleFn) return;
+  row.hidden = false;
+  $("qaTidy").onclick = async () => {
+    const t = TYPES[state.type], btn = $("qaTidy"), note = $("qaTidyNote");
+    btn.disabled = true; note.textContent = "Thinking...";
+    const fields = t.fields.map(f => ({ key: f.key, label: f.label, type: f.type, hint: f.hint, answer: qa.answers[f.key] || "" }));
+    const prompt = `These are spoken answers to a form, transcribed by speech recognition. Clean each one up without changing its meaning or adding facts: fix punctuation and casing, remove filler words and false starts, write numbers as digits, and for textarea fields that list several things put one item per line. Leave empty answers empty.\n\nReturn only JSON: an object mapping each key to its cleaned answer.\n\n${JSON.stringify(fields)}`;
+    try {
+      const out = await sampleFn.json(prompt, { modelTier: "quick" });
+      t.fields.forEach(f => { if (typeof out[f.key] === "string") qa.answers[f.key] = out[f.key]; });
+      qaRender(); toast("Answers tidied. Check them, then apply.");
+    } catch (e) {
+      btn.disabled = false;
+      note.textContent = e && e.code === "not_granted" ? "Claude was not allowed for this page, so your answers are unchanged." : "That did not work, so your answers are unchanged. You can apply them as they are.";
+    }
+  };
+}
+
+/* boot */
+delete state.storyboard;
+renderGuards(); renderSkills();
+$("mpExamples").value = state.mpExamples || ""; $("mpBar").checked = !!state.mpBar;
+$("sharing").value = state.sharing; $("notes").value = state.notes;
+renderPicker(); renderDeck(); renderSetup(); renderDesign("A"); setType(state.type); paintMics(); showView();
+</script>

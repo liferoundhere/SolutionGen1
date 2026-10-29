@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A spoken word away · FutureSE</title>
+  <meta name="description" content="An interactive 3D talk for Cisco Business Solutions Engineering: how the FutureSE verses were built with natural language." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 20'%3E%3Cg fill='%2300bceb'%3E%3Crect x='1' y='14' width='2' height='5' rx='1'/%3E%3Crect x='5' y='9' width='2' height='10' rx='1'/%3E%3Crect x='9' y='3' width='2' height='16' rx='1'/%3E%3Crect x='13' y='9' width='2' height='10' rx='1'/%3E%3Crect x='17' y='14' width='2' height='5' rx='1'/%3E%3Crect x='21' y='9' width='2' height='10' rx='1'/%3E%3Crect x='25' y='3' width='2' height='16' rx='1'/%3E%3Crect x='29' y='9' width='2' height='10' rx='1'/%3E%3Crect x='33' y='14' width='2' height='5' rx='1'/%3E%3C/g%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three/three.module.js", "three/addons/": "./vendor/three/addons/" } }
+  </script>
+</head>
+<body>
+  <canvas id="gl"></canvas>
+  <div class="vignette"></div>
+  <div class="scrim"></div>
+  <div id="progress"><i></i></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 36 20" aria-hidden="true"><g fill="currentColor"><rect x="1" y="14" width="2" height="5" rx="1"/><rect x="5" y="9" width="2" height="10" rx="1"/><rect x="9" y="3" width="2" height="16" rx="1"/><rect x="13" y="9" width="2" height="10" rx="1"/><rect x="17" y="14" width="2" height="5" rx="1"/><rect x="21" y="9" width="2" height="10" rx="1"/><rect x="25" y="3" width="2" height="16" rx="1"/><rect x="29" y="9" width="2" height="10" rx="1"/><rect x="33" y="14" width="2" height="5" rx="1"/></g></svg>
+      <span class="brand-name">FutureSE</span><span class="brand-sub">A spoken word away · Business Solutions Engineering</span>
+    </div>
+    <nav id="dots" aria-label="Scenes"></nav>
+    <div class="tools">
+      <button id="btn-menu" title="Scenes (M)">Scenes</button>
+      <button id="btn-notes" title="Notes (N)">Notes</button>
+      <button id="btn-presenter" title="Presenter window (P)">Presenter</button>
+      <button id="btn-points" title="Talking points window (T)">Points</button>
+      <button id="btn-cam" title="Camera (C)">Camera</button>
+      <button id="btn-settings" title="Verse links (,)">Links</button>
+      <button id="btn-help" title="Keys (?)">?</button>
+    </div>
+  </header>
+
+  <main id="hud">
+    <div class="eyebrow" id="eyebrow"></div>
+    <h1 id="title"></h1>
+    <p class="lead" id="lead"></p>
+    <ol id="beats"></ol>
+    <div id="chips"></div>
+  </main>
+  <div id="live"></div>
+  <div id="stepinfo"></div>
+  <div id="hint">→ / click next · ← / right-click back · ↓ ↑ skip scene · M scenes · ? keys</div>
+
+  <section id="workshop" aria-label="Workshop prompt builder">
+    <div class="ws-head"><span class="eyebrow">Your one-shot brief</span>
+      <div class="ws-actions"><button id="ws-timer">Start · 10:00</button><button id="ws-reset">Reset</button><button id="ws-copy" class="primary">Copy prompt</button></div>
+    </div>
+    <div id="ws-form"></div>
+    <div id="ws-prompt" aria-live="polite"></div>
+  </section>
+
+  <div id="cam" title="Double-click to resize · B hides · C toggles camera">
+    <video muted playsinline></video>
+    <div id="cam-hint" role="button" tabindex="0">Click or press C to show your camera</div>
+    <div id="cam-name"></div>
+  </div>
+
+  <aside id="notes"><div class="eyebrow">Talk track</div><p id="notes-body"></p></aside>
+
+  <div class="overlay" id="menu"><div class="panel wide"><div class="panel-head"><span class="eyebrow">Jump to a scene</span><button data-close>Close</button></div><div id="menu-grid"></div></div></div>
+  <div class="overlay" id="settings"><div class="panel"><div class="panel-head"><span class="eyebrow">Verse links</span><button data-close>Close</button></div>
+    <p class="muted">Prefilled with the published here.now links. Edits stay in this browser only. Links only, never paste keys or passwords here.</p>
+    <div id="settings-list"></div>
+    <div class="panel-foot"><button id="settings-reset">Restore defaults</button><button id="settings-save" class="primary">Save</button></div></div></div>
+  <div class="overlay" id="help"><div class="panel"><div class="panel-head"><span class="eyebrow">Presenter keys</span><button data-close>Close</button></div>
+    <dl class="keys">
+      <dt>→ · Space · Enter · Left click</dt><dd>Next animation step, then next scene</dd>
+      <dt>← · Backspace · Right click</dt><dd>Previous step</dd>
+      <dt>↓ / ↑ · Shift + → / ←</dt><dd>Skip to next / previous scene</dd>
+      <dt>M</dt><dd>Scene menu</dd><dt>N</dt><dd>Notes on stage</dd><dt>P</dt><dd>Presenter window (syncs both ways)</dd><dt>T</dt><dd>Talking points window for off camera (syncs both ways)</dd>
+      <dt>C</dt><dd>Your camera in the bottom right box</dd><dt>B</dt><dd>Hide or show the camera box</dd>
+      <dt>L</dt><dd>Open the live verse</dd><dt>H</dt><dd>Hide all HUD</dd><dt>F</dt><dd>Fullscreen</dd><dt>,</dt><dd>Edit verse links</dd>
+    </dl>
+    <p class="muted">Printable talk track: add <code>?talktrack</code> to the URL.</p></div></div>
+
+  <div id="presenter-root" hidden>
+    <div class="p-top"><span class="eyebrow" id="p-eyebrow"></span><span id="p-clock"></span></div>
+    <h1 id="p-title"></h1>
+    <ul id="p-points"></ul>
+    <p id="p-note"></p>
+    <p id="p-next"></p>
+    <div class="p-nav"><button id="p-prev">← Back</button><button id="p-nextbtn" class="primary">Next →</button></div>
+    <div id="p-list"></div>
+  </div>
+  <article id="talktrack-root" hidden></article>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

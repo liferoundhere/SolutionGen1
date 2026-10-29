@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MetLife x Cisco Cloud Control | AgenticOps 4D</title>
+  <meta name="description" content="A four-dimensional, mission-based walkthrough of how AgenticOps, the Splunk-powered Cisco Data Fabric and Cisco Cloud Control give MetLife a vantage point above every domain. Illustrative scenarios; dollar figures are modeled." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 20'%3E%3Cg fill='%23049fd9'%3E%3Crect x='1' y='12' width='3' height='7' rx='1.5'/%3E%3Crect x='6' y='7' width='3' height='12' rx='1.5'/%3E%3Crect x='11' y='3' width='3' height='16' rx='1.5'/%3E%3Crect x='16' y='0' width='3' height='19' rx='1.5'/%3E%3Crect x='21' y='3' width='3' height='16' rx='1.5'/%3E%3Crect x='26' y='7' width='3' height='12' rx='1.5'/%3E%3Crect x='31' y='12' width='3' height='7' rx='1.5'/%3E%3C/g%3E%3C/svg%3E" />
+  <!-- Studio voice manifest: { "base": "audio", "voices": { "heart": ["<fnv1a hash>", ...], ... } }.
+       Filled by tools/render-voices.mjs after MP3s are rendered into audio/<voice>/<hash>.mp3. Empty = device voices. -->
+  <script type="application/json" id="studio-manifest">{"base":"audio","voices":{}}</script>
+</head>
+<body class="no-mission">
+  <div id="stage"></div>
+  <div id="labels"></div>
+
+  <header id="topbar" class="hidden">
+    <div class="brand">
+      <span class="logo" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+      <div><div class="b1">MetLife <span>x</span> Cisco Cloud Control</div><div class="b2">AgenticOps 4D · modeled scenarios</div></div>
+    </div>
+    <nav id="modeTabs" class="seg" aria-label="Mode">
+      <button data-mode="tour">Executive Tour</button>
+      <button data-mode="explore">Explore Missions</button>
+      <button data-mode="academy">Academy</button>
+    </nav>
+    <div class="vantage" title="Live AgenticOps activity across all locations (illustrative)">
+      <div><b id="vpSignals">2.40M</b><label>signals / hr</label></div>
+      <div><b id="vpAgents">128</b><label>agents</label></div>
+      <div><b id="vpResolved">1,240</b><label>resolved today</label></div>
+    </div>
+    <div class="hud">
+      <div class="score"><label>Value protected <em>modeled</em></label><b id="scoreValue">$0</b></div>
+      <div class="rank"><label id="rankName">Observer</label><div class="xp"><i id="xpFill"></i></div><small id="xpText">0 XP</small></div>
+      <button id="badgesBtn" class="hbtn" title="Badges">Badges <b id="badgeCount">0</b></button>
+      <button id="voiceBtn" class="hbtn">Voice</button>
+      <button id="ambientBtn" class="hbtn">Ambient: Off</button>
+    </div>
+  </header>
+
+  <nav id="crumbs" class="hidden" aria-label="Location"></nav>
+
+  <aside id="missionList" class="glass hidden">
+    <div class="ml-head"><h2>Missions</h2><span>10 locations · filter by business function</span></div>
+    <div id="lensRow" class="lens-row"></div>
+    <div id="missions"></div>
+    <button id="introReplay" class="ml-foot">▶ Replay the opening</button>
+  </aside>
+  <button id="mlToggle" class="ml-toggle">Missions</button>
+
+  <aside id="missionPanel" class="glass hidden">
+    <button id="mpCollapse" class="mp-collapse" title="Collapse panel" aria-label="Collapse panel">›</button>
+    <div class="mp-head">
+      <div id="mpKicker" class="kicker">Explore</div>
+      <h2 id="mpTitle">Choose a mission</h2>
+      <div id="mpSub" class="sub"></div>
+      <div id="mpTags" class="tags"></div>
+    </div>
+    <div id="mpSteps" class="steps"></div>
+    <div id="mpBody" class="body"></div>
+    <div class="log-wrap"><h5>Live agent log</h5><div id="mpLog" class="log"></div></div>
+    <div class="mp-nav">
+      <button id="prevStep" class="btn ghost">Back</button>
+      <button id="playBtn" class="btn ghost">Pause</button>
+      <button id="overviewBtn" class="btn ghost" title="Audio overview">Overview</button>
+      <button id="nextStep" class="btn">Next</button>
+    </div>
+  </aside>
+
+  <section id="timeline" class="glass hidden empty">
+    <div class="tl-head">
+      <span class="tl-title">4D timeline</span>
+      <div id="branchToggle" class="seg small">
+        <button data-branch="compare" class="active">Compare</button>
+        <button data-branch="traditional" class="trad">Traditional</button>
+        <button data-branch="agentic" class="agent">AgenticOps</button>
+      </div>
+      <span id="tlClock" class="clock">T-00h 00m</span>
+      <span id="tlMetric" class="metric"></span>
+      <button id="tlFold" class="tl-fold" title="Hide timeline">Hide</button>
+    </div>
+    <canvas id="tlCanvas"></canvas>
+    <div class="tl-empty">Choose a mission to scrub through time: drag across the chart, or click a marker to open that product view.</div>
+  </section>
+  <button id="tlShow" class="tl-show">4D timeline</button>
+
+  <div id="ticker" class="hidden"><span class="tk-label">Live · AgenticOps</span><div class="tk-viewport"><div id="tickerTrack"></div></div></div>
+
+  <div id="caption"><span id="captionText" class="fade"></span></div>
+
+  <div id="dock" class="glass hidden">
+    <div class="dk-btns">
+      <button id="dkPrevSec" title="Previous section (Shift+Left)" aria-label="Previous section"></button>
+      <button id="dkBack" title="Previous sentence (Left)" aria-label="Previous sentence"></button>
+      <button id="dkPlay" class="play" title="Pause (Space)" aria-label="Play or pause"></button>
+      <button id="dkFwd" title="Next sentence (Right)" aria-label="Next sentence"></button>
+      <button id="dkNextSec" title="Next section (Shift+Right)" aria-label="Next section"></button>
+    </div>
+    <div class="dk-mid"><div class="dk-top"><span id="dkSec"></span><span id="dkCount"></span></div><div id="dkBar"></div></div>
+    <button id="dkVoice" class="dk-voice"><i id="dkVoiceIc"></i><span id="dkVoiceName">Voice</span></button>
+  </div>
+  <div id="voicePop" class="glass hidden"></div>
+
+  <div id="evTip" class="hidden"></div>
+  <div id="toast"></div>
+  <div id="modal" class="hidden"><div id="modalCard" class="glass"></div></div>
+
+  <div id="intro">
+    <div class="i-box">
+      <div class="i-kicker"><span class="c">MetLife</span> <i>x</i> <span>Cisco Cloud Control</span></div>
+      <h1>See it before it becomes the business problem.</h1>
+      <p class="i-lead">A four-dimensional, mission-based walkthrough of how <b>AgenticOps</b>, the <b>Splunk-powered Cisco Data Fabric</b> and <b>Cisco Cloud Control</b> give MetLife a vantage point above every network, cloud, application and security domain, so that weak signals are acted on hours or days before they turn into missed revenue, regulatory exposure or broken customer promises.</p>
+      <div class="i-cards">
+        <button class="i-card" data-start="tour"><span class="k">Present</span><b>Executive Tour</b><span class="d">Cinematic, fully narrated journey across all 10 MetLife missions.</span></button>
+        <button class="i-card" data-start="explore"><span class="k">Play</span><b>Explore Missions</b><span class="d">Pick a location, make the call at each decision point, and protect business value.</span></button>
+        <button class="i-card" data-start="academy"><span class="k">Learn</span><b>Account Team Academy</b><span class="d">Trace each IT signal to a business KPI, practice discovery questions, and take the quiz.</span></button>
+      </div>
+      <p class="i-note">Illustrative scenarios built from public information about MetLife (including its New Frontier strategy and public filings) and common challenges across the insurance industry. No MetLife internal data is used. Dollar figures are modeled estimates based on industry benchmarks, meant for discussion only.</p>
+      <p class="i-sound">Best with sound on. Narrated sentence by sentence: pause, skip and change voices from the dock at the bottom.</p>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

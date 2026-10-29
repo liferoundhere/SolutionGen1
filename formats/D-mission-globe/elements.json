@@ -1,0 +1,359 @@
+[
+ {
+  "id": "intro-three-modes",
+  "name": "Three-mode intro screen",
+  "category": "intro",
+  "description": "Full-screen intro over the slowly spinning globe: letter-spaced kicker, gradient two-line headline, lead with bold product names, three glass mode cards (Present, Play, Learn), modeled-data disclaimer and a sound note.",
+  "prompt_snippet": "Open on an intro over a slowly spinning 3D globe with a letter-spaced kicker, a two-line gradient headline (white to cyan to green) and a lead paragraph. Below it, put three glass cards: PRESENT \u00b7 Executive Tour, PLAY \u00b7 Explore Missions and LEARN \u00b7 Account Team Academy, each with a one-line description. End with the modeled-figures disclaimer and 'Best with sound on'."
+ },
+ {
+  "id": "deep-links",
+  "name": "Deep links",
+  "category": "intro",
+  "description": "URL parameters start a mode or mission directly and can mute the voice.",
+  "prompt_snippet": "Support ?mode=tour|explore|academy&mission=<id>&voice=off so a presenter can jump straight into a mode or mission."
+ },
+ {
+  "id": "top-bar",
+  "name": "Top bar HUD",
+  "category": "hud",
+  "description": "56px gradient bar: Cisco logo and customer title, segmented mode tabs, live vantage stats, score, rank with XP bar, Badges, Voice and Ambient buttons.",
+  "prompt_snippet": "Add a 56px top bar with the Cisco bars logo and '<Customer> x Cisco Cloud Control', segmented mode tabs (Executive Tour, Explore Missions, Academy), live stats (signals per hour, agents, resolved today), a green 'Value protected (modeled)' score, a rank name with an XP bar, and Badges, Voice and Ambient buttons."
+ },
+ {
+  "id": "vantage-stats",
+  "name": "Live vantage stats",
+  "category": "hud",
+  "description": "Three counters (signals/hr, agents, resolved today) that drift every 1.3 s while random sites flash green on the globe.",
+  "prompt_snippet": "Show three live counters in the top bar (signals per hour about 2.4M, agents about 128, resolved today counting up). Every 1.3 s, flash a random site on the globe green to suggest agents quietly resolving issues."
+ },
+ {
+  "id": "score-xp-rank",
+  "name": "Score, XP and rank",
+  "category": "game",
+  "description": "Running modeled dollar value protected, XP points and five ranks from Observer to AgenticOps Architect.",
+  "prompt_snippet": "Keep a running 'value protected (modeled)' score: exposure \u00d7 1 / 0.4 / 0 for a best / partial / poor call, keeping the best result per mission. Award XP (+150 / +60 / +20 per outcome, +20 for comparing timelines, +30 per correct quiz answer). Show ranks Observer 0, Operator 200, Correlator 600, Orchestrator 1200 and AgenticOps Architect 2000 with a progress bar."
+ },
+ {
+  "id": "badges",
+  "name": "Badges modal",
+  "category": "game",
+  "description": "Eight badges with medal art, toast and chime on unlock, and a reset button.",
+  "prompt_snippet": "Add 8 badges: First Save, Perfect Call (3 best calls), Americas, Asia and EMEA Guardian, Account Scholar (3 perfect quizzes), Time Traveler (compare timelines in 5 missions) and Global Vantage (all missions). Unlocking one plays a chime and a toast. A Badges modal shows gold and grey medals and has a Reset progress button."
+ },
+ {
+  "id": "breadcrumbs",
+  "name": "Drill-down breadcrumbs",
+  "category": "navigation",
+  "description": "Pill under the top bar: Globe \u203a Region \u203a City \u203a Campus \u203a Building \u203a Floor N (room). Each crumb flies the camera there.",
+  "prompt_snippet": "Show a breadcrumb pill under the top bar (Globe \u203a Region \u203a City \u203a Building \u203a Floor N with the room name) that tracks where the camera is. Clicking any crumb flies the camera to that level."
+ },
+ {
+  "id": "mission-rail",
+  "name": "Mission rail",
+  "category": "navigation",
+  "description": "Left glass rail listing every mission with a code tile, title, city and unit, lens colour bars, and a status line with modeled value and quiz score.",
+  "prompt_snippet": "Add a left glass rail listing all missions. Each row has a code tile (M-01, turning green, amber or red once played), title, 'City | Business unit', three lens colour bars, and a status line (Not started / Protected / Partial / Impacted, with '$X at stake' or '$X protected' and the quiz %). The footer has 'Replay the opening'."
+ },
+ {
+  "id": "function-filters",
+  "name": "Business-function filters",
+  "category": "navigation",
+  "description": "Chips filter the rail by business function and flash the matching sites on the globe.",
+  "prompt_snippet": "Above the mission list, add lens chips ('All functions' plus Revenue and growth, Customer experience, Operations and cost, Risk and compliance, Security, IT and network), each with a colour dot. Selecting one filters the rail and flashes the matching locations on the globe one after another."
+ },
+ {
+  "id": "step-panel",
+  "name": "Right step panel",
+  "category": "panel",
+  "description": "Right glass panel: mission kicker, title, tags, clickable step chips, step content, live agent log, Back / Pause / Overview / Next.",
+  "prompt_snippet": "Add a right glass panel with the kicker 'M-01 | City, Country', the mission title, subtitle and lens tags, clickable step chips, and the scrolling step content. Below that, a live agent log of timeline events up to the playhead, then a nav row (Back, Pause, Overview, Next). Next pulses on steps that wait for the user."
+ },
+ {
+  "id": "globe",
+  "name": "Dotted 3D globe",
+  "category": "globe",
+  "description": "Three.js globe: fresnel ocean, about 95k land dots from Natural Earth with day/night and city lights, blue atmosphere, stars, UnrealBloom.",
+  "prompt_snippet": "Build a Three.js globe: a dark fresnel ocean sphere, about 95,000 Fibonacci-sphere dots on land (rasterized from Natural Earth 110m TopoJSON) shaded day and night by a moving sun, amber city lights on the night side, a back-face blue atmosphere at 1.16\u00d7, 2,600 stars, and UnrealBloom at strength 0.62, radius 0.5, threshold 0.32."
+ },
+ {
+  "id": "pins-labels",
+  "name": "Location pins and labels",
+  "category": "globe",
+  "description": "Hub and minor beacons with spike, glow head, pulse ring and protected dome; CSS2D labels with live state notes; hover tooltip; click opens the mission.",
+  "prompt_snippet": "Mark every real location with a beacon (spike, glow head, base ring, pulsing ring; hubs about 2\u00d7 taller). Colour each beacon by state (idle blue, signal yellow, warning amber, critical red, protected green with a wireframe dome). Add a CSS2D city label with a live note such as 'T-48h 00m | Agent acting'. Hovering shows address and mission; clicking opens it."
+ },
+ {
+  "id": "fabric-arcs",
+  "name": "Data Fabric arcs and streams",
+  "category": "globe",
+  "description": "Great-circle tubes between sites with travelling pulse heads, plus particles rising from each site to the vantage shell.",
+  "prompt_snippet": "Connect the sites with about 30 great-circle tubes in #2fb4ff, each with a travelling bright pulse. Have 26 particles per site rise from the surface to an outer shell. In a 'silos' story layer, tint them by silo and stop them short."
+ },
+ {
+  "id": "vantage-shell",
+  "name": "Cloud Control vantage shell",
+  "category": "globe",
+  "description": "An outer icosahedron wireframe with three counter-rotating rings and nine orbiting agent glyphs.",
+  "prompt_snippet": "Surround the globe with a faint icosahedron wireframe at radius 1.55 and three thin tilted rings that counter-rotate, with nine glowing octahedron 'agents' orbiting them. When an agent acts, fly one agent to a cyan beam above the site."
+ },
+ {
+  "id": "incident-effects",
+  "name": "Incident, blast radius and shockwave",
+  "category": "globe",
+  "description": "A rippling red, amber or green disc on the dots, red blast arcs to affected sites, a scan ring, an agent beam and a green shockwave when protected.",
+  "prompt_snippet": "Drive globe effects from the mission state: a rippling incident disc on the land dots (amber for a signal, red for impact, green for protected), red blast-radius arcs to dependent sites during impact, an expanding scan ring when the agent detects, a striped cyan beam while the agent acts, and a green shockwave when the site is protected."
+ },
+ {
+  "id": "story-layers",
+  "name": "Story layers",
+  "category": "globe",
+  "description": "Preset blends of arcs, streams, silo colouring and shell opacity for each opening chapter.",
+  "prompt_snippet": "Add story layers (sites, silos, fabric, agents, all) that tween arc opacity, stream reach, silo colouring and shell visibility over 2.2 s, so each opening chapter visibly changes what the globe emphasizes."
+ },
+ {
+  "id": "camera-flights",
+  "name": "Camera flights",
+  "category": "globe",
+  "description": "Great-circle flyTo with mid-flight lift, idle spin, view offset to centre the globe between the panels.",
+  "prompt_snippet": "Move the camera with a great-circle flyTo(lat, lon, distance) that lifts mid-flight (GSAP power2.inOut). Use a slow idle spin on the home view, and setViewOffset so the globe stays centred in the space between the side panels."
+ },
+ {
+  "id": "building-closeup",
+  "name": "Building and floor close-up",
+  "category": "globe",
+  "description": "Warp into a second scene: procedural city, the real building as translucent floor slabs, customer floors highlighted, the mission floor with an interior, devices and state effects.",
+  "prompt_snippet": "When a mission drills in, play a warp flash and switch to a city scene: a shader street grid, a procedural lit-window city, nearby landmarks, and the real building as stacked translucent floor slabs, with customer-occupied floors in blue and the mission floor in cyan. Floor focus fades the floors above and reveals desks, a room box and labelled device beacons. Show a striped beam while warning, a red alarm ring at impact and a green dome when protected."
+ },
+ {
+  "id": "floor-hover",
+  "name": "Public vs illustrative floor tooltips",
+  "category": "globe",
+  "description": "Hovering a floor says whether it is customer space per public sources or illustrative.",
+  "prompt_snippet": "Make building floors hoverable and clickable, with a tooltip that says 'Customer-occupied floor (public source)', 'Illustrative floor' or the mission room and its basis."
+ },
+ {
+  "id": "timeline-4d",
+  "name": "4D timeline",
+  "category": "timeline",
+  "description": "Canvas chart with a KPI band, two branch curves, five swim lanes of events, T-0 line, lead-time and outage bands, and a draggable playhead.",
+  "prompt_snippet": "Add a 4D timeline across the bottom: a canvas with a business-KPI band (0 to 100) showing a red traditional curve and a green AgenticOps curve, five swim lanes (ThousandEyes, Splunk Data Fabric, Cloud Control agents, Security XDR, People and business) with diamond and circle event markers, and a dashed 'T-0 business moment' line. Shade the agent lead time and the outage window, add a glowing playhead you can drag, and show 'Agent lead time: 48 hours'."
+ },
+ {
+  "id": "branch-toggle",
+  "name": "Traditional vs AgenticOps branch toggle",
+  "category": "timeline",
+  "description": "Compare / Traditional / AgenticOps views, a mission clock and KPI read-outs; scrubbing drives the globe.",
+  "prompt_snippet": "Give the timeline a Compare / Traditional / AgenticOps toggle, a mission clock ('T-48h 00m'), and live read-outs ('Traditional 71', 'AgenticOps 98', 'Exposure $8.4M (modeled)'). Scrubbing must drive the globe, building and product windows."
+ },
+ {
+  "id": "event-markers",
+  "name": "Clickable timeline events",
+  "category": "timeline",
+  "description": "Hover shows the event; clicking opens the matching product window and toasts it.",
+  "prompt_snippet": "Make every timeline event hoverable (source, time, branch, text) and clickable. A click opens the matching product window (ThousandEyes, Splunk, AI Canvas, XDR or Business impact) and shows a toast."
+ },
+ {
+  "id": "stage-windows",
+  "name": "Product stage windows with leader lines",
+  "category": "panel",
+  "description": "Floating glass product windows dock into slots around the globe, with dashed animated leader lines to the site or floor.",
+  "prompt_snippet": "Show floating 'product screens' that dock into slots (nw, ne, sw, se, w, e, n, s, center) around the globe. Each has a product-coloured header (brand, title, live status dot, expand, close) and a dashed, animated SVG leader line curving to the site or floor it describes."
+ },
+ {
+  "id": "splunk-itsi",
+  "name": "Splunk ITSI window",
+  "category": "panel",
+  "description": "Service health ring, predicted health, episode banner, KPI sparklines, adaptive-threshold chart, service tree with root cause.",
+  "prompt_snippet": "Add a Splunk ITSI window with a service health ring, predicted health, an episode banner, four KPI tiles with sparklines, a KPI chart with an adaptive threshold band, and a service tree that outlines the root-cause node while it degrades."
+ },
+ {
+  "id": "thousandeyes-path",
+  "name": "ThousandEyes path window",
+  "category": "panel",
+  "description": "Hop diagram with the degrading hop, alternate path, and loss, latency and jitter.",
+  "prompt_snippet": "Add a ThousandEyes path visualization: five hops with glyphs, the bad hop turning red with a metric tag, an alternate path that lights green once the agent fixes it, and live loss, latency and jitter."
+ },
+ {
+  "id": "ai-canvas",
+  "name": "AI Canvas window with decision",
+  "category": "panel",
+  "description": "Typed prompt, multi-agent plan, forecast widget, sourced root cause, policy-checked action, Approve / Revise / Reject, 'Your call' options, reasoning trail.",
+  "prompt_snippet": "Add an AI Canvas window that reveals in beats: a typed prompt, a 4-agent investigation plan ticking through tool calls, a generated forecast widget, a sourced root cause with evidence, and a proposed action with its change policy and Approve / Revise / Reject buttons. At the decision point, add a 'Your call' card with the three options and a reasoning trail with tool-call timings."
+ },
+ {
+  "id": "ai-assistant",
+  "name": "AI Assistant window",
+  "category": "panel",
+  "description": "Natural-language question, generated SPL2, result table, follow-up chips, free-text questions.",
+  "prompt_snippet": "Add a Cisco AI Assistant chat: it types a question, shows 'Reasoning across\u2026', then answers with a generated SPL2 federated search and a three-row result table. It offers three follow-up chips and accepts free-text questions answered from the mission data."
+ },
+ {
+  "id": "traditional-storm",
+  "name": "Traditional alert-storm window",
+  "category": "panel",
+  "description": "'12 tools, 6 teams, 1 bridge call': alert counters, scrolling alerts, teams joining a P1 bridge, root cause found late.",
+  "prompt_snippet": "For the traditional branch, add a '12 tools, 6 teams, 1 bridge call' window: counters for alerts, tickets, teams and bridge time climbing after T-0, a scrolling P1 alert list, team avatars joining the bridge, and 'Root cause: unknown' until it is found by hand."
+ },
+ {
+  "id": "xdr-window",
+  "name": "Cisco XDR attack story",
+  "category": "panel",
+  "description": "Verdict, MITRE tactics, attack chain stages, SOAR response tasks, 'Contained' stamp.",
+  "prompt_snippet": "For the security mission, add a Cisco XDR window with the verdict, MITRE tactics, a five-stage attack story that lights up, SOAR playbook tasks that tick off, and a 'Contained at the identity stage' stamp."
+ },
+ {
+  "id": "impact-window",
+  "name": "Business impact window",
+  "category": "panel",
+  "description": "Strategy pillar, exposure realized vs protected (modeled), KPI bars and before/after table.",
+  "prompt_snippet": "Add a Business impact window: the strategy pillar at stake, 'Exposure realized, traditional' vs 'Protected with AgenticOps' in modeled dollars that update with the playhead, KPI bars per branch, and a four-row before/after KPI table labelled Modeled."
+ },
+ {
+  "id": "facility-window",
+  "name": "Facility facts window",
+  "category": "panel",
+  "description": "Building address, mission floor and basis, facts tagged Public source or Illustrative, drill buttons, text-only sources.",
+  "prompt_snippet": "Add a Facility window for each real building: entity and address, the mission floor and room with its basis, facts tagged 'Public source' or 'Illustrative', drill buttons (Globe, Campus, Building, Floor) and text-only sources."
+ },
+ {
+  "id": "fabric-diagram",
+  "name": "Data Fabric diagram",
+  "category": "panel",
+  "description": "Animated SVG: six signal domains into the Data Fabric, into Cloud Control, out to six action targets, lit per mission.",
+  "prompt_snippet": "Add an animated SVG diagram: six signal domains (network, internet and cloud, applications, identity and security, business events, external signals) wire into a Cisco Data Fabric column, then into a Cisco Cloud Control column, then out to six action targets. Light only the sources and targets this mission uses, with dots flowing along the wires."
+ },
+ {
+  "id": "topology-window",
+  "name": "Cloud Control topology window",
+  "category": "panel",
+  "description": "Counts of sites, agents, impacted and pending actions, with per-site status rows.",
+  "prompt_snippet": "Add a Cloud Control topology window with counts (sites, agents, impacted, actions pending) and a row per major site that shows Healthy, Weak signal, Agent acting, Business impact, Blast radius or Protected as the timeline plays."
+ },
+ {
+  "id": "decision-scoring",
+  "name": "Decision options and feedback",
+  "category": "game",
+  "description": "Three options (best, partial, poor) in the panel and on the AI Canvas; locks, colours, marks the best, feedback text, sound cue, auto-advance.",
+  "prompt_snippet": "At each mission's decision point, ask '... What do you do?' with three options (one best, one partial, one poor), shown in the side panel and on the AI Canvas. Picking one locks them all, colours the choice, marks the best, and shows feedback ('Great call.', 'Partial save.' or 'Business impact ahead.'). Play a cue, then auto-advance into the timeline your choice leads to."
+ },
+ {
+  "id": "counterfactual",
+  "name": "Your outcome and the other timeline",
+  "category": "game",
+  "description": "After the decision, play your branch, then the counterfactual branch, then the outcome.",
+  "prompt_snippet": "After the decision, play 'Your outcome' (the AgenticOps branch for a best call, otherwise traditional), then 'The other timeline', then an Outcome step with the big modeled number, its basis, the KPI table and Replay and make a better call."
+ },
+ {
+  "id": "academy-chain",
+  "name": "Academy chain",
+  "category": "learn",
+  "description": "Five-link chain: IT signal, domains, Cisco capability, business KPI, executive outcome.",
+  "prompt_snippet": "For every mission, show a five-link chain card (IT signal, Domains, Cisco capability, Business KPI, Executive outcome), each link with its own colour, so account teams learn to walk from a weak signal to a board-level outcome."
+ },
+ {
+  "id": "talk-track",
+  "name": "Talk track",
+  "category": "learn",
+  "description": "Three sentences an account rep can say verbatim.",
+  "prompt_snippet": "In the Academy Connections step, add a 'Talk track' card with three sentences an account rep can say verbatim to the business owner."
+ },
+ {
+  "id": "discovery-questions",
+  "name": "Discovery questions",
+  "category": "learn",
+  "description": "Three open questions per mission for the business owner.",
+  "prompt_snippet": "Add a 'Discovery questions to ask' card with three open questions per mission about the last bad day and what it cost, plus the Cisco and Splunk capabilities in play as chips."
+ },
+ {
+  "id": "quiz",
+  "name": "Academy quiz",
+  "category": "learn",
+  "description": "Two questions per mission; answer to reveal the correct option and why; score and XP.",
+  "prompt_snippet": "End each Academy mission with a two-question quiz (three options each). Answering reveals the right option and a one-line why; finishing shows 'Score: N/2. +XP' and a Next mission button."
+ },
+ {
+  "id": "executive-tour",
+  "name": "Executive Tour flow",
+  "category": "mode",
+  "description": "Six narrated opening chapters with globe layers and context windows, every mission's key steps, and a finale with the total modeled value.",
+  "prompt_snippet": "Build an auto-playing Executive Tour: six narrated opening chapters (the customer promise, strategy commitments, siloed operations, one fabric of data, a vantage point above it all, IT problems to business outcomes), each with its own camera and globe layer. Then play each mission's briefing, signal, both timelines and outcome, and end on a finale with every site protected, the total modeled value and a mission table."
+ },
+ {
+  "id": "explore-flow",
+  "name": "Explore Missions flow",
+  "category": "mode",
+  "description": "Overview, briefing, signal, decision, your outcome, other timeline, outcome.",
+  "prompt_snippet": "In Explore mode, each mission runs Overview, Briefing (where it happens, industry challenge, strategy priority, data sources joined), Signal (lead-time callout), Decision (blocks Next until answered), Your outcome, The other timeline, and Outcome."
+ },
+ {
+  "id": "audio-dock",
+  "name": "Audio dock with sentence segments",
+  "category": "narration",
+  "description": "Bottom dock: section and sentence skip, play/pause, a clickable segmented progress bar per sentence, counter, voice button; captions above.",
+  "prompt_snippet": "Add a bottom audio dock with previous / next section, previous / next sentence and play / pause. A progress bar has one clickable segment per narrated sentence (width by length, filling live), plus a '3 / 7' counter and a voice button. Show each sentence as a caption above the timeline."
+ },
+ {
+  "id": "studio-voice-fallback",
+  "name": "Studio voices with fallback",
+  "category": "narration",
+  "description": "Pre-rendered studio MP3s per sentence (hash-named) when present, else the best device speechSynthesis voice, else a silent timer; voice popover with speed and preview.",
+  "prompt_snippet": "Narrate sentence by sentence. Play audio/<voice>/<fnv1a hash>.mp3 when a studio voice manifest lists it, fall back to the best English speechSynthesis voice, then to a silent reading-speed timer, so captions and cues always advance. Add a voice popover with Voice and Captions toggles, speed 0.85 to 1.5x, studio, premium and device voice groups, and a preview button."
+ },
+ {
+  "id": "narration-cues",
+  "name": "Narration-synced cues",
+  "category": "narration",
+  "description": "Step actions fire at fractions of the narration (sentence index plus progress), opening windows and moving the camera in time with speech.",
+  "prompt_snippet": "Attach cues to each step as [fraction, action] pairs that fire as the narration progresses (sentence index plus progress within the sentence), so product windows open and the camera moves in step with what is being said."
+ },
+ {
+  "id": "ambient-sound",
+  "name": "Ambient pad and cues",
+  "category": "narration",
+  "description": "WebAudio ambient drone (off by default, ducks under speech) and short cues for info, warn, crit, good and badge.",
+  "prompt_snippet": "Add a WebAudio ambient pad (detuned low sines through a slow-moving lowpass, off by default, ducking under narration) and short synthesized cues for info, warning, critical, good and badge events. Create the AudioContext only after a user gesture."
+ },
+ {
+  "id": "live-ticker",
+  "name": "Live ticker",
+  "category": "hud",
+  "description": "Scrolling marquee of 20 one-line agent wins at other locations.",
+  "prompt_snippet": "Add a thin 'LIVE \u00b7 AgenticOps' ticker above the dock that scrolls 20 one-line items such as 'Seoul | Experience Agent moved bancassurance API traffic off a lossy transit path. No customer impact.' Pause it on hover."
+ },
+ {
+  "id": "toasts-float",
+  "name": "Toasts and floating rewards",
+  "category": "hud",
+  "description": "Toasts for events and badges; a floating '+150 XP +$14.0M' after each outcome.",
+  "prompt_snippet": "Show toasts for event clicks, badges and hints, and float a '+150 XP / +$14.0M' reward near the score when a mission completes."
+ },
+ {
+  "id": "modeled-disclaimer",
+  "name": "Modeled disclaimer and labelling",
+  "category": "compliance",
+  "description": "Verbatim disclaimer on the intro; every dollar labelled modeled with a basis; facts tagged public or illustrative; no source links in the UI.",
+  "prompt_snippet": "Put this disclaimer on the intro: 'Illustrative scenarios built from public information about <Customer> \u2026 No <Customer> internal data is used. Dollar figures are modeled estimates based on industry benchmarks, meant for discussion only.' Label every dollar figure as modeled with a one-sentence 'Modeled:' basis, tag building facts 'Public source' or 'Illustrative', and add no source links in the UI."
+ },
+ {
+  "id": "keyboard",
+  "name": "Keyboard control",
+  "category": "navigation",
+  "description": "Space pause; arrows by sentence; Shift+arrows or PgUp/PgDn by section; Esc closes.",
+  "prompt_snippet": "Support keyboard presenting: Space pauses everything, Left / Right skip sentences, Shift + arrows or PgUp / PgDn skip sections, Escape closes popovers and modals."
+ },
+ {
+  "id": "persistence",
+  "name": "Saved progress",
+  "category": "game",
+  "description": "Score, badges, quiz results, voice, captions and timeline fold state persist in localStorage.",
+  "prompt_snippet": "Persist score, badges, quiz results, voice choice, captions and timeline fold state in localStorage (wrapped in try/catch), and offer Reset progress in the badges modal."
+ },
+ {
+  "id": "responsive",
+  "name": "Responsive layout",
+  "category": "layout",
+  "description": "Collapsible panel and timeline; on mobile, a missions drawer, bottom-sheet panel, one window at a time, no horizontal scroll.",
+  "prompt_snippet": "Make the right panel collapsible and the timeline foldable. Under 760px, wrap the mode tabs, turn the rail into a Missions drawer and the step panel into a bottom sheet, hide the timeline and ticker, show one product window at a time, stack the intro cards, and never scroll horizontally."
+ }
+]

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Securing CSX Wayside Infrastructure | Cisco</title>
+  <meta name="description" content="Interactive 3D briefing: securing CSX wayside rail infrastructure with Cisco industrial networking, security and assurance.">
+</head>
+<body>
+  <canvas id="gl" data-engine="three.js r186"></canvas>
+  <div id="fade"></div>
+
+  <header id="top">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <div><div class="b1" id="b1"></div><div class="b2" id="b2"></div></div>
+    </div>
+    <div class="segs">
+      <div class="seg" id="viewSeg">
+        <button data-view="map" class="on">Network map</button>
+        <button data-view="wayside">Wayside site</button>
+      </div>
+      <div class="seg mode" id="modeSeg">
+        <button data-mode="without" class="on bad">Without Cisco</button>
+        <button data-mode="with" class="good">With Cisco</button>
+        <button data-mode="split">Split view</button>
+      </div>
+    </div>
+    <div class="actions">
+      <button id="btnBrowse" class="mobileOnly">Browse</button>
+      <button id="btnTour" class="primary">Guided story</button>
+      <button id="btnSources">Sources</button>
+      <button id="btnAssump">Assumptions</button>
+    </div>
+  </header>
+
+  <aside id="nav" class="glass">
+    <div class="tabs" id="tabs">
+      <button data-tab="personas" class="on">Personas</button>
+      <button data-tab="tech">Technology</button>
+      <button data-tab="scenarios">Scenarios</button>
+      <button data-tab="places">Places</button>
+    </div>
+    <div id="list"></div>
+  </aside>
+
+  <section id="detail" class="glass empty"><button class="dClose" id="dClose" aria-label="Close detail">&times;</button><div id="detailInner"></div></section>
+
+  <div id="splitLabels">
+    <div class="sl left">WITHOUT CISCO</div>
+    <div class="divider"></div>
+    <div class="sl right">WITH CISCO</div>
+  </div>
+
+  <div id="legend" class="glass"></div>
+
+  <footer id="story" class="glass">
+    <button id="stPrev" aria-label="Previous">&lsaquo;</button>
+    <div class="stBody">
+      <div class="stTop"><span id="stNum"></span><span id="stTitle">Ready</span></div>
+      <div id="stText">Press play or the arrow keys to start the guided story.</div>
+      <div id="stDots"></div>
+    </div>
+    <button id="stPlay" aria-label="Autoplay">&#9654;</button>
+    <button id="stNext" aria-label="Next">&rsaquo;</button>
+  </footer>
+
+  <div id="tooltip"></div>
+
+  <div id="modal" class="hidden">
+    <div class="mBox glass">
+      <button class="mClose" id="mClose" aria-label="Close">&times;</button>
+      <div id="mBody"></div>
+    </div>
+  </div>
+
+  <div id="intro">
+    <div class="iBox">
+      <div class="iKicker" id="iKicker"></div>
+      <h1 id="iH1"></h1>
+      <p id="iP"></p>
+      <div class="iBtns">
+        <button id="iTour" class="primary big">Start the guided story</button>
+        <button id="iExplore" class="big">Explore freely</button>
+      </div>
+      <div class="iNote" id="iNote"></div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

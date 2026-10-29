@@ -1,0 +1,121 @@
+[
+  {
+    "key": "CUSTOMER",
+    "label": "Customer name",
+    "hint": "Company name as the audience says it.",
+    "example": "Northwind Freight",
+    "type": "text"
+  },
+  {
+    "key": "WHERE",
+    "label": "Where they operate",
+    "hint": "Footprint: region, network size, HQ city.",
+    "example": "US Midwest: about 4,800 route miles of rail plus 9 intermodal terminals, headquartered in Kansas City, MO",
+    "type": "text"
+  },
+  {
+    "key": "AUDIENCE",
+    "label": "Audience",
+    "hint": "Roles (and names only if public) who will explore the briefing.",
+    "example": "Northwind Freight CISO and VP of Network Operations",
+    "type": "text"
+  },
+  {
+    "key": "GOAL",
+    "label": "Goal of the briefing",
+    "hint": "What the audience should believe or decide after exploring.",
+    "example": "Show that every trackside and terminal site can become a monitored, segmented sensor, and agree on a 10-site pilot on the Kansas City to Chicago corridor.",
+    "type": "textarea"
+  },
+  {
+    "key": "SCENARIO",
+    "label": "Cisco topic",
+    "hint": "The Cisco solution theme the scenarios illustrate.",
+    "example": "Industrial IoT security and assurance for wayside and intermodal terminal OT networks",
+    "type": "textarea"
+  },
+  {
+    "key": "KEY_ITEMS",
+    "label": "Cisco technologies to feature",
+    "hint": "6 to 8 products, comma separated. The SIEM is added automatically.",
+    "example": "Cisco IE3500 switch, Catalyst IR1101 router, Cyber Vision, Identity Services Engine, Catalyst Center, ThousandEyes, Cisco XDR",
+    "type": "textarea"
+  },
+  {
+    "key": "HOURS",
+    "label": "Time budget (hours)",
+    "hint": "Total hours for research, build and review.",
+    "example": "10",
+    "type": "number"
+  },
+  {
+    "key": "PRESENTER",
+    "label": "Presenter",
+    "hint": "Who drives it live (name and role).",
+    "example": "Alex Rivera, Cisco Solutions Engineer",
+    "type": "text"
+  },
+  {
+    "key": "SIEM",
+    "label": "SIEM",
+    "hint": "The SOC's SIEM; mark as assumed if not public.",
+    "example": "Splunk Enterprise Security (assumed SIEM)",
+    "type": "text"
+  },
+  {
+    "key": "TAGLINE",
+    "label": "Brand subtitle",
+    "hint": "3 to 4 word mission shown under 'Cisco for <customer>'.",
+    "example": "Securing the corridor",
+    "type": "text"
+  },
+  {
+    "key": "SITE",
+    "label": "Site to model in 3D",
+    "hint": "The representative field site for the diorama.",
+    "example": "an intermodal terminal gate and adjacent wayside control point",
+    "type": "text"
+  },
+  {
+    "key": "SITE_LABEL",
+    "label": "Site view button label",
+    "hint": "Short label for the second view in the top bar.",
+    "example": "Terminal site",
+    "type": "text"
+  },
+  {
+    "key": "SITE_KEY",
+    "label": "Site view hash key",
+    "hint": "One lowercase word used in URLs and file names.",
+    "example": "terminal",
+    "type": "text"
+  },
+  {
+    "key": "SITE_ASSETS",
+    "label": "Field assets in the site",
+    "hint": "6 to 8 assets, comma separated.",
+    "example": "gate OCR portal, crane controller, reefer power posts, wayside signal, grade crossing, hot box detector, equipment shelter, carrier 5G tower",
+    "type": "textarea"
+  },
+  {
+    "key": "MAP_REGION",
+    "label": "Map region",
+    "hint": "Geography for the network map.",
+    "example": "US Midwest and Great Plains (us-atlas states)",
+    "type": "text"
+  },
+  {
+    "key": "HUB",
+    "label": "Telemetry hub",
+    "hint": "Where field telemetry lands (place and lon/lat).",
+    "example": "Northwind data center, Lenexa, KS [-94.73, 38.95]",
+    "type": "text"
+  },
+  {
+    "key": "FILE_SLUG",
+    "label": "Output file name",
+    "hint": "Lowercase slug for dist/<slug>.html.",
+    "example": "northwind",
+    "type": "text"
+  }
+]

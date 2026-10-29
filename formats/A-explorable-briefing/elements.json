@@ -1,0 +1,240 @@
+[
+  {
+    "id": "intro-overlay",
+    "name": "Intro overlay",
+    "category": "layout",
+    "description": "Full-screen radial-gradient overlay with kicker, two-line headline (second line gradient), paragraph, two big buttons and an honesty note; fades out.",
+    "prompt_snippet": "Open on a full-screen intro overlay with a cyan uppercase kicker, a two-line headline whose second line uses a cyan-to-lime gradient, a short paragraph, and two big buttons: 'Start the guided story' (primary) and 'Explore freely'. Add a small note that public facts are cited and modeled items are labeled. Skip the intro when the URL hash has parameters."
+  },
+  {
+    "id": "top-bar",
+    "name": "Top bar with brand",
+    "category": "layout",
+    "description": "Fixed 64px gradient bar: Cisco 7-bar logo, 'Cisco for <Customer>' title and subtitle, two segmented controls, action buttons right-aligned.",
+    "prompt_snippet": "Add a fixed 64px top bar with a dark top-to-bottom gradient and a hairline bottom border. Left: a Cisco 7-bar logo built from CSS bars, a bold 'Cisco for <Customer>' title and a muted subtitle. Right-aligned: Guided story (primary gradient), Sources and Assumptions buttons."
+  },
+  {
+    "id": "view-toggle",
+    "name": "Network map / Site view toggle",
+    "category": "navigation",
+    "description": "Segmented control switching between the 3D network map and the 3D site diorama, with a fade-through-black transition and a camera fly-in.",
+    "prompt_snippet": "Add a segmented control 'Network map | Wayside site' that switches between two Three.js scenes on one canvas. Fade to black for 0.45 s, jump the camera, fade back, then fly to the view's overview pose."
+  },
+  {
+    "id": "mode-toggle",
+    "name": "Without / With / Split toggle",
+    "category": "state",
+    "description": "Segmented control that toggles the scene layers: red blind spots (Without), teal sensors and telemetry (With), or both side by side (Split). Active colors: red, teal, cyan.",
+    "prompt_snippet": "Add a 'Without Cisco | With Cisco | Split view' segmented control. Without shows red blind spots and threats, With shows teal sensors and telemetry flows, and the active button tints red, teal or cyan. The mode applies to both scenes and re-renders any open scenario panel."
+  },
+  {
+    "id": "split-view",
+    "name": "Split view rendering",
+    "category": "3d",
+    "description": "Same scene rendered twice per frame with the scissor test, left Without and right With, fov 60, with a centre divider and WITHOUT/WITH pills; the side nav collapses.",
+    "prompt_snippet": "In Split mode, render the active scene twice per frame using renderer.setScissorTest: the left half in Without and the right half in With, each with aspect w/2/h and fov 60. Overlay a gradient divider and red 'WITHOUT CISCO' and teal 'WITH CISCO' pills, and slide the left nav off-screen."
+  },
+  {
+    "id": "left-nav-tabs",
+    "name": "Left navigator with tabs",
+    "category": "layout",
+    "description": "300px glass panel with four tabs (Personas, Technology, Scenarios, Places) over a scrolling item list.",
+    "prompt_snippet": "Add a 300px glass panel on the left (top 78px, bottom 150px) with a 4-column tab row: Personas, Technology, Scenarios, Places. The active tab gets white text and a 2px cyan underline. Below it, a scrolling list of items."
+  },
+  {
+    "id": "personas-tab",
+    "name": "Personas tab",
+    "category": "content",
+    "description": "List of 7 personas: public executives and modeled composites, each with an initials dot in its own color, a badge and a role line.",
+    "prompt_snippet": "List 6 to 8 personas, each with a 34px rounded color dot holding the initials, the name with a PUBLIC or MODELED badge, and a muted role line. Selecting a persona opens its detail and flies the map to the persona's place."
+  },
+  {
+    "id": "technology-tab",
+    "name": "Technology tab",
+    "category": "content",
+    "description": "List of Cisco products plus the SIEM, each with an abbreviation dot in the product color and a one-line 'where it sits' description.",
+    "prompt_snippet": "List 7 to 9 technologies with an abbreviation dot in the product color, the product name and one line on where it sits in the site. Selecting one switches to With mode, opens the site view and flies to and highlights that product."
+  },
+  {
+    "id": "scenarios-tab",
+    "name": "Scenarios tab",
+    "category": "content",
+    "description": "8 numbered scenarios with persona names as the sub line.",
+    "prompt_snippet": "List exactly 8 scenarios with a light numbered dot, a concrete title and the involved persona first names. Selecting one opens the site view at the scenario's focus asset and opens its detail."
+  },
+  {
+    "id": "places-tab",
+    "name": "Places tab",
+    "category": "content",
+    "description": "Map places (HQ, ops center, data center, yards, projects, events, modeled site) with kind-letter dots and PUBLIC/MODELED badges.",
+    "prompt_snippet": "List 10 to 16 real places with a dot in the kind color holding the kind's first letter, the name with a PUBLIC or MODELED badge, and the address. Selecting one flies the map camera to it."
+  },
+  {
+    "id": "detail-panel",
+    "name": "Right detail panel",
+    "category": "layout",
+    "description": "400px glass panel, hidden until selection; renders place, persona, technology or scenario templates; ends with sources.",
+    "prompt_snippet": "Add a 400px glass panel on the right that stays hidden (faded and shifted 20px) until something is selected. Render a template per type, with uppercase 11px section headings, cross-link chips, and a Sources list of links at the end."
+  },
+  {
+    "id": "scenario-detail",
+    "name": "Scenario detail: Without/With columns and KPIs",
+    "category": "content",
+    "description": "Hook, two tinted columns of 4 steps each (the off-mode column dims), three modeled KPI tiles, SIEM touchpoints box, chips and mode CTAs.",
+    "prompt_snippet": "For a scenario, show 'Scenario n of 8' with an ILLUSTRATIVE badge, a hook sentence, then two columns: red 'Without Cisco' and teal 'With Cisco' ordered lists of 4 steps. Dim the column that does not match the current mode. Below them: three KPI tiles (Time to detect, Visibility, Field impact) with red before and teal after values under 'Outcome (modeled KPIs)', plus Show without, Show with and Split view buttons."
+  },
+  {
+    "id": "siem-box",
+    "name": "SIEM touchpoint box",
+    "category": "content",
+    "description": "Blue tinted box with a CSS logo mark naming the documented path into the SIEM (Microsoft Sentinel).",
+    "prompt_snippet": "Add a blue-tinted box headed '<SIEM> touchpoint' with a small CSS-built logo mark. It states the documented integration path for each product (connector, syslog or CEF via the agent, webhook, or native export), or says 'integration pattern to validate'."
+  },
+  {
+    "id": "persona-priority",
+    "name": "Persona priority block",
+    "category": "content",
+    "description": "Cyan left-border italic block showing a first-person priority, labeled as illustrative, not a quote.",
+    "prompt_snippet": "In the persona detail, show the persona's one-line priority in an italic block with a 3px cyan left border, labeled 'Illustrative priority, not a quote'. Follow it with 'What matters' bullets, scenario chips and a Where chip."
+  },
+  {
+    "id": "chips",
+    "name": "Cross-link chips",
+    "category": "navigation",
+    "description": "Pill chips in the detail panel that open related personas, scenarios, technologies and places.",
+    "prompt_snippet": "Use pill-shaped chips with data-open='type:id' to cross-link related personas, scenarios, technologies and places from any detail panel. Clicking one opens that item and moves the camera."
+  },
+  {
+    "id": "badges",
+    "name": "PUBLIC / MODELED / ILLUSTRATIVE badges",
+    "category": "labeling",
+    "description": "Small uppercase badges on every item: PUBLIC (cyan), MODELED and ILLUSTRATIVE (yellow).",
+    "prompt_snippet": "Label every persona and place with a small 9.5px uppercase badge: PUBLIC (light cyan on cyan tint) for sourced items and MODELED (yellow on yellow tint) for composites. Label every scenario ILLUSTRATIVE."
+  },
+  {
+    "id": "story-dock",
+    "name": "Guided story dock",
+    "category": "navigation",
+    "description": "Bottom-centre glass dock with prev/next, step counter, title, text with inline source links, 7 progress bars and play/pause; autoplay every 7.5 s.",
+    "prompt_snippet": "Add a bottom-centre glass dock (max 900px) with round prev and next buttons, a cyan 'n / 7' counter, a step title, 1 to 3 sentences of text with inline source links, 7 clickable 22x4 progress bars, and a play/pause button. Each step sets the view, the mode, the camera target and an optional detail panel. Autoplay advances every 7.5 s; any manual action stops it."
+  },
+  {
+    "id": "sources-modal",
+    "name": "Sources panel",
+    "category": "labeling",
+    "description": "Modal listing all public sources grouped by category with titles and URLs, and a research date.",
+    "prompt_snippet": "Add a Sources button that opens a modal listing every public source grouped by category (customer, industry, regulatory and threat, Cisco, SIEM) as ordered lists of title plus URL, with a line stating the research month and that MODELED or ILLUSTRATIVE items are not sourced facts."
+  },
+  {
+    "id": "assumptions-modal",
+    "name": "Assumptions panel",
+    "category": "labeling",
+    "description": "Modal with a numbered list of assumptions and a badge legend.",
+    "prompt_snippet": "Add an Assumptions button that opens a modal with 10 to 14 numbered assumptions (audience, naming, modeled personas, schematic geometry, modeled site, SIEM assumption, documented integrations, product dates, KPI disclaimer, no sensitive information) and a legend explaining the three badges."
+  },
+  {
+    "id": "legend",
+    "name": "Legend card",
+    "category": "layout",
+    "description": "Small glass card next to the nav with color swatches and a usage hint; content swaps per view.",
+    "prompt_snippet": "Add a small glass legend beside the left nav with 10px color dots or 18x3 line swatches explaining marker kinds, corridors, Without and With layers, plus a hint such as 'Click a marker. Drag to orbit, scroll to zoom.' Swap its rows when the view changes."
+  },
+  {
+    "id": "network-map",
+    "name": "3D network map",
+    "category": "3d",
+    "description": "Extruded region polygons from topojson, schematic corridor tubes with halos, moving train glows, place pins with rings and labels.",
+    "prompt_snippet": "Build a 3D map from embedded us-atlas topojson: extrude the operating states (deep blue with emissive and bright outlines) and leave the rest flat and dark, over a fogged grid. Draw schematic corridors as Catmull-Rom tubes with additive halos and moving gold glow 'trains'. Mark places with glowing pins, ground rings and canvas-text labels."
+  },
+  {
+    "id": "blind-spots",
+    "name": "Blind spots (Without layer)",
+    "category": "3d",
+    "description": "Pulsing red rings along every corridor with '?' labels on the map; red threat flows and '?' callouts in the site.",
+    "prompt_snippet": "In Without mode, place pulsing red rings at regular intervals along every corridor, with a '?' label on every fourth, to show unmonitored sites. In the site, add red threat flows from off-site and pulsing red callouts such as '? No asset inventory'."
+  },
+  {
+    "id": "telemetry-flows",
+    "name": "Telemetry flows (With layer)",
+    "category": "3d",
+    "description": "Teal sensor dots with arched additive flows to the hub; colored bead flows from edge devices to control-plane products and the SIEM.",
+    "prompt_snippet": "In With mode, turn the corridor sample points into teal glows and send arched additive tubes with moving beads from every third one to the data center hub. In the site, run colored bead flows from the edge switch and router to the Cisco control-plane labels and on to the SIEM."
+  },
+  {
+    "id": "site-diorama",
+    "name": "Site diorama",
+    "category": "3d",
+    "description": "Modeled field site with named assets, an enclosure with a rack, backhaul, scenery and a moving train that drives signals and gates.",
+    "prompt_snippet": "Build a modeled field-site diorama in Three.js from primitives: track, a signal, an equipment bungalow with a visible rack, a radio tower, a grade crossing with animated gates and flashers, a detector, a switch machine, a pole line and a carrier tower, under dusk lighting with shadows. Loop a train along the track that changes the signal aspect and lowers the gates."
+  },
+  {
+    "id": "control-plane-labels",
+    "name": "Floating control-plane labels",
+    "category": "3d",
+    "description": "Large label sprites for each Cisco product and the SIEM floating above the site with glows; they dim when another is focused.",
+    "prompt_snippet": "Float a large canvas-label sprite with a soft color glow above the site for each Cisco product (and the SIEM in deep blue) in With mode. When one product is focused, fade the others to 45% opacity."
+  },
+  {
+    "id": "highlight-ring",
+    "name": "Focus highlight",
+    "category": "3d",
+    "description": "White pulsing ring and glow at the focused asset or product.",
+    "prompt_snippet": "When a technology or scenario focuses an asset, place a white pulsing ground ring and a soft glow at it (laid flat for ground assets, upright for floating labels)."
+  },
+  {
+    "id": "canvas-labels",
+    "name": "Canvas text label sprites",
+    "category": "3d",
+    "description": "Runtime-drawn rounded-pill text sprites with an optional sub line; no image assets.",
+    "prompt_snippet": "Draw every 3D label at runtime on a canvas (60px title, 40px muted sub line, rounded dark pill with a colored 4px border) and use it as a SpriteMaterial texture scaled to world units. Use no image files."
+  },
+  {
+    "id": "orbit-controls",
+    "name": "Orbit controls and camera fly",
+    "category": "interaction",
+    "description": "OrbitControls with damping and polar and distance limits; eased camera flights with an arc lift.",
+    "prompt_snippet": "Use Three.js OrbitControls with damping 0.08, maxPolarAngle 0.47*PI and distance 2 to 80, so users can drag to orbit and scroll to zoom. Move between poses with a 1.4 to 1.6 s cubic in-out flight that lifts the camera in an arc."
+  },
+  {
+    "id": "marker-picking",
+    "name": "Marker hover and click",
+    "category": "interaction",
+    "description": "Raycast to invisible spheres on map markers; tooltip on hover; click (not drag) selects; split-aware.",
+    "prompt_snippet": "Raycast pointer events against invisible spheres on each map marker. On hover, show a small tooltip with the name and sub line and a pointer cursor. On click (pointer travel under 5px), select the place. In split mode, map the pointer into the half it is in."
+  },
+  {
+    "id": "hash-deep-links",
+    "name": "Hash deep links",
+    "category": "state",
+    "description": "URL hash parameters (mode, view, focus, open, story) restore state on load and on hashchange; the hash is written back as state changes.",
+    "prompt_snippet": "Support URL hash deep links: mode=without|with|split, open=persona:id|tech:id|scenario:id|place:id, view=map|wayside with optional focus, and story=0..6. Read them on load and on hashchange (skipping the intro), and write the current state back with history.replaceState."
+  },
+  {
+    "id": "keyboard",
+    "name": "Keyboard shortcuts",
+    "category": "interaction",
+    "description": "Arrow keys step the story, Esc closes the modal, H collapses the panels.",
+    "prompt_snippet": "Bind Left and Right arrows to step the guided story, Esc to close the modal, and H to toggle a collapsed layout that hides the nav and legend."
+  },
+  {
+    "id": "collapsed-layout",
+    "name": "Collapsed panel layout",
+    "category": "layout",
+    "description": "body.collapsed slides the nav out, hides the legend and narrows the detail; used in split and on H.",
+    "prompt_snippet": "Add a body.collapsed state that slides the left nav off-screen, hides the legend and narrows the detail panel to 330px with a lighter fill. Apply it automatically in split mode and toggle it with H."
+  },
+  {
+    "id": "glass-tokens",
+    "name": "Dark glass design tokens",
+    "category": "style",
+    "description": "Navy background, 78% glass panels with a hairline blue border, radius 16 and a soft shadow; cyan Cisco accent; red and teal semantic colors.",
+    "prompt_snippet": "Use these tokens: --bg #050a16, --glass #0a1224c7, --line #78aaff2e, --text #e6eefc, --muted #93a4c3, --cisco #049fd9, --good #2dd4bf, --bad #f87171. Glass panels get radius 16, a 1px --line border and 0 10px 40px rgba(0,0,0,.45). Use no backdrop blur."
+  },
+  {
+    "id": "single-file-build",
+    "name": "Single-file Vite build",
+    "category": "build",
+    "description": "Vite build with Three.js r186 and the data inlined into one self-contained HTML file of about 800 KB.",
+    "prompt_snippet": "Build with Vite and vite-plugin-singlefile so that Three.js 0.186, topojson-client, the embedded topojson, all data and the CSS are inlined into one self-contained HTML file that runs over file:// with no network requests."
+  }
+]

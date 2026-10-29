@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dominion Energy and Splunk, a Cisco company | IT Leadership Briefing</title>
+<meta name="description" content="A sourced IT leadership briefing for Dominion Energy with a 3D digital twin of the service territory, the Splunk data fabric and Cisco Cloud Control agents.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23020710'/><g fill='%2300bceb'><rect x='5' y='13' width='2.4' height='6' rx='1.2'/><rect x='10' y='9' width='2.4' height='14' rx='1.2'/><rect x='15' y='6' width='2.4' height='20' rx='1.2'/><rect x='20' y='9' width='2.4' height='14' rx='1.2'/><rect x='25' y='13' width='2.4' height='6' rx='1.2'/></g></svg>">
+</head>
+<body>
+<header class="topbar">
+  <a class="lockup" href="#twin" aria-label="Cisco and Splunk, Dominion Energy briefing">
+    <svg class="cisco-logo" viewBox="0 0 92 48" aria-label="Cisco"><g fill="currentColor"><rect x="2" y="14" width="4" height="10" rx="2"/><rect x="12" y="7" width="4" height="24" rx="2"/><rect x="22" y="0" width="4" height="38" rx="2"/><rect x="32" y="7" width="4" height="24" rx="2"/><rect x="42" y="14" width="4" height="10" rx="2"/><rect x="52" y="7" width="4" height="24" rx="2"/><rect x="62" y="0" width="4" height="38" rx="2"/><rect x="72" y="7" width="4" height="24" rx="2"/><rect x="82" y="14" width="4" height="10" rx="2"/></g><text x="44" y="48" text-anchor="middle" font-size="11" font-weight="700" fill="currentColor" letter-spacing="1">CISCO</text></svg>
+    <span class="divider"></span>
+    <span class="splunk-logo">splunk<b>&gt;</b><small>a Cisco company</small></span>
+    <span class="divider"></span>
+    <span class="cust">Dominion Energy<small>IT leadership briefing</small></span>
+  </a>
+  <nav class="nav" aria-label="Sections">
+    <a href="#twin">Digital Twin</a><a href="#leadership">For IT Leadership</a><a href="#account">Our Work Together</a><a href="#story">Story</a><a href="#alignment">Alignment</a><a href="#threats">Threats</a><a href="#personas">Departments</a><a href="#dashboards">Dashboards</a><a href="#agentic">Cloud Control</a><a href="#federal">Federal</a><a href="#plays">Roadmap</a><a href="#sources">Sources</a>
+  </nav>
+</header>
+
+<section id="twin" class="twin">
+  <div id="stage"></div>
+  <div id="labels"></div>
+  <div class="hero-rail">
+    <div class="twin-title">
+      <div class="kicker">Prepared for Dominion Energy IT leadership, October 2026</div>
+      <h1>Dominion Energy, <span class="grad">operated by agents</span>, <span class="grad2">grounded in one data fabric</span></h1>
+      <p class="lede">A 3D view of your critical business functions, the Splunk platform you already run beneath them, and Cisco Cloud Control orchestrating governed agents above. Click any site, or press play to walk the story.</p>
+      <button id="heroListen" class="hero-listen"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><b>Listen to the security briefing</b><span>5 minute narrated overview</span></button>
+      <div id="kpis" class="kpis"></div>
+    </div>
+    <div id="chapterCard" class="chapter-card" aria-live="polite"></div>
+  </div>
+  <div class="layer-toggle" id="layerToggle">
+    <div class="lt-row">
+      <button data-layer="all" class="on">All layers</button><button data-layer="ops">Operations</button><button data-layer="fabric">+ Splunk fabric</button><button data-layer="agentic">+ Cloud Control</button>
+    </div>
+    <button id="threatBtn" class="threat">Simulate attacks</button>
+  </div>
+  <aside class="asset-panel" id="assetPanel" aria-live="polite"></aside>
+  <div class="legend-strip">
+    <span><i class="lg-t"></i>Dominion territory</span><span><i class="lg-x"></i>Transmission</span><span><i class="lg-s"></i>Splunk ingest</span><span><i class="lg-a"></i>Agent actions</span><span><i class="lg-r"></i>Threat path</span>
+  </div>
+  <a class="scroll-cue" href="#story">Scroll for the full brief</a>
+</section>
+
+<main>
+  <section id="leadership" class="sec">
+    <div class="sec-head"><div class="kicker">For IT leadership</div><h2>What this means for Dominion IT</h2><p>Dominion is building at a scale it has never built before while the threat to the grid keeps rising. These are the outcomes we believe matter most to the CIO organization, each starting from the Splunk platform you already run.</p></div>
+    <div id="leadOutcomes" class="lead-grid"></div>
+    <div class="lead-next"><h3>Proposed next steps</h3><ol id="leadNext"></ol></div>
+  </section>
+
+  <section id="account" class="sec">
+    <div class="sec-head"><div class="kicker">Our work together</div><h2>Re-architecting access to storage in Splunk Cloud for CIP-015</h2><p>You already run Splunk Core, ES Premier and SOAR, and our teams are working together on how internal network security monitoring data is stored, retained, protected and searched in Splunk Cloud ahead of CIP-015. Each item is labeled so it is clear what comes from public sources, what reflects our work together, and what we recommend.</p></div>
+    <div class="prov-legend">
+      <span class="prov r">Public sources</span><span>NERC, FERC and Splunk documentation. Superscripts link to the source list.</span>
+      <span class="prov a">Our work together</span><span>Known context about your environment and the work in progress.</span>
+      <span class="prov i">Our recommendation</span><span>Design guidance that connects the two.</span>
+    </div>
+    <div id="acctStatus" class="acct-status"></div>
+    <div class="acct-split">
+      <div class="acct-col research">
+        <h3 class="col-h"><span class="prov r">Public sources</span> What CIP-015 requires and what Splunk Cloud offers</h3>
+        <div id="acctTiers" class="tiers"></div>
+        <div id="acctResearch" class="rcards"></div>
+      </div>
+      <div class="acct-col team">
+        <h3 class="col-h"><span class="prov a">Our work together</span> What we know together</h3>
+        <div id="acctPoints"></div>
+      </div>
+    </div>
+    <h3 class="sub-h">Current activity</h3>
+    <div id="acctActivities" class="acct-acts"></div>
+    <div class="acct-q"><h4>Open questions for your team</h4><ol id="acctQuestions"></ol></div>
+  </section>
+
+  <section id="story" class="sec">
+    <div class="sec-head"><div class="kicker">The thesis <span class="prov r sm">Public sources</span></div><h2>Three layers, one story</h2><p>Dominion is executing the largest build-out in its history while the threat to the grid has moved from "access" to "preparation for impact." This is not a SIEM conversation. It is about how every function runs on trusted data and safely governed agents, starting with the platform you already run.</p></div>
+    <div class="owned-base" id="owned"></div>
+    <div class="stack" id="stack"></div>
+    <div class="thesis" id="thesis"></div>
+  </section>
+
+  <section id="alignment" class="sec">
+    <div class="sec-head"><div class="kicker">Sourced alignment <span class="prov r sm">Public sources</span></div><h2>What Dominion is trying to accomplish, and where we help</h2><p>Each initiative comes from Dominion's public filings, earnings calls or regulatory dockets, mapped to how Splunk and Cisco can help. Superscripts link to the source list.</p></div>
+    <div class="align-tabs" role="tablist"><button class="on" data-view="cards">Initiative cards</button><button data-view="matrix">Initiative x product matrix</button></div>
+    <div id="alignCards" class="align-grid"></div>
+    <div id="alignMatrix" class="matrix-wrap hidden"></div>
+  </section>
+
+  <section id="threats" class="sec">
+    <div class="sec-head"><div class="kicker">Threat landscape <span class="prov r sm">Public sources</span></div><h2>What Dominion's peers and the sector are reporting</h2><p>These are sector-wide findings and AI-era risks reported by peers, regulators and threat researchers. Nothing here implies an incident at Dominion; it shows what your teams are defending against.</p></div>
+    <div id="threatGrid" class="threat-grid"></div>
+  </section>
+
+  <section id="personas" class="sec">
+    <div class="sec-head"><div class="kicker">Departments and personas <span class="prov r sm">Public sources</span></div><h2>Every department, every persona, multiple use cases</h2><p>Pick a department. Each persona lists the outcomes they own, use cases Splunk can support, and whether it runs on what you have today. Open the illustrative dashboard to see it in Splunk.</p></div>
+    <div id="deptTabs" class="dept-tabs"></div>
+    <div id="deptBody"></div>
+  </section>
+
+  <section id="dashboards" class="sec">
+    <div class="sec-head"><div class="kicker">Mock dashboards <span class="prov r sm">Public sources</span></div><h2>What each persona would see</h2><p>Illustrative Splunk Dashboard Studio views for your teams. Values tagged "reported" come from public sources; all other values are illustrative, not Dominion data.</p></div>
+    <div class="dash-wrap"><div id="dashList" class="dash-list"></div><div id="dashView" class="dash-view"></div></div>
+  </section>
+
+  <section id="agentic" class="sec">
+    <div class="sec-head"><div class="kicker">Cisco Cloud Control <span class="prov r sm">Public sources</span></div><h2>AgenticOps across Cisco, Splunk and everything else</h2><p>Unveiled at Cisco Live on June 2, 2026, Cloud Control is a unified platform for humans and AI agents: one login, one data layer, one system of action, with Splunk as the data fabric.</p></div>
+    <div id="pillars" class="pillars"></div>
+    <div id="constellation" class="constellation"></div>
+    <h3 class="sub-h">Agents we could build together in Cloud Control Studio</h3>
+    <div class="agent-wrap"><div id="agentList" class="agent-list"></div><div id="agentRun" class="agent-run"></div></div>
+  </section>
+
+  <section id="federal" class="sec">
+    <div class="sec-head"><div class="kicker">Mission assurance <span class="prov r sm">Public sources</span></div><h2>Supporting your DoD and DC-area federal customers</h2><p>Dominion owns and operates the electric systems on several installations, including the system that feeds the Pentagon. Your federal customers need proof of resilience, and the data to show it.</p></div>
+    <div id="federalBody" class="federal"></div>
+  </section>
+
+  <section id="plays" class="sec">
+    <div class="sec-head"><div class="kicker">Roadmap options <span class="prov r sm">Public sources</span></div><h2>Where we can help next</h2><p>Eight options, sequenced by business value and effort. Each shows how we would start, questions for a working session with your teams, and how you would measure success.</p></div>
+    <div class="plays-top"><div id="bubble" class="bubble"></div><div id="roadmap" class="roadmap"></div></div>
+    <div id="playCards" class="play-grid"></div>
+  </section>
+
+  <section id="sources" class="sec">
+    <div class="sec-head"><div class="kicker">Evidence</div><h2>Sources and method</h2></div>
+    <div class="method" id="method"></div>
+    <ol id="sourceList" class="source-list"></ol>
+  </section>
+</main>
+<footer class="foot"><p>Prepared by Splunk, a Cisco company, for Dominion Energy IT leadership from public information and our ongoing work together. Dashboards use illustrative data. Product capabilities, availability and authorizations are subject to confirmation for your environment. Cisco, the Cisco logo, Splunk and related marks are trademarks of Cisco Systems, Inc. and/or its affiliates. Dominion Energy and NextEra Energy are trademarks of their respective owners.</p></footer>
+
+<dialog id="scriptDlg" class="script-dlg"><form method="dialog"><button class="x" aria-label="Close">&times;</button></form><h3>Audio briefing script</h3><p class="note">The published edition plays a rendered MP3 (about 5:40). This single-file edition reads the same script with your browser's voice.</p><div id="scriptBody"></div></dialog>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

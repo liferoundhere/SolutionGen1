@@ -1,0 +1,240 @@
+[
+ {
+  "id": "sticky-lockup-nav",
+  "name": "Sticky top bar with three-part lockup and 12 anchors",
+  "category": "navigation",
+  "description": "Glass sticky header: Cisco bars logo, divider, splunk> 'a Cisco company', divider, customer name over 'IT leadership briefing'; 12 section anchors right-aligned; scrolls horizontally on mobile.",
+  "prompt_snippet": "Add a sticky glass top bar (rgba(2,7,16,.86), 14px blur) with a three-part lockup: the Cisco bars logo, 'splunk>' with 'a Cisco company', and the customer name over 'IT leadership briefing'. To the right, place 12 anchor links to each section. On mobile the links become one horizontally scrollable row and the page never scrolls sideways."
+ },
+ {
+  "id": "hex-twin-hero",
+  "name": "3D hex digital twin hero",
+  "category": "hero",
+  "description": "Full-bleed Three.js scene: service territory as an instanced hex-prism lattice with glowing region-colored edges over a cyan grid floor fading into blue fog; bloom.",
+  "prompt_snippet": "Build a full-viewport Three.js r169 hero that maps the customer's territory as short extruded hex prisms (near-black tops, glowing magenta, amber or cyan edges by region) on a cyan square-grid floor fading into deep-blue fog. Use UnrealBloom for glow and CSS2DRenderer for labels, and pause rendering when the hero scrolls off screen."
+ },
+ {
+  "id": "site-beacons",
+  "name": "Clickable site beacons with label pills",
+  "category": "3d",
+  "description": "Glowing orbs at each site's lat/lon, colored by department, with dark pill labels (colored dot + short name, italic place suffix for out-of-territory sites); the merger partner gets a light beam with a ground ring.",
+  "prompt_snippet": "Place 15 to 20 glowing site orbs at real lat/lon positions, colored by department. Label each with a dark pill holding a colored dot and the short name. Clicking a site shows a pulsing focus ring and opens a side drawer. Give the catalyst site (merger partner or flagship project) a tall light beam with a ground ring."
+ },
+ {
+  "id": "asset-drawer",
+  "name": "Asset drawer",
+  "category": "panel",
+  "description": "Right-side glass drawer for a selected site: department tag, name, function, cited 'What the public record says', 'Where Splunk and Cisco help', and buttons to the persona tab and the mock dashboard.",
+  "prompt_snippet": "When a site is clicked, slide in a right-side glass drawer with the department tag, site name, function line, a cited 'What the public record says' list and a 'Where Splunk and Cisco help' list. Add buttons for 'Personas and use cases' and 'Open mock dashboard'."
+ },
+ {
+  "id": "layer-chips",
+  "name": "Layer chips and Simulate attacks",
+  "category": "control",
+  "description": "Pill chips: All layers, Operations, + Splunk fabric, + Cloud Control (exactly one active, cyan fill), plus a red-outlined 'Simulate attacks' toggle below them.",
+  "prompt_snippet": "Put pill chips at the top right of the hero for All layers, Operations, + Splunk fabric and + Cloud Control, with one active at a time (solid cyan). Below them, add a red-outlined 'Simulate attacks' toggle that draws animated red attack arcs to OT and grid sites, with pulsing rings on the targets."
+ },
+ {
+  "id": "fabric-layer",
+  "name": "Splunk fabric layer",
+  "category": "3d",
+  "description": "Orange particle 'ingest' streams rising from every site into the fabric, a brighter grid and a magenta-bordered 'splunk> Cisco Data Fabric' callout listing platform products.",
+  "prompt_snippet": "For the '+ Splunk fabric' layer, add orange particles that rise from every site, brighten the grid floor, and float a magenta-bordered callout reading 'splunk> Cisco Data Fabric' with the customer's platform products listed beneath."
+ },
+ {
+  "id": "agentic-orbit",
+  "name": "Cloud Control agent orbit",
+  "category": "3d",
+  "description": "A bright core sphere above the territory with 2 or 3 elliptical rings and 8 clickable agent orbs orbiting; sky-blue action arcs from each orb to its department's site; a cyan 'Cisco Cloud Control AgenticOps' callout.",
+  "prompt_snippet": "For the '+ Cloud Control' layer, float a glowing core sphere above the map with tilted elliptical rings and 8 named agent orbs orbiting slowly. Draw thin sky-blue arcs from each agent down to its department's site. Clicking an agent scrolls to the agents section and opens that agent's run."
+ },
+ {
+  "id": "legend-strip",
+  "name": "Legend strip",
+  "category": "hero",
+  "description": "A pill at the bottom right with five swatches: territory, transmission, Splunk ingest, agent actions, threat path.",
+  "prompt_snippet": "Add a small legend pill at the bottom right of the hero with 14x3px color swatches for territory (slate), transmission (cyan), Splunk ingest (orange), agent actions (sky) and threat path (red)."
+ },
+ {
+  "id": "hero-title",
+  "name": "Three-run gradient H1 with kicker and lede",
+  "category": "hero",
+  "description": "A cyan uppercase 'Prepared for \u2026 IT leadership, Month Year' kicker; H1 '{Customer}, operated by agents, grounded in one data fabric' with a cyan gradient on run 2 and a magenta-to-orange gradient on run 3; a two-sentence lede.",
+  "prompt_snippet": "Open the hero rail with a cyan uppercase kicker 'Prepared for {customer} IT leadership, {month year}' and an 800-weight H1 in three runs. The customer name is white, 'operated by agents' uses a cyan gradient, and 'grounded in one data fabric' uses a magenta-to-orange gradient that spans the wrapped lines."
+ },
+ {
+  "id": "kpi-tiles",
+  "name": "KPI tiles with citations",
+  "category": "data",
+  "description": "A 3x2 grid of glass tiles, each with a bold value, a two-line muted label and numbered citation chips.",
+  "prompt_snippet": "Show six headline KPIs in a 3x2 grid of dark glass tiles, each with a bold value, a short muted label and numbered cyan citation chips that link to the source list."
+ },
+ {
+  "id": "citation-chips",
+  "name": "Numbered citation chips",
+  "category": "citation",
+  "description": "Small cyan-tinted square badges showing the source's ordinal number, linking to #src-sN with the source title as tooltip; the target flashes on arrival.",
+  "prompt_snippet": "After every sourced claim, add a tiny cyan-tinted square citation chip showing the source number. It links to that source in the list, uses the source title as its tooltip, and makes the target flash for 1.6 seconds."
+ },
+ {
+  "id": "story-card",
+  "name": "Story card with chapter playback",
+  "category": "story",
+  "description": "A glass card pinned at the bottom of the hero rail: orange chapter kicker plus 'n / 10', title, cited body, audio row, then \u2190, a gradient 'Play story' button, \u2192 and 10 dots. Each chapter flies the camera, sets a layer and focuses a site.",
+  "prompt_snippet": "Pin a glass story card to the bottom of the hero rail with 10 chapters (Prologue, Acts I to VIII, Epilogue). Each has an orange kicker, 'n / 10', a title and a cited body. Prev and next arrows, a gradient 'Play story' button (auto-advances every 9 seconds) and dots move the 3D camera over 2.6 seconds, switch the layer and focus a site."
+ },
+ {
+  "id": "audio-briefing",
+  "name": "Audio briefing player",
+  "category": "audio",
+  "description": "A 'Listen to the security briefing / 5 minute narrated overview' hero button, plus an audio row in the story card (equalizer pill, progress track, time, MP3 download). Chapter MP3s play in sequence and advance the story.",
+  "prompt_snippet": "Add an audio briefing: a hero 'Listen to the security briefing' button and, in the story card, a row with an animated equalizer pill, a progress bar, the elapsed time and an MP3 download chip. Play one TTS-rendered MP3 per chapter in sequence, advancing chapters as each ends. If no MP3 is present, fall back to browser speech synthesis with a viewable script."
+ },
+ {
+  "id": "lead-outcome-cards",
+  "name": "Leadership outcome cards and next steps",
+  "category": "section",
+  "description": "Six outcome cards tagged 'Builds on what you run' (magenta), 'Supports our current work' (orange) or 'Extends the platform' (cyan), each linking to a section, plus a numbered list of four proposed next steps.",
+  "prompt_snippet": "Create a 'For IT leadership' section with six outcome cards in three columns. Each card has a colored tag (builds on what you run / supports our current work / extends the platform), an outcome title, one sentence with citations, and 'Explore \u2192' linking to a deeper section. Follow them with four numbered proposed next steps."
+ },
+ {
+  "id": "provenance-labels",
+  "name": "Provenance labels",
+  "category": "citation",
+  "description": "Three pill badges, never mixed: Public sources (cyan), Our work together (magenta), Our recommendation (orange). A legend explains them.",
+  "prompt_snippet": "Label every block with one of three provenance pills: 'Public sources' (cyan, cited), 'Our work together' (magenta, account context) or 'Our recommendation' (orange, guidance). Show a legend at the top of the account section."
+ },
+ {
+  "id": "account-workstream",
+  "name": "Our work together: regulation-to-storage workstream",
+  "category": "section",
+  "description": "Two columns: numbered pipeline tiers and regulatory research cards on the left; collapsible known-insight groups with links to research on the right; then the current activity, 'How we can help' and open questions.",
+  "prompt_snippet": "Build an 'Our work together' section for the current engagement. On the left, numbered pipeline tiers (Collect, Route, Store, Search, Evidence) with product chips, and research cards for each regulatory requirement. On the right, collapsible groups of known insights that link to those cards. End with the current activity card and six open questions."
+ },
+ {
+  "id": "owned-base",
+  "name": "What you already run panel",
+  "category": "section",
+  "description": "The owned products, three counters (use cases on owned / extend / new capability), three motions and a caveat.",
+  "prompt_snippet": "Add a 'What you already run' panel that lists the products the customer owns. Count every persona use case as running entirely on owned products, extending them, or needing new capability, and show three counters. Add three motions: get more from what you own, extend the platform, connect across Cisco."
+ },
+ {
+  "id": "layer-stack",
+  "name": "Four-layer stack diagram",
+  "category": "diagram",
+  "description": "Stacked bands with colored left borders: Cisco Cloud Control, splunk> Data Fabric (owned items highlighted), Cisco infrastructure and security, customer business functions.",
+  "prompt_snippet": "Draw a four-layer stack from top to bottom: Cisco Cloud Control, the splunk> Data Fabric (owned products highlighted), Cisco infrastructure and security, and the customer's business functions. Give each layer a colored left band, its name, a subtitle, item chips and citations."
+ },
+ {
+  "id": "thesis-row",
+  "name": "Numbered thesis row",
+  "category": "section",
+  "description": "Five numbered claims in a row, each short and cited.",
+  "prompt_snippet": "Add a five-column row of numbered thesis statements (build-out, threat, operating model, AI in production, catalysts), each two sentences with citations."
+ },
+ {
+  "id": "initiative-cards-matrix",
+  "name": "Initiative cards and initiative x product matrix",
+  "category": "section",
+  "description": "Tabs switch between 12 cards (icon, cited evidence, challenge, Splunk and Cisco bullets, product chips, own-line) and a scrollable matrix of initiatives by products.",
+  "prompt_snippet": "Map 12 publicly sourced customer initiatives to Splunk and Cisco. Each card holds an icon, a cited 'Evidence' line, a 'Challenge', two bullet columns (Splunk, Cisco), product chips and an ownership line. Add a tab that switches to an initiative x product matrix with dot marks."
+ },
+ {
+  "id": "product-chips-ownline",
+  "name": "Product chips with ownership line",
+  "category": "data",
+  "description": "Splunk chips in magenta and Cisco chips in cyan; owned chips get a solid dot and included ones a dashed border. The own-line reads 'New use case on what you already run', 'Extends what you run' or 'New capability', with 'In place today' and 'Adds' lists.",
+  "prompt_snippet": "Render products as pill chips: magenta for Splunk, cyan for Cisco, a solid dot when the customer already runs it, and a dashed border when it is included in an owned SKU. Under each list, show an ownership line that classifies it and lists what is in place and what it adds."
+ },
+ {
+  "id": "threat-cards",
+  "name": "Threat cards with severity and Counter",
+  "category": "section",
+  "description": "Twelve sector-threat cards in a 3-column grid with a critical/high/medium severity tag and matching top border, a cited body, and a darker 'Counter' box naming controls.",
+  "prompt_snippet": "List 12 sector threats as cards. Each has a severity tag (critical red, high orange, medium yellow) with a matching top border, a short cited description, and a darker inset 'Counter' box naming the Splunk and Cisco controls. State that nothing implies an incident at the customer."
+ },
+ {
+  "id": "department-personas",
+  "name": "Department tabs and persona cards",
+  "category": "section",
+  "description": "Twelve department tabs; each shows three persona cards with an initials avatar, goal, three use cases with chips and own-lines, and an 'Open dashboard' button.",
+  "prompt_snippet": "Add department tabs (8 to 12). Each tab shows three persona cards with a colored initials avatar, role, goal and three numbered use cases, each with product chips and an ownership line, plus a button that opens that persona's mock dashboard."
+ },
+ {
+  "id": "mock-dashboards",
+  "name": "Illustrative Splunk dashboards",
+  "category": "data",
+  "description": "A list grouped by department beside a Dashboard Studio mock: app bar, filters, owned/adds tag, 'Illustrative data' tag, and a 12-column grid of panels (kpi + sparkline, line, bars, hbars, donut, gauge, heat, table, tiles, agent trace feed, SPL).",
+  "prompt_snippet": "Build a mock Splunk Dashboard Studio viewer: a grouped list on the left, and on the right a dark app bar, filter pills, an 'Illustrative data' tag and a 12-column grid of SVG panels (KPI with sparkline, line, bars, donut, gauge, heatmap, table with severity pills, status tiles, agent reasoning feed, SPL code). Seed the random data so it stays stable."
+ },
+ {
+  "id": "capability-cards",
+  "name": "Cloud Control capability cards",
+  "category": "section",
+  "description": "Four cards with cyan top borders: One login, one data layer \u00b7 Agent Builder \u00b7 App Builder \u00b7 Governed and observed, each cited.",
+  "prompt_snippet": "Add four Cisco Cloud Control capability cards (one login and data layer, Agent Builder, App Builder, governed and observed), each with a cyan top border, two sentences and citations."
+ },
+ {
+  "id": "ecosystem-constellation",
+  "name": "Product ecosystem constellation",
+  "category": "diagram",
+  "description": "Four columns: Cisco chips, a central 'Cisco Cloud Control on the Splunk data fabric' core with two animated rings, Splunk chips (owned/included states), and third-party chips plus dashed customer MCP targets.",
+  "prompt_snippet": "Draw an ecosystem diagram with Cisco product chips on the left, a glowing 'Cisco Cloud Control / on the Splunk data fabric' core with two rotating rings in the center, Splunk chips (owned and included states) on the right, and third-party integrations plus dashed 'customer-relevant targets via MCP' chips."
+ },
+ {
+  "id": "agent-run",
+  "name": "Agent list and animated run trace",
+  "category": "section",
+  "description": "Eight agents listed beside a run card: trigger, Splunk data as index= code chips, tools, AI Defense guardrail, then eight typed steps (Signal, Reason, Tool, Proposal, Human, Action, Verify) revealed one by one, with Replay and assurance tags.",
+  "prompt_snippet": "List 8 agents you could build in Cloud Control Studio. Selecting one shows its trigger, Splunk indexes as code chips, tools and AI Defense guardrail, then animates eight color-coded steps (Signal, Reason, Tool, Proposal, Human approval, Action, Verify) with a 'Replay run' button and three assurance tags."
+ },
+ {
+  "id": "mission-section",
+  "name": "Mission or federal customers section",
+  "category": "section",
+  "description": "Two columns: cited installations and relationships; what mission customers need, a numbered 'How we help', an authorization caveat and an open-dashboard button.",
+  "prompt_snippet": "Add a mission-assurance section for the customer's federal or critical customers: a cited list of installations on the left; their needs, five numbered ways we help, an authorization caveat and an 'Open dashboard' button on the right."
+ },
+ {
+  "id": "value-effort-bubble",
+  "name": "Value vs effort bubble chart",
+  "category": "diagram",
+  "description": "A 520x340 SVG plotting impact against effort, with a green-tinted 'Quick wins' quadrant and numbered colored bubbles sized by product count; clicking a bubble scrolls to its play.",
+  "prompt_snippet": "Plot the roadmap options in an SVG bubble chart of business impact (y) against effort (x), with a tinted 'Quick wins' quadrant, numbered bubbles colored per option, and a legend. Clicking a bubble scrolls to that option's card."
+ },
+ {
+  "id": "roadmap-sequencing",
+  "name": "Now / Next / Then roadmap",
+  "category": "diagram",
+  "description": "Three columns with colored headers (cyan, orange, magenta) and stacked items anchored to cited deadlines, plus a caveat that lists the anchors.",
+  "prompt_snippet": "Add a 'Sequencing' roadmap of three columns, 'Now', 'Next' and 'Then', with colored headers and stacked initiative items timed to the customer's cited deadlines, plus a caveat line listing the date anchors."
+ },
+ {
+  "id": "play-cards",
+  "name": "Roadmap play cards",
+  "category": "section",
+  "description": "Eight cards: number badge, title, 'horizon | impact x/10 | effort y/10', cited why, how we would start, questions for a working session, how you would measure it, product chips and own-line.",
+  "prompt_snippet": "For each of the 8 roadmap options, add a card with a number badge, title, horizon and impact/effort scores, a cited 'why', a three-step 'How we would start', 'Questions for a working session', 'How you would measure it', product chips and an ownership line."
+ },
+ {
+  "id": "sources-method",
+  "name": "Sources and method",
+  "category": "citation",
+  "description": "Six method notes (public sources with cut-off date, sector patterns, illustrative dashboards, what you run today, how to read labels, confirmed during design), then a 2-column ordered source list with li#src-sN, title links and 'Org, date'.",
+  "prompt_snippet": "End with 'Sources and method': six short method notes (including the research cut-off date and the no-incident statement), then an ordered two-column list of every source with id src-sN, a title link that opens in a new tab, and 'Org, date'."
+ },
+ {
+  "id": "footer-disclaimer",
+  "name": "Footer disclaimer",
+  "category": "navigation",
+  "description": "A prepared-by line, illustrative-data note, availability caveat and trademarks.",
+  "prompt_snippet": "Close with a muted footer: prepared by Splunk, a Cisco company, from public information and our work together; dashboards are illustrative; availability is subject to confirmation; Cisco, Splunk and customer trademark notes."
+ },
+ {
+  "id": "webgl-fallback",
+  "name": "WebGL guard and render pause",
+  "category": "behavior",
+  "description": "WebGL is checked before the scene chunk loads; without it a 'brief below is fully readable' note shows. An IntersectionObserver pauses the render loop off screen; reduced motion stops drift and rings.",
+  "prompt_snippet": "Feature-detect WebGL before dynamically importing the scene module; if it is missing, show 'WebGL is not available in this browser. The brief below is fully readable.' Pause the render loop with an IntersectionObserver when the hero is off screen, and respect prefers-reduced-motion."
+ }
+]

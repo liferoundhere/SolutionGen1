@@ -1,0 +1,14 @@
+{
+  "name": "cisco-3d-stage",
+  "private": true,
+  "type": "module",
+  "description": "Cisco-branded 3D stage presentation: slide-deck navigation through Three.js worlds, presenter tools, and an optional narrated film edition.",
+  "scripts": {
+    "serve": "python3 -m http.server 8765",
+    "review": "node tools/review.mjs http://localhost:8765/",
+    "narration": "node tools/export_narration.mjs tmp/narr.json && python3 tools/gen_audio.py tmp/narr.json ../narrated/audio",
+    "docs": "node tools/gen_docs.mjs ../narrated/audio/manifest.json",
+    "narrated": "bash tools/sync_narrated.sh"
+  },
+  "devDependencies": { "puppeteer-core": "^23.0.0" }
+}
