@@ -164,6 +164,8 @@ textarea.code { font-family: var(--f-mono); font-size: 0.8rem; }
 .preset-opt:has(input:checked) { border-color: var(--blue); background: rgba(0, 188, 235, 0.1); }
 .preset-opt:has(input:focus-visible) { outline: 2px solid var(--blue); outline-offset: 2px; }
 .note { font-size: 0.8rem; color: var(--muted); }
+.req { font-family: var(--f-mono); font-size: 0.66rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--amber); }
+button:disabled { opacity: 0.45; cursor: not-allowed; }
 .el-head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
 .els { display: flex; flex-direction: column; gap: 4px; max-height: 360px; overflow: auto; padding-right: 4px; }
 .el { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 10px; padding: 7px 8px; border-radius: 10px; cursor: pointer; align-items: start; }
@@ -274,7 +276,7 @@ footer { margin-top: 36px; color: var(--muted); font-size: 0.8rem; max-width: 90
   <div class="wrap topbar-in">
     <div class="brand">
       <svg viewBox="0 0 36 20" aria-hidden="true"><g fill="currentColor"><rect x="1" y="14" width="2" height="5" rx="1"/><rect x="5" y="9" width="2" height="10" rx="1"/><rect x="9" y="3" width="2" height="16" rx="1"/><rect x="13" y="9" width="2" height="10" rx="1"/><rect x="17" y="14" width="2" height="5" rx="1"/><rect x="21" y="9" width="2" height="10" rx="1"/><rect x="25" y="3" width="2" height="16" rx="1"/><rect x="29" y="9" width="2" height="10" rx="1"/><rect x="33" y="14" width="2" height="5" rx="1"/></g></svg>
-      <span>Cisco Solutions Generator <small>· four formats, four prompts</small></span>
+      <span>Cisco Solutions Generator <small>· five formats, one brief</small></span>
     </div>
     <nav class="tabs" aria-label="Views">
       <a href="#gallery" data-view="gallery">Gallery</a>
@@ -290,11 +292,11 @@ footer { margin-top: 36px; color: var(--muted); font-size: 0.8rem; max-width: 90
     <div class="hero">
       <div class="text">
         <div class="eyebrow">01 · Gallery</div>
-        <h1 id="g-title">Four formats, each on its own stack. <span class="grad">Rebuilt from its own prompt.</span></h1>
-        <p class="lead">Each type was studied from one of your published originals: its tech stack, layout, design tokens, components and interaction model. That study became the type's prompt, and the rebuild shown here was built from that prompt.</p>
+        <h1 id="g-title">Five formats from one kind of brief. <span class="grad">Each one shaped to its customer.</span></h1>
+        <p class="lead">Eight published builds, five formats: an explorable briefing, a narrated talk, a leadership twin page, a mission globe and a living operations twin. Each was studied for what made it work, and the shared ingredients now go into every prompt.</p>
       </div>
       <div class="notice">
-        <span><b>Rebuild and original, side by side.</b> Thumbnails marked "orig" are screenshots of your original; the rest are the rebuild. Open the rebuild to use it.</span>
+        <span><b>References, not templates.</b> Every format here came from the same short, intent-first brief; the model chose the form for each customer. Thumbnails marked "orig" are your originals. The prompt points the model at these builds as the bar, not as a spec.</span>
         <span>Only the FutureSE talk uses the cisco-3d-stage skill, because that talk is where the skill came from. The other three have no deck navigation, no presenter camera box and no narrated talk track.</span>
       </div>
     </div>
@@ -316,12 +318,12 @@ footer { margin-top: 36px; color: var(--muted); font-size: 0.8rem; max-width: 90
     <div class="hero">
       <div class="text">
         <div class="eyebrow">02 · Compose</div>
-        <h1 id="c-title">Pick a format. <span class="grad">Get the prompt that builds it.</span></h1>
-        <p class="lead">Each format has its own prompt, written from a study of the original: stack and versions, layout, tokens, components, data model and review steps. Fill the fields, keep or drop the format's elements, borrow elements from other formats, and copy.</p>
+        <h1 id="c-title">Write the brief. <span class="grad">Let the model make the masterpiece.</span></h1>
+        <p class="lead">Every reference build came from the same short, intent-first brief: medium, customer, story and audience, key items, research, one shot, time and masterpiece. Compose builds that brief for you, adds the format as a live reference and the ingredients the best builds share, and leaves the design to the model.</p>
       </div>
       <div class="notice">
-        <span><b>Before you paste.</b> Use Claude Code in an empty folder. Type B also needs the cisco-3d-stage skill installed (see Setup); types A, C and D are self-contained.</span>
-        <span id="exampleBar"><b>Sample values filled in.</b> The made-up sample customer for each format comes from its field examples. <button type="button" id="clearBtn" class="small">Clear fields</button></span>
+        <span><b>Before you paste.</b> Use Claude Code (or Cursor) in an empty folder, with web access so it can research and open the reference builds. Type B also needs the cisco-3d-stage skill (see Setup).</span>
+        <span id="exampleBar"><b>Sample values filled in.</b> Northwind Health is a made-up customer. <button type="button" id="clearBtn" class="small">Clear fields</button></span>
       </div>
     </div>
     <div class="voice-cta">
@@ -339,13 +341,15 @@ footer { margin-top: 36px; color: var(--muted); font-size: 0.8rem; max-width: 90
           <legend><span class="eyebrow">02</span><span id="fieldsTitle">Details</span></legend>
           <div class="row2" id="fieldsShort"></div>
           <div class="stack" id="fieldsLong"></div>
-          <div class="btns"><button type="button" class="small" id="sampleBtn">Fill with sample values</button></div>
+          <div class="btns"><button type="button" class="small" id="sampleBtn">Fill with sample values</button><button type="button" class="small" id="clearBtn2">Clear</button></div>
         </fieldset>
         <fieldset>
-          <legend><span class="eyebrow">03</span>Elements</legend>
-          <div class="el-head"><span class="note" id="elCount"></span><span class="btns"><button type="button" class="small" id="elAll">Keep all</button><button type="button" class="small" id="elNone">Drop all</button></span></div>
-          <div class="els" id="ownEls"></div>
-          <details class="more"><summary>Add elements from other formats</summary><div id="otherEls"></div></details>
+          <legend><span class="eyebrow">03</span>Ingredients</legend>
+          <div class="el-head"><span class="note" id="elCount"></span><span class="btns"><button type="button" class="small" id="elAll">All on</button><button type="button" class="small" id="elNone">All off</button></span></div>
+          <span class="note">What every reference build shares. Each one adds a single line to the prompt.</span>
+          <div class="els" id="dnaList" style="max-height:none"></div>
+          <details class="more"><summary>Borrow signature elements (optional)</summary><span class="note">Specific features from the reference builds. Each adds its own instruction.</span><div id="otherEls"></div></details>
+          <label class="el" id="appendixRow" style="padding:0;border-top:1px solid var(--line);padding-top:12px;border-radius:0"><input type="checkbox" id="appendix"><span><b>Include the technical appendix</b><small>Optional. Adds the detailed spec reverse engineered from the reference build (layout, tokens, stack versions, data schema). Leave off to let the model design for this customer; turn on for a close copy of the reference.</small></span></label>
         </fieldset>
         <fieldset>
           <legend><span class="eyebrow">04</span>Guardrails</legend>
@@ -390,7 +394,7 @@ footer { margin-top: 36px; color: var(--muted); font-size: 0.8rem; max-width: 90
       <div class="text">
         <div class="eyebrow">03 · Setup</div>
         <h1 id="i-title">Set up once. <span class="grad">Paste a prompt, get the format.</span></h1>
-        <p class="lead">Types A, C and D carry their whole design and tech spec inside the prompt, so they need only Claude Code and Node. Type B, the narrated talk, runs on the cisco-3d-stage skill, which you install once.</p>
+        <p class="lead">Every prompt is a short brief that the model expands through research, so all it needs is Claude Code (or Cursor) with web access and Node. Type B, the narrated talk, also runs on the cisco-3d-stage skill, which you install once.</p>
       </div>
       <div class="notice warn">
         <span><b>Missing from the skill pack.</b> cisco-3d-stage says it extends a base skill called <span class="mono">cisco-branded</span> (palette, type, glass and scroll explainers). It was not in the zip you uploaded. Type B works without it.</span>
@@ -555,15 +559,15 @@ function renderDeck() {
         <dt>Palette</dt><dd><div class="sw-row">${d.tokens.map(c => `<span style="background:${c}" title="${c}"></span>`).join("")}</div></dd>
       </dl>
       <div class="btns">
-        <a class="btn primary" href="${d.live}" target="_blank" rel="noopener"><span class="dot"></span>Open the rebuild</a>
+        ${d.file ? `<a class="btn primary" href="${d.live}" target="_blank" rel="noopener"><span class="dot"></span>Open the rebuild</a>` : ""}
         ${d.narrated ? `<a class="btn" href="${d.narrated}" target="_blank" rel="noopener">Narrated edition</a>` : ""}
-        <a class="btn" href="${d.original}" target="_blank" rel="noopener">Original</a>
+        ${(d.refs || [["Original", d.original]]).map(([n, u], i) => `<a class="btn ${!d.file && i === 0 ? "primary" : ""}" href="${u}" target="_blank" rel="noopener">${!d.file && i === 0 ? '<span class="dot"></span>' : ""}${esc(n)}</a>`).join("")}
       </div>
       <div class="btns">
         <a class="btn small" href="#compose" data-use="${d.key}">Use this format</a>
-        <button type="button" class="small" data-dl="kits/${t.slug}-PROMPT.md" data-name="${t.slug}-prompt-template.md">Prompt template</button>
+        ${t.template ? `<button type="button" class="small" data-dl="kits/${t.slug}-PROMPT.md" data-name="${t.slug}-prompt-template.md">Technical appendix</button>` : ""}
         ${d.spec ? `<button type="button" class="small" data-dl="kits/${t.slug}-SPEC.md" data-name="${t.slug}-design-spec.md">Design and tech spec</button>` : ""}
-        <button type="button" class="small" data-dl="${d.file}" data-name="${d.fileName}">Rebuild (.html)</button>
+        ${d.file ? `<button type="button" class="small" data-dl="${d.file}" data-name="${d.fileName}">Rebuild (.html)</button>` : ""}
       </div>
       <div class="toast" id="deckToast" role="status"></div>
       <p class="status-note">${esc(d.note)}</p>
@@ -580,59 +584,137 @@ $("deckDetail").addEventListener("click", e => {
 });
 
 /* composer */
-const KEY = "csg-draft-v3";
-let state = { type: "A", values: {}, drop: {}, add: {}, guards: {}, sharing: "herenow", notes: "" };
+const KEY = "csg-draft-v4";
+let state = { type: "A", values: {}, add: {}, dna: {}, guards: {}, sharing: "herenow", notes: "", appendix: false };
 try { const s = JSON.parse(localStorage.getItem(KEY) || "null"); if (s && TYPES[s.type]) state = Object.assign(state, s); } catch (e) {}
 
-/* Guardrails: the core operating principles. On = build mode (one shot, no questions, finish inside the budget, masterpiece).
-   Off = the model works with the user on that point instead. */
+/* The prompt is built the way the eight reference builds were briefed: a short, intent-first brief in eight blocks
+   (medium, customer, story and audience, key items, research, one shot, time, masterpiece). Formats describe the
+   experience and point at live reference builds; they are inspiration, not a spec. The detailed spec is an optional appendix. */
+const FORMATS = {
+  A: { medium: "an explorable briefing: one screen built around a live 3D scene that the audience explores on their own or follows as a short guided story",
+    refs: ["https://rapid-rafter-dk38.here.now/"],
+    experience: [
+      "Open on a short intro with two ways in: start the guided story, or explore freely.",
+      "A live 3D scene is the stage: the customer's real network or footprint, plus one representative site modeled in detail that you can switch to.",
+      "Every scenario can be shown without Cisco, with Cisco, or both side by side, and the scene itself changes: blind spots and threat paths without, sensors, segmentation and telemetry with.",
+      "Panels let the audience browse along the navigation axes (for example personas, technology, scenarios and places), with a detail panel for whatever they pick.",
+      "A guided story of six to eight steps walks the room through the key moments; sources and assumptions are one click away."],
+    navigate: "persona or by technology", device: "tell every scenario with Cisco and without",
+    discussPh: "e.g. how to secure the wayside infrastructure",
+    extra: [] },
+  B: { medium: "an interactive 3D stage presentation built with the cisco-3d-stage skill, which I can present live and also share as a self-playing narrated film",
+    refs: ["https://brisk-valley-7hw3.here.now/"],
+    experience: [
+      "It moves like a deck through a row of lit 3D worlds: arrow keys and clicks step through animations, up and down skip scenes, every scene is its own world reached by a camera flight.",
+      "Every scene shows its idea as an object or a system, and every click changes the world, not just the text; the sky and a particle field change on every scene.",
+      "A glass HUD carries a numbered eyebrow and a two-clause headline whose outcome clause is a gradient; notes are written to be spoken.",
+      "The presenter gets a camera box, a presenter window, an off-camera talking-points window and a printable talk track; a live workshop scene is optional.",
+      "A second, narrated edition plays by itself with neural voices, an AI narrator that says it is AI, word-highlighted captions and chapters."],
+    navigate: "chapter and scene", device: "move each idea from the old way to the new way, one click at a time",
+    discussPh: "e.g. how account teams can brief AI like a teammate",
+    extra: [{ key: "MINUTES", label: "Talk length (minutes)", hint: "About 150 spoken words per minute", ph: "e.g. 20", example: "20", type: "number" }] },
+  C: { medium: "a leadership briefing page: a 3D twin of their territory at the top, and the story and evidence below it, so a leadership team can read it on its own after the meeting",
+    refs: ["https://hollow-flame-f2tf.here.now/"],
+    experience: [
+      "The page opens on a full-width 3D twin of the customer's territory and sites, with layer controls that add one layer of the story at a time (operations, the data platform, the control plane, a simulated attack).",
+      "Beside the twin: a headline, a handful of cited KPI tiles, and a short chaptered story with an audio briefing that moves the camera chapter by chapter.",
+      "Below it, a sticky section bar leads into the evidence: what this means for the audience, the work already under way, alignment to their public priorities, threats each paired with a counter, departments and personas, illustrative dashboards, the Cisco capabilities, a roadmap, and numbered sources.",
+      "Every claim carries a numbered citation; anything modeled or illustrative is labeled."],
+    navigate: "section, layer and department", device: "pair every threat or challenge with how Cisco counters it",
+    discussPh: "e.g. how the platform they run today supports their business initiatives and compliance",
+    extra: [] },
+  D: { medium: "a mission globe: a cinematic 3D globe of their real locations where each location holds a mission, with three ways to use it (present, play and learn)",
+    refs: ["https://rosy-beacon-q5c8.here.now/"],
+    experience: [
+      "Open on an intro with three modes: Present (a narrated executive tour), Play (pick a mission, make the call at a decision point, get scored) and Learn (trace each IT signal to a business KPI, with discovery questions and a quiz).",
+      "Each mission is a weak signal at a real location that becomes a business problem unless someone acts; the viewer sees it play out both ways on a timeline and the value protected, labeled modeled.",
+      "A mission rail with business-function filters, product windows that open beside the scene, a running score with badges, a live ticker and a narration dock complete the experience.",
+      "Every dollar figure carries its basis and is labeled modeled; a disclaimer says no internal customer data is used."],
+    navigate: "mission, location and business function", device: "play every mission the traditional way and the Cisco way, and show the value protected",
+    discussPh: "e.g. how acting on weak signals early protects revenue and customer promises",
+    extra: [{ key: "MISSIONS", label: "Number of missions", hint: "Each at a different real location", ph: "e.g. 10", example: "10", type: "number" }] },
+  E: { medium: "a living 3D digital twin of their site",
+    refs: ["https://topaz-kernel-3cga.here.now/", "https://dapper-ginger-cs9a.here.now/"],
+    experience: [
+      "Model their real site as the stage (a campus, an airport, a plant, a hub): buildings, floors or zones and the routes people and things move along, labeled with their real names.",
+      "The site is alive: a clock you can speed up, time of day, weather, and people and assets moving through it.",
+      "Stories are the way in: many scenarios, each a named character's moment or a timed event (a 3 AM alarm, a storm, a surge), played out on the twin with and without Cisco.",
+      "Lenses re-color the same world for each audience or domain (operations, security, AI, the Cisco portfolio), with an inspector for anything you click and live KPIs and dashboards for each lens.",
+      "A narrated guided tour on first open, plus journeys and free exploration.",
+      "A sources and methodology panel separates public facts from simulated metrics and fictional characters."],
+    navigate: "persona, lens or journey", device: "play every scenario on the twin with Cisco and without",
+    discussPh: "e.g. how one connected fabric keeps clinical operations running through a storm",
+    extra: [{ key: "SITE", label: "Site or campus to model", hint: "Optional. Leave empty and the model picks the most telling one", ph: "e.g. their flagship hospital campus", example: "", type: "text" }] }
+};
+ORDER.push("E");
+
+/* Core fields shared by every format, in the order of the brief. Values start empty; the placeholders show the kind of answer. */
+const CORE = [
+  { key: "CUSTOMER", label: "Account", ph: "e.g. MedStar Health", req: true },
+  { key: "WHERE", label: "Where they are", ph: "e.g. headquartered in Columbia, Maryland, with hospitals across Maryland, Washington DC and Virginia", req: true },
+  { key: "DISCUSS", label: "What to discuss", req: true, type: "textarea" },
+  { key: "AUDIENCE", label: "Who is in the room", ph: "e.g. the CISO and the CIO", req: true },
+  { key: "NAVIGATE", label: "Navigate by", hint: "How the audience moves through it" },
+  { key: "DEVICE", label: "Story device", hint: "How every scenario is told" },
+  { key: "INCLUDE", label: "Must include", hint: "Products, moments, must-haves", ph: "e.g. ThousandEyes, ISE, Cyber Vision, Catalyst Center, Cisco Cloud Control", req: true, type: "textarea" },
+  { key: "EXCLUDE", label: "Must not mention", hint: "Optional", ph: "e.g. Splunk" },
+  { key: "INTEGRATE", label: "Call out integrations with", hint: "Optional. Their own tools", ph: "e.g. Microsoft Sentinel" },
+  { key: "HOURS", label: "Time budget (hours)", ph: "e.g. 2", req: true, type: "number" },
+  { key: "PRESENTER", label: "Presenter", hint: "Optional", ph: "e.g. your name, Solutions Engineer, Cisco" }
+];
+const SAMPLE = { CUSTOMER: "Northwind Health (sample)", WHERE: "a regional health system with five hospitals and 40 clinics across Ohio, headquartered in Columbus",
+  DISCUSS: "how one connected network and security fabric keeps clinical operations running through outages and storms", AUDIENCE: "the CIO, the CISO and the VP of Clinical Operations",
+  INCLUDE: "ThousandEyes, Cisco Spaces, ISE, Secure Access, Cisco Cloud Control", EXCLUDE: "", INTEGRATE: "Epic and Microsoft Sentinel", HOURS: "2", PRESENTER: "" };
+function fieldsFor(k) {
+  const F = FORMATS[k];
+  const core = CORE.map(f => Object.assign({}, f, {
+    ph: f.key === "DISCUSS" ? F.discussPh : f.key === "NAVIGATE" ? "e.g. " + F.navigate : f.key === "DEVICE" ? "e.g. " + F.device : f.ph,
+    example: f.key === "NAVIGATE" ? F.navigate : f.key === "DEVICE" ? F.device : (SAMPLE[f.key] ?? ""), type: f.type || "text" }));
+  return [...core.slice(0, 10), ...F.extra, core[10]];
+}
+ORDER.forEach(k => { TYPES[k].fields = fieldsFor(k); });
+
+/* What every reference build shares. On by default; each one is a single line in the prompt. */
+const DNA = [
+  { id: "place", name: "Their real place is the stage", line: "Their real place is the stage: model the customer's actual sites, buildings, routes or territory with their real names, so it could not be re-skinned for another account." },
+  { id: "people", name: "People are the way in", line: "People are the way in: composite characters with a role, a place and a day; real leaders only by their public titles, from public pages." },
+  { id: "stories", name: "Scenarios are stories with a clock", line: "Scenarios are stories with a clock and tension: named, timed moments (\"8:05 AM, the EHR slows\", \"the 3 AM alarm\", \"the storm hits\"), not feature names." },
+  { id: "lenses", name: "Several lenses on one world", line: "Several lenses on one world: the same scene re-read by persona, by technology, by domain or by business outcome." },
+  { id: "before", name: "Before and after", line: "Before and after: every scenario shown the old way and the Cisco way, and the difference made visible in the scene, not only in text." },
+  { id: "guided", name: "A guided way in plus free exploration", line: "A guided way in plus free exploration: a short tour or story for the room, and the freedom to wander afterwards." },
+  { id: "living", name: "A living world", line: "A living world: time, motion and sound where they help the story (a clock, weather, people and data moving, narration)." },
+  { id: "honest", name: "An honesty layer", line: "An honesty layer: a sources and methodology panel with an as-of date; every item labeled public, modeled or illustrative; fictional characters and simulated metrics disclosed." },
+  { id: "depth", name: "Depth that rewards exploring", line: "Depth that rewards exploring: enough sites, people, scenarios and sources that a curious executive keeps finding real detail; density of real detail over decoration." }
+];
+function dnaOn(id) { return state.dna[id] !== false; }
+
+/* Guardrails: the core operating principles. On = build it (one shot, no questions, the time budget, make it real then perfect,
+   a masterpiece). Off = the model works with the user on that point. */
 const GUARDS = [
-  { id: "oneshot", name: "One shot", desc: "Go from this prompt straight to a finished build. No plan, outline or storyboard for approval.",
-    on: () => "**One shot.** This is a one-shot brief, not the start of a conversation. Do not present a plan, an outline, a storyboard, a scene list or design options for approval, and do not pause between phases to check in. Go from this message straight to a finished, working build, and report only when it is done.",
-    off: () => "**Plan with me.** Start by proposing an outline of what you will build (sections or scenes, the data you will research, the main design choices) and wait for my approval before you build. Check in again after the first working version." },
-  { id: "noq", name: "No questions", desc: "Never ask. Decide like a strong practitioner and record every assumption.",
-    on: () => "**No questions.** Do not ask me anything: not before you start, not during, not at the end. Where something is missing, vague or contradictory, make the decision a senior Cisco solutions engineer and a top creative technologist would make together, write it down in the assumptions list the format provides (or in the README), and keep going. A reasonable assumption is always better than a question.",
-    off: () => "**Ask what you need.** Before you start, ask me the questions you need answered: at most eight, grouped, each with the default you would choose if I do not answer. Then continue." },
-  { id: "time", name: "Time budget", desc: "Use the hours given: research, make it real, then make it perfect. Cut scope, never quality.",
-    on: v => `**Time budget.** You have ${v.HOURS && String(v.HOURS).trim() ? String(v.HOURS).trim() + " hours" : "[HOURS] hours"} of focused work, and you are expected to use them. Spend roughly 15% researching, 45% getting a complete working version, and 40% raising it to the bar. Ship inside the budget. When time runs short, cut scope, never quality: a smaller thing that is finished and polished beats a bigger thing that is not.`,
-    off: () => "**Effort.** There is no fixed time budget. Before you build, tell me roughly how long each part will take so we can decide together what to include." },
-  { id: "real", name: "Make it real, then make it perfect", desc: "First a complete version that runs end to end with real content, then review and refine in passes.",
-    on: () => "**Make it real, then make it perfect.** First make it real: a complete version that runs end to end, with the customer's real content in every part, no placeholders, no lorem ipsum, no \"coming soon\" and no dead buttons. Then make it perfect: open it in a browser at laptop and phone sizes, look at every view and state, fix the weakest thing, and repeat. Stop only when it is a masterpiece by your own judgment or the time budget is spent.",
-    off: () => "**Draft first.** After the first working version, stop and show me what you have before you polish it, so I can steer the refinement." },
-  { id: "master", name: "Create a masterpiece", desc: "A broad approval: the model decides what a masterpiece is. Add your own examples or the gallery's quality bar below if you want to steer it.",
-    on: () => {
-      const out = ["**Create a masterpiece.** It will be shown to customer executives by Cisco sellers, solutions engineers and customer success managers. What a masterpiece is, is yours to decide."];
-      const ex = (state.mpExamples || "").trim();
-      if (ex) out.push("Here are examples of what a masterpiece looks like to me. Treat them as the bar to clear, not as templates to copy:\n\"\"\"\n" + ex + "\n\"\"\"");
-      if (state.mpBar) out.push(
-        "Qualities the reference builds behind this format share, as a floor rather than a ceiling:",
-        "- Unmistakably about this customer: their real places, operations, vocabulary and public priorities; it could not be re-skinned for another account by swapping the logo.",
-        "- A story with a point of view: the tension, the turn and the outcome, in business terms an executive repeats afterwards.",
-        "- Every interaction earns its place: each click, layer or step changes what you see and teaches something.",
-        "- Honest: public facts cited, modeled and illustrative content labeled, no invented numbers, quotes or names.",
-        "- One coherent visual system: deliberate type, color and spacing, crisp text, nothing overlapping.",
-        "- Works on first open: fast, no blank or broken states, no console errors, good on a laptop and a phone.",
-        "AI slop to avoid: generic gradients and glass on everything without purpose; emoji as icons; centered grids of identical cards; decorative 3D that means nothing; stock phrases such as \"unlock\", \"seamless\", \"leverage\", \"game-changer\"; feature lists instead of a story; made-up statistics; placeholder or generic company content; fake testimonials; tiny or low-contrast labels; layouts that break at other sizes; controls that do nothing.");
-      return out.join("\n");
-    },
-    off: () => "**Quality.** Aim for a clean, professional first version. I will direct the polish." }
+  { id: "oneshot", name: "One shot", desc: "Go from this prompt straight to a finished build. No plan, outline or storyboard for approval." },
+  { id: "noq", name: "No questions", desc: "Never ask. Make reasonable assumptions and document them." },
+  { id: "time", name: "Time budget", desc: "Use the hours given. Cut scope, never quality." },
+  { id: "real", name: "Make it real, then make it perfect", desc: "A complete version with real content first, then refine it in passes in a browser." },
+  { id: "master", name: "Create a masterpiece", desc: "A broad approval: the model decides what a masterpiece is. Add examples below if you want to steer it." }
 ];
 function guardOn(id) { return state.guards[id] !== false; }
 
 /* What the model shows for approval in guided mode, per format */
 const SCRIPT = {
-  A: "the briefing script: the tagline, the network map and the site you will model, every persona (role, place, what they care about, label), every scenario with its Without and With step lists and outcome, the places with sources, the 6 to 8 guided story steps, and the assumptions list",
-  B: "the talk script: the scene list (id, chapter eyebrow, title, gradient outcome clause, lead, layout and the 3D world you will build), then for each scene the beats and the spoken notes for every click, plus where the workshop and the film pause go",
-  C: "the briefing script: the hero headline and the six KPIs with their sources, the ten story chapters with the narration for each, the twin layers and sites, every section in order with its cards, the threats with their counters, the roadmap options, and the numbered source list",
-  D: "the mission script: every mission (location, business function lenses, situation, signals, the three options with feedback, outcome and modeled value with its basis), the executive tour chapters and narration, the academy chains, discovery questions and quiz items"
+  A: "the briefing script: the places and the site you will model, every persona, every scenario with its without and with steps and outcome, the guided story steps, the sources and the assumptions",
+  B: "the talk script: the scene list (chapter eyebrow, headline, outcome clause, layout and the 3D world for each scene), then the beats and spoken notes for every click",
+  C: "the briefing script: the headline and cited KPIs, the story chapters with their narration, the twin layers and sites, every section in order, the threats with their counters, the roadmap and the sources",
+  D: "the mission script: every mission (location, functions, situation, signals, the options with feedback, outcome and modeled value with its basis), the executive tour, the academy chains, discovery questions and quiz",
+  E: "the twin script: the site and zones you will model, the people (role, place, day), every scenario with its time, trigger, without and with outcome, the lenses and KPIs, the guided tour beats, and the sources"
 };
 
 /* Agent Skills the build should use for its visuals. use: required | recommended | optional, per format */
 const SKILLS = [
-  { id: "cisco-3d-stage", use: { A: "optional", B: "required", C: "optional", D: "optional" },
+  { id: "cisco-3d-stage", use: { A: "optional", B: "required", C: "optional", D: "optional", E: "optional" },
     purpose: { B: "the stage engine, scene recipes, presenter tools, narrated edition and review tools this format is built on",
-      _: "its Cisco palette, type and glass tokens, crisp overlay labels after bloom, and its headless review tools; use them for the visuals but keep this format's own layout and stack" } },
-  { id: "cisco-branded", use: { A: "recommended", B: "recommended", C: "recommended", D: "recommended" },
+      _: "its Cisco palette, type and glass tokens, crisp overlay labels after bloom, and its headless review tools; use them for the visuals but keep this format's own layout" } },
+  { id: "cisco-branded", use: { A: "recommended", B: "recommended", C: "recommended", D: "recommended", E: "recommended" },
     purpose: { _: "the base Cisco design system: palette, type, logo usage, glass and scroll explainers" } }
 ];
 function skillOn(id) { const s = (state.skills || {})[state.type] || {}; const def = SKILLS.find(x => x.id === id); return s[id] ?? (def ? def.use[state.type] !== "optional" : true); }
@@ -641,45 +723,117 @@ function activeSkills() {
   (state.customSkills || []).filter(n => n.trim()).forEach(n => list.push({ id: n.trim(), level: "recommended", purpose: "a skill you added; use it wherever it applies" }));
   return list;
 }
-const INSTALL_HELP = "Install it from the Setup tab of the Cisco Solutions Generator. In Claude Code, copy the skill folder to ~/.claude/skills/ (or .claude/skills/ in this project) and run /reload-skills if needed. In the Claude app, upload the zip under Customize, then Skills. In Cursor, copy the folder to ~/.cursor/skills/.";
+const INSTALL_HELP = "It is available from the Setup tab of the Cisco Solutions Generator; in Claude Code, copy the skill folder to ~/.claude/skills/ and run /reload-skills.";
 function skillsBlock(oneShot) {
   const list = activeSkills(); if (!list.length) return "";
   const lines = list.map(s => `- \`${s.id}\` (${s.level}): ${s.purpose}.`).join("\n");
-  const check = "Check that each one is actually installed before you do anything else: list your skills (in Claude Code, run /skills), or look for `<name>/SKILL.md` under `~/.claude/skills/`, `.claude/skills/` in this project, or your tool's skills folder. Do not assume a skill is there because this prompt names it. For every skill you find, read its SKILL.md and the reference files it points to, and use them in every visual decision: brand rules, logo use, type, motion, craft techniques and review. Where a skill and this prompt disagree, follow the skill on Cisco brand rules (logo, approved colors, type) and follow this prompt on the format, layout, stack and this format's own design tokens.";
+  const check = "Check that each one is installed before you start: list your skills (in Claude Code, run /skills), or look for `<name>/SKILL.md` under `~/.claude/skills/`, `.claude/skills/` in this project, or your tool's skills folder. For every skill you find, read its SKILL.md and the files it points to, and use them in every visual decision. Follow a skill on Cisco brand rules (logo, approved colors, type); follow this brief on the format and the story.";
   const missing = oneShot
-    ? "If a skill is missing, do not stop and do not ask. Build from the design system this prompt specifies, and put a short note at the top of the README naming the missing skill, what it would add and how to install it. " + INSTALL_HELP + (list.some(s => s.level === "required") ? " If a required skill is missing, also say so in one line at the start of your final report." : "")
-    : "If you cannot find a skill, stop before you build anything. Tell me which skill is missing, what it adds to this build, and how to install it. " + INSTALL_HELP + " Then ask whether I want to install it now or continue without it. When I say it is installed, check again and confirm you can read its SKILL.md." + (list.some(s => s.level === "required") ? " Do not build without a required skill unless I explicitly tell you to." : "");
-  return "## Skills for the visuals\nThis build relies on these Agent Skills:\n" + lines + "\n\n" + check + "\n\n" + missing;
+    ? "If a skill is missing, do not stop and do not ask: build anyway, and note the missing skill, what it would add and how to install it at the top of the README. " + INSTALL_HELP
+    : "If you cannot find a skill, stop before you build. Tell me which skill is missing, what it adds and how to install it. " + INSTALL_HELP + " Ask whether to install it now or continue without it, and check again when I say it is installed." + (list.some(s => s.level === "required") ? " Do not build without a required skill unless I tell you to." : "");
+  return "## Skills for the visuals\n" + lines + "\n\n" + check + "\n\n" + missing;
 }
 
-function guardrailsBlock(v) {
-  const oneShot = guardOn("oneshot");
-  if (oneShot) {
-    const allOn = GUARDS.every(g => guardOn(g.id));
-    const head = allOn ? "## Operating rules\nThese rules come first and override anything later in this prompt that suggests stopping, planning for approval or asking questions."
-      : "## Operating rules\nThese rules come first and override anything later in this prompt. Some points are build-it-yourself and some are work-with-me, as marked.";
-    return [head, ...GUARDS.map(g => (guardOn(g.id) ? g.on(v) : g.off(v))), skillsBlock(true)].filter(Boolean).join("\n\n");
+const PUB = { herenow: "Publish it to a public, shareable link (here.now works well; Netlify Drop, surge.sh or GitHub Pages also work) and open the link to verify it loads.",
+  private: "Do not publish publicly. I will host it behind access control; give me the build output ready for a static host.",
+  zip: "Do not publish. Give me the build output and a zip of the source project without node_modules, tmp or credentials." };
+
+function vals() { if (!state.values[state.type]) state.values[state.type] = Object.fromEntries(TYPES[state.type].fields.map(f => [f.key, ""])); return state.values[state.type]; }
+const has = x => x != null && String(x).trim() !== "";
+const tv = x => String(x).trim().replace(/[.\s]+$/, "");
+
+function build() {
+  const k = state.type, F = FORMATS[k], v = vals(), oneShot = guardOn("oneshot");
+  const missing = TYPES[k].fields.filter(f => f.req && !has(v[f.key])).map(f => f.key);
+  const ph = key => "[" + key + "]";
+  const val = key => has(v[key]) ? tv(v[key]) : ph(key);
+  const nav = has(v.NAVIGATE) ? tv(v.NAVIGATE) : F.navigate, dev = has(v.DEVICE) ? tv(v.DEVICE) : F.device;
+  const hours = has(v.HOURS) ? tv(v.HOURS) : ph("HOURS");
+
+  /* 1. The brief: eight blocks, intent only */
+  const brief = [];
+  brief.push(`Build ${k === "B" ? F.medium : "an interactive Three.js (npm) 3D web app, a single self-contained file I can present and share as a link: " + F.medium}.`);
+  brief.push(`The customer is ${val("CUSTOMER")}, ${val("WHERE")}. Show their real places and the people in them.`);
+  brief.push(`I want to discuss ${val("DISCUSS")}. The audience is ${val("AUDIENCE")}. Organize it so they can navigate by ${nav}, and ${dev}.`);
+  let items = `It must include: ${val("INCLUDE").replace(/\n+/g, ", ")}.`;
+  if (has(v.EXCLUDE)) items += ` Do not mention ${tv(v.EXCLUDE)} anywhere.`;
+  if (has(v.INTEGRATE)) items += ` Call out integration points with ${tv(v.INTEGRATE)} wherever they genuinely exist, and describe them accurately.`;
+  if (k === "B" && has(v.MINUTES)) items += ` The talk runs about ${tv(v.MINUTES)} minutes.`;
+  if (k === "D" && has(v.MISSIONS)) items += ` Build ${tv(v.MISSIONS)} missions, each at a different real location.`;
+  if (k === "E" && has(v.SITE)) items += ` Model ${tv(v.SITE)}.`;
+  if (has(v.PRESENTER)) items += ` The presenter is ${tv(v.PRESENTER)}.`;
+  brief.push(items);
+  brief.push("Research is mandatory: research the customer's business, initiatives, public challenges and outages, and locations, then research the Cisco solutions through that lens. Cite sources and label modeled data.");
+  if (oneShot && guardOn("noq")) brief.push("Do not ask me any questions. This is a one-shot task. Make reasonable assumptions and document them.");
+  else if (oneShot) brief.push("This is a one-shot task. Before you start, you may ask me up to eight grouped questions, each with the default you would choose; then make reasonable assumptions, document them, and build without stopping again.");
+  else brief.push(guardOn("noq") ? "We will work in stages (see How we will work). Do not send me lists of questions; make reasonable assumptions and document them where I can correct them." : "We will work in stages (see How we will work).");
+  if (guardOn("time")) brief.push(`You have ${hours} hours of work.`);
+  if (guardOn("master")) {
+    let m = "Create a masterpiece.";
+    if (has(state.mpExamples)) m += ` Here is what a masterpiece looks like to me; treat it as the bar to clear, not a template: ${tv(state.mpExamples).replace(/\n+/g, "; ")}.`;
+    brief.push(m);
   }
-  // Guided mode: one shot is off, so the model works through stages with the user and stops at each gate.
-  const t = state.type, h = v.HOURS && String(v.HOURS).trim() ? String(v.HOURS).trim() + " hours" : "the time budget";
-  const stages = [];
-  const sk = activeSkills();
-  if (sk.length) stages.push(`**Stage 1. Skills check.** Confirm the skills listed in "Skills for the visuals" below are installed and readable. If any is missing, stop here and help me install it before going on.`);
-  stages.push(guardOn("noq")
-    ? `**Stage ${stages.length + 1}. Assumptions.** Do not send me a list of questions. Make the calls yourself and list every assumption at the top of the script in the next stage, so I can correct them there.`
-    : `**Stage ${stages.length + 1}. Questions.** Ask me what you need to know before you research: at most eight questions, grouped, each with the default you would choose if I do not answer. Wait for my answers.`);
-  stages.push(`**Stage ${stages.length + 1}. Research and script for approval.** Research the customer and the Cisco content first, then show me ${SCRIPT[t]}. Wait for my approval or changes, and revise the script until I approve it.`);
-  stages.push(`**Stage ${stages.length + 1}. Build the first version.** Build exactly what I approved. ${guardOn("time") ? `Work within ${h}: about 15% research, 45% to a complete working version, 40% refinement; cut scope, never quality.` : "Before you start, tell me roughly how long each part will take so we can agree on scope."} ${guardOn("real") ? "Make it real: a complete version that runs end to end with the real content in every part, no placeholders and no dead controls." : ""} Then show me screenshots at laptop and phone sizes, list what you would improve, and wait for my feedback.`);
-  stages.push(`**Stage ${stages.length + 1}. Make it perfect.** Apply my feedback, then keep refining in passes: review every view and state in a browser, fix the weakest thing, and repeat. Check in with me after each pass with what changed, until I say it is done.`);
-  const quality = guardOn("master") ? GUARDS.find(g => g.id === "master").on(v) : GUARDS.find(g => g.id === "master").off(v);
-  return ["## How we will work\nThese rules come first and override anything later in this prompt. Guide me through this build in stages, and stop at the end of each stage for my go-ahead. Never skip a stage gate.", ...stages, quality, skillsBlock(false)].filter(Boolean).join("\n\n");
+  const head = oneShot
+    ? "## The brief\nThis brief comes first and overrides anything later that suggests stopping for approval or asking questions."
+    : "## The brief";
+
+  /* 2. The format: the experience, with live references */
+  const fmt = [`## The format: ${TYPES[k].name}`,
+    "Shape it like this, adapted to this customer's world. Treat it as a starting point; if the research shows a better form for this customer, use it.",
+    F.experience.map(x => "- " + x).join("\n"),
+    `Reference builds that cleared the bar (open them if you can; aim for similar ambition and craft, not a copy): ${F.refs.join(" and ")}`].join("\n\n");
+
+  /* 3. What the best builds share */
+  const dna = DNA.filter(d => dnaOn(d.id));
+  const dnaBlock = dna.length ? "## What the best builds share\n" + dna.map(d => "- " + d.line).join("\n") : "";
+
+  /* 4. Signature elements borrowed on request */
+  const added = Object.keys(state.add).filter(id => state.add[id]).map(id => { const [kk, eid] = id.split(":"); const e = (TYPES[kk].elements || []).find(x => x.id === eid); return e ? Object.assign({ from: TYPES[kk].name }, e) : null; }).filter(Boolean);
+  const elBlock = added.length ? "## Also include these elements\n" + added.map(e => `- ${e.name} (from the ${e.from} format). ${e.snip}`).join("\n") : "";
+
+  /* 5. How to work */
+  let work;
+  if (oneShot) {
+    const w = [];
+    w.push("1. **Research, then write yourself a brief.** Research first (use web search). Then, before writing code, write `research-notes.md`: the customer's real places with names, the people by role, their operations and assets, public incidents, outages and initiatives, the regulatory frame, each Cisco product seen through that lens with citations, the scenarios you will tell, and your assumptions. Do not show it to me for approval; build from it.");
+    if (guardOn("real")) {
+      w.push("2. **Make it real.** Build a complete version that runs end to end, with the researched content in every part: no placeholders, no lorem ipsum, no dead controls.");
+      w.push("3. **Make it perfect.** Open it in a browser at laptop and phone sizes, look at every view and state, fix the weakest thing, and repeat until it is a masterpiece by your own judgment or the time is spent.");
+    } else w.push("2. **Draft first.** After the first working version, stop and show me screenshots before you polish, so I can steer the refinement.");
+    if (guardOn("time")) w.push(`Spend roughly 15% of the ${hours} hours on research, 45% on a complete working version and 40% on refinement. When time runs short, cut scope, never quality.`);
+    else w.push("There is no fixed time budget; before you build, tell me roughly how long each part will take so we can agree on scope.");
+    work = "## How to work\n" + w.join("\n");
+  } else {
+    const st = [];
+    if (activeSkills().length) st.push("**Stage 1. Skills check.** Confirm the skills in Skills for the visuals are installed and readable; if any is missing, stop and help me install it.");
+    st.push(guardOn("noq") ? `**Stage ${st.length + 1}. Assumptions.** Make the calls yourself and list every assumption at the top of the script in the next stage, so I can correct them there.`
+      : `**Stage ${st.length + 1}. Questions.** Ask me up to eight grouped questions, each with the default you would choose. Wait for my answers.`);
+    st.push(`**Stage ${st.length + 1}. Research and script for approval.** Research first, write research-notes.md with citations, then show me ${SCRIPT[k]}. Revise it until I approve.`);
+    st.push(`**Stage ${st.length + 1}. First version.** Build exactly what I approved${guardOn("time") ? ` within ${hours} hours` : ", after telling me roughly how long each part will take"}. ${guardOn("real") ? "Make it real: real content everywhere, no placeholders and no dead controls. " : ""}Show me screenshots at laptop and phone sizes and wait for my feedback.`);
+    st.push(`**Stage ${st.length + 1}. Make it perfect.** Apply my feedback and refine in passes, checking in after each one, until I say it is done.`);
+    work = "## How we will work\nGuide me through this build in stages and stop at the end of each stage for my go-ahead. Never skip a stage gate.\n\n" + st.join("\n\n") + (guardOn("master") ? "" : "\n\n**Quality.** Aim for a clean, professional first version; I will direct the polish.");
+  }
+
+  /* 6. Deliverables and proof */
+  const deliver = ["## Deliverables",
+    "- " + (k === "B" ? "The presenter edition and the narrated edition, built from the skill's starter." : "One self-contained HTML file (bundle everything inline, for example with Vite and vite-plugin-singlefile) that works from a link or from the file."),
+    "- " + PUB[state.sharing],
+    "- Two or three screenshots, taken after you tested it visually in a browser.",
+    "- research-notes.md with the sources (URLs) and the assumptions; the same sources and assumptions are also reachable inside the app.",
+    "- Never use em dashes in any text you write. No hardcoded credentials or keys anywhere.",
+    "- Report back the link, the file paths and a short summary of the structure and the key assumptions."].join("\n");
+
+  const parts = [head + "\n\n" + brief.join("\n\n"), fmt, dnaBlock, elBlock, work, skillsBlock(oneShot), deliver];
+  if (state.notes.trim()) parts.push(`## Private context from customer calls\nUse this to frame the content only. Do not show it, quote it, or name people from it unless they also appear in public sources.\n"""\n${state.notes.trim()}\n"""`);
+  if (state.appendix && TYPES[k].template) {
+    let t = TYPES[k].template.replace(/\{\{([A-Z_]+)\}\}/g, (m, key) => key === "STORYBOARD" ? "" : key === "PUBLISHING" ? PUB[state.sharing] : has(v[key]) ? tv(v[key]) : "[" + key + "]");
+    parts.push("## Appendix: technical reference from the original build\nOptional detail from the reference build. Use what helps; where it conflicts with the brief or with this customer's world, the brief wins.\n\n" + t);
+  }
+  if (oneShot && GUARDS.every(g => guardOn(g.id))) parts.push(`## Start now\nOne shot, no questions, ${hours} hours, make it real and then make it perfect, and create a masterpiece. Begin with the research.`);
+  else if (!oneShot) parts.push("## Start now\nBegin with stage 1, and stop at each stage gate for my go-ahead.");
+  return { txt: parts.filter(Boolean).join("\n\n"), missing };
 }
-function guardrailsReminder(v) {
-  if (!guardOn("oneshot")) return "## Start now\nBegin with stage 1, and stop at each stage gate for my go-ahead.";
-  if (!GUARDS.every(g => guardOn(g.id))) return "";
-  const h = v.HOURS && String(v.HOURS).trim() ? String(v.HOURS).trim() + " hours" : "the time budget";
-  return "## Start now\nOne shot, no questions, " + h + ", make it real and then make it perfect, and create a masterpiece. Begin with the research and do not stop until it is finished.";
-}
+
 function renderGuards() {
   $("guards").innerHTML = GUARDS.map(g => `<label class="el"><input type="checkbox" data-guard="${g.id}" ${guardOn(g.id) ? "checked" : ""}><span><b>${esc(g.name)}</b><small>${esc(g.desc)}</small></span></label>`).join("");
   $("mpOpts").hidden = !guardOn("master");
@@ -695,8 +849,6 @@ function renderSkills() {
   $("skillsNote").textContent = guardOn("oneshot") ? "One shot: the model checks for these and, if one is missing, builds anyway and notes it in the README." : "Guided: the model checks for these first and stops to help you install any that are missing.";
 }
 function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
-function vals() { if (!state.values[state.type]) state.values[state.type] = Object.fromEntries(TYPES[state.type].fields.map(f => [f.key, f.example])); return state.values[state.type]; }
-function dropSet() { return state.drop[state.type] || (state.drop[state.type] = []); }
 
 $("presetRow").innerHTML = ORDER.map(k => {
   const d = DECKS.find(x => x.key === k);
@@ -705,57 +857,31 @@ $("presetRow").innerHTML = ORDER.map(k => {
 
 function renderFields() {
   const t = TYPES[state.type], v = vals();
-  $("fieldsTitle").textContent = `${t.name} details`;
+  $("fieldsTitle").textContent = "The brief";
   const field = f => {
     const id = "fld-" + f.key, val = esc(v[f.key] ?? "");
-    const lab = `<label class="lab" for="${id}">${esc(f.label)}${f.hint ? ` <span class="hint">${esc(f.hint)}</span>` : ""}</label>`;
+    const lab = `<label class="lab" for="${id}">${esc(f.label)}${f.req ? ' <span class="req">required</span>' : ""}${f.hint ? ` <span class="hint">${esc(f.hint)}</span>` : ""}</label>`;
     // numbers take dictated words like "twenty", so they render as text with a numeric keyboard hint
-    const ctl = f.type === "textarea" ? `<textarea id="${id}" data-key="${f.key}" rows="3">${val}</textarea>`
-      : `<input type="text" ${f.type === "number" ? 'inputmode="decimal"' : ""} id="${id}" data-key="${f.key}" value="${val}">`;
+    const ctl = f.type === "textarea" ? `<textarea id="${id}" data-key="${f.key}" rows="2" placeholder="${esc(f.ph || "")}">${val}</textarea>`
+      : `<input type="text" ${f.type === "number" ? 'inputmode="decimal"' : ""} id="${id}" data-key="${f.key}" value="${val}" placeholder="${esc(f.ph || "")}">`;
     return `<div class="f">${lab}<div class="fwrap">${ctl}<button type="button" class="mic" data-mic="${id}" aria-label="Dictate into ${esc(f.label)}"></button></div><div class="live" id="live-${id}"></div></div>`;
   };
   $("fieldsShort").innerHTML = t.fields.filter(f => f.type !== "textarea").map(field).join("");
   $("fieldsLong").innerHTML = t.fields.filter(f => f.type === "textarea").map(field).join("");
-  const isSample = t.fields.every(f => (v[f.key] ?? "") === f.example);
-  $("exampleBar").hidden = !isSample;
+  $("exampleBar").hidden = v.CUSTOMER !== SAMPLE.CUSTOMER;
   paintMics($("f"));
 }
 function renderElements() {
-  const t = TYPES[state.type], drop = dropSet(), add = state.add;
-  $("ownEls").innerHTML = t.elements.map(e => `<label class="el"><input type="checkbox" data-own="${e.id}" ${drop.includes(e.id) ? "" : "checked"}><span><b>${esc(e.name)}</b><span class="c">${esc(e.cat)}</span><small>${esc(e.desc)}</small></span></label>`).join("");
-  $("otherEls").innerHTML = ORDER.filter(k => k !== state.type).map(k => `<div class="grp"><span class="eyebrow">${k} · ${esc(TYPES[k].name)}</span><div class="els">${
-    TYPES[k].elements.map(e => { const id = k + ":" + e.id; return `<label class="el"><input type="checkbox" data-add="${id}" ${add[id] ? "checked" : ""}><span><b>${esc(e.name)}</b><span class="c">${esc(e.cat)}</span><small>${esc(e.desc)}</small></span></label>`; }).join("")}</div></div>`).join("");
+  $("dnaList").innerHTML = DNA.map(d => `<label class="el"><input type="checkbox" data-dna="${d.id}" ${dnaOn(d.id) ? "checked" : ""}><span><b>${esc(d.name)}</b><small>${esc(d.line.split(": ").slice(1).join(": "))}</small></span></label>`).join("");
+  $("otherEls").innerHTML = ORDER.filter(k => (TYPES[k].elements || []).length).map(k => `<div class="grp"><span class="eyebrow">${k} · ${esc(TYPES[k].name)}</span><div class="els">${
+    TYPES[k].elements.map(e => { const id = k + ":" + e.id; return `<label class="el"><input type="checkbox" data-add="${id}" ${state.add[id] ? "checked" : ""}><span><b>${esc(e.name)}</b><span class="c">${esc(e.cat)}</span><small>${esc(e.desc)}</small></span></label>`; }).join("")}</div></div>`).join("");
+  const hasApp = !!TYPES[state.type].template;
+  $("appendixRow").hidden = !hasApp; $("appendix").checked = !!state.appendix;
   updateElCount();
 }
 function updateElCount() {
-  const t = TYPES[state.type], kept = t.elements.length - dropSet().length, added = Object.keys(state.add).filter(k => state.add[k] && !k.startsWith(state.type + ":")).length;
-  $("elCount").textContent = `${kept} of ${t.elements.length} kept${added ? ` · ${added} added from other formats` : ""}`;
-}
-const PUB = { herenow: "Publish the finished file to here.now and give me the link and its claim URL. Keep any account key in the CLI credential file, never in the project.",
-  private: "Do not publish. I will host it behind access control; give me the build output ready for a static host.",
-  zip: "Do not publish. Give me the build output and a zip of the source project without node_modules, tmp or credentials." };
-function build() {
-  const t = TYPES[state.type], v = vals(), drop = dropSet();
-  const missing = [];
-  let txt = t.template.replace(/\{\{([A-Z_]+)\}\}/g, (m, k) => {
-    if (k === "STORYBOARD") return "";
-    if (k === "PUBLISHING") return PUB[state.sharing];
-    const x = v[k];
-    if (x == null || !String(x).trim()) { if (!missing.includes(k)) missing.push(k); return "[" + k + "]"; }
-    return String(x).trim();
-  });
-  const extra = [];
-  const dropped = t.elements.filter(e => drop.includes(e.id));
-  if (dropped.length) extra.push("## Leave these out\nThe spec above includes them, but this build does not need them. Leave them out and keep everything else consistent:\n" + dropped.map(e => `- ${e.name}`).join("\n"));
-  const added = Object.keys(state.add).filter(id => state.add[id] && !id.startsWith(state.type + ":")).map(id => { const [k, eid] = id.split(":"); return TYPES[k].elements.find(e => e.id === eid); }).filter(Boolean);
-  if (added.length) extra.push("## Also include\nAdd these elements from other formats, restyled to this format's design tokens and layout:\n" + added.map(e => `- ${e.name}. ${e.snip}`).join("\n"));
-  if (!t.template.includes("{{PUBLISHING}}")) extra.push("## Publishing\n" + PUB[state.sharing]);
-  if (state.notes.trim()) extra.push(`## Private context from customer calls\nUse this to frame the content only. Do not show it, quote it, or name people from it unless they also appear in public sources.\n"""\n${state.notes.trim()}\n"""`);
-  const rem = guardrailsReminder(v); if (rem) extra.push(rem);
-  txt = guardrailsBlock(v) + "\n\n---\n\n" + txt;
-  if (extra.length) txt += "\n\n" + extra.join("\n\n");
-  if (guardOn("time") && !(v.HOURS && String(v.HOURS).trim()) && !missing.includes("HOURS")) missing.push("HOURS");
-  return { txt, missing };
+  const n = DNA.filter(d => dnaOn(d.id)).length, added = Object.keys(state.add).filter(k => state.add[k]).length;
+  $("elCount").textContent = `${n} of ${DNA.length} shared ingredients on${added ? ` · ${added} signature element${added > 1 ? "s" : ""} added` : ""}`;
 }
 let current = "";
 function render() {
@@ -764,13 +890,15 @@ function render() {
   $("prompt").innerHTML = esc(txt).replace(/^(#{1,3} .+)$/gm, '<span class="h">$1</span>').replace(/\[([A-Z][A-Z_]+)\]/g, "<mark>[$1]</mark>");
   $("meter").textContent = `${txt.split(/\s+/).length.toLocaleString()} words · ~${Math.round(txt.length / 4).toLocaleString()} tokens`;
   const labelOf = k => (TYPES[state.type].fields.find(f => f.key === k) || { label: k }).label;
-  $("missing").innerHTML = missing.length ? `<span class="hint">Still to fill:</span>` + missing.map(m => `<span class="chip">${esc(labelOf(m))}</span>`).join("") : `<span class="chip green">All fields filled</span>`;
+  $("missing").innerHTML = missing.length ? `<span class="hint">Required, still to fill:</span>` + missing.map(m => `<span class="chip">${esc(labelOf(m))}</span>`).join("") : `<span class="chip green">Brief complete</span>`;
+  $("copyBtn").disabled = missing.length > 0; $("dlPrompt").disabled = missing.length > 0;
+  $("copyBtn").title = missing.length ? "Fill the required fields first" : "";
   save();
 }
 function setType(k) {
   state.type = k;
   document.querySelectorAll("input[name=preset]").forEach(r => r.checked = r.value === k);
-  renderFields(); renderElements(); if (typeof renderSkills === "function" && $("skillsList")) renderSkills(); render();
+  renderFields(); renderElements(); renderSkills(); render();
 }
 $("presetRow").addEventListener("change", e => { if (e.target.name === "preset") setType(e.target.value); });
 $("f").addEventListener("input", e => {
@@ -782,12 +910,12 @@ $("f").addEventListener("input", e => {
 });
 $("f").addEventListener("change", e => {
   const el = e.target;
-  if (el.dataset.own) { const d = dropSet(), i = d.indexOf(el.dataset.own); if (el.checked && i >= 0) d.splice(i, 1); if (!el.checked && i < 0) d.push(el.dataset.own); updateElCount(); }
+  if (el.dataset.dna) { state.dna[el.dataset.dna] = el.checked; updateElCount(); }
   else if (el.dataset.add) { state.add[el.dataset.add] = el.checked; updateElCount(); }
   else if (el.dataset.guard) { state.guards[el.dataset.guard] = el.checked; renderGuards(); renderSkills(); }
   else if (el.dataset.skillUse) { state.skills = state.skills || {}; (state.skills[state.type] = state.skills[state.type] || {})[el.dataset.skillUse] = el.checked; }
   else if (el.id === "skillAdd") return;
-  else if (el.id === "mpBar") state.mpBar = el.checked;
+  else if (el.id === "appendix") state.appendix = el.checked;
   else if (el.id === "sharing") state.sharing = el.value;
   render();
 });
@@ -803,9 +931,10 @@ function addSkill() {
 $("skillAddBtn").addEventListener("click", addSkill);
 $("skillAdd").addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); addSkill(); } });
 $("skillsList").addEventListener("click", e => { const b = e.target.closest("[data-skill-del]"); if (!b) return; state.customSkills.splice(+b.dataset.skillDel, 1); renderSkills(); render(); });
-$("elAll").addEventListener("click", () => { state.drop[state.type] = []; renderElements(); render(); });
-$("elNone").addEventListener("click", () => { state.drop[state.type] = TYPES[state.type].elements.map(e => e.id); renderElements(); render(); });
-$("sampleBtn").addEventListener("click", () => { state.values[state.type] = Object.fromEntries(TYPES[state.type].fields.map(f => [f.key, f.example])); renderFields(); render(); });
+$("elAll").addEventListener("click", () => { DNA.forEach(d => state.dna[d.id] = true); renderElements(); render(); });
+$("elNone").addEventListener("click", () => { DNA.forEach(d => state.dna[d.id] = false); renderElements(); render(); });
+$("sampleBtn").addEventListener("click", () => { state.values[state.type] = Object.fromEntries(TYPES[state.type].fields.map(f => [f.key, f.example ?? ""])); renderFields(); render(); });
+$("clearBtn2").addEventListener("click", () => $("clearBtn").click());
 $("clearBtn").addEventListener("click", () => { state.values[state.type] = Object.fromEntries(TYPES[state.type].fields.map(f => [f.key, ""])); renderFields(); $("exampleBar").hidden = true; render(); });
 
 function toast(msg, err) { const t = $("toast"); t.className = err ? "toast err" : "toast"; t.textContent = msg; clearTimeout(toast.t); toast.t = setTimeout(() => t.textContent = "", 3500); }
@@ -850,7 +979,7 @@ function renderSetup() {
     { k: "upload", t: "Upload-ready skill", d: "Only the cisco-3d-stage folder, zipped the way the Claude app expects.", size: "3.3 MB" }
     , { k: "local", t: "This generator, for live dictation", d: "The composer as one HTML file. Open it in Chrome or Edge to dictate straight into every field and run the spoken questionnaire with your microphone. Gallery images stay online.", size: "single file" }
   ].map(x => `<div class="dl"><b>${x.t}</b><span class="muted" style="font-size:0.86rem">${x.d}</span><span class="size">${SKILL_FILES[x.k].name} · ${x.size}</span><button type="button" class="primary small" style="width:fit-content" data-skill="${x.k}">Download</button></div>`).join("") +
-    ORDER.map(k => { const t = TYPES[k], d = DECKS.find(x => x.key === k); return `<div class="dl"><b>${k} · ${esc(t.name)} kit</b><span class="muted" style="font-size:0.86rem">The prompt template${d && d.spec ? " and the design and tech spec reverse engineered from the original" : ""}.</span><span class="btns"><button type="button" class="small" data-kit="kits/${t.slug}-PROMPT.md" data-name="${t.slug}-prompt-template.md">Prompt</button>${d && d.spec ? `<button type="button" class="small" data-kit="kits/${t.slug}-SPEC.md" data-name="${t.slug}-design-spec.md">Spec</button>` : ""}</span></div>`; }).join("");
+    ORDER.filter(k => TYPES[k].template).map(k => { const t = TYPES[k], d = DECKS.find(x => x.key === k); return `<div class="dl"><b>${k} · ${esc(t.name)} kit</b><span class="muted" style="font-size:0.86rem">The technical appendix${d && d.spec ? " and the design and tech spec reverse engineered from the original" : ""}.</span><span class="btns"><button type="button" class="small" data-kit="kits/${t.slug}-PROMPT.md" data-name="${t.slug}-prompt-template.md">Prompt</button>${d && d.spec ? `<button type="button" class="small" data-kit="kits/${t.slug}-SPEC.md" data-name="${t.slug}-design-spec.md">Spec</button>` : ""}</span></div>`; }).join("");
   $("platformTabs").innerHTML = PLATFORMS.map((p, i) => `<button type="button" aria-pressed="${i === 0}" data-p="${p.id}">${p.name}</button>`).join("");
   $("panes").innerHTML = PLATFORMS.map((p, i) => `<div class="pane" data-pane="${p.id}" ${i ? "hidden" : ""}><ol class="steps">${INSTALL[p.id].map(st => `<li><div class="body"><b>${st.t}</b>${st.d ? `<span class="muted">${st.d}</span>` : ""}${(st.cmds || []).map(cmdBlock).join("")}</div></li>`).join("")}</ol></div>`).join("");
 }
@@ -941,7 +1070,7 @@ function qaSteps() {
   return [{ kind: "type" }, ...t.fields.map(f => ({ kind: "field", f })), { kind: "notes" }, { kind: "review" }];
 }
 function qaQuestion(s) {
-  if (s.kind === "type") return ["Which format fits the room?", "Say explorable briefing, talk, leadership page or mission globe, or tap one."];
+  if (s.kind === "type") return ["Which format fits the room?", "Say explorable briefing, talk, leadership page, mission globe or operations twin, or tap one."];
   if (s.kind === "notes") return ["Anything from customer calls I should know?", "Optional. It frames the content and is never shown. Say skip if there is nothing."];
   if (s.kind === "review") return ["Here is what you said.", "Check it, then apply it to the form. You can fix anything in the form afterwards."];
   return [s.f.label + "?", s.f.hint || ""];
@@ -972,8 +1101,10 @@ function qaPickType(t) {
   const c = t.toLowerCase();
   if (/explor|brief(ing)? a\b|\btype a\b|wayside|csx/.test(c)) return "A";
   if (/talk|film|narrat|deck|futurese|\btype b\b/.test(c)) return "B";
-  if (/leader|twin|page|scroll|dominion|\btype c\b/.test(c)) return "C";
+  if (/operations twin|campus|hospital|airport|\bsite\b|\btype e\b/.test(c)) return "E";
+  if (/leader|page|scroll|dominion|\btype c\b/.test(c)) return "C";
   if (/mission|globe|game|metlife|\btype d\b/.test(c)) return "D";
+  if (/twin/.test(c)) return "E";
   return null;
 }
 function qaRender() {

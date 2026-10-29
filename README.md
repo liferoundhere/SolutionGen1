@@ -2,9 +2,9 @@
 
 **Turn a customer conversation into a customer-specific, interactive 3D story, from one prompt.**
 
-The Cisco Solutions Generator is for Cisco sellers, solutions engineers and customer success managers who need visuals and storytelling that hold up in front of customer executives. You pick one of four proven presentation formats, describe the customer (by typing or by talking), choose the elements you want, and copy one prompt into Claude Code. The prompt carries everything needed to build that format for a new customer: the tech stack and versions, the layout, the design values, every component, the data model, the honesty rules and the review steps. By default it tells the model to build the whole thing in one shot, without questions, inside a time budget, and to make it a masterpiece.
+The Cisco Solutions Generator is for Cisco sellers, solutions engineers and customer success managers who need visuals and storytelling that hold up in front of customer executives. You pick one of five proven presentation formats, describe the customer and the conversation (by typing or by talking), and copy one prompt into Claude Code or Cursor. The prompt is a short, intent-first brief, the same eight-block shape that produced every reference build: medium, customer, story and audience, key items, research, one shot, time and "create a masterpiece". It adds the format as an experience with live reference builds to clear, the ingredients every great build shares, a research-then-brief step and a proof-of-delivery list, and leaves the design to the model.
 
-Each format was reverse-engineered from a published example built by Stephen Ewings (Solutions Engineer, Cisco), and the example was rebuilt from its own prompt to prove the prompt works.
+The formats come from eight published builds by Stephen Ewings (Solutions Engineer, Cisco). See [docs/examples](docs/examples/README.md) for why a short brief beats a long spec, with the same MedStar inputs run through the old and new generator.
 
 ![The generator's gallery](docs/screenshots/01-gallery.png)
 
@@ -12,9 +12,9 @@ Each format was reverse-engineered from a published example built by Stephen Ewi
 
 ---
 
-## The four formats
+## The five formats
 
-Each format keeps the format, stack and look of its original. Only the talk (B) uses deck navigation, presenter windows and a camera box.
+Each format describes an experience and points the model at the live builds it came from. Only the talk (B) uses deck navigation, presenter windows and a camera box.
 
 ### A · Explorable Briefing
 
@@ -48,21 +48,29 @@ A game-like 3D globe with three modes. **Present** runs a narrated executive tou
 
 *Studied from MetLife AgenticOps 4D. Stack: three r186 with bloom, GSAP, topojson-client, Vite single file. 51 elements.*
 
+### E · Operations Twin
+
+![Deltaverse, a reference for the Operations Twin: personas, the ATL twin, an inspector with live KPIs and a simulation clock](generator/shots2/twin-r1.jpg)
+
+A living 3D digital twin of the one site that runs the business: a hospital campus, an airport, a plant or a hub. A clock you can speed up, weather and people moving through it; a dozen or more timed story scenarios, each played with and without Cisco; lenses for each audience; an inspector with live KPIs; journeys; and a narrated guided tour. The closest precedent for a hospital system.
+
+*Studied from the MSK Operations Twin (Memorial Sloan Kettering) and the Deltaverse (Hartsfield-Jackson Atlanta). Stack: Three.js r186. 16 elements.*
+
 ---
 
 ## What the generator does
 
-### Compose a prompt for any customer
+### Write the brief
 
 ![Compose](docs/screenshots/05-compose-fields-and-prompt.png)
 
-Each format has its own fields (13 to 17) with sample values, and its own prompt of roughly 1,300 to 4,000 words. The assembled prompt updates live, and empty fields are highlighted.
+The fields follow the brief: account, where they are, what to discuss, who is in the room, navigate by, story device, must include, must not mention, integrations to call out, time budget and presenter, plus one or two per format. Fields start empty with examples as placeholders, and the prompt cannot be copied until the required ones are filled. Prompts run about 1,100 words.
 
-### Keep, drop or borrow elements
+### Ingredients, signature elements and the appendix
 
-![Elements](docs/screenshots/06-compose-elements.png)
+![Ingredients](docs/screenshots/06-compose-ingredients.png)
 
-Every element of the chosen format is a checkbox. Drop what you do not need, or borrow elements from the other formats; each brings its own instructions.
+Nine ingredients every reference build shares are on by default, one line each: their real place as the stage, people as the way in, timed story scenarios, several lenses, before and after, a guided way in plus free exploration, a living world, an honesty layer, and depth. You can borrow signature elements from any format, and add the detailed technical appendix reverse engineered from a reference build when you want a close copy.
 
 ### Guardrails: build it, or guide me through it
 
@@ -115,21 +123,28 @@ formats/                One kit per format (A-explorable-briefing, B-narrated-ta
   app/, dist/, shots/   The rebuild's source, its single-file build, and screenshots
 skills/                 The SEVerse cisco-3d-stage skill pack
 archive/                First-pass rebuilds on the cisco-3d-stage engine (superseded)
-originals/captures/     Saved copies of the original builds used for the reverse engineering
+originals/captures/     Saved copies of the original builds used for the first reverse engineering
+originals/sites/        All eight published builds as downloaded, with live screenshots
 tools/                  Bundling, headless screenshot and page-conversion scripts, and generator tests
-docs/                   Instructions and screenshots
+docs/                   Instructions, screenshots and the MedStar prompt comparison (docs/examples)
 HISTORY.md              How the project was built, request by request
 ```
 
 ## Rebuilding the generator page
 
-`generator/index.html` is assembled from `generator/src/generator-src.html` by replacing the `__TYPES_JSON__` and `__DECKS_JSON__` markers with `types.json` and `decks2.json`. `types.json` is built from each format's `PROMPT.md`, `prompt-fields.json` and `elements.json`.
+`generator/index.html` is assembled from `generator/src/generator-src.html` by replacing the `__TYPES_JSON__` and `__DECKS_JSON__` markers with `types.json` and `decks2.json`:
+
+```bash
+python3 tools/assemble_generator.py . /tmp/generator-page.html
+```
+
+The brief, the format descriptions and the ingredients live in the composer section of `generator-src.html`. `types.json` holds each format's elements and its technical appendix (from `formats/*/PROMPT.md`).
 
 ## Notes and limits
 
 - **Dictation:** live in-page dictation works where the browser lets the page use the microphone (Chrome or Edge, from a file or a normal site). Inside the claude.ai artifact viewer the microphone is blocked, so the buttons point to system dictation.
 - **Downloads:** the generator's download buttons use a claude.ai feature. On GitHub Pages or a local copy, take the files from this repository instead.
 - **cisco-branded:** the base skill that `cisco-3d-stage` extends is not included.
-- **Prompt testing:** the rebuilds were made from each format's prompt using the original customer's data. Running each prompt for a new customer is the next test.
+- **Prompt testing:** the new brief-first prompts have not yet been run end to end; run the MedStar prompt in [docs/examples](docs/examples/medstar-new-prompt.md) and compare it with the earlier run.
 - **Honesty:** figures in the examples are labeled public, modeled or illustrative as in the originals. Have a person review every generated build before it reaches a customer.
 - Cisco names and marks belong to Cisco Systems, Inc. Third-party components in the skill pack are listed in [`skills/THIRD_PARTY_NOTICES.md`](skills/THIRD_PARTY_NOTICES.md).

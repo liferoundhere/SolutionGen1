@@ -31,7 +31,7 @@ The page has four tabs: **Gallery**, **Compose**, **Setup** and **Design systems
 
 ![Gallery](screenshots/01-gallery.png)
 
-The Gallery shows the four formats. Each card names the original it was studied from and the stack its prompt asks for. Pick the one that fits the room:
+The Gallery shows the five formats. Each card names the original builds it was studied from. Pick the one that fits the room:
 
 | Choose | When |
 |---|---|
@@ -39,23 +39,36 @@ The Gallery shows the four formats. Each card names the original it was studied 
 | **B · Narrated Talk Film** | A talk you present live, or send as a self-playing narrated film. The only format with deck navigation, presenter windows and a camera box. |
 | **C · Leadership Digital Twin** | A leave-behind page a leadership team reads on its own: a 3D twin of their territory at the top, cited KPIs, an audio story, then sections on threats, departments, dashboards and the roadmap. |
 | **D · Mission Globe** | A multi-site customer and an account team to enable: a 3D globe of missions people can present, play (make the call, get scored) and learn from (signal to business outcome, quiz). |
+| **E · Operations Twin** | One site that runs the business (a hospital campus, an airport, a plant, a hub) as a living twin: a clock, weather and people moving; timed story scenarios with and without Cisco; lenses, an inspector with live KPIs, journeys and a narrated tour. The best fit for health systems. |
 
-Select a card to see the details: rebuild and original screenshots side by side (thumbnails marked "orig" are the original), the stack, layout, audience, narration and palette, how it is built, and every element of the format.
+Select a card to see the details: screenshots (thumbnails marked "orig" are your originals), the stack, layout, audience, narration and palette, how it is built, and every element of the format.
+
+![Operations Twin](screenshots/14-gallery-operations-twin.png)
 
 ![Format detail](screenshots/02-gallery-format-detail.png)
 
-From here you can open the rebuild, open the original, download the format's prompt template and design spec, or select **Use this format** to go straight to Compose.
+From here you can open the rebuild or the originals, download the technical appendix and design spec where a format has them, or select **Use this format** to go straight to Compose.
 
 ## 3. Fill in the details
 
 ![Compose](screenshots/04-compose.png)
 
-In **Compose**, choose the format under **01 Format**. The **02 Details** fields change with the format: each format has its own fields (13 to 17), because each prompt needs different facts. For example, the Explorable Briefing asks for the SIEM, the site to model and the map region; the Mission Globe asks for the locations, business functions and mission count.
+In **Compose**, choose the format under **01 Format**. **02 The brief** has the same fields for every format, in the order of the brief, plus one or two per format (talk length for B, mission count for D, the site to model for E):
+
+| Field | Goes into the brief as |
+|---|---|
+| Account, Where they are | "The customer is ..., .... Show their real places and the people in them." |
+| What to discuss, Who is in the room | "I want to discuss .... The audience is ...." |
+| Navigate by, Story device | "Organize it so they can navigate by ..., and ...." Each format suggests a default. |
+| Must include | "It must include: ...." |
+| Must not mention | "Do not mention ... anywhere." |
+| Call out integrations with | "Call out integration points with ... wherever they genuinely exist, and describe them accurately." |
+| Time budget | "You have ... hours of work." |
 
 ![Fields and the assembled prompt](screenshots/05-compose-fields-and-prompt.png)
 
-- Every field starts with sample values for a made-up customer, so you can see a complete prompt straight away. Select **Clear fields** to start blank, or **Fill with sample values** to bring them back.
-- The **Assembled prompt** on the right updates as you type. Fields still empty are listed above it and highlighted in the prompt.
+- Fields start empty, with an example in each as a placeholder. **Fill with sample values** loads a made-up customer (Northwind Health) to show a complete prompt; **Clear** empties the fields again.
+- The **Assembled prompt** on the right updates as you type. Required fields still empty are listed above it, and **Copy prompt** stays disabled until they are filled, so no sample text can leak into a real prompt.
 - Every field has a **microphone button**. Select it and talk; the words go into the field. Say "new line" or "new paragraph" to break the text. Select it again, or press Esc, to stop.
 
 ## 4. Talk it through instead of typing
@@ -70,14 +83,14 @@ In **Compose**, choose the format under **01 Format**. The **02 Details** fields
 4. At the end it shows everything you said. **Tidy my answers with Claude** fixes punctuation, removes filler words, turns spoken lists into one item per line and numbers into digits. It only runs when you select it, uses your own Claude usage, and asks permission the first time (inside claude.ai only).
 5. **Apply to the form** fills the fields and the prompt.
 
-## 5. Choose the elements
+## 5. Choose the ingredients
 
-![Elements](screenshots/06-compose-elements.png)
+![Ingredients](screenshots/06-compose-ingredients.png)
 
-**03 Elements** lists every element of the chosen format: 34 for A and C, 19 for B, 51 for D. Each one has a short description.
+**03 Ingredients** lists the nine things every reference build shares. All are on by default, and each adds one line to the prompt: their real place as the stage, people as the way in, scenarios as stories with a clock, several lenses on one world, before and after, a guided way in plus free exploration, a living world, an honesty layer, and depth that rewards exploring.
 
-- All are kept by default, because the prompt already describes them. Uncheck any you do not need; the prompt gains a "Leave these out" list.
-- **Add elements from other formats** lets you borrow, for example a quiz from the Mission Globe on a leadership page. Each borrowed element brings its own instructions and is restyled to the current format.
+- **Borrow signature elements (optional)** lets you add specific features from any reference build, for example the Mission Globe's quiz or the Operations Twin's simulation clock. Each adds its own instruction.
+- **Include the technical appendix** (formats A to D, off by default) adds the detailed spec reverse engineered from the reference build: layout, design values, stack versions and data schema. Leave it off to let the model design for this customer; turn it on only when you want a close copy of the reference.
 
 ## 6. Set the guardrails
 
@@ -208,7 +221,9 @@ Claude Code installs what each prompt needs; this table is for running things yo
 
 ## Troubleshooting
 
-- **The model stops to show a plan or ask questions.** Check that all five guardrails are on (select **Build it for me**) and copy the prompt again. The operating rules at the top of the prompt override anything later.
+- **The model stops to show a plan or ask questions.** Check that all five guardrails are on (select **Build it for me**) and copy the prompt again. The brief at the top of the prompt overrides anything later.
+- **Copy prompt is greyed out.** Fill the fields marked required; the chips above the prompt list what is missing.
+- **The result looks like a copy of a reference build, or the wrong industry.** Make sure the technical appendix is off, pick the format closest to the customer's world (for a hospital, the Operations Twin), and fill What to discuss and Story device in the customer's own terms.
 - **The microphone button shows "Use your system dictation here".** The page is not allowed to use the microphone in that view, for example inside the claude.ai artifact viewer. Use system dictation (Fn twice on a Mac, Win+H on Windows, the keyboard mic on a phone), or open `generator/index.html` in Chrome or Edge.
 - **Download buttons say downloads are not available.** They use a claude.ai feature. On GitHub Pages or a local file, take the files straight from this repository: `formats/*/PROMPT.md`, `formats/*/SPEC.md`, `generator/decks/*.html` and `skills/`.
 - **A format B deck does not run when opened as a file.** The skill's starter uses ES modules, which need a local server: `python3 -m http.server 8765`.

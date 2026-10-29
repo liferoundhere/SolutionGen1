@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MetLife x Cisco Cloud Control | AgenticOps 4D Experience</title>
+    <meta name="description" content="A 4D, gamified walkthrough of how Cisco Cloud Control, AgenticOps and the Splunk-powered Cisco Data Fabric help MetLife get ahead of business-impacting issues across the globe." />
+    <script type="module" crossorigin src="./assets/index-Ds7oawb6.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CLaUYnke.css">
+  <meta property="og:title" content="MetLife Cisco Cloud Control AgenticOps 4D Experience" />
+<meta property="og:description" content="A gamified 4D walkthrough demonstrating how Cisco Cloud Control and AgenticOps help MetLife proactively manage business-impacting IT issues." />
+<meta property="og:url" content="https://rosy-beacon-q5c8.here.now/" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://here.now/og/rosy-beacon-q5c8.jpg" />
+<meta property="og:image:width" content="1280" />
+<meta property="og:image:height" content="720" />
+<meta name="twitter:image" content="https://here.now/og/rosy-beacon-q5c8.jpg" />
+<meta name="twitter:card" content="summary_large_image" /></head>
+  <body>
+    <div id="stage"></div>
+    <div id="labels"></div>
+
+    <!-- Start screen -->
+    <section id="intro" class="intro">
+      <div class="intro-inner">
+        <div class="brand-lockup">
+          <span class="brand-metlife">MetLife</span>
+          <span class="brand-x">x</span>
+          <span class="brand-cisco">Cisco Cloud Control</span>
+        </div>
+        <h1>See it before it becomes the business problem.</h1>
+        <p class="lede">
+          A four-dimensional, mission-based walkthrough of how <strong>AgenticOps</strong>, the
+          <strong>Splunk-powered Cisco Data Fabric</strong> and <strong>Cisco Cloud Control</strong> give MetLife a vantage point
+          above every network, cloud, application and security domain, so that weak signals are acted on hours or days
+          before they turn into missed revenue, regulatory exposure or broken customer promises.
+        </p>
+        <div class="intro-modes">
+          <button class="mode-card" data-start="tour">
+            <span class="mode-kicker">Present</span>
+            <span class="mode-title">Executive Tour</span>
+            <span class="mode-desc">Cinematic, fully narrated journey across all 10 MetLife missions.</span>
+          </button>
+          <button class="mode-card" data-start="explore">
+            <span class="mode-kicker">Play</span>
+            <span class="mode-title">Explore Missions</span>
+            <span class="mode-desc">Pick a location, make the call at each decision point, and protect business value.</span>
+          </button>
+          <button class="mode-card" data-start="academy">
+            <span class="mode-kicker">Learn</span>
+            <span class="mode-title">Account Team Academy</span>
+            <span class="mode-desc">Trace each IT signal to a business KPI, practice discovery questions, and take the quiz.</span>
+          </button>
+        </div>
+        <p class="disclaimer">
+          Illustrative scenarios built from public information about MetLife (including its New Frontier strategy and public
+          filings) and common challenges across the insurance industry. No MetLife internal data is used. Dollar figures are modeled
+          estimates based on industry benchmarks, meant for discussion only.
+        </p>
+        <p class="hint">Best with sound on. Studio neural narration: pause, skip and change voices from the dock at the bottom.</p>
+      </div>
+    </section>
+
+    <!-- HUD -->
+    <header id="topbar" class="topbar hidden">
+      <div class="tb-left">
+        <div class="logo-mini"><span class="brand-metlife">MetLife</span><span class="brand-x">x</span><span class="brand-cisco">Cisco Cloud Control</span></div>
+        <nav class="mode-tabs" id="modeTabs">
+          <button data-mode="tour">Executive Tour</button>
+          <button data-mode="explore">Explore</button>
+          <button data-mode="academy">Academy</button>
+        </nav>
+        <nav id="crumbs" class="crumbs hidden"></nav>
+      </div>
+      <div class="tb-right">
+        <div class="score-block" title="Modeled business value protected in this session">
+          <span class="score-label">Business Value Protected</span>
+          <span class="score-value" id="scoreValue">$0.0M</span>
+        </div>
+        <div class="rank-block">
+          <span class="rank-name" id="rankName">Observer</span>
+          <div class="xp-bar"><div class="xp-fill" id="xpFill"></div></div>
+          <span class="xp-text" id="xpText">0 XP</span>
+        </div>
+        <button class="icon-btn" id="badgesBtn" title="Badges"><span id="badgeCount">0</span>/8 badges</button>
+        <div class="audio-controls">
+          <button class="icon-btn" id="voiceBtn" title="Choose the narration voice">Voice</button>
+          <button class="icon-btn" id="ambientBtn" title="Ambient music on or off">Ambient: Off</button>
+        </div>
+      </div>
+    </header>
+
+    <aside id="missionList" class="panel left-panel hidden">
+      <div class="panel-head">
+        <h2>Global Missions</h2>
+        <button class="link-btn" id="introReplay">Replay the opening</button>
+      </div>
+      <div class="lens-row" id="lensRow"></div>
+      <div class="missions" id="missions"></div>
+      <div class="vantage">
+        <div class="vantage-title">AgenticOps vantage point</div>
+        <div class="vantage-grid">
+          <div><span id="vpSignals">0</span><label>signals / min into the Data Fabric</label></div>
+          <div><span id="vpAgents">0</span><label>governed agents active</label></div>
+          <div><span id="vpResolved">0</span><label>issues resolved before impact today</label></div>
+        </div>
+      </div>
+    </aside>
+
+    <aside id="missionPanel" class="panel right-panel hidden">
+      <button class="mp-collapse" id="mpCollapse" title="Hide or show the story panel"><span></span></button>
+      <div class="mp-head">
+        <div class="mp-kicker" id="mpKicker"></div>
+        <h2 id="mpTitle">Choose a mission</h2>
+        <div class="mp-sub" id="mpSub"></div>
+        <div class="mp-tags" id="mpTags"></div>
+      </div>
+      <div class="mp-steps" id="mpSteps"></div>
+      <div class="mp-body" id="mpBody"></div>
+      <div class="mp-log">
+        <div class="mp-log-head">Cloud Control activity log <span class="live-dot"></span></div>
+        <div class="mp-log-body" id="mpLog"></div>
+      </div>
+      <div class="mp-actions">
+        <button class="btn ghost" id="prevStep">Back</button>
+        <button class="btn ghost" id="overviewBtn" title="Play the audio overview">Audio overview</button>
+        <button class="btn" id="nextStep">Next</button>
+      </div>
+    </aside>
+
+    <section id="dock" class="dock hidden">
+      <div class="dk-cap"><span class="dk-sec" id="dkSec"></span><span class="dk-text" id="captionText"></span></div>
+      <div class="dk-row">
+        <button class="dk-btn" id="dkPrevSec" title="Previous section (Shift + Left)"></button>
+        <button class="dk-btn" id="dkBack" title="Previous sentence (Left)"></button>
+        <button class="dk-btn play" id="dkPlay" title="Pause (Space)"></button>
+        <button class="dk-btn" id="dkFwd" title="Next sentence (Right)"></button>
+        <button class="dk-btn" id="dkNextSec" title="Next section (Shift + Right)"></button>
+        <div class="dk-bar" id="dkBar"></div>
+        <span class="dk-count" id="dkCount"></span>
+        <button class="dk-voice" id="dkVoice" title="Voice, speed and captions"><i id="dkVoiceIc"></i><span id="dkVoiceName">Voice</span></button>
+      </div>
+    </section>
+    <button class="tl-show" id="tlShow">Show 4D timeline</button>
+    <div id="voicePop" class="voice-pop hidden"></div>
+    <div id="evTip" class="ev-tip hidden"></div>
+
+    <section id="timeline" class="timeline hidden">
+      <div class="tl-controls">
+        <button class="btn small" id="playBtn" title="Play or pause the timeline">Play</button>
+        <div class="tl-clock">
+          <span class="tl-clock-label">Mission clock</span>
+          <span class="tl-clock-value" id="tlClock">T-00:00</span>
+        </div>
+        <div class="branch-toggle" id="branchToggle">
+          <button data-branch="traditional">Traditional IT</button>
+          <button data-branch="compare" class="active">Compare</button>
+          <button data-branch="agentic">AgenticOps</button>
+        </div>
+        <div class="tl-metric" id="tlMetric"></div>
+        <button class="tl-fold" id="tlFold" title="Hide or show the 4D timeline">Hide timeline</button>
+      </div>
+      <canvas id="tlCanvas" title="Drag to move through time. Click a marker to open that product view."></canvas>
+    </section>
+
+    <div id="ticker" class="ticker hidden"><div class="ticker-track" id="tickerTrack"></div></div>
+
+    <div id="toast" class="toast"></div>
+    <div id="modal" class="modal hidden"><div class="modal-card" id="modalCard"></div></div>
+
+  </body>
+</html>
